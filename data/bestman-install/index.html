@@ -27,6 +27,16 @@
   <script src="../../js/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69012-29', 'opensciencegrid.github.io');
+      ga('send', 'pageview');
+  </script>
+  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -58,83 +68,8 @@
             <li class="toctree-l1">
 		
   
-    <a class="" href="../../install-overview/">Installation Overview</a>
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
     <a class="" href="../../site-planning/">Site Planning</a>
   
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Install Guides - Common</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../common/install-best-practices/">Install Best Practices</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/ca/">CA Certificates</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/osg-ca-certs-updater/">OSG CA Certificates Updater</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/yum/">Yum Repos</a>
-  
-        </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Install Guides - Worker Node</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-wn/">Worker Node (RPM install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-wn-tarball/">Worker Node (tarball install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-wn-oasis/">Worker Node (OASIS install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-cvmfs/">CVMFS</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-singularity/">Singularity</a>
-  
-        </li>
-  </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -176,24 +111,42 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Install Guides - Data</span>
+  <span class="caption-text">Worker Node</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../gridftp/">GridFTP Server</a>
+    <a class="" href="../../worker-node/using-wn/">Worker Node Overview</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../frontier-squid/">HTTP Cache</a>
+    <a class="" href="../../worker-node/install-wn/">Worker Node (RPM install)</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../install-xroot-client/">XRootD Client</a>
+    <a class="" href="../../worker-node/install-wn-tarball/">Worker Node (tarball install)</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../worker-node/install-wn-oasis/">Worker Node (OASIS install)</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../worker-node/install-cvmfs/">CVMFS</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../worker-node/install-singularity/">Singularity</a>
   
         </li>
   </ul>
@@ -201,14 +154,81 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Install Guides - Other</span>
+  <span class="caption-text">Data</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../other/gsissh/">GSI-enabled SSH</a>
+    <a class="" href="../frontier-squid/">Install HTTP Cache</a>
   
         </li>
+        <li class="">
+          
+  
+    <a class="" href="../update-oasis/">Update OASIS</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../external-oasis-repos/">External OASIS repositories</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../gridftp/">Install GridFTP Server</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../load-balanced-gridftp/">Install Load Balanced GridFTP</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../install-gridftp-xrootd/">Install GridFtp XRootD</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../hadoop-overview/">Hadoop Overview</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../install-hadoop-2-0-0/">Hadoop</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../xrootd-overview/">XRootD Overview</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../install-xroot-client/">Install XRootD Client</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../install-xrootd/">Install XRootD</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Security</span>
+  <ul class="subnav">
         <li class="">
           
   
@@ -218,7 +238,88 @@
         <li class="">
           
   
-    <a class="" href="../../other/install-osg-upcoming-software/">OSG upcoming software</a>
+    <a class="" href="../../security/host-certs/">Host Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../security/user-certs/">User Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../security/osg-ca-manage/">Managing CAs</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Common</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../common/install-best-practices/">Install Best Practices</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/ca/">CA Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/osg-ca-certs-updater/">OSG CA Certificates Updater</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/yum/">Yum Repos</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/openjdk7/">Java 7</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Usage Guides</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../common/pki-cli/">Certificate Tools</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../other/configuration-with-osg-configure/">Configuration with OSG-Configure</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Other</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../other/gsissh/">GSI-enabled SSH</a>
   
         </li>
         <li class="">
@@ -233,41 +334,10 @@
     <a class="" href="../../other/install-cvmfs-stratum1/">Install a CVMFS Stratum 1</a>
   
         </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Monitoring</span>
-  <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../monitoring/rsv-overview/">RSV Overview</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/install-rsv/">Install RSV</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/advanced-rsv-configuration/">Advanced RSV Configuration</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/rsv-control/">Manage RSV via rsv-control</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/install-rsv-gwms-tester/">RSV GlideinWMS Tester</a>
+    <a class="" href="../../other/network-performance-toolkit/">Network Performance Toolkit</a>
   
         </li>
   </ul>
@@ -298,6 +368,12 @@
         <li class="">
           
   
+    <a class="" href="../../other/install-osg-upcoming-software/">OSG upcoming software</a>
+  
+        </li>
+        <li class="">
+          
+  
     <a class="" href="../../release/yum-basics/">Yum Basics</a>
   
         </li>
@@ -318,24 +394,30 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Usage Guides</span>
+  <span class="caption-text">Monitoring</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../common/pki-cli/">Certificate Tools</a>
+    <a class="" href="../../monitoring/install-rsv/">Install RSV</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../other/configuration-with-osg-configure/">Configuration with OSG-Configure</a>
+    <a class="" href="../../monitoring/advanced-rsv-configuration/">Advanced RSV Configuration</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../worker-node/using-wn/">Worker Node Environment</a>
+    <a class="" href="../../monitoring/rsv-control/">Manage RSV via rsv-control</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../monitoring/install-rsv-gwms-tester/">RSV GlideinWMS Tester</a>
   
         </li>
   </ul>
@@ -345,12 +427,6 @@
 		
   <span class="caption-text">Deprecated Software</span>
   <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../bestman-overview/">BeStMan Overview</a>
-  
-        </li>
         <li class=" current">
           
   
@@ -457,6 +533,12 @@
           
   
     <a class="" href="../../worker-node/install-glexec/">Worker node glexec Install</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../other/install-voms/">Install VOMS</a>
   
         </li>
   </ul>
@@ -746,7 +828,7 @@
                 <h1 id="installing-bestman">Installing BeStMan<a class="headerlink" href="#installing-bestman" title="Permanent link">&para;</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>As of the June 2017 release of OSG 3.4.0, this software is officially deprecated.  Support is scheduled to end as of June 2018.</p>
+<p>As of the June 2017 release of OSG 3.4.0, this software is officially deprecated.  Support is scheduled to end as of May 2018.</p>
 </div>
 <h1 id="about-this-document">About this Document<a class="headerlink" href="#about-this-document" title="Permanent link">&para;</a></h1>
 <p>This document explains how to install a BeStMan SRMv2 service. This procedure will guide one through the installation and configuration of a basic <code>bestman2</code> host with an underlying GridFTP server. This will allow the service to service requests via the SRM (Storage Resource Manager) protocol or the GridFTP protocol.</p>
@@ -860,7 +942,7 @@
 <h3 id="engineering-considerations">Engineering Considerations<a class="headerlink" href="#engineering-considerations" title="Permanent link">&para;</a></h3>
 <p>Please answer following questions before you proceed with installation and configuration of BeStMan storage element:</p>
 <p>Q. <em>What authorization mechanism should I use?</em></p>
-<p>Decide between a <a href="../../security/edg-mkgridmap">grid-mapfile</a> or a <a href="../../security/install-gums">GUMS</a> server for authorization.  Both mechanisms are deprecated with a planned removal by June 2018.  The replacement mechanism, however, does not work with <code>bestman2</code>.</p>
+<p>Decide between a <a href="../../security/edg-mkgridmap">grid-mapfile</a> or a <a href="../../security/install-gums">GUMS</a> server for authorization.  Both mechanisms are deprecated with a planned removal by May 2018.  The replacement mechanism, however, does not work with <code>bestman2</code>.</p>
 <p>Q. <em>How many GridFTP servers will I need?</em></p>
 <p>Choose to run multiple GridFTP servers for load balancing and better performance. We recommend to install additional GridFTP servers if your Storage Element:</p>
 <ul>
@@ -870,13 +952,13 @@
 </ul>
 <p>We recommend approximately one GridFTP server for each 8Gbps of desired utilized bandwidth.</p>
 <p>Q. <em>Do I need to change default configuration of Gridftp server?</em></p>
-<p>Yes, you may want to do this if the node on which GridFTP server will be installed has multiple network interfaces. Read <a href="https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallOSGGridFTP#ConfigMultiHomed">this section</a> for more details.</p>
+<p>Yes, you may want to do this if the node on which GridFTP server will be installed has multiple network interfaces. Read <a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/InstallOSGGridFTP#ConfigMultiHomed">this section</a> for more details.</p>
 <p>Q. <em>Do you need to enable Gratia gridftp-transfer probes?</em> <br />
 The Gratia gridftp-transfer probes provide OSG storage statistics for accounting purposes. The reports include the source and destination of transfers, certificate subject of transfer initiator, as well as the size and status of the transferred file. The probe needs to be installed on every GridFTP server.</p>
 <h1 id="install-instructions">Install Instructions<a class="headerlink" href="#install-instructions" title="Permanent link">&para;</a></h1>
 <h2 id="installing-bestman2">Installing BeStMan2<a class="headerlink" href="#installing-bestman2" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Install Java using <a href="https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallSoftwareWithOpenJDK7#InstallingJava">these instructions</a>.</li>
+<li>Install Java using <a href="../../common/openjdk7#installing-java">these instructions</a>.</li>
 <li>Install the BeStMan Storage element meta-package:</li>
 </ol>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install osg-se-bestman
@@ -1297,15 +1379,15 @@ bestman   ALL=(SRM_USR) NOPASSWD: SRM_CMD
 <h1 id="how-to-get-help">How to get Help?<a class="headerlink" href="#how-to-get-help" title="Permanent link">&para;</a></h1>
 <p>If you cannot resolve the problem, there are several ways to receive help:</p>
 <ul>
-<li>For bug support and issues, submit a ticket to the <a href="https://ticket.grid.iu.edu/goc">Grid Operations Center</a>.</li>
+<li>For bug support and issues, submit a ticket to the <a href="https://ticket.opensciencegrid.org/goc">Grid Operations Center</a>.</li>
 <li>For community support and best-effort software team support contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#111;&#115;&#103;&#45;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#111;&#115;&#103;&#45;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a>.</li>
 </ul>
 <p>For a full set of help options, see the <a href="../../common/help">Help Procedure</a>.</p>
 <h1 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h1>
 <ul>
-<li><a href="https://twiki.grid.iu.edu/bin/view/Documentation/StorageInfrastructureSoftware">Storage infrastructure software</a></li>
-<li><a href="https://twiki.grid.iu.edu/bin/view/Documentation/StorageSiteAdministrator">Information on planning, installing and validating storage software</a></li>
-<li><a href="https://twiki.grid.iu.edu/bin/view/Storage/SEToolsTipsFAQs">Tips and FAQ</a></li>
+<li><a href="https://twiki.opensciencegrid.org/bin/view/Documentation/StorageInfrastructureSoftware">Storage infrastructure software</a></li>
+<li><a href="https://twiki.opensciencegrid.org/bin/view/Documentation/StorageSiteAdministrator">Information on planning, installing and validating storage software</a></li>
+<li><a href="https://twiki.opensciencegrid.org/bin/view/Storage/SEToolsTipsFAQs">Tips and FAQ</a></li>
 <li><a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/GratiaTransferProbe">OSG Gratia Transfer Probe page</a></li>
 <li><a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/LbnlSrmClient">SRM v2.2 LBNL client command line examples</a></li>
 <li><a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/SrmTester">SRM-Tester</a></li>
@@ -1339,7 +1421,7 @@ bestman   ALL=(SRM_USR) NOPASSWD: SRM_CMD
         <a href="../install-bestman-xrootd/" class="btn btn-neutral float-right" title="BeStMan Xrootd SE">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../bestman-overview/" class="btn btn-neutral" title="BeStMan Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../monitoring/install-rsv-gwms-tester/" class="btn btn-neutral" title="RSV GlideinWMS Tester"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -1367,7 +1449,7 @@ bestman   ALL=(SRM_USR) NOPASSWD: SRM_CMD
           <a href="https://github.com/opensciencegrid/docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../bestman-overview/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../monitoring/install-rsv-gwms-tester/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../install-bestman-xrootd/" style="color: #fcfcfc">Next &raquo;</a></span>

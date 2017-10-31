@@ -27,6 +27,16 @@
   <script src="../../js/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69012-29', 'opensciencegrid.github.io');
+      ga('send', 'pageview');
+  </script>
+  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -58,83 +68,8 @@
             <li class="toctree-l1">
 		
   
-    <a class="" href="../../install-overview/">Installation Overview</a>
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
     <a class="" href="../../site-planning/">Site Planning</a>
   
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Install Guides - Common</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../common/install-best-practices/">Install Best Practices</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/ca/">CA Certificates</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/osg-ca-certs-updater/">OSG CA Certificates Updater</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/yum/">Yum Repos</a>
-  
-        </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Install Guides - Worker Node</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-wn/">Worker Node (RPM install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-wn-tarball/">Worker Node (tarball install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-wn-oasis/">Worker Node (OASIS install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-cvmfs/">CVMFS</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-singularity/">Singularity</a>
-  
-        </li>
-  </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -202,24 +137,42 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Install Guides - Data</span>
+  <span class="caption-text">Worker Node</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../data/gridftp/">GridFTP Server</a>
+    <a class="" href="../../worker-node/using-wn/">Worker Node Overview</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/frontier-squid/">HTTP Cache</a>
+    <a class="" href="../../worker-node/install-wn/">Worker Node (RPM install)</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/install-xroot-client/">XRootD Client</a>
+    <a class="" href="../../worker-node/install-wn-tarball/">Worker Node (tarball install)</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../worker-node/install-wn-oasis/">Worker Node (OASIS install)</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../worker-node/install-cvmfs/">CVMFS</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../worker-node/install-singularity/">Singularity</a>
   
         </li>
   </ul>
@@ -227,14 +180,81 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Install Guides - Other</span>
+  <span class="caption-text">Data</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../other/gsissh/">GSI-enabled SSH</a>
+    <a class="" href="../../data/frontier-squid/">Install HTTP Cache</a>
   
         </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/update-oasis/">Update OASIS</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/external-oasis-repos/">External OASIS repositories</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/gridftp/">Install GridFTP Server</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/load-balanced-gridftp/">Install Load Balanced GridFTP</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-gridftp-xrootd/">Install GridFtp XRootD</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/hadoop-overview/">Hadoop Overview</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-hadoop-2-0-0/">Hadoop</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/xrootd-overview/">XRootD Overview</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-xroot-client/">Install XRootD Client</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-xrootd/">Install XRootD</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Security</span>
+  <ul class="subnav">
         <li class="">
           
   
@@ -244,7 +264,88 @@
         <li class="">
           
   
-    <a class="" href="../../other/install-osg-upcoming-software/">OSG upcoming software</a>
+    <a class="" href="../../security/host-certs/">Host Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../security/user-certs/">User Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../security/osg-ca-manage/">Managing CAs</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Common</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../common/install-best-practices/">Install Best Practices</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/ca/">CA Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/osg-ca-certs-updater/">OSG CA Certificates Updater</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/yum/">Yum Repos</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/openjdk7/">Java 7</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Usage Guides</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../common/pki-cli/">Certificate Tools</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../other/configuration-with-osg-configure/">Configuration with OSG-Configure</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Other</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../other/gsissh/">GSI-enabled SSH</a>
   
         </li>
         <li class="">
@@ -259,41 +360,10 @@
     <a class="" href="../../other/install-cvmfs-stratum1/">Install a CVMFS Stratum 1</a>
   
         </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Monitoring</span>
-  <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../monitoring/rsv-overview/">RSV Overview</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/install-rsv/">Install RSV</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/advanced-rsv-configuration/">Advanced RSV Configuration</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/rsv-control/">Manage RSV via rsv-control</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/install-rsv-gwms-tester/">RSV GlideinWMS Tester</a>
+    <a class="" href="../../other/network-performance-toolkit/">Network Performance Toolkit</a>
   
         </li>
   </ul>
@@ -324,6 +394,12 @@
         <li class="">
           
   
+    <a class="" href="../../other/install-osg-upcoming-software/">OSG upcoming software</a>
+  
+        </li>
+        <li class="">
+          
+  
     <a class="" href="../../release/yum-basics/">Yum Basics</a>
   
         </li>
@@ -344,24 +420,30 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Usage Guides</span>
+  <span class="caption-text">Monitoring</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../common/pki-cli/">Certificate Tools</a>
+    <a class="" href="../../monitoring/install-rsv/">Install RSV</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../other/configuration-with-osg-configure/">Configuration with OSG-Configure</a>
+    <a class="" href="../../monitoring/advanced-rsv-configuration/">Advanced RSV Configuration</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../worker-node/using-wn/">Worker Node Environment</a>
+    <a class="" href="../../monitoring/rsv-control/">Manage RSV via rsv-control</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../monitoring/install-rsv-gwms-tester/">RSV GlideinWMS Tester</a>
   
         </li>
   </ul>
@@ -371,12 +453,6 @@
 		
   <span class="caption-text">Deprecated Software</span>
   <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../data/bestman-overview/">BeStMan Overview</a>
-  
-        </li>
         <li class="">
           
   
@@ -405,6 +481,12 @@
           
   
     <a class="" href="../../worker-node/install-glexec/">Worker node glexec Install</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../other/install-voms/">Install VOMS</a>
   
         </li>
   </ul>
@@ -702,7 +784,7 @@
 <li>Security in the OSG via <a href="http://toolkit.globus.org/toolkit/docs/3.2/security.html">GSI</a> (i.e., <a href="https://en.wikipedia.org/wiki/Certificate_authority">Certificate authorities</a>, user and host <a href="https://en.wikipedia.org/wiki/Public_key_certificate">certificates</a>, proxies)</li>
 </ul>
 </li>
-<li>Pilot jobs, frontends, and factories (i.e., <a href="http://glideinwms.fnal.gov/doc.prd/index.html">GlideinWMS</a>, <a href="https://twiki.grid.iu.edu/bin/view/Documentation/Release3/AutoPyFactory">AutoPyFactory</a>)</li>
+<li>Pilot jobs, frontends, and factories (i.e., <a href="http://glideinwms.fnal.gov/doc.prd/index.html">GlideinWMS</a>, AutoPyFactory)</li>
 </ul>
 <h2 id="what-is-a-compute-element">What is a Compute Element?<a class="headerlink" href="#what-is-a-compute-element" title="Permanent link">&para;</a></h2>
 <p>An OSG Compute Element (CE) is the entry point for the OSG to your local resources: a layer of software that you install on a machine that can submit jobs into your local batch system. At the heart of the CE is the <em>job gateway</em> software, which is responsible for handling incoming jobs, authorizing them, and delegating them to your batch system for execution. Historically, the OSG only had one option for a job gateway solution, Globus Toolkit’s GRAM-based gatekeeper, but now offers the HTCondor-CE as an alternative.</p>
@@ -743,14 +825,14 @@
 <p><img alt="HTCondor-CE with other batch systems" src="../../images/ce_otherbatchsystem.png" /></p>
 <p>With non-HTCondor batch systems, HTCondor-CE cannot use internal HTCondor protocols to transfer files so its spool directory must be exported to a shared file system that is mounted on the batch system’s worker nodes.</p>
 <h3 id="over-ssh">Over SSH<a class="headerlink" href="#over-ssh" title="Permanent link">&para;</a></h3>
-<p><a href="https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallHTCondorBosco">HTCondor-CE-Bosco</a> is a special configuration of HTCondor-CE that can submit jobs to a remote cluster over SSH. The HTCondor-CE-Bosco provides a simple starting point for opportunistic resource owners that want to start contributing to the OSG with minimal effort: an organization will be able to accept OSG jobs by allowing SSH access to a submit node in their cluster.</p>
+<p>HTCondor-CE-Bosco is a special configuration of HTCondor-CE that can submit jobs to a remote cluster over SSH. The HTCondor-CE-Bosco provides a simple starting point for opportunistic resource owners that want to start contributing to the OSG with minimal effort: an organization will be able to accept OSG jobs by allowing SSH access to a submit node in their cluster.</p>
 <p><img alt="HTCondor-CE-Bosco" src="../../images/HTCondorCEBosco.png" /></p>
 <p>HTCondor-CE-Bosco is intended for small sites or as an introduction to the OSG. If your site intends to run thousands of OSG jobs, you will need to host a standard <a href="../install-htcondor-ce">HTCondor-CE</a> because HTCondor-CE-Bosco has not yet been optimized for such loads.</p>
 <h2 id="how-the-ce-is-customized">How the CE is Customized<a class="headerlink" href="#how-the-ce-is-customized" title="Permanent link">&para;</a></h2>
 <p>Aside from the <a href="../install-htcondor-ce#configuring-htcondor-ce">basic configuration</a> required in the CE installation, there are two main ways to customize your CE (if you decide any customization is required at all):</p>
 <ul>
 <li><strong>Deciding which VOs are allowed to run at your site:</strong> The method of limiting the VOs that are allowed to run on your site has not changed between GRAM and HTCondor-CE’s: select an authorization system, GUMS or edg-mkgridmap, and configure it accordingly.</li>
-<li><strong>How to filter and transform the grid jobs to be run on your batch system:</strong> Filtering and transforming grid jobs (i.e., setting site-specific attributes or resource limits), requires configuration of your site’s job routes. For examples of common job routes, consult the <a href="https://twiki.grid.iu.edu/bin/view/Documentation/Release3/JobRouterRecipes">JobRouter recipes</a> page.</li>
+<li><strong>How to filter and transform the grid jobs to be run on your batch system:</strong> Filtering and transforming grid jobs (i.e., setting site-specific attributes or resource limits), requires configuration of your site’s job routes. For examples of common job routes, consult the <a href="../job-router-recipes">JobRouter recipes</a> page.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -763,8 +845,7 @@
 <h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <p>If you're transitioning from a GRAM CE to HTCondor-CE, the process is the same as if you were setting up a completely new CE, whether you're installing it on a new machine or alongside your GRAM CE.</p>
 <ul>
-<li>Install <a href="../install-htcondor-ce">HTCondor-CE</a> or <a href="https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallHTCondorBosco">HTCondor-CE-Bosco</a></li>
-<li>Setting up <a href="https://twiki.grid.iu.edu/bin/view/Documentation/Release3/JobRouterRecipes">job routes</a></li>
+<li>Setting up <a href="../job-router-recipes">job routes</a></li>
 <li><a href="../submit-htcondor-ce">Submitting</a> jobs to HTCondor-CE</li>
 <li><a href="../troubleshoot-htcondor-ce">Troubleshooting</a> HTCondor-CE</li>
 <li>Register the CE with OIM</li>
@@ -780,7 +861,7 @@
         <a href="../install-htcondor-ce/" class="btn btn-neutral float-right" title="Install HTCondor-CE">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../worker-node/install-singularity/" class="btn btn-neutral" title="Singularity"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../site-planning/" class="btn btn-neutral" title="Site Planning"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -808,7 +889,7 @@
           <a href="https://github.com/opensciencegrid/docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../worker-node/install-singularity/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../site-planning/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../install-htcondor-ce/" style="color: #fcfcfc">Next &raquo;</a></span>

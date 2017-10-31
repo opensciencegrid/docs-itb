@@ -27,6 +27,16 @@
   <script src="../../js/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69012-29', 'opensciencegrid.github.io');
+      ga('send', 'pageview');
+  </script>
+  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -58,83 +68,8 @@
             <li class="toctree-l1">
 		
   
-    <a class="" href="../../install-overview/">Installation Overview</a>
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
     <a class="" href="../../site-planning/">Site Planning</a>
   
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Install Guides - Common</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../common/install-best-practices/">Install Best Practices</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/ca/">CA Certificates</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/osg-ca-certs-updater/">OSG CA Certificates Updater</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/yum/">Yum Repos</a>
-  
-        </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Install Guides - Worker Node</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-wn/">Worker Node (RPM install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-wn-tarball/">Worker Node (tarball install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-wn-oasis/">Worker Node (OASIS install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-cvmfs/">CVMFS</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-singularity/">Singularity</a>
-  
-        </li>
-  </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -204,24 +139,42 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Install Guides - Data</span>
+  <span class="caption-text">Worker Node</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../data/gridftp/">GridFTP Server</a>
+    <a class="" href="../../worker-node/using-wn/">Worker Node Overview</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/frontier-squid/">HTTP Cache</a>
+    <a class="" href="../../worker-node/install-wn/">Worker Node (RPM install)</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/install-xroot-client/">XRootD Client</a>
+    <a class="" href="../../worker-node/install-wn-tarball/">Worker Node (tarball install)</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../worker-node/install-wn-oasis/">Worker Node (OASIS install)</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../worker-node/install-cvmfs/">CVMFS</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../worker-node/install-singularity/">Singularity</a>
   
         </li>
   </ul>
@@ -229,14 +182,81 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Install Guides - Other</span>
+  <span class="caption-text">Data</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../other/gsissh/">GSI-enabled SSH</a>
+    <a class="" href="../../data/frontier-squid/">Install HTTP Cache</a>
   
         </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/update-oasis/">Update OASIS</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/external-oasis-repos/">External OASIS repositories</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/gridftp/">Install GridFTP Server</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/load-balanced-gridftp/">Install Load Balanced GridFTP</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-gridftp-xrootd/">Install GridFtp XRootD</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/hadoop-overview/">Hadoop Overview</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-hadoop-2-0-0/">Hadoop</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/xrootd-overview/">XRootD Overview</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-xroot-client/">Install XRootD Client</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-xrootd/">Install XRootD</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Security</span>
+  <ul class="subnav">
         <li class="">
           
   
@@ -246,7 +266,88 @@
         <li class="">
           
   
-    <a class="" href="../../other/install-osg-upcoming-software/">OSG upcoming software</a>
+    <a class="" href="../../security/host-certs/">Host Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../security/user-certs/">User Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../security/osg-ca-manage/">Managing CAs</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Common</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../common/install-best-practices/">Install Best Practices</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/ca/">CA Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/osg-ca-certs-updater/">OSG CA Certificates Updater</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/yum/">Yum Repos</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/openjdk7/">Java 7</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Usage Guides</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../common/pki-cli/">Certificate Tools</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../other/configuration-with-osg-configure/">Configuration with OSG-Configure</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Other</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../other/gsissh/">GSI-enabled SSH</a>
   
         </li>
         <li class="">
@@ -261,41 +362,10 @@
     <a class="" href="../../other/install-cvmfs-stratum1/">Install a CVMFS Stratum 1</a>
   
         </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Monitoring</span>
-  <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../monitoring/rsv-overview/">RSV Overview</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/install-rsv/">Install RSV</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/advanced-rsv-configuration/">Advanced RSV Configuration</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/rsv-control/">Manage RSV via rsv-control</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/install-rsv-gwms-tester/">RSV GlideinWMS Tester</a>
+    <a class="" href="../../other/network-performance-toolkit/">Network Performance Toolkit</a>
   
         </li>
   </ul>
@@ -326,6 +396,12 @@
         <li class="">
           
   
+    <a class="" href="../../other/install-osg-upcoming-software/">OSG upcoming software</a>
+  
+        </li>
+        <li class="">
+          
+  
     <a class="" href="../../release/yum-basics/">Yum Basics</a>
   
         </li>
@@ -346,24 +422,30 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Usage Guides</span>
+  <span class="caption-text">Monitoring</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../common/pki-cli/">Certificate Tools</a>
+    <a class="" href="../../monitoring/install-rsv/">Install RSV</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../other/configuration-with-osg-configure/">Configuration with OSG-Configure</a>
+    <a class="" href="../../monitoring/advanced-rsv-configuration/">Advanced RSV Configuration</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../worker-node/using-wn/">Worker Node Environment</a>
+    <a class="" href="../../monitoring/rsv-control/">Manage RSV via rsv-control</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../monitoring/install-rsv-gwms-tester/">RSV GlideinWMS Tester</a>
   
         </li>
   </ul>
@@ -373,12 +455,6 @@
 		
   <span class="caption-text">Deprecated Software</span>
   <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../data/bestman-overview/">BeStMan Overview</a>
-  
-        </li>
         <li class="">
           
   
@@ -407,6 +483,12 @@
           
   
     <a class="" href="../../worker-node/install-glexec/">Worker node glexec Install</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../other/install-voms/">Install VOMS</a>
   
         </li>
   </ul>
@@ -817,13 +899,13 @@ htcondor_gateway_enabled = True
 <h4 id="batch-systems-other-than-htcondor">Batch systems other than HTCondor<a class="headerlink" href="#batch-systems-other-than-htcondor" title="Permanent link">&para;</a></h4>
 <p>Non-HTCondor batch systems require additional configuration to support file transfer to your site's worker nodes.</p>
 <h5 id="sharing-the-spool-directory">Sharing the spool directory<a class="headerlink" href="#sharing-the-spool-directory" title="Permanent link">&para;</a></h5>
-<p>To transfer files between the CE and the batch system, HTCondor-CE requires a shared file system. The current recommendation is to run a dedicated NFS server (whose installation is beyond the scope of this document) on the <strong>CE host</strong>. In this setup, HTCondor-CE writes to the local spool directory and the NFS server shares the directory with all of the worker nodes.</p>
+<p>To transfer files between the CE and the batch system, HTCondor-CE requires a shared file system. The current recommendation is to run a dedicated NFS server (whose installation is beyond the scope of this document) on the <strong>CE host</strong>. In this setup, HTCondor-CE writes to the local spool directory, the NFS server shares the directory, and each worker node mounts the directory in the same location as on the CE. For example, if your spool directory is <code>/var/lib/condor-ce</code> (the default), you must mount the shared directory to <code>/var/lib/condor-ce</code> on the worker nodes.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you choose not to host the NFS server on your CE, you will need to turn off root squash so that the HTCondor-CE daemons can write to the spool directory.</p>
 </div>
-<p>By default, the spool directory is <code>/var/lib/condor-ce</code> but you can control this by setting <code>SPOOL</code> in <code>/etc/condor-ce/config.d/99-local.conf</code> (create this file if it doesn't exist). For example, the following sets the <code>SPOOL</code> directory to <code>/home/condor</code>:</p>
-<div class="codehilite"><pre><span></span>SPOOL=/home/condor
+<p>You can control the value of the spool directory by setting <code>SPOOL</code> in <code>/etc/condor-ce/config.d/99-local.conf</code> (create this file if it doesn't exist). For example, the following sets the <code>SPOOL</code> directory to <code>/home/condor</code>:</p>
+<div class="codehilite"><pre><span></span>SPOOL = /home/condor
 </pre></div>
 
 
@@ -1199,8 +1281,8 @@ cms\/Role=production cms.prod
 <h2 id="registering-the-ce">Registering the CE<a class="headerlink" href="#registering-the-ce" title="Permanent link">&para;</a></h2>
 <p>To be part of the OSG Production Grid, your CE must be registered in the <a href="https://oim.opensciencegrid.org">OSG Information Management System</a> (OIM). To register your resource:</p>
 <ol>
-<li><a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/CertificateUserGet">Obtain, install, and verify your user certificate</a> (which you may have done already)</li>
-<li><a href="https://twiki.grid.iu.edu/bin/view/Operations/OIMRegistrationInstructions">Register your site and CE in OIM</a></li>
+<li><a href="../../security/user-certs">Obtain, install, and verify your user certificate</a> (which you may have done already)</li>
+<li><a href="https://twiki.opensciencegrid.org/bin/view/Operations/OIMRegistrationInstructions">Register your site and CE in OIM</a></li>
 </ol>
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
 <p>To get assistance, please use the <a href="../../common/help">this page</a>.</p>
@@ -1279,7 +1361,7 @@ cms\/Role=production cms.prod
 </tr>
 </tbody>
 </table>
-<p>Find instructions to request a host certificate <a href="https://twiki.grid.iu.edu/bin/view/Documentation/Release3/GetHostServiceCertificates">here</a>.</p>
+<p>Find instructions to request a host certificate <a href="../../security/host-certs">here</a>.</p>
 <h3 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">&para;</a></h3>
 <table>
 <thead>

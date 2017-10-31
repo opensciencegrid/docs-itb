@@ -27,6 +27,16 @@
   <script src="../../js/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69012-29', 'opensciencegrid.github.io');
+      ga('send', 'pageview');
+  </script>
+  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -58,105 +68,8 @@
             <li class="toctree-l1">
 		
   
-    <a class="" href="../../install-overview/">Installation Overview</a>
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
     <a class="" href="../../site-planning/">Site Planning</a>
   
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Install Guides - Common</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../common/install-best-practices/">Install Best Practices</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/ca/">CA Certificates</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/osg-ca-certs-updater/">OSG CA Certificates Updater</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/yum/">Yum Repos</a>
-  
-        </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Install Guides - Worker Node</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../install-wn/">Worker Node (RPM install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../install-wn-tarball/">Worker Node (tarball install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../install-wn-oasis/">Worker Node (OASIS install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../install-cvmfs/">CVMFS</a>
-  
-        </li>
-        <li class=" current">
-          
-  
-    <a class="current" href="./">Singularity</a>
-  
-  <ul class="subnav">
-      
-    <li class="toctree-l3"><a href="#install-singularity">Install Singularity</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#before-starting">Before Starting</a></li>
-        
-            <li><a class="toctree-l4" href="#using-singularity-via-cvmfs-el-7-only">Using Singularity via CVMFS (EL 7 only)</a></li>
-        
-            <li><a class="toctree-l4" href="#installing-singularity">Installing singularity</a></li>
-        
-            <li><a class="toctree-l4" href="#configuring-singularity">Configuring singularity</a></li>
-        
-            <li><a class="toctree-l4" href="#validating-singularity">Validating singularity</a></li>
-        
-            <li><a class="toctree-l4" href="#starting-and-stopping-services">Starting and Stopping services</a></li>
-        
-        </ul>
-    
-
-  </ul>
-        </li>
-  </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -198,24 +111,149 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Install Guides - Data</span>
+  <span class="caption-text">Worker Node</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../data/gridftp/">GridFTP Server</a>
+    <a class="" href="../using-wn/">Worker Node Overview</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/frontier-squid/">HTTP Cache</a>
+    <a class="" href="../install-wn/">Worker Node (RPM install)</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/install-xroot-client/">XRootD Client</a>
+    <a class="" href="../install-wn-tarball/">Worker Node (tarball install)</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../install-wn-oasis/">Worker Node (OASIS install)</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../install-cvmfs/">CVMFS</a>
+  
+        </li>
+        <li class=" current">
+          
+  
+    <a class="current" href="./">Singularity</a>
+  
+  <ul class="subnav">
+      
+    <li class="toctree-l3"><a href="#install-singularity">Install Singularity</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#before-starting">Before Starting</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#enabling-unprivileged-mode-for-singularity">Enabling Unprivileged Mode for Singularity</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#validating-singularity">Validating singularity</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#installing-singularity-as-privileged">Installing Singularity as Privileged</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#configuring-singularity">Configuring singularity</a></li>
+        
+            <li><a class="toctree-l4" href="#validating-singularity_1">Validating singularity</a></li>
+        
+            <li><a class="toctree-l4" href="#starting-and-stopping-services">Starting and Stopping services</a></li>
+        
+        </ul>
+    
+
+  </ul>
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../data/frontier-squid/">Install HTTP Cache</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/update-oasis/">Update OASIS</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/external-oasis-repos/">External OASIS repositories</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/gridftp/">Install GridFTP Server</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/load-balanced-gridftp/">Install Load Balanced GridFTP</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-gridftp-xrootd/">Install GridFtp XRootD</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/hadoop-overview/">Hadoop Overview</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-hadoop-2-0-0/">Hadoop</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/xrootd-overview/">XRootD Overview</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-xroot-client/">Install XRootD Client</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-xrootd/">Install XRootD</a>
   
         </li>
   </ul>
@@ -223,14 +261,8 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Install Guides - Other</span>
+  <span class="caption-text">Security</span>
   <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../other/gsissh/">GSI-enabled SSH</a>
-  
-        </li>
         <li class="">
           
   
@@ -240,7 +272,88 @@
         <li class="">
           
   
-    <a class="" href="../../other/install-osg-upcoming-software/">OSG upcoming software</a>
+    <a class="" href="../../security/host-certs/">Host Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../security/user-certs/">User Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../security/osg-ca-manage/">Managing CAs</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Common</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../common/install-best-practices/">Install Best Practices</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/ca/">CA Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/osg-ca-certs-updater/">OSG CA Certificates Updater</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/yum/">Yum Repos</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/openjdk7/">Java 7</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Usage Guides</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../common/pki-cli/">Certificate Tools</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../other/configuration-with-osg-configure/">Configuration with OSG-Configure</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Other</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../other/gsissh/">GSI-enabled SSH</a>
   
         </li>
         <li class="">
@@ -255,41 +368,10 @@
     <a class="" href="../../other/install-cvmfs-stratum1/">Install a CVMFS Stratum 1</a>
   
         </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Monitoring</span>
-  <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../monitoring/rsv-overview/">RSV Overview</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/install-rsv/">Install RSV</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/advanced-rsv-configuration/">Advanced RSV Configuration</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/rsv-control/">Manage RSV via rsv-control</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/install-rsv-gwms-tester/">RSV GlideinWMS Tester</a>
+    <a class="" href="../../other/network-performance-toolkit/">Network Performance Toolkit</a>
   
         </li>
   </ul>
@@ -320,6 +402,12 @@
         <li class="">
           
   
+    <a class="" href="../../other/install-osg-upcoming-software/">OSG upcoming software</a>
+  
+        </li>
+        <li class="">
+          
+  
     <a class="" href="../../release/yum-basics/">Yum Basics</a>
   
         </li>
@@ -340,24 +428,30 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Usage Guides</span>
+  <span class="caption-text">Monitoring</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../common/pki-cli/">Certificate Tools</a>
+    <a class="" href="../../monitoring/install-rsv/">Install RSV</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../other/configuration-with-osg-configure/">Configuration with OSG-Configure</a>
+    <a class="" href="../../monitoring/advanced-rsv-configuration/">Advanced RSV Configuration</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../using-wn/">Worker Node Environment</a>
+    <a class="" href="../../monitoring/rsv-control/">Manage RSV via rsv-control</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../monitoring/install-rsv-gwms-tester/">RSV GlideinWMS Tester</a>
   
         </li>
   </ul>
@@ -367,12 +461,6 @@
 		
   <span class="caption-text">Deprecated Software</span>
   <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../data/bestman-overview/">BeStMan Overview</a>
-  
-        </li>
         <li class="">
           
   
@@ -401,6 +489,12 @@
           
   
     <a class="" href="../install-glexec/">Worker node glexec Install</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../other/install-voms/">Install VOMS</a>
   
         </li>
   </ul>
@@ -670,7 +764,7 @@
     
       
         
-          <li>Install Guides - Worker Node &raquo;</li>
+          <li>Worker Node &raquo;</li>
         
       
     
@@ -702,23 +796,31 @@ to the root user, so it has to be installed with setuid-root
 executables.  Securing setuid-root programs is difficult, but singularity
 keeps that privileged code to a
 <a href="http://singularity.lbl.gov/docs-security">minimum</a> to keep the
-vulnerability low.  Beginning with the kernel released with RHEL 7.4,
-there is a new
+vulnerability low.</p>
+<p>Beginning with the kernel released with RHEL 7.4, there is a new
 <a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html-single/7.4_Release_Notes/index.html#technology_previews_kernel">technology preview feature</a>
-to allow unprivileged bind mounts in user name spaces, which allows
+to allow unprivileged bind mounts in user namespaces, which allows
 singularity to run as an unprivileged user.  The OSG has installed
-singularity in <a href="../install-cvmfs">cvmfs</a>, so if you have a RHEL 7.4 kernel
-or later you
-can avoid installing singularity at all and reduce vulnerability even
-further.  The RHEL 7.4 kernel (version 3.10.0-693) is available as a
-security update for all RHEL 7 based versions, even on systems that
-have not updated to RHEL 7.4.</p>
+singularity in <a href="../install-cvmfs">cvmfs</a>, so  you can avoid installing
+singularity at all.  The minimum version of the kernel (3.10.0-693) is
+available as at least a security update for all RHEL7-based releases.</p>
+<div class="admonition danger">
+<p class="admonition-title">Kernel vs. Userspace security</p>
+<p>Enabling unprivileged user namespaces increases the risk to the
+kernel. However, the kernel is more widely reviewed than Singularity and
+the additional capability given to users is more limited.
+OSG Security considers the non-setuid, kernel-based method to have a
+lower security risk.</p>
+</div>
 <p>The document is intended for system administrators who wish to either
-install singularity or enable it to be run as an unprivileged user.</p>
+install singularity or enable it to be run as an unprivileged user.
+<em>Note that no VO currently uses unprivileged mode in production</em>; however, several
+have this in testing.  Sites that want to support production jobs with singularity
+will need to choose the RPM method.</p>
 <div class="admonition note">
 <p class="admonition-title">Applicable versions</p>
-<p>The applicable software versions for this document are OSG Version &gt;= 3.4.3.
-The version of singularity installed should be &gt;= 2.3.1</p>
+<p>The applicable software versions for this document are OSG version 3.4.2 or later.
+The version of singularity installed should be 2.3.1 or later.</p>
 </div>
 <h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
 <p>As with all OSG software installations, there are some one-time (per host) steps to prepare in advance:</p>
@@ -727,14 +829,24 @@ The version of singularity installed should be &gt;= 2.3.1</p>
 <li>Obtain root access to the host</li>
 <li>If you're installing singularity, prepare the <a href="../../common/yum">required Yum repositories</a></li>
 </ul>
-<h2 id="using-singularity-via-cvmfs-el-7-only">Using Singularity via CVMFS (EL 7 only)<a class="headerlink" href="#using-singularity-via-cvmfs-el-7-only" title="Permanent link">&para;</a></h2>
-<p>If the operating system is an EL 7 variant, and has been updated to EL
-7.4 or the 7.4 kernel (3.10.0-693 or greater), you can skip
-installation altogether and use singularity through CVMFS:</p>
+<h1 id="enabling-unprivileged-mode-for-singularity">Enabling Unprivileged Mode for Singularity<a class="headerlink" href="#enabling-unprivileged-mode-for-singularity" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of October 2017, no VO in the OSG is ready to use non-setuid
+Singularity in production.  Only testing sites will need to follow
+these instructions; contact the VOs you support for more
+information.</p>
+<p>Most sites will want to follow the RPM install instructions until
+there is wider VO support.</p>
+</div>
+<p>If the operating system is an EL 7 variant and has been updated to the EL
+7.4 kernel (3.10.0-693 or greater), you can skip
+installation altogether and instead do these steps to enable
+singularity to be run as an unprivileged user via CVMFS:</p>
 <ol>
 <li>Set the <code>namespace.unpriv_enable=1</code> boot option.  The easiest way
     to do this is to add it in <code>/etc/sysconfig/grub</code> to the end of the
-    GRUB_CMDLINE_LINUX variable, before the ending double-quote.</li>
+    <code>GRUB_CMDLINE_LINUX</code> variable, before the ending double-quote.</li>
 <li>
 <p>Update the grub configuration:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> grub2-mkconfig -o /boot/grub2/grub.cfg
@@ -754,20 +866,25 @@ installation altogether and use singularity through CVMFS:</p>
 <p>Reboot</p>
 </li>
 <li>If you haven't yet installed <a href="../install-cvmfs">cvmfs</a>, do so.</li>
-<li>Log in as an ordinary unprivileged user and verify that singularity
-    works:<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> /cvmfs/oasis.opensciencegrid.org/mis/singularity/el7-x86_64/bin/singularity <span class="se">\</span>
-        <span class="nb">exec</span> -C -H <span class="nv">$HOME</span>:/srv /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo:el6 <span class="se">\</span>
-        ps -ef
+</ol>
+<h2 id="validating-singularity">Validating singularity<a class="headerlink" href="#validating-singularity" title="Permanent link">&para;</a></h2>
+<p>Once you have the host configured properly, log in as an ordinary unprivileged user and
+verify that singularity works:</p>
+<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> /cvmfs/oasis.opensciencegrid.org/mis/singularity/el7-x86_64/bin/singularity <span class="se">\</span>
+                <span class="nb">exec</span> -C -H <span class="nv">$HOME</span>:/srv /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo:el6 <span class="se">\</span>
+                ps -ef
 <span class="go">WARNING: Container does not have an exec helper script, calling &#39;cat&#39; directly</span>
 <span class="go">UID        PID  PPID  C STIME TTY          TIME CMD</span>
 <span class="go">user         1     0  0 21:34 ?        00:00:00 ps -ef</span>
 </pre></div>
 
 
-</li>
-</ol>
-<h2 id="installing-singularity">Installing singularity<a class="headerlink" href="#installing-singularity" title="Permanent link">&para;</a></h2>
-<p>To install singularity, make sure that your host is up to date before installing the required packages:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The remainder of this document pertains to the privileged (<code>setuid</code>) mode of singularity.</p>
+</div>
+<h1 id="installing-singularity-as-privileged">Installing Singularity as Privileged<a class="headerlink" href="#installing-singularity-as-privileged" title="Permanent link">&para;</a></h1>
+<p>To install singularity as <code>setuid</code>, make sure that your host is up to date before installing the required packages:</p>
 <ol>
 <li>
 <p>Clean yum cache:</p>
@@ -788,7 +905,7 @@ installation altogether and use singularity through CVMFS:</p>
 <p>The singularity packages are split into two parts, choose the command that corresponds to your host:</p>
 <ul>
 <li>
-<p>If you are installing singularity on a worker node, where images do not need to be created of a manipulated, install just the smaller part to limit the amount of setuid-root code that is installed:</p>
+<p>If you are installing singularity on a worker node, where images do not need to be created or manipulated, install just the smaller part to limit the amount of setuid-root code that is installed:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install singularity-runtime
 </pre></div>
 
@@ -807,17 +924,17 @@ installation altogether and use singularity through CVMFS:</p>
 <h2 id="configuring-singularity">Configuring singularity<a class="headerlink" href="#configuring-singularity" title="Permanent link">&para;</a></h2>
 <p>The default configuration of singularity is sufficient.  If you want
 to see what options are available, see <code>/etc/singularity/singularity.conf</code>.</p>
-<h2 id="validating-singularity">Validating singularity<a class="headerlink" href="#validating-singularity" title="Permanent link">&para;</a></h2>
+<h2 id="validating-singularity_1">Validating singularity<a class="headerlink" href="#validating-singularity_1" title="Permanent link">&para;</a></h2>
 <p>After singularity is installed, as an ordinary user run the following
 command to verify it:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> singlarity <span class="nb">exec</span> -C -H <span class="nv">$HOME</span>:/srv /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo:el6 ps -ef
+<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> singlarity <span class="nb">exec</span> -C -H <span class="nv">$HOME</span>:/srv /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo:el6 <span class="se">\</span>
+                ps -ef
 <span class="go">WARNING: Container does not have an exec helper script, calling &#39;cat&#39; directly</span>
 <span class="go">UID        PID  PPID  C STIME TTY          TIME CMD</span>
 <span class="go">user         1     0  0 21:34 ?        00:00:00 ps -ef</span>
 </pre></div>
 
 
-<p><br></p>
 <h2 id="starting-and-stopping-services">Starting and Stopping services<a class="headerlink" href="#starting-and-stopping-services" title="Permanent link">&para;</a></h2>
 <p>singularity has no services to start or stop.</p>
               
@@ -827,7 +944,7 @@ command to verify it:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../compute-element/htcondor-ce-overview/" class="btn btn-neutral float-right" title="HTCondor-CE Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../data/frontier-squid/" class="btn btn-neutral float-right" title="Install HTTP Cache">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../install-cvmfs/" class="btn btn-neutral" title="CVMFS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -861,7 +978,7 @@ command to verify it:</p>
         <span><a href="../install-cvmfs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../compute-element/htcondor-ce-overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../data/frontier-squid/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

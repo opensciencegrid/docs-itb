@@ -27,6 +27,16 @@
   <script src="../../js/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69012-29', 'opensciencegrid.github.io');
+      ga('send', 'pageview');
+  </script>
+  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -58,83 +68,8 @@
             <li class="toctree-l1">
 		
   
-    <a class="" href="../../install-overview/">Installation Overview</a>
-  
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  
     <a class="" href="../../site-planning/">Site Planning</a>
   
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Install Guides - Common</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../common/install-best-practices/">Install Best Practices</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/ca/">CA Certificates</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/osg-ca-certs-updater/">OSG CA Certificates Updater</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../common/yum/">Yum Repos</a>
-  
-        </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Install Guides - Worker Node</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-wn/">Worker Node (RPM install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-wn-tarball/">Worker Node (tarball install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-wn-oasis/">Worker Node (OASIS install)</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-cvmfs/">CVMFS</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../worker-node/install-singularity/">Singularity</a>
-  
-        </li>
-  </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -176,24 +111,42 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Install Guides - Data</span>
+  <span class="caption-text">Worker Node</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../data/gridftp/">GridFTP Server</a>
+    <a class="" href="../../worker-node/using-wn/">Worker Node Overview</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/frontier-squid/">HTTP Cache</a>
+    <a class="" href="../../worker-node/install-wn/">Worker Node (RPM install)</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/install-xroot-client/">XRootD Client</a>
+    <a class="" href="../../worker-node/install-wn-tarball/">Worker Node (tarball install)</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../worker-node/install-wn-oasis/">Worker Node (OASIS install)</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../worker-node/install-cvmfs/">CVMFS</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../worker-node/install-singularity/">Singularity</a>
   
         </li>
   </ul>
@@ -201,14 +154,81 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Install Guides - Other</span>
+  <span class="caption-text">Data</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../other/gsissh/">GSI-enabled SSH</a>
+    <a class="" href="../../data/frontier-squid/">Install HTTP Cache</a>
   
         </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/update-oasis/">Update OASIS</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/external-oasis-repos/">External OASIS repositories</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/gridftp/">Install GridFTP Server</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/load-balanced-gridftp/">Install Load Balanced GridFTP</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-gridftp-xrootd/">Install GridFtp XRootD</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/hadoop-overview/">Hadoop Overview</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-hadoop-2-0-0/">Hadoop</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/xrootd-overview/">XRootD Overview</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-xroot-client/">Install XRootD Client</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../data/install-xrootd/">Install XRootD</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Security</span>
+  <ul class="subnav">
         <li class=" current">
           
   
@@ -219,8 +239,6 @@
     <li class="toctree-l3"><a href="#installing-and-maintaining-the-lcmaps-voms-plugin">Installing and Maintaining the LCMAPS VOMS Plugin</a></li>
     
         <ul>
-        
-            <li><a class="toctree-l4" href="#about-this-guide">About This Guide</a></li>
         
             <li><a class="toctree-l4" href="#installing-the-lcmaps-voms-plugin">Installing the LCMAPS VOMS Plugin</a></li>
         
@@ -242,7 +260,88 @@
         <li class="">
           
   
-    <a class="" href="../../other/install-osg-upcoming-software/">OSG upcoming software</a>
+    <a class="" href="../host-certs/">Host Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../user-certs/">User Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../osg-ca-manage/">Managing CAs</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Common</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../common/install-best-practices/">Install Best Practices</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/ca/">CA Certificates</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/osg-ca-certs-updater/">OSG CA Certificates Updater</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/yum/">Yum Repos</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../common/openjdk7/">Java 7</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Usage Guides</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../common/pki-cli/">Certificate Tools</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../other/configuration-with-osg-configure/">Configuration with OSG-Configure</a>
+  
+        </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Other</span>
+  <ul class="subnav">
+        <li class="">
+          
+  
+    <a class="" href="../../other/gsissh/">GSI-enabled SSH</a>
   
         </li>
         <li class="">
@@ -257,41 +356,10 @@
     <a class="" href="../../other/install-cvmfs-stratum1/">Install a CVMFS Stratum 1</a>
   
         </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Monitoring</span>
-  <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../monitoring/rsv-overview/">RSV Overview</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/install-rsv/">Install RSV</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/advanced-rsv-configuration/">Advanced RSV Configuration</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/rsv-control/">Manage RSV via rsv-control</a>
-  
-        </li>
-        <li class="">
-          
-  
-    <a class="" href="../../monitoring/install-rsv-gwms-tester/">RSV GlideinWMS Tester</a>
+    <a class="" href="../../other/network-performance-toolkit/">Network Performance Toolkit</a>
   
         </li>
   </ul>
@@ -322,6 +390,12 @@
         <li class="">
           
   
+    <a class="" href="../../other/install-osg-upcoming-software/">OSG upcoming software</a>
+  
+        </li>
+        <li class="">
+          
+  
     <a class="" href="../../release/yum-basics/">Yum Basics</a>
   
         </li>
@@ -342,24 +416,30 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Usage Guides</span>
+  <span class="caption-text">Monitoring</span>
   <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../common/pki-cli/">Certificate Tools</a>
+    <a class="" href="../../monitoring/install-rsv/">Install RSV</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../other/configuration-with-osg-configure/">Configuration with OSG-Configure</a>
+    <a class="" href="../../monitoring/advanced-rsv-configuration/">Advanced RSV Configuration</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../worker-node/using-wn/">Worker Node Environment</a>
+    <a class="" href="../../monitoring/rsv-control/">Manage RSV via rsv-control</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../monitoring/install-rsv-gwms-tester/">RSV GlideinWMS Tester</a>
   
         </li>
   </ul>
@@ -369,12 +449,6 @@
 		
   <span class="caption-text">Deprecated Software</span>
   <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="../../data/bestman-overview/">BeStMan Overview</a>
-  
-        </li>
         <li class="">
           
   
@@ -403,6 +477,12 @@
           
   
     <a class="" href="../../worker-node/install-glexec/">Worker node glexec Install</a>
+  
+        </li>
+        <li class="">
+          
+  
+    <a class="" href="../../other/install-voms/">Install VOMS</a>
   
         </li>
   </ul>
@@ -672,7 +752,7 @@
     
       
         
-          <li>Install Guides - Other &raquo;</li>
+          <li>Security &raquo;</li>
         
       
     
@@ -690,8 +770,7 @@
             <div class="section">
               
                 <h1 id="installing-and-maintaining-the-lcmaps-voms-plugin">Installing and Maintaining the LCMAPS VOMS Plugin<a class="headerlink" href="#installing-and-maintaining-the-lcmaps-voms-plugin" title="Permanent link">&para;</a></h1>
-<h2 id="about-this-guide">About This Guide<a class="headerlink" href="#about-this-guide" title="Permanent link">&para;</a></h2>
-<p>LCMAPS is a software library for mapping grid certificates of incoming connections to specific Unix accounts. The LCMAPS VOMS plugin enables LCMAPS to make mapping decisions based on the VOMS attributes of grid certificates, e.g., <code>/cms/Role=production/Capability=NULL</code>. Starting in OSG 3.4, the LCMAPS VOMS plugin will replace GUMS and edg-mkgridmap as the authentication method at OSG sites.</p>
+<p>LCMAPS is a software library used on <a href="../../compute-element/install-htcondor-ce">HTCondor-CE</a>, <a href="../../data/gridftp">GridFTP</a>, or <a href="../../data/install-xrootd">XRootD</a> hosts for mapping grid certificates of incoming connections to specific Unix accounts. The LCMAPS VOMS plugin enables LCMAPS to make mapping decisions based on the VOMS attributes of grid certificates, e.g., <code>/cms/Role=production/Capability=NULL</code>. Starting in OSG 3.4, the LCMAPS VOMS plugin will replace GUMS and edg-mkgridmap as the authentication method at OSG sites.</p>
 <p>The OSG provides a default set of mappings from VOMS attributes to Unix accounts. By configuring LCMAPS, you can override these mappings, including changing the Unix account that a VO is mapped to, banning based on VOMS attributes, banning a specific user, or adding a VO, VO group, VO role, and/or user that is not in the OSG's set of mappings.</p>
 <p>Use this page to learn how to install and configure the LCMAPS VOMS plugin to authenticate users to access your resources on a per-VO basis.</p>
 <h2 id="installing-the-lcmaps-voms-plugin">Installing the LCMAPS VOMS Plugin<a class="headerlink" href="#installing-the-lcmaps-voms-plugin" title="Permanent link">&para;</a></h2>
@@ -729,12 +808,13 @@
 <p>Additionally, there is <a href="#optional-configuration">optional configuration</a> if you need to make changes to the default mappings.</p>
 <h3 id="enabling-the-lcmaps-voms-plugin">Enabling the LCMAPS VOMS plugin<a class="headerlink" href="#enabling-the-lcmaps-voms-plugin" title="Permanent link">&para;</a></h3>
 <p>To configure your host to use LCMAPS VOMS plugin authentication, edit <code>/etc/osg/config.d/10-misc.ini</code> and set the following options:</p>
-<div class="codehilite"><pre><span></span><span class="na">glexec_location</span> <span class="o">=</span> <span class="s">UNAVAILABLE</span>
-<span class="na">edit_lcmaps_db</span> <span class="o">=</span> <span class="s">True</span>
+<div class="codehilite"><pre><span></span><span class="na">edit_lcmaps_db</span> <span class="o">=</span> <span class="s">True</span>
 <span class="na">authorization_method</span> <span class="o">=</span> <span class="s">vomsmap</span>
 </pre></div>
 
 
+<p>If the <code>glexec_location</code> option is present, you must comment it out or set it to <code>UNAVAILABLE</code>.
+The LCMAPS VOMS plugin does not work with gLExec.</p>
 <h3 id="supporting-mapped-vos-and-users">Supporting mapped VOs and users<a class="headerlink" href="#supporting-mapped-vos-and-users" title="Permanent link">&para;</a></h3>
 <p>Unix accounts must exist for each VO, VO role, VO group, or user you choose to support in the <a href="#configuration-files">mapfiles</a>:</p>
 <ol>
@@ -788,6 +868,7 @@
 <li><a href="#mapping-users">Mapping users</a></li>
 <li><a href="#banning-vos">Banning VOs</a></li>
 <li><a href="#banning-users">Banning users</a></li>
+<li><a href="#mapping-using-all-fqans">Mapping using all FQANs</a></li>
 </ul>
 <h4 id="migrating-from-edg-mkgridmap">Migrating from edg-mkgridmap<a class="headerlink" href="#migrating-from-edg-mkgridmap" title="Permanent link">&para;</a></h4>
 <p>The program edg-mkgridmap (found in the package <code>edg-mkgridmap</code>), used for authentication on HTCondor-CE, GridFTP, and XRootD hosts, is no longer available starting in OSG 3.4. The LCMAPS VOMS plugin (package <code>lcmaps-plugins-voms</code>) now provides the same functionality. To migrate from edg-mkgridmap to the LCMAPS VOMS plugin, perform the following procedure:</p>
@@ -831,14 +912,14 @@
 <p>If you are converting an HTCondor-CE host, remove the HTCondor-CE <code>GRIDMAP</code> configuration. Otherwise, skip to the next step.</p>
 <ol>
 <li>
-<p>Find the location of this configuration using the following command:</p>
+<p>Find where <code>GRIDMAP</code> is set:</p>
 <div class="codehilite"><pre><span></span><span class="gp">[root@ce]#</span> condor_ce_config_val -v GRIDMAP
 </pre></div>
 
 
 </li>
 <li>
-<p>Delete the line that sets the <code>GRIDMAP</code> configuration variable</p>
+<p>If the above command returns <code>Not defined: GRIDMAP</code>, skip to step 4. Otherwise, delete the line that sets the <code>GRIDMAP</code> configuration variable</p>
 </li>
 <li>Reconfigure HTCondor-CE:<div class="codehilite"><pre><span></span><span class="gp">[root@ce]#</span> condor_ce_reconfig
 </pre></div>
@@ -875,6 +956,7 @@ The patterns are compared in the order they are listed in. Therefore, more gener
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Unix account must exist for the user to be mapped. If a VO's Unix account is missing, that VO will not be able to access your resources.</p>
+<p>Additionally, if you map VOMS attributes to a non-existent user in <code>/etc/grid-security/voms-mapfile</code>, <code>/usr/share/osg/voms-mapfile-default</code> will be considered next to find a mapping. The best way to ban a VO is edit <code>/etc/grid-security/ban-voms-mapfile</code> as described in <a href="#banning-vos">Banning VOs</a> below. Do not edit <code>voms-mapfile-default</code> as your changes will be overwritten upon updates.</p>
 </div>
 <h4 id="mapping-users">Mapping users<a class="headerlink" href="#mapping-users" title="Permanent link">&para;</a></h4>
 <p><code>/etc/grid-security/grid-mapfile</code> is used to map specific users to Unix accounts based on their certificates' DNs. An example of the format of a <code>grid-mapfile</code> follows:</p>
@@ -910,6 +992,20 @@ The patterns are compared in the order they are listed in. Therefore, more gener
 <p class="admonition-title">Warning</p>
 <p><code>/etc/grid-security/ban-mapfile</code> <em>must</em> exist, even if you are not banning any users. In that case, the file should be blank. If the file does not exist, LCMAPS will ban every user.</p>
 </div>
+<h3 id="mapping-using-all-fqans">Mapping using all FQANs<a class="headerlink" href="#mapping-using-all-fqans" title="Permanent link">&para;</a></h3>
+<p>By default, the LCMAPS VOMS plugin only considers the first FQAN of a VOMS proxy for mapping. This matches the behavior of GUMS. If you want to consider all FQANs, you must set the appropriate option.</p>
+<ul>
+<li>
+<p>If you are using osg-configure, set <code>all_fqans = True</code> in <code>10-misc.ini</code>, then run <code>osg-configure -c</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using OSG 3.3, osg-configure should be at least version 1.10.2.  If you are using OSG 3.4, osg-configure should be at least version 2.2.2.</p>
+</div>
+</li>
+<li>
+<p>If you are configuring <code>lcmaps.db</code> manually (see <a href="#manual-configuration">manual configuration</a> below), add <code>"-all-fqans"</code> to the module definitions for <code>vomsmapfile</code> and <code>defaultmapfile</code></p>
+</li>
+</ul>
 <h2 id="validating-the-lcmaps-voms-plugin-vo-mappings">Validating the LCMAPS VOMS plugin VO mappings<a class="headerlink" href="#validating-the-lcmaps-voms-plugin-vo-mappings" title="Permanent link">&para;</a></h2>
 <p>To validate the LCMAPS VOMS plugin by itself, use the following procedure to test mapping your own cert to a user:</p>
 <ol>
@@ -1047,6 +1143,11 @@ The patterns are compared in the order they are listed in. Therefore, more gener
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>/usr/share/osg/voms-mapfile-default</code> is not meant to be edited and will be overwritten on upgrades.
+All VO mappings can be overridden by editing the above files in <code>/etc/grid-security</code>.</p>
+</div>
 <h3 id="manual-configuration">Manual Configuration<a class="headerlink" href="#manual-configuration" title="Permanent link">&para;</a></h3>
 <p>This section is intended for use as reference if you choose to forego configuring the LCMAPS VOMS plugin via osg-configure (i.e., if you prefer a configuration management system like <a href="https://www.ansible.com/">Ansible</a> or <a href="https://puppet.com/">Puppet</a>). Therefore, the following instructions serve as a replacement for <a href="#applying-configuration-settings">this section</a> above.</p>
 <p>LCMAPS is configured in <code>/etc/lcmaps.db</code>. and since the VOMS plugin is a newer component, configuration for it may not be present in your existing <code>/etc/lcmaps.db</code> file.</p>
@@ -1099,10 +1200,10 @@ defaultmapfile -&gt; good | bad
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../other/install-osg-upcoming-software/" class="btn btn-neutral float-right" title="OSG upcoming software">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../host-certs/" class="btn btn-neutral float-right" title="Host Certificates">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../other/gsissh/" class="btn btn-neutral" title="GSI-enabled SSH"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../data/install-xrootd/" class="btn btn-neutral" title="Install XRootD"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -1130,10 +1231,10 @@ defaultmapfile -&gt; good | bad
           <a href="https://github.com/opensciencegrid/docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../other/gsissh/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../data/install-xrootd/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../other/install-osg-upcoming-software/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../host-certs/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
