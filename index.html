@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./css/theme.css" type="text/css" />
   <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="./css/highlight.css">
+  <link href="./css/itb.css" rel="stylesheet">
   <link href="./css/extra.css" rel="stylesheet">
   
   <script>
@@ -264,7 +265,7 @@
         <li class="">
           
   
-    <a class="" href="security/osg-ca-manage/">Managing CAs</a>
+    <a class="" href="security/certificate-management/">Certificate Management Reference</a>
   
         </li>
   </ul>
@@ -289,12 +290,6 @@
         <li class="">
           
   
-    <a class="" href="common/osg-ca-certs-updater/">OSG CA Certificates Updater</a>
-  
-        </li>
-        <li class="">
-          
-  
     <a class="" href="common/yum/">Yum Repos</a>
   
         </li>
@@ -302,19 +297,6 @@
           
   
     <a class="" href="common/openjdk7/">Java 7</a>
-  
-        </li>
-  </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-  <span class="caption-text">Usage Guides</span>
-  <ul class="subnav">
-        <li class="">
-          
-  
-    <a class="" href="common/pki-cli/">Certificate Tools</a>
   
         </li>
         <li class="">
@@ -722,6 +704,16 @@
   
 	    </li>
           
+            <li class="toctree-l1">
+		
+  
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -763,7 +755,7 @@
 <li>If you are a researcher interested in using OSG resources, you can find user documentation <a href="https://support.opensciencegrid.org/support/home">here</a>. </li>
 <li>If you'd like to learn more about the OSG and our mission, visit our website <a href="https://www.opensciencegrid.org/">here</a>.</li>
 </ul>
-<p>This document outlines the overall installation process for an OSG site and provides many links into detailed installation, configuration, troubleshooting, and similar pages. If you do not see software-related technical documentation listed here, try the search bar to the left or contacting us at <a href="mailto:goc@opensciencegrid.org">goc@opensciencegrid.org</a>.</p>
+<p>This document outlines the overall installation process for an OSG site and provides many links into detailed installation, configuration, troubleshooting, and similar pages. If you do not see software-related technical documentation listed here, try the search bar to the left or contacting us at <a href="mailto:help@opensciencegrid.org">help@opensciencegrid.org</a>.</p>
 <h2 id="plan-the-site">Plan the Site<a class="headerlink" href="#plan-the-site" title="Permanent link">&para;</a></h2>
 <p>If you have not done so already, <a href="./site-planning">plan the overall architecture of your OSG site</a>. It is recommended that your plan be sufficiently detailed to include the OSG hosts that are needed and the main software components for each host. Be sure to consider <a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/SupportedOperatingSystems">the operating systems that OSG supports</a>. For example, a basic site might include:</p>
 <table>
@@ -789,7 +781,7 @@
 </table>
 <h2 id="prepare-the-batch-system">Prepare the Batch System<a class="headerlink" href="#prepare-the-batch-system" title="Permanent link">&para;</a></h2>
 <p>The assumption is that you have an existing batch system at your site. Currently, we support <a href="http://research.cs.wisc.edu/htcondor/">HTCondor</a>, <a href="http://www-03.ibm.com/systems/platformcomputing/products/lsf/">LSF</a>, <a href="http://www.pbsworks.com">PBS</a> and <a href="http://www.adaptivecomputing.com/products/open-source/torque/">TORQUE</a>, <a href="http://en.wikipedia.org/wiki/Oracle_Grid_Engine">SGE</a>, and <a href="http://slurm.schedmd.com">Slurm</a> batch systems.</p>
-<p>For smaller sites (less than 50 worker nodes), the most common way to add a site to OSG is to install the OSG Compute Element (CE) on the central host of your batch system.  At such a site - especially if you have minimal time to maintain a CE - you may want to contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#111;&#99;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#103;&#111;&#99;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a> to ask about using an OSG-hosted CE instead of running your own.  Before proceeding with an install, be sure that you can submit and successfully run a job from your OSG CE host into your batch system.</p>
+<p>For smaller sites (less than 50 worker nodes), the most common way to add a site to OSG is to install the OSG Compute Element (CE) on the central host of your batch system.  At such a site - especially if you have minimal time to maintain a CE - you may want to contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a> to ask about using an OSG-hosted CE instead of running your own.  Before proceeding with an install, be sure that you can submit and successfully run a job from your OSG CE host into your batch system.</p>
 <h2 id="add-osg-software">Add OSG Software<a class="headerlink" href="#add-osg-software" title="Permanent link">&para;</a></h2>
 <p>If necessary, provision all OSG hosts that are in your site plan and that do not exist yet.</p>
 <div class="admonition note">
@@ -808,9 +800,9 @@
 <ul>
 <li><a href="./common/ca">Installing the grid certificate authorities (CAs)</a></li>
 <li><a href="./security/host-certs">How do I get PKI host and service X.509 certificates?</a></li>
-<li><a href="./common/osg-ca-certs-updater">Automatically updating the grid certificate authorities (CAs)</a></li>
+<li><a href="./security/certificate-management">Automatically updating the grid certificate authorities (CAs)</a></li>
 <li><a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/SHA2Compliance">SHA-2 certificates and minimum required OSG software versions</a></li>
-<li><a href="./common/pki-cli">OSG PKI command line client reference</a></li>
+<li><a href="./security/certificate-management">OSG PKI command line client reference</a></li>
 </ul>
 <h3 id="adding-osg-software-to-worker-nodes">Adding OSG Software to Worker Nodes<a class="headerlink" href="#adding-osg-software-to-worker-nodes" title="Permanent link">&para;</a></h3>
 <ul>
@@ -946,5 +938,5 @@
 
 <!--
 MkDocs version : 0.17.1
-Build Date UTC : 2017-11-07 21:53:17
+Build Date UTC : 2017-11-07 22:55:06
 -->
