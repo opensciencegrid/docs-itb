@@ -2,6 +2,8 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
+  <meta name="robots" contents="noindex, nofollow" />
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -145,7 +147,7 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Data</span>
+  <span class="caption-text">Data - HTTP & CVMFS</span>
   <ul class="subnav">
         <li class="">
           
@@ -156,15 +158,22 @@
         <li class="">
           
   
-    <a class="" href="../../data/update-oasis/">Update OASIS</a>
+    <a class="" href="../../data/update-oasis/">Update OASIS Shared Repo</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/external-oasis-repos/">External OASIS repositories</a>
+    <a class="" href="../../data/external-oasis-repos/">Install an OASIS Repo</a>
   
         </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data - POSIX Storage</span>
+  <ul class="subnav">
         <li class="">
           
   
@@ -177,24 +186,32 @@
     <a class="" href="../../data/load-balanced-gridftp/">Install Load Balanced GridFTP</a>
   
         </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data - HDFS</span>
+  <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../data/install-gridftp-xrootd/">Install GridFtp XRootD</a>
+    <a class="" href="../../data/hadoop-overview/">HDFS Overview</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/hadoop-overview/">Hadoop Overview</a>
+    <a class="" href="../../data/install-hadoop-2-0-0/">Install HDFS</a>
   
         </li>
-        <li class="">
+  </ul>
+	    </li>
           
-  
-    <a class="" href="../../data/install-hadoop-2-0-0/">Hadoop</a>
-  
-        </li>
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data - XRootD</span>
+  <ul class="subnav">
         <li class="">
           
   
@@ -204,13 +221,13 @@
         <li class="">
           
   
-    <a class="" href="../../data/install-xroot-client/">Install XRootD Client</a>
+    <a class="" href="../../data/install-xrootd/">Install XRootD</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/install-xrootd/">Install XRootD</a>
+    <a class="" href="../../data/install-xroot-client/">Install XRootD Client</a>
   
         </li>
   </ul>
@@ -910,7 +927,10 @@
 </tr>
 </tbody>
 </table>
-<p>Note that if uid 48 is already taken but not used for the appropriate users, you will experience errors. <a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/KnownProblems#Reserved_user_ids_especially_for">Details...</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>UID 48 is reserved by RedHat for user <code>apache</code>.  If it is already taken by a different username, you will experience errors.</p>
+</div>
 <h2 id="credentials-and-proxies">Credentials and Proxies<a class="headerlink" href="#credentials-and-proxies" title="Permanent link">&para;</a></h2>
 <p>The VO Frontend will use two credentials in its interactions with the the other glideinWMS services. At this time, these will be proxy files.</p>
 <ol>
@@ -1019,7 +1039,7 @@
 <h1 id="installation-procedure">Installation Procedure<a class="headerlink" href="#installation-procedure" title="Permanent link">&para;</a></h1>
 <p>Refer to installation of the <a href="../../common/ca">CA certificates</a></p>
 <h2 id="install-htcondor">Install HTCondor<a class="headerlink" href="#install-htcondor" title="Permanent link">&para;</a></h2>
-<p>Most required software is installed from the Frontend RPM installation. HTCondor is the only exception since there are <a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/CondorInformation">many different ways to install it</a>, using the RPM system or not. You need to have HTCondor installed before installing the Glidein WMS Frontend. If yum cannot find a HTCondor RPM, it will install the dummy <code>empty-condor</code> RPM, assuming that you installed HTCondor using a tarball distribution.</p>
+<p>Most required software is installed from the Frontend RPM installation. You need to have HTCondor installed before installing the Glidein WMS Frontend. If yum cannot find a HTCondor RPM, it will install the dummy <code>empty-condor</code> RPM, assuming that you installed HTCondor using a tarball distribution.</p>
 <p>If you don't have HTCondor already installed, you can install the HTCondor RPM from the OSG repository:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install condor.x86_64
 <span class="gp">#</span> If you have a <span class="m">32</span> bit host use instead:
@@ -1027,7 +1047,6 @@
 </pre></div>
 
 
-<p>See <a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/CondorInformation">this HTCondor document</a> for more information on the different options.</p>
 <h2 id="download-and-install-the-vo-frontend-rpm">Download and install the VO Frontend RPM<a class="headerlink" href="#download-and-install-the-vo-frontend-rpm" title="Permanent link">&para;</a></h2>
 <p>The RPM is available in the OSG repository:</p>
 <p>Install the RPM and dependencies (be prepared for a lot of dependencies).</p>
@@ -1852,13 +1871,11 @@ queue
 <p>Definitions:</p>
 <ul>
 <li>What is a <a href="https://www.opensciencegrid.org/about/organization/">Virtual Organisation</a></li>
-<li><a href="http://twiki.opensciencegrid.org/bin/view/Documentation/UsingTheGrid">Introduction to the Grid for users/scientists</a></li>
 </ul>
 <p>Documents about the Glidein-WMS system and the VO frontend:</p>
 <ul>
 <li><a href="http://www.uscms.org/SoftwareComputing/Grid/WMS/glideinWMS/">http://www.uscms.org/SoftwareComputing/Grid/WMS/glideinWMS/</a></li>
 <li><a href="http://www.uscms.org/SoftwareComputing/Grid/WMS/glideinWMS/doc.prd/manual/">http://www.uscms.org/SoftwareComputing/Grid/WMS/glideinWMS/doc.prd/manual/</a></li>
-<li><a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/GlideinWMSCampusGrid">How to setup a Submit host flocking to the VO Frontend</a></li>
 </ul>
               
             </div>

@@ -2,6 +2,8 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
+  <meta name="robots" contents="noindex, nofollow" />
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -145,7 +147,7 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Data</span>
+  <span class="caption-text">Data - HTTP & CVMFS</span>
   <ul class="subnav">
         <li class="">
           
@@ -156,15 +158,22 @@
         <li class="">
           
   
-    <a class="" href="../../data/update-oasis/">Update OASIS</a>
+    <a class="" href="../../data/update-oasis/">Update OASIS Shared Repo</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/external-oasis-repos/">External OASIS repositories</a>
+    <a class="" href="../../data/external-oasis-repos/">Install an OASIS Repo</a>
   
         </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data - POSIX Storage</span>
+  <ul class="subnav">
         <li class="">
           
   
@@ -177,24 +186,32 @@
     <a class="" href="../../data/load-balanced-gridftp/">Install Load Balanced GridFTP</a>
   
         </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data - HDFS</span>
+  <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../data/install-gridftp-xrootd/">Install GridFtp XRootD</a>
+    <a class="" href="../../data/hadoop-overview/">HDFS Overview</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/hadoop-overview/">Hadoop Overview</a>
+    <a class="" href="../../data/install-hadoop-2-0-0/">Install HDFS</a>
   
         </li>
-        <li class="">
+  </ul>
+	    </li>
           
-  
-    <a class="" href="../../data/install-hadoop-2-0-0/">Hadoop</a>
-  
-        </li>
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data - XRootD</span>
+  <ul class="subnav">
         <li class="">
           
   
@@ -204,13 +221,13 @@
         <li class="">
           
   
-    <a class="" href="../../data/install-xroot-client/">Install XRootD Client</a>
+    <a class="" href="../../data/install-xrootd/">Install XRootD</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/install-xrootd/">Install XRootD</a>
+    <a class="" href="../../data/install-xroot-client/">Install XRootD Client</a>
   
         </li>
   </ul>
@@ -820,7 +837,7 @@
 <h2 id="install-instructions">Install Instructions<a class="headerlink" href="#install-instructions" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The glexec tracking function requires a part of HTCondor. There are multiple ways to install HTCondor, for details see <a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/CondorInformation">these instructions</a>. If you want a minimal install, you can run just this command to install the needed piece from the OSG distribution:</p>
+<p>The glexec tracking function requires a part of HTCondor. There are multiple ways to install HTCondor; if you want a minimal install, you can run just this command to install the needed piece from the OSG distribution:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install condor-procd
 </pre></div>
 
@@ -888,7 +905,6 @@ gridmapfile -&gt; glexectracking
 
 
 <p>If <code>glexec</code> is successful, it will print out the uid and gid that your proxy would normally be mapped to by your GUMS server, plus a supplementary tracking group. (The actual names and numbers will be different from what you see above.)</p>
-<p>If you have problems, please read about <a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/TroubleshootingGlexecLcmaps">troubleshooting glexec</a>.</p>
 <h2 id="glexec-log-files">Glexec log files<a class="headerlink" href="#glexec-log-files" title="Permanent link">&para;</a></h2>
 <p>Glexec sends all its log information by default to syslog. By default they go to <code>/var/log/messages</code>, but this may differ if you have customized your syslog setup. Here are some sample messages:</p>
 <div class="codehilite"><pre><span></span>Apr 25 16:36:16 fermicloud053 glexec[2867]: lcmaps: lcmaps.mod-PluginInit(): plugin glexectracking not found (arguments: )

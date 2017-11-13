@@ -2,6 +2,8 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
+  <meta name="robots" contents="noindex, nofollow" />
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -145,7 +147,7 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Data</span>
+  <span class="caption-text">Data - HTTP & CVMFS</span>
   <ul class="subnav">
         <li class="">
           
@@ -156,15 +158,22 @@
         <li class="">
           
   
-    <a class="" href="../../data/update-oasis/">Update OASIS</a>
+    <a class="" href="../../data/update-oasis/">Update OASIS Shared Repo</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/external-oasis-repos/">External OASIS repositories</a>
+    <a class="" href="../../data/external-oasis-repos/">Install an OASIS Repo</a>
   
         </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data - POSIX Storage</span>
+  <ul class="subnav">
         <li class="">
           
   
@@ -177,24 +186,32 @@
     <a class="" href="../../data/load-balanced-gridftp/">Install Load Balanced GridFTP</a>
   
         </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data - HDFS</span>
+  <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../../data/install-gridftp-xrootd/">Install GridFtp XRootD</a>
+    <a class="" href="../../data/hadoop-overview/">HDFS Overview</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/hadoop-overview/">Hadoop Overview</a>
+    <a class="" href="../../data/install-hadoop-2-0-0/">Install HDFS</a>
   
         </li>
-        <li class="">
+  </ul>
+	    </li>
           
-  
-    <a class="" href="../../data/install-hadoop-2-0-0/">Hadoop</a>
-  
-        </li>
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data - XRootD</span>
+  <ul class="subnav">
         <li class="">
           
   
@@ -204,13 +221,13 @@
         <li class="">
           
   
-    <a class="" href="../../data/install-xroot-client/">Install XRootD Client</a>
+    <a class="" href="../../data/install-xrootd/">Install XRootD</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../data/install-xrootd/">Install XRootD</a>
+    <a class="" href="../../data/install-xroot-client/">Install XRootD Client</a>
   
         </li>
   </ul>
@@ -859,7 +876,7 @@
 </li>
 </ol>
 <p>This command will update <strong>all</strong> packages on your system.</p>
-<p><strong>Troubleshooting</strong> If you are not having the expected result or having problems with Yum please see the <a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/YumRpmBasics#Troubleshooting">Yum troubleshooting guide</a></p>
+<p><strong>Troubleshooting</strong> If you are not having the expected result or having problems with Yum please see the <a href="../../release/yum-basics#troubleshooting">Yum troubleshooting guide</a></p>
 <h2 id="migrating-from-edg-mkgridmap-to-lcmaps-voms-plugin">Migrating from edg-mkgridmap to LCMAPS VOMS Plugin<a class="headerlink" href="#migrating-from-edg-mkgridmap-to-lcmaps-voms-plugin" title="Permanent link">&para;</a></h2>
 <p>After following the update instructions above, perform the migration process documented <a href="../../security/lcmaps-voms-authentication#migrating-from-edg-mkgridmap">here</a>.</p>
 <h2 id="updating-from-frontier-squid-27-to-frontier-squid-35-upgrading-from-osg-33">Updating from Frontier Squid 2.7 to Frontier Squid 3.5 (upgrading from OSG 3.3)<a class="headerlink" href="#updating-from-frontier-squid-27-to-frontier-squid-35-upgrading-from-osg-33" title="Permanent link">&para;</a></h2>
@@ -963,9 +980,9 @@
 </div>
 <h1 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h1>
 <ul>
-<li><a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/YumRepositories">YUM Repositories</a></li>
-<li><a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/YumRpmBasics">Basic use of Yum</a></li>
-<li><a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/InstallBestPractices">Best practices in using Yum</a></li>
+<li><a href="../../common/yum">Yum repositories</a></li>
+<li><a href="../../release/yum-basics">Basic use of Yum</a></li>
+<li><a href="../../common/install-best-practices">Yum best practices</a></li>
 </ul>
               
             </div>

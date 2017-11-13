@@ -2,6 +2,8 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
+  <meta name="robots" contents="noindex, nofollow" />
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -145,7 +147,7 @@
           
             <li class="toctree-l1">
 		
-  <span class="caption-text">Data</span>
+  <span class="caption-text">Data - HTTP & CVMFS</span>
   <ul class="subnav">
         <li class="">
           
@@ -156,15 +158,22 @@
         <li class="">
           
   
-    <a class="" href="../update-oasis/">Update OASIS</a>
+    <a class="" href="../update-oasis/">Update OASIS Shared Repo</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../external-oasis-repos/">External OASIS repositories</a>
+    <a class="" href="../external-oasis-repos/">Install an OASIS Repo</a>
   
         </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data - POSIX Storage</span>
+  <ul class="subnav">
         <li class=" current">
           
   
@@ -203,24 +212,32 @@
     <a class="" href="../load-balanced-gridftp/">Install Load Balanced GridFTP</a>
   
         </li>
+  </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data - HDFS</span>
+  <ul class="subnav">
         <li class="">
           
   
-    <a class="" href="../install-gridftp-xrootd/">Install GridFtp XRootD</a>
+    <a class="" href="../hadoop-overview/">HDFS Overview</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../hadoop-overview/">Hadoop Overview</a>
+    <a class="" href="../install-hadoop-2-0-0/">Install HDFS</a>
   
         </li>
-        <li class="">
+  </ul>
+	    </li>
           
-  
-    <a class="" href="../install-hadoop-2-0-0/">Hadoop</a>
-  
-        </li>
+            <li class="toctree-l1">
+		
+  <span class="caption-text">Data - XRootD</span>
+  <ul class="subnav">
         <li class="">
           
   
@@ -230,13 +247,13 @@
         <li class="">
           
   
-    <a class="" href="../install-xroot-client/">Install XRootD Client</a>
+    <a class="" href="../install-xrootd/">Install XRootD</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../install-xrootd/">Install XRootD</a>
+    <a class="" href="../install-xroot-client/">Install XRootD Client</a>
   
         </li>
   </ul>
@@ -738,7 +755,7 @@
     
       
         
-          <li>Data &raquo;</li>
+          <li>Data - POSIX Storage &raquo;</li>
         
       
     
@@ -766,7 +783,12 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This document is for a standalone GridFTP server on top of POSIX storage.  <a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/InstallHadoop200SE">See this page</a> for installation and configuration of a GridFTP server on top of the Hadoop Distributed File System.</p>
+<p>This document is for a standalone GridFTP server on top of POSIX storage.  We have two specialized documents
+for Hadoop Distributed File System (HDFS) and XRootD based storage:</p>
+<ul>
+<li><a href="../install-hadoop-2-0-0#standalone-gridftp-node-installation">Install and configure a GridFTP server on top of HDFS.</a></li>
+<li><a href="../install-xrootd#optional-installing-a-gridftp-server">Install and configure a GridFTP server on top of XRootD.</a></li>
+</ul>
 </div>
 <h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
 <p>Before starting the installation process you will need to fulfill these prerequisites.</p>
@@ -1009,7 +1031,6 @@ ipc_interface IP-TO-USE
 <p>For this package to function correctly, you will have to create the users needed for grid operation. Any Unix username that can be mapped by LCMAPS VOMS, <code>edg-mkgridmap</code>, or GUMS should be created on the GridFTP host.</p>
 <p>For example, VOs newly-added to the LCMAPS VOMS configuration will not be able to transfer files until the corresponding Unix user account is created.</p>
 <h3 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">&para;</a></h3>
-<p>For more details on overall firewall configuration, please see our <a href="https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/FirewallInformation">firewall documentation</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1058,7 +1079,7 @@ ipc_interface IP-TO-USE
         <a href="../load-balanced-gridftp/" class="btn btn-neutral float-right" title="Install Load Balanced GridFTP">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../external-oasis-repos/" class="btn btn-neutral" title="External OASIS repositories"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../external-oasis-repos/" class="btn btn-neutral" title="Install an OASIS Repo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
