@@ -115,19 +115,19 @@
         <li class="">
           
   
-    <a class="" href="../../worker-node/install-wn/">Worker Node (RPM install)</a>
+    <a class="" href="../../worker-node/install-wn/">Worker Node via RPM</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../worker-node/install-wn-tarball/">Worker Node (tarball install)</a>
+    <a class="" href="../../worker-node/install-wn-tarball/">Worker Node via Tarball</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../worker-node/install-wn-oasis/">Worker Node (OASIS install)</a>
+    <a class="" href="../../worker-node/install-wn-oasis/">Worker Node via OASIS</a>
   
         </li>
         <li class="">
@@ -727,6 +727,31 @@
   
 	    </li>
           
+            <li class="toctree-l1">
+		
+  
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -804,7 +829,7 @@
 <ol>
 <li>
 <p>Request and generate the shared certificate:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> osg-gridadmin-cert-request -H &lt;VIRTUAL-HOSTNAME&gt; -a &lt;GRIDFTP-SERVER-#1-HOSTNAME&gt; <span class="o">[</span><span class="p">&amp;</span>hellip<span class="p">;</span><span class="o">]</span>
+<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> osg-gridadmin-cert-request -H &lt;VIRTUAL-HOSTNAME&gt; -a &lt;GRIDFTP-SERVER-#1-HOSTNAME&gt; <span class="o">[</span>...<span class="o">]</span>
 </pre></div>
 
 
@@ -843,7 +868,7 @@ export X509_USER_KEY=/etc/grid-security/gridftp/gridftp-hostkey.pem
 <p>Create a list of GridFTP server hostnames in <code>load-balanced-hosts.txt</code>:</p>
 <div class="codehilite"><pre><span></span>&lt;GRIDFTP-SERVER-#1-HOSTNAME&gt; &lt;VIRTUAL-HOSTNAME&gt;
 &lt;GRIDFTP-SERVER-#2-HOSTNAME&gt; &lt;VIRTUAL-HOSTNAME&gt;
-[&amp;hellip;]
+[...]
 </pre></div>
 
 
@@ -1001,7 +1026,7 @@ virtual_server &lt;VIRTUAL-IP-ADDRESS&gt; 2811 {
             connect_port 2811
         }
     }
-    &lt;[&amp;hellip;]&gt;
+    [...]
 }
 </pre></div>
 

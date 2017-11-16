@@ -115,19 +115,19 @@
         <li class="">
           
   
-    <a class="" href="../../../worker-node/install-wn/">Worker Node (RPM install)</a>
+    <a class="" href="../../../worker-node/install-wn/">Worker Node via RPM</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../../worker-node/install-wn-tarball/">Worker Node (tarball install)</a>
+    <a class="" href="../../../worker-node/install-wn-tarball/">Worker Node via Tarball</a>
   
         </li>
         <li class="">
           
   
-    <a class="" href="../../../worker-node/install-wn-oasis/">Worker Node (OASIS install)</a>
+    <a class="" href="../../../worker-node/install-wn-oasis/">Worker Node via OASIS</a>
   
         </li>
         <li class="">
@@ -482,6 +482,16 @@
   
 	    </li>
           
+            <li class="toctree-l1">
+		
+  
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  
+	    </li>
+          
             <li class="toctree-l1 current">
 		
   
@@ -507,6 +517,21 @@
     
 
   </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  
+	    </li>
+          
+            <li class="toctree-l1">
+		
+  
 	    </li>
           
             <li class="toctree-l1">
@@ -815,8 +840,14 @@
 </pre></div>
 
 
-<p><span class="twiki-macro NOTE"></span> Please be aware that running <code>yum update</code> may also update other RPMs. You can exclude packages from being updated using the <code>--exclude=[package-name or glob]</code> option for the <code>yum</code> command.</p>
-<p><span class="twiki-macro NOTE"></span> Watch the yum update carefully for any messages about a <code>.rpmnew</code> file being created. That means that a configuration file had been editted, and a new default version was to be installed. In that case, RPM does not overwrite the editted configuration file but instead installs the new version with a <code>.rpmnew</code> extension. You will need to merge any edits that have made into the <code>.rpmnew</code> file and then move the merged version into place (that is, without the <code>.rpmnew</code> extension). Watch especially for <code>/etc/lcmaps.db</code>, which every site is expected to edit.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please be aware that running <code>yum update</code> may also update other RPMs. You can exclude packages from being updated using the <code>--exclude=[package-name or glob]</code> option for the <code>yum</code> command.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Watch the yum update carefully for any messages about a <code>.rpmnew</code> file being created. That means that a configuration file had been editted, and a new default version was to be installed. In that case, RPM does not overwrite the editted configuration file but instead installs the new version with a <code>.rpmnew</code> extension. You will need to merge any edits that have made into the <code>.rpmnew</code> file and then move the merged version into place (that is, without the <code>.rpmnew</code> extension). Watch especially for <code>/etc/lcmaps.db</code>, which every site is expected to edit.</p>
+</div>
 <h2 id="need-help">Need help?<a class="headerlink" href="#need-help" title="Permanent link">&para;</a></h2>
 <p>Do you need help with this release? <a href="../../../common/help">Contact us for help</a>.</p>
 <h2 id="detailed-changes-in-this-release">Detailed changes in this release<a class="headerlink" href="#detailed-changes-in-this-release" title="Permanent link">&para;</a></h2>
@@ -855,8 +886,6 @@
 <div class="codehilite"><pre><span></span>condor condor-all condor-bosco condor-classads condor-classads-devel condor-cream-gahp condor-debuginfo condor-kbdd condor-procd condor-python condor-std-universe condor-test condor-vm-gahp globus-gridftp-server-control globus-gridftp-server-control-debuginfo globus-gridftp-server-control-devel gsi-openssh gsi-openssh-clients gsi-openssh-debuginfo gsi-openssh-server osg-build osg-build-base osg-build-koji osg-build-mock osg-build-tests osg-ca-scripts osg-configure osg-configure-bosco osg-configure-ce osg-configure-condor osg-configure-gateway osg-configure-gip osg-configure-gratia osg-configure-infoservices osg-configure-lsf osg-configure-managedfork osg-configure-misc osg-configure-network osg-configure-pbs osg-configure-rsv osg-configure-sge osg-configure-slurm osg-configure-squid osg-configure-tests osg-release osg-release-itb osg-tested-internal osg-version singularity singularity-debuginfo singularity-devel singularity-runtime
 </pre></div>
 
-
-</pre>
 
 <p>If you wish to only update the RPMs that changed, the set of RPMs is:</p>
 <h4 id="enterprise-linux-6_1">Enterprise Linux 6<a class="headerlink" href="#enterprise-linux-6_1" title="Permanent link">&para;</a></h4>
