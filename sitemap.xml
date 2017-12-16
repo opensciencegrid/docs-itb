@@ -3,7 +3,7 @@
 
     
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -11,7 +11,7 @@
 
     
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//site-planning/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//site-planning/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -20,71 +20,31 @@
     
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//compute-element/htcondor-ce-overview/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//compute-element/htcondor-ce-overview/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//compute-element/install-htcondor-ce/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//compute-element/install-htcondor-ce/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//compute-element/job-router-recipes/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//compute-element/job-router-recipes/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//compute-element/troubleshoot-htcondor-ce/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//compute-element/troubleshoot-htcondor-ce/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//compute-element/submit-htcondor-ce/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//worker-node/using-wn/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//worker-node/install-wn/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//worker-node/install-wn-tarball/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//worker-node/install-wn-oasis/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//worker-node/install-cvmfs/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//worker-node/install-singularity/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//compute-element/submit-htcondor-ce/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -94,51 +54,37 @@
     
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//data/frontier-squid/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//worker-node/using-wn/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//data/update-oasis/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//worker-node/install-wn/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//data/external-oasis-repos/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//data/gridftp/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//worker-node/install-wn-tarball/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//data/load-balanced-gridftp/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//data/hadoop-overview/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//worker-node/install-wn-oasis/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//data/install-hadoop-2-0-0/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//worker-node/install-cvmfs/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//worker-node/install-singularity/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -148,48 +94,26 @@
     
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//data/xrootd-overview/</loc>
-     <lastmod>2017-12-16</lastmod>
+     <loc>https://opensciencegrid.github.io/docs-itb/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//data/install-xrootd/</loc>
-     <lastmod>2017-12-16</lastmod>
+     <loc>https://opensciencegrid.github.io/docs-itb/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//data/install-xroot-client/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//security/lcmaps-voms-authentication/</loc>
-     <lastmod>2017-12-16</lastmod>
+     <loc>https://opensciencegrid.github.io/docs-itb/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//security/host-certs/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//security/user-certs/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//security/certificate-management/</loc>
-     <lastmod>2017-12-16</lastmod>
+     <loc>https://opensciencegrid.github.io/docs-itb/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -198,31 +122,25 @@
     
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//common/install-best-practices/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//security/lcmaps-voms-authentication/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//common/ca/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//security/host-certs/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//common/yum/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//security/user-certs/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//common/openjdk7/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//other/configuration-with-osg-configure/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//security/certificate-management/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -232,71 +150,31 @@
     
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//other/gsissh/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//common/install-best-practices/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//other/install-gwms-frontend/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//common/ca/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//other/install-cvmfs-stratum1/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//common/yum/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//other/network-performance-toolkit/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/notes/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//common/openjdk7/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/release_series/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/supported_platforms/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//other/install-osg-upcoming-software/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/yum-basics/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/signing/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/contrib/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//other/configuration-with-osg-configure/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -306,65 +184,25 @@
     
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//monitoring/install-rsv/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//other/gsissh/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//monitoring/advanced-rsv-configuration/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//other/install-gwms-frontend/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//monitoring/rsv-control/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//other/install-cvmfs-stratum1/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//monitoring/install-rsv-gwms-tester/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//data/bestman-install/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//data/install-bestman-xrootd/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//security/edg-mkgridmap/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//security/install-gums/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//worker-node/install-glexec/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//other/install-voms/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//other/network-performance-toolkit/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -372,472 +210,134 @@
     
 
     
+        
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//common/help/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//release/notes/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb/</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb/</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//release/release_series/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//release/supported_platforms/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//other/install-osg-upcoming-software/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//release/yum-basics/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//release/signing/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//release/contrib/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//monitoring/install-rsv/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//monitoring/advanced-rsv-configuration/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//monitoring/rsv-control/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//monitoring/install-rsv-gwms-tester/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//data/bestman-install/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//data/install-bestman-xrootd/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//security/edg-mkgridmap/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//security/install-gums/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//worker-node/install-glexec/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb//other/install-voms/</loc>
+     <lastmod>2017-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-5-3/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-30-3/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-5-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-30-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-5/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-30/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-4-3/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-29-3/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-4-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-29-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-4/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-29/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-3/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-28/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-2-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-1-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-1/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-0-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.4/release-3-4-0/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-27-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-27/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-26-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-26/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-25-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-25/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-24-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-24/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-23/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-22-3/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-22-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-22/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-21-3/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-21-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-21/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-20-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-20/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-19/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-18/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-17-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-17/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-16/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-15/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-14/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-13/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-12/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-11/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-10/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-9/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-8/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-7/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-6/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-5/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-4/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-3/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-2/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-1/</loc>
-     <lastmod>2017-12-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/itb.separate_itb_areas//release/3.3/release-3-3-0/</loc>
+     <loc>https://opensciencegrid.github.io/docs-itb//common/help/</loc>
      <lastmod>2017-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
