@@ -909,13 +909,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contents-of-osg-ca-package" title="Contents of OSG CA package" class="md-nav__link">
-    Contents of OSG CA package
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#configuration-files" title="Configuration files" class="md-nav__link">
     Configuration files
   </a>
@@ -2301,13 +2294,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contents-of-osg-ca-package" title="Contents of OSG CA package" class="md-nav__link">
-    Contents of OSG CA package
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#configuration-files" title="Configuration files" class="md-nav__link">
     Configuration files
   </a>
@@ -2391,10 +2377,11 @@ For example, <code>yum install osg-ce</code> will bring in <code>osg-ca-certs</c
 <h3 id="option-2-install-osg-ca-scripts">Option 2: Install osg-ca-scripts<a class="headerlink" href="#option-2-install-osg-ca-scripts" title="Permanent link">&para;</a></h3>
 <p>The <code>osg-ca-scripts</code> package provides scripts to install and update predefined sets of CAs with the ability to add or remove specific CAs. </p>
 <ul>
-<li>The OSG CA certificates. This is similar to the IGTF set, but may have a small number of additions or deletions. (See <a href="#contents-of-osg-ca-package">this section</a> for details)</li>
-<li>
-<p>The <a href="http://www.igtf.net/">IGTF</a> CA certificates.</p>
-</li>
+<li>The OSG CA certificates. This is similar to the IGTF set but may have a small number of additions or deletions</li>
+<li>The <a href="http://www.igtf.net/">IGTF</a> CA certificates</li>
+</ul>
+<p>See <a href="https://opensciencegrid.github.io/security/CaDistribution/">this page</a> for details of the contents of the OSG CA package</p>
+<ol>
 <li>
 <p>Install the <code>osg-ca-scripts</code> package:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install osg-ca-scripts
@@ -2438,7 +2425,7 @@ For example, <code>yum install osg-ce</code> will bring in <code>osg-ca-certs</c
 
 
 </li>
-</ul>
+</ol>
 <p>A complete set of options available though <code>osg-ca-manage</code> command, can be found in the <a href="../../security/certificate-management#managing-cas">osg-ca-manage documentation</a></p>
 <h3 id="option-3-site-managed-cas">Option 3: Site-managed CAs<a class="headerlink" href="#option-3-site-managed-cas" title="Permanent link">&para;</a></h3>
 <p>If you want to handle the list of CAs completely internally to your site, you can utilize the <code>empty-ca-certs</code> RPM to satisfy
@@ -2570,12 +2557,6 @@ syslogfacility = daemon
 <li><a href="../../security/certificate-management#managing-cas">osg-ca-manage</a></li>
 <li><a href="../../security/certificate-management#osg-ca-certificates-updater">osg-ca-certs-updater</a></li>
 </ul>
-<h3 id="contents-of-osg-ca-package">Contents of OSG CA package<a class="headerlink" href="#contents-of-osg-ca-package" title="Permanent link">&para;</a></h3>
-<p>The OSG CA Distribution contains:</p>
-<ul>
-<li><a href="http://dist.eugridpma.info/distribution/igtf/current/">IGTF Distribution of Authority Root Certificates</a> (CAs accredited by the <a href="http://igtf.net/">International Grid Trust Federation</a>)</li>
-</ul>
-<p>For additional details what is in the current release, see the <a href="http://repo.opensciencegrid.org/pacman/cadist/">distribution site</a> and <a href="http://repo.opensciencegrid.org/pacman/cadist/CHANGES">change log</a>.</p>
 <h3 id="configuration-files">Configuration files<a class="headerlink" href="#configuration-files" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
