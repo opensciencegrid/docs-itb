@@ -21,6 +21,10 @@
       
         <meta name="lang:search.language" content="en">
       
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
         <meta name="lang:search.result.none" content="No matching documents">
       
         <meta name="lang:search.result.one" content="1 matching document">
@@ -30,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.5.5">
+      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.6.0">
     
     
       
@@ -59,14 +63,30 @@
     
   </head>
   
-  
     <body dir="ltr">
   
     <svg class="md-svg">
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
         
       </defs>
     </svg>
@@ -2422,14 +2442,14 @@ For example, <code>yum install osg-ce</code> will bring in <code>osg-ca-certs</c
 <p>A complete set of options available though <code>osg-ca-manage</code> command, can be found in the <a href="../../security/certificate-management#managing-cas">osg-ca-manage documentation</a></p>
 <h3 id="option-3-site-managed-cas">Option 3: Site-managed CAs<a class="headerlink" href="#option-3-site-managed-cas" title="Permanent link">&para;</a></h3>
 <p>If you want to handle the list of CAs completely internally to your site, you can utilize the <code>empty-ca-certs</code> RPM to satisfy
-RPM dependencies - but not actually install any CAs. To install this RPM, run the following command:</p>
+RPM dependencies while not actually installing any CAs. To install this RPM, run the following command:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install empty-ca-certs –-enablerepo<span class="o">=</span>osg-empty
 </pre></div>
 
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you choose this option, you are responsible for installing and maintaing the CA certificates. They must be installed in <code>/etc/grid-security/certificates</code>, or make a symlink from that location to the directory that contains the CA certificates.</p>
+<p>If you choose this option, you are responsible for installing and maintaining the CA certificates. They must be installed in <code>/etc/grid-security/certificates</code>, or a symlink must be made from that location to the directory that contains the CA certificates.</p>
 </div>
 <h3 id="installing-other-cas">Installing other CAs<a class="headerlink" href="#installing-other-cas" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
@@ -2441,7 +2461,7 @@ RPM dependencies - but not actually install any CAs. To install this RPM, run th
 |----------------|------------------|------------------|------------------------------------|
 | cilogon-openid | cilogon-ca-certs | <code>yum install cilogon-ca-certs</code>     |</p>
 <h2 id="managing-certificate-revocation-lists">Managing Certificate Revocation Lists<a class="headerlink" href="#managing-certificate-revocation-lists" title="Permanent link">&para;</a></h2>
-<p>In addition to CA certificates, you must have updated Certificate Revocation Lists (CRLs). CRLs contain a certificate blacklists that OSG software uses to ensure that your hosts are talking to valid clients or servers. To maintain up to date CAs, you will need to run the <code>fetch-crl</code> services. </p>
+<p>In addition to CA certificates, you must have updated Certificate Revocation Lists (CRLs). CRLs contain certificate blacklists that OSG software uses to ensure that your hosts are only talking to valid clients or servers. To maintain up to date CAs, you will need to run the <code>fetch-crl</code> services. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Normally <code>fetch-crl</code> is installed when you install the rest of the software and you do not need to explicitly install it.
@@ -2707,7 +2727,7 @@ syslogfacility = daemon
       
     </div>
     
-      <script src="../../assets/javascripts/application.f041762f.js"></script>
+      <script src="../../assets/javascripts/application.9fb73e57.js"></script>
       
       <script>app.initialize({version:"0.17.1",url:{base:"../.."}})</script>
       
