@@ -1076,18 +1076,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../common/install-best-practices/" title="Install Best Practices" class="md-nav__link">
-      Install Best Practices
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../common/ca/" title="CA Certificates" class="md-nav__link">
       CA Certificates
     </a>
@@ -2150,6 +2138,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/contrib/" title="Contrib Software" class="md-nav__link">
+      Contrib Software
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2653,7 +2653,7 @@
 <ul>
 <li><strong>User IDs:</strong> If they do not exist already, the installation will create the Linux users <code>condor</code> (UID 4716) and <code>gratia</code> (UID 42401)</li>
 <li><strong>Service certificate:</strong> The HTCondor-CE service uses a host certificate at <code>/etc/grid-security/hostcert.pem</code> and an accompanying key at <code>/etc/grid-security/hostkey.pem</code></li>
-<li><strong>Network ports:</strong> The pilot factories must be able to contact your HTCondor-CE service on ports 9619 and 9620 for condor versions &lt; 8.3.2 (TCP)</li>
+<li><strong>Network ports:</strong> The pilot factories must be able to contact your HTCondor-CE service on port 9619 (TCP)</li>
 <li><strong>Host choice:</strong> HTCondor-CE should be installed on a host that already has the ability to submit jobs into your local cluster</li>
 </ul>
 <p>As with all OSG software installations, there are some one-time (per host) steps to prepare in advance:</p>
@@ -3082,7 +3082,7 @@ cms\/Role=production cms.prod
 <tr>
 <td align="left">Fetch CRL</td>
 <td align="left"><code>fetch-crl-boot</code> and <code>fetch-crl-cron</code></td>
-<td align="left">See <a href="../../common/ca/#startstop-fetch-crl-a-quick-guide">CA documentation</a> for more info</td>
+<td align="left">See <a href="../../common/ca#managing-fetch-crl-services">CA documentation</a> for more info</td>
 </tr>
 <tr>
 <td align="left">Gratia</td>

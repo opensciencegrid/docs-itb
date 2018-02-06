@@ -960,18 +960,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../common/install-best-practices/" title="Install Best Practices" class="md-nav__link">
-      Install Best Practices
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../common/ca/" title="CA Certificates" class="md-nav__link">
       CA Certificates
     </a>
@@ -2034,6 +2022,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/contrib/" title="Contrib Software" class="md-nav__link">
+      Contrib Software
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2478,6 +2478,47 @@ The LCMAPS VOMS plugin does not work with gLExec.</p>
 </pre></div>
 
 
+<p>The full list of VOs is located on <a href="https://oim.opensciencegrid.org/oim/vo">OIM</a>.
+You are not expected to support all the VOs.
+If you would like to support opportunistic usage, we recommend creating the following Unix accounts:</p>
+<table>
+<thead>
+<tr>
+<th><strong>VO name</strong></th>
+<th><strong>Unix account(s)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://oim.opensciencegrid.org/oim/vo?id=13">GLOW</a></td>
+<td><code>glow</code></td>
+</tr>
+<tr>
+<td><a href="https://oim.opensciencegrid.org/oim/vo?id=30">OSG</a></td>
+<td><code>osg</code></td>
+</tr>
+<tr>
+<td><a href="https://oim.opensciencegrid.org/oim/vo?id=35">ATLAS</a></td>
+<td><code>usatlas1</code>, <code>usatlas2</code>, <code>usatlas3</code>, <code>usatlas4</code></td>
+</tr>
+<tr>
+<td><a href="https://oim.opensciencegrid.org/oim/vo?id=3">CMS</a></td>
+<td><code>cmspilot</code>, <code>uscmslocal</code>, <code>cmslocal</code>, <code>cmsprod</code>, <code>lcgadmin</code>, <code>cmsuser</code></td>
+</tr>
+<tr>
+<td><a href="https://oim.opensciencegrid.org/oim/vo?id=9">Fermilab</a></td>
+<td><code>fermigli</code>, <code>fermilab</code></td>
+</tr>
+<tr>
+<td><a href="https://oim.opensciencegrid.org/oim/vo?id=67">HCC</a></td>
+<td><code>hcc</code></td>
+</tr>
+<tr>
+<td><a href="https://oim.opensciencegrid.org/oim/vo?id=62">Gluex</a></td>
+<td><code>gluex</code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="applying-configuration-settings">Applying configuration settings<a class="headerlink" href="#applying-configuration-settings" title="Permanent link">&para;</a></h3>
 <p>Making changes to the OSG configuration files in the <code>/etc/osg/config.d</code> directory does not apply those settings to software automatically. For the OSG settings, use the <a href="../../other/configuration-with-osg-configure">osg-configure</a> tool to validate (to a limited extent) and apply the settings to the relevant software components. If instead you wish to manage the LCMAPS VOMS plugin configuration yourself, skip to the <a href="#manual-configuration">manual configuration section</a>.</p>
 <ol>
@@ -2630,6 +2671,10 @@ The patterns are compared in the order they are listed in. Therefore, more gener
 
 
 <p>Each non-commented line is a shell-style pattern which is compared against a user's VOMS attributes. If the pattern matches, that user will be unable to access your resources.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>When banning users, you must restart the services using the LCMAPS VOMS authentication (e.g. <code>condor-ce</code>, <code>globus-gridftp-server</code>, etc.) to clear any authentication caches.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><code>/etc/grid-security/ban-voms-mapfile</code> <em>must</em> exist, even if you are not banning any VOs. In that case, the file should be blank. If the file does not exist, LCMAPS will ban every user.</p>
