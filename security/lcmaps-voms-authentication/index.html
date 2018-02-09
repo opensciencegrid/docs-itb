@@ -2736,10 +2736,6 @@ To migrate any custom configuration from GUMS to the LCMAPS VOMS plugin, perform
 <p>On each of your client hosts, add the lines from the output of <code>manual-mapfile-from-gumsdb.py</code> to the specified files</p>
 </li>
 </ol>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If you are running dCache and/or BeStMan2 hosts, do not retire your GUMS hosts until they have been retired or you have an alternative authentication solution in place.</p>
-</div>
 <h4 id="mapping-vos">Mapping VOs<a class="headerlink" href="#mapping-vos" title="Permanent link">&para;</a></h4>
 <p><code>/etc/grid-security/voms-mapfile</code> is used to map VOs, VO roles, or VO groups to Unix accounts based on their VOMS attributes. An example of the format of a <code>voms-mapfile</code> follows:</p>
 <div class="codehilite"><pre><span></span># map GLOW jobs in the chtc group to the &#39;glow1&#39; Unix account.
