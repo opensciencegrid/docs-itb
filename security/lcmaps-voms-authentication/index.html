@@ -2689,47 +2689,23 @@ If it lists other packages, cancel the erase operation, make sure the other pack
 <h4 id="migrating-from-gums">Migrating from GUMS<a class="headerlink" href="#migrating-from-gums" title="Permanent link">&para;</a></h4>
 <p>GUMS is no longer available starting in OSG 3.4 and is being replaced by the LCMAPS VOMS plugin.
 Note that unlike GUMS, which runs on a central host, the LCMAPS VOMS plugin will run on your GUMS clients (e.g. HTCondor-CE, GridFTP, and XRootD).
-To migrate any custom configuration from GUMS to the LCMAPS VOMS plugin, perform the following procedure:</p>
+To migrate any custom authentication configuration from GUMS to the LCMAPS VOMS plugin, perform the following procedure:</p>
 <ol>
 <li>
 <p>On your GUMS host, retrieve the conversion helper script and run it:</p>
-<div class="codehilite"><pre><span></span><span class="gp">root@gums-host #</span> wget https://raw.githubusercontent.com/opensciencegrid/osg-vo-config/mapfile-generator-0.1/bin/manual-mapfile-from-gumsdb.py
+<div class="codehilite"><pre><span></span><span class="gp">root@gums-host #</span> wget https://raw.githubusercontent.com/opensciencegrid/osg-vo-config/mapfile-generator-0.2/bin/manual-mapfile-from-gumsdb.py
 <span class="gp">root@gums-host #</span> python manual-mapfile-from-gumsdb.py
-<span class="gp">#</span> Add the following contents to /etc/grid-security/ban-mapfile
-<span class="gp">#</span> http://opensciencegrid.github.io/docs/security/lcmaps-voms-authentication/#banning-users
-
-<span class="go">&quot;/DC=org/DC=opensciencegrid/O=Open Science Grid/OU=People/CN=Alpha Flight 7727&quot;</span>
-<span class="go">&quot;/DC=org/DC=opensciencegrid/O=Open Science Grid/OU=People/CN=Dancing Zorba 4528&quot;</span>
-<span class="go">&quot;/DC=org/DC=opensciencegrid/O=Open Science Grid/OU=People/CN=Freddie Redonschnider 1234&quot;</span>
-
-<span class="gp">#</span> ---
-
-<span class="gp">#</span> Add the following contents to /etc/grid-security/grid-mapfile
-<span class="gp">#</span> http://opensciencegrid.github.io/docs/security/lcmaps-voms-authentication/#mapping-users
-
-<span class="go">&quot;/DC=com/DC=example/OU=People/CN=Example User 12345&quot; test</span>
-<span class="go">&quot;/DC=org/DC=doegrids/OU=People/CN=Janet Doe 123456&quot; osg</span>
-<span class="go">&quot;/DC=org/DC=doegrids/OU=People/CN=Jane Doe 12345&quot; osg</span>
-<span class="go">&quot;/DC=com/DC=example/OU=People/CN=Example User 12345&quot; osg</span>
-<span class="go">&quot;/DC=org/DC=opensciencegrid/O=Open Science Grid/OU=People/CN=Carl Edquist 1013&quot; osg</span>
-
-<span class="gp">#</span> ---
-
-<span class="gp">#</span> Add the following contents to /etc/grid-security/voms-mapfile
-<span class="gp">#</span> http://opensciencegrid.github.io/docs/security/lcmaps-voms-authentication/#mapping-vos
-
-<span class="go">&quot;/osg/testgroup/Role=somerole/*&quot; sam</span>
-
-<span class="gp">#</span> ---
 </pre></div>
 
 
 </li>
 <li>
-<p>Review the output and verify that it includes any custom banned users, user mappings, or VO mappings.</p>
+<p>Verify that the contents of <code>ban-mapfile</code>, <code>grid-mapfile.additions</code>, and <code>voms-mapfile.additions</code> include any custom
+   banned users, user mappings, and VO mappings, respectively.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The OSG provides default VO mappings in <code>/usr/share/osg/voms-mapfile-default</code></p>
+<p>The above files will not include all VO mappings; the OSG provides default VO mappings in
+<code>/usr/share/osg/voms-mapfile-default</code></p>
 </div>
 </li>
 <li>
