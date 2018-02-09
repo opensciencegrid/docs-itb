@@ -2700,7 +2700,7 @@ To migrate any custom authentication configuration from GUMS to the LCMAPS VOMS 
 
 </li>
 <li>
-<p>Verify that the contents of <code>ban-mapfile</code>, <code>grid-mapfile.additions</code>, and <code>voms-mapfile.additions</code> include any custom
+<p>Verify that the contents of <code>ban-mapfile.additions</code>, <code>grid-mapfile.additions</code>, and <code>voms-mapfile.additions</code> include any custom
    banned users, user mappings, and VO mappings, respectively.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2709,7 +2709,7 @@ To migrate any custom authentication configuration from GUMS to the LCMAPS VOMS 
 </div>
 </li>
 <li>
-<p>On each of your client hosts, add the lines from the output of <code>manual-mapfile-from-gumsdb.py</code> to the specified files</p>
+<p>On each of your client hosts, append each <code>.additions</code> file to its corresponding file in <code>/etc/grid-security/</code> (creating those files if they do not exist).</p>
 </li>
 </ol>
 <h4 id="mapping-vos">Mapping VOs<a class="headerlink" href="#mapping-vos" title="Permanent link">&para;</a></h4>
