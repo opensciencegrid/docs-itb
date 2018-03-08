@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.6.6">
+      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.7.0">
     
     
       
@@ -647,6 +647,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-transfer-limits-for-gridftp-hdfs" title="Setting transfer limits for GridFTP-HDFS" class="md-nav__link">
+    Setting transfer limits for GridFTP-HDFS
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#modifying-the-environment" title="Modifying the environment" class="md-nav__link">
@@ -2354,6 +2361,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#setting-transfer-limits-for-gridftp-hdfs" title="Setting transfer limits for GridFTP-HDFS" class="md-nav__link">
+    Setting transfer limits for GridFTP-HDFS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#modifying-the-environment" title="Modifying the environment" class="md-nav__link">
     Modifying the environment
   </a>
@@ -2497,19 +2511,7 @@ for Hadoop Distributed File System (HDFS) and XRootD based storage:</p>
 <p>In OSG 3.3, there are three methods to manage authentication for incoming jobs: the <a href="../../security/lcmaps-voms-authentication">LCMAPS VOMS plugin</a>, <a href="../../security/edg-mkgridmap">edg-mkgridmap</a> and <a href="../../security/install-gums">GUMS</a>. Of these, GUMS has the most features and capabilities. The LCMAPS VOMS plugin is the new OSG-preferred authentication, offering the simplicity of edg-mkgridmap and many of GUMS' rich feature set. If you need to support "<a href="https://www.racf.bnl.gov/Facility/GUMS/1.4/use_configuration.html">pool accounts</a>", GUMS is the only option with that capability.</p>
 <p>In OSG 3.4, the LCMAPS VOMS plugin is the only available authentication solution.</p>
 <h4 id="authentication-with-the-lcmaps-voms-plugin">Authentication with the LCMAPS VOMS plugin<a class="headerlink" href="#authentication-with-the-lcmaps-voms-plugin" title="Permanent link">&para;</a></h4>
-<ol>
-<li>
-<p>Add the following line to <code>/etc/sysconfig/globus-gridftp-server</code>:</p>
-<div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">LLGT_VOMS_ENABLE_CREDENTIAL_CHECK</span><span class="o">=</span><span class="m">1</span>
-</pre></div>
-
-
-<p>This should <em>only</em> be done for OSG 3.3; it is unnecessary for OSG 3.4.</p>
-</li>
-<li>
-<p>Follow the instructions in <a href="../../security/lcmaps-voms-authentication">the LCMAPS VOMS plugin installation and configuration document</a> to prepare the LCMAPS VOMS plugin.</p>
-</li>
-</ol>
+<p>To configure your GridFTP server to use the LCMAPS VOMS plugin, follow the instructions in <a href="../../security/lcmaps-voms-authentication#configuring-the-lcmaps-voms-plugin">the LCMAPS VOMS plugin document</a> to prepare the LCMAPS VOMS plugin.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is the suggested mechanism for all new installs.</p>
@@ -2560,6 +2562,24 @@ gumsclient = &quot;lcmaps_gums_client.mod&quot;
 
 <p>All other configuration settings should be suitable for most purposes. However, you can edit them if needed. The probe runs every 30 minutes as a cron job.</p>
 <h3 id="optional-configuration">Optional configuration<a class="headerlink" href="#optional-configuration" title="Permanent link">&para;</a></h3>
+<h4 id="setting-transfer-limits-for-gridftp-hdfs">Setting transfer limits for GridFTP-HDFS<a class="headerlink" href="#setting-transfer-limits-for-gridftp-hdfs" title="Permanent link">&para;</a></h4>
+<p>To set a limit on the total or per-user number of transfers, create <code>/etc/sysconfig/gridftp-hdfs</code> and set the following configuration:</p>
+<div class="codehilite"><pre><span></span>export GRIDFTP_TRANSFER_LIMIT=&quot;80&quot;
+export GRIDFTP_DEFAULT_USER_TRANSFER_LIMIT=&quot;50&quot;
+export GRIDFTP_<span style="color:red">&lt;UNIX USERNAME&gt;</span>_USER_TRANSFER_LIMIT=&quot;40&quot;
+</pre></div>
+
+
+<p>In the above configuration:</p>
+<ul>
+<li>There would be no more than 80 transfers going at a time, across all users.</li>
+<li>By default, any single user can have no more than 50 transfers at a time.</li>
+<li>The <code><span style="color:red">&lt;UNIX USERNAME&gt;</span></code> user has a more stringent limit of 40 transfers at a time.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This limits are per gridftp server. If you have several gridftp servers you may want to have this limits divided by the number of gridftp servers at your site.</p>
+</div>
 <h4 id="modifying-the-environment">Modifying the environment<a class="headerlink" href="#modifying-the-environment" title="Permanent link">&para;</a></h4>
 <p>Environment variables are stored in <code>/etc/sysconfig/globus-gridftp-server</code> which is sourced on service startup.  If you want to change LCMAPS log levels, or GridFTP port ranges, you can edit them there.</p>
 <div class="codehilite"><pre><span></span><span class="c1">#Uncomment and modify for firewalls</span>
@@ -2824,7 +2844,7 @@ ipc_interface IP-TO-USE
       
     </div>
     
-      <script src="../../assets/javascripts/application.02434462.js"></script>
+      <script src="../../assets/javascripts/application.8eb9be28.js"></script>
       
       <script>app.initialize({version:"0.17.1",url:{base:"../.."}})</script>
       
