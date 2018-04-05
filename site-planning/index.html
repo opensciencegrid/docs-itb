@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.7.0">
+      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.7.1">
     
     
       
@@ -91,8 +91,8 @@
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
       <a href="#site-planning" tabindex="1" class="md-skip">
@@ -546,8 +546,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../data/frontier-squid/" title="Install HTTP Cache" class="md-nav__link">
-      Install HTTP Cache
+    <a href="../data/frontier-squid/" title="Install Squid HTTP Cache" class="md-nav__link">
+      Install Squid HTTP Cache
     </a>
   </li>
 
@@ -1038,6 +1038,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../release/3.4/release-3-4-9-2/" title="OSG Release 3.4.9-2" class="md-nav__link">
+      OSG Release 3.4.9-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../release/3.4/release-3-4-9/" title="OSG Release 3.4.9" class="md-nav__link">
       OSG Release 3.4.9
     </a>
@@ -1283,6 +1295,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../release/3.3/release-3-3-33-2/" title="OSG Release 3.3.33-2" class="md-nav__link">
+      OSG Release 3.3.33-2
+    </a>
+  </li>
+
         
           
           
@@ -2305,7 +2329,7 @@ resources regardless, but installing CVMFS is a primary mechanism to attract mor
   <a href="../data/frontier-squid">Squid HTTP</a> cache for smaller working set sizes and software called <a href="http://xrootd.org">XRootD</a>
   for larger datasets.  Almost every site on the OSG installs a Squid cache.</li>
 <li>A <strong>Storage Element</strong> provides remote, POSIX-like access to your site storage service for reading and writing of data.
-  All Storage Element implementations in the OSG support the GridFTP, XRootD, and HTTPs protocols.</li>
+  All Storage Element implementations in the OSG support the GridFTP, XRootD, and HTTPS protocols.</li>
 </ul>
 <p>The storage element model is chosen mostly by sites that support either ATLAS or CMS VOs; otherwise, only caches are
 typically provided.  Sites that need a SE which have existing POSIX-like storage (e.g., Lustre, GPFS) layer remote
@@ -2324,6 +2348,8 @@ example.
               
               
                 
+
+
               
             </article>
           </div>

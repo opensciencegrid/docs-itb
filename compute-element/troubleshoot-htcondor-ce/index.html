@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.7.0">
+      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.7.1">
     
     
       
@@ -91,8 +91,8 @@
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
       <a href="#htcondor-ce-troubleshooting-guide" tabindex="1" class="md-skip">
@@ -525,6 +525,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#held-jobs-no-matching-routes-route-job-limit-or-route-failure-threshold" title="Held jobs: no matching routes, route job limit, or route failure threshold" class="md-nav__link">
+    Held jobs: no matching routes, route job limit, or route failure threshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#held-jobs-missingexpired-user-proxy" title="Held jobs: Missing/expired user proxy" class="md-nav__link">
     Held jobs: Missing/expired user proxy
   </a>
@@ -534,13 +541,6 @@
           <li class="md-nav__item">
   <a href="#held-jobs-invalid-job-universe" title="Held jobs: Invalid job universe" class="md-nav__link">
     Held jobs: Invalid job universe
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#held-jobs-non-existent-route-or-entry-in-job_router_entries" title="Held jobs: Non-existent route or entry in JOB_ROUTER_ENTRIES" class="md-nav__link">
-    Held jobs: Non-existent route or entry in JOB_ROUTER_ENTRIES
   </a>
   
 </li>
@@ -1194,8 +1194,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/frontier-squid/" title="Install HTTP Cache" class="md-nav__link">
-      Install HTTP Cache
+    <a href="../../data/frontier-squid/" title="Install Squid HTTP Cache" class="md-nav__link">
+      Install Squid HTTP Cache
     </a>
   </li>
 
@@ -1686,6 +1686,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-9-2/" title="OSG Release 3.4.9-2" class="md-nav__link">
+      OSG Release 3.4.9-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../release/3.4/release-3-4-9/" title="OSG Release 3.4.9" class="md-nav__link">
       OSG Release 3.4.9
     </a>
@@ -1931,6 +1943,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.3/release-3-3-33-2/" title="OSG Release 3.3.33-2" class="md-nav__link">
+      OSG Release 3.3.33-2
+    </a>
+  </li>
+
         
           
           
@@ -2994,6 +3018,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#held-jobs-no-matching-routes-route-job-limit-or-route-failure-threshold" title="Held jobs: no matching routes, route job limit, or route failure threshold" class="md-nav__link">
+    Held jobs: no matching routes, route job limit, or route failure threshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#held-jobs-missingexpired-user-proxy" title="Held jobs: Missing/expired user proxy" class="md-nav__link">
     Held jobs: Missing/expired user proxy
   </a>
@@ -3003,13 +3034,6 @@
           <li class="md-nav__item">
   <a href="#held-jobs-invalid-job-universe" title="Held jobs: Invalid job universe" class="md-nav__link">
     Held jobs: Invalid job universe
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#held-jobs-non-existent-route-or-entry-in-job_router_entries" title="Held jobs: Non-existent route or entry in JOB_ROUTER_ENTRIES" class="md-nav__link">
-    Held jobs: Non-existent route or entry in JOB_ROUTER_ENTRIES
   </a>
   
 </li>
@@ -3772,10 +3796,24 @@ to.</p>
 <h3 id="jobs-go-on-hold">Jobs go on hold<a class="headerlink" href="#jobs-go-on-hold" title="Permanent link">&para;</a></h3>
 <p>Jobs will be put on held with a <code>HoldReason</code> attribute that can be inspected with <a href="#condor_ce_q">condor_ce_q</a>:</p>
 <div class="codehilite"><pre><span></span><span class="gp">user@host $</span> condor_ce_q -l &lt;JOB-ID&gt; -attr HoldReason
-<span class="go">HoldReason = &quot;CE job in status 5 put on hold by SYSTEM_PERIODIC_HOLD due to non-existent route or entry in JOB_ROUTER_ENTRIES.&quot;</span>
+<span class="go">HoldReason = &quot;CE job in status 5 put on hold by SYSTEM_PERIODIC_HOLD due to no matching routes, route job limit, or route failure threshold.&quot;</span>
 </pre></div>
 
 
+<h4 id="held-jobs-no-matching-routes-route-job-limit-or-route-failure-threshold">Held jobs: no matching routes, route job limit, or route failure threshold<a class="headerlink" href="#held-jobs-no-matching-routes-route-job-limit-or-route-failure-threshold" title="Permanent link">&para;</a></h4>
+<p>Jobs on the CE will be put on hold if they are not claimed by the job router within 30 minutes.
+The most common cases for this behavior are as follows:</p>
+<ul>
+<li><strong>The job does not match any job routes:</strong>
+  use <a href="#condor_ce_job_router_info">condor_ce_job_router_info</a> to see why your idle job does not match any
+  <a href="../../compute-element/job-router-recipes#how-job-routes-are-constructed">routes</a>.</li>
+<li><strong>The route(s) that the job matches to are full:</strong>
+  See <a href="../../compute-element/job-router-recipes#limiting-the-number-of-jobs">limiting the number of jobs</a>.</li>
+<li><strong>The job router is throttling submission to your batch system due to submission failures:</strong>
+  See the HTCondor manual for <a href="http://research.cs.wisc.edu/htcondor/manual/v8.6/5_4HTCondor_Job.html#55958">FailureRateThreshold</a>.
+  Check for errors in the <a href="#jobrouterlog">JobRouterLog</a> or <a href="#gridmanagerlog">GridmanagerLog</a> for HTCondor and
+  non-HTCondor batch systems, respectively.</li>
+</ul>
 <h4 id="held-jobs-missingexpired-user-proxy">Held jobs: Missing/expired user proxy<a class="headerlink" href="#held-jobs-missingexpired-user-proxy" title="Permanent link">&para;</a></h4>
 <p>HTCondor-CE requires a valid user proxy for each job that is submitted. 
 You can check the status of your proxy with the following</p>
@@ -3803,10 +3841,6 @@ grid_resource = condor condorce.example.com condorce.example.com:9619
 <p>replacing <code>condorce.example.com</code> with the hostname of the CE.</p>
 </li>
 </ol>
-<h4 id="held-jobs-non-existent-route-or-entry-in-job_router_entries">Held jobs: Non-existent route or entry in JOB_ROUTER_ENTRIES<a class="headerlink" href="#held-jobs-non-existent-route-or-entry-in-job_router_entries" title="Permanent link">&para;</a></h4>
-<p>Jobs on the CE will be put on hold if they do not match any job routes within 30 minutes.</p>
-<p><strong>Next actions</strong></p>
-<p>Use <a href="#condor_ce_job_router_info">condor_ce_job_router_info</a> to see why your idle job does not match any routes.</p>
 <h3 id="identifying-the-corresponding-job-id-on-the-local-batch-system">Identifying the corresponding job ID on the local batch system<a class="headerlink" href="#identifying-the-corresponding-job-id-on-the-local-batch-system" title="Permanent link">&para;</a></h3>
 <p>When troubleshooting interactions between your CE and your local batch system, you will need to associate the CE job ID
 and the resultant job ID on the batch system. 
@@ -4606,6 +4640,8 @@ submit file and proxy used.</p>
               
               
                 
+
+
               
             </article>
           </div>
