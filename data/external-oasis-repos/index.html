@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.7.1">
+      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.7.2">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.78aab2dc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.8d40d89b.css">
       
     
     
@@ -1089,6 +1089,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-10/" title="OSG Release 3.4.10" class="md-nav__link">
+      OSG Release 3.4.10
+    </a>
+  </li>
+
         
           
           
@@ -2442,7 +2454,14 @@ The next steps will fail if the web server is not accessible.</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> <span class="nb">echo</span> -e <span class="s2">&quot;\*\\t\\t-\\tnofile\\t\\t16384&quot;</span> &gt;&gt;/etc/security/limits.conf
 <span class="gp">root@host #</span> <span class="nb">ulimit</span> -n <span class="m">16384</span>
 <span class="gp">root@host #</span> cvmfs_server mkfs -o <span style="color:blue">LIBRARIAN</span> <span style="color:red">example.opensciencegrid.org</span>
-<span class="gp">root@host #</span> <span class="o">(</span><span class="nb">echo</span> Order deny,allow<span class="p">;</span><span class="nb">echo</span> Deny from all<span class="p">;</span><span class="nb">echo</span> Allow from <span class="m">127</span>.0.0.1<span class="p">;</span><span class="nb">echo</span> Allow from ::1<span class="p">;</span><span class="nb">echo</span> Allow from <span class="m">129</span>.79.53.0/24<span class="p">;</span><span class="nb">echo</span> Allow from <span class="m">2001</span>:18e8:2:6::/56<span class="o">)</span> &gt;/srv/cvmfs/<span style="color:red">example.opensciencegrid.org</span>/.htaccess
+<span class="gp">root@host #</span> cat &gt;/srv/cvmfs/<span style="color:red">example.opensciencegrid.org</span>/.htaccess <span class="s">&lt;&lt;xEOFx</span>
+<span class="go">Order deny,allow</span>
+<span class="go">Deny from all</span>
+<span class="go">Allow from 127.0.0.1</span>
+<span class="go">Allow from ::1</span>
+<span class="go">Allow from 129.79.53.0/24 129.93.244.192/26 129.93.227.64/26</span>
+<span class="go">Allow from 2001:18e8:2:6::/56 2600:900:6::/48 </span>
+<span class="go">xEOFx</span>
 </pre></div>
 
 
@@ -2479,7 +2498,7 @@ The next steps will fail if the web server is not accessible.</p>
 <p><strong>Verify your VO's OIM registration is up-to-date</strong>.  All repositories need to be associated with a VO; the VO
     needs to assign an <em>OASIS manager</em> in OIM who would be responsible for the contents of any of the VO's repositories
     and will be contacted in case of issues. To designate an OASIS manager, have the VO manager update the
-    <a href="https://oim.grid.iu.edu">OIM registration</a>.</p>
+    <a href="https://oim.opensciencegrid.org">OIM registration</a>.</p>
 </li>
 <li>
 <p>Create a <a href="https://ticket.opensciencegrid.org/submit">support ticket</a> using the following template:</p>
@@ -2660,7 +2679,7 @@ remove the repository configuration while preserving the data and keys:</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.8eb9be28.js"></script>
+      <script src="../../assets/javascripts/application.b438e6c5.js"></script>
       
       <script>app.initialize({version:"0.17.1",url:{base:"../.."}})</script>
       

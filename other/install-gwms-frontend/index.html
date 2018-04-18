@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.7.1">
+      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.7.2">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.78aab2dc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.8d40d89b.css">
       
     
     
@@ -1434,6 +1434,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-10/" title="OSG Release 3.4.10" class="md-nav__link">
+      OSG Release 3.4.10
+    </a>
+  </li>
+
         
           
           
@@ -3088,8 +3100,8 @@ significant, large host, we have been able to scale the single-host install to
 <li>Install <a href="../../common/ca">CA certificates</a></li>
 </ul>
 <h3 id="credentials-and-proxies">Credentials and Proxies<a class="headerlink" href="#credentials-and-proxies" title="Permanent link">&para;</a></h3>
-<p>The VO Frontend will use two credentials in its interactions with the the other
-glideinWMS services. At this time, these will be proxy files.</p>
+<p>The VO Frontend will use two service certificates in its interactions with the the other glideinWMS services.
+GlideinWMS will generate proxies from these two certificates:</p>
 <ol>
 <li>the <span style="color:green">VO Frontend proxy</span> (used to authenticate with the other glideinWMS services).</li>
 <li>one or more glideinWMS <span style="color:red">pilot proxies</span> (used/delegated to the factory services and submitted on the glideinWMS pilot jobs).</li>
@@ -3097,6 +3109,10 @@ glideinWMS services. At this time, these will be proxy files.</p>
 <p>The <span style="color:green">VO Frontend proxy</span> and the <span style="color:red"> pilot proxy</span> can
 be the same. By default, the VO Frontend will run as user <code>frontend</code> (UID is
 machine dependent) so these proxies must be owned by the user <code>frontend</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Both proxies need to be passwordless to allow <a href="#proxy-configuration">automatic proxy renewal</a>.</p>
+</div>
 <h4 id="vo-frontend-proxy">VO Frontend proxy<a class="headerlink" href="#vo-frontend-proxy" title="Permanent link">&para;</a></h4>
 <p>The use of a service certificate is recommended. Then you create a proxy from
 the certificate as explained in the <a href="#proxy-configuration">proxy configuration
@@ -3515,7 +3531,7 @@ lifetime = <span style="color:red">&lt;PROXY LIFETIME&gt;</span>
 
 </li>
 <li>
-<p>Edit the ProbeConfig located in <code>/etc/gratia/condor/ProbeConfig</code>. First, edit the <code>SiteName</code> and <code>ProbeName</code> to be a unique identifier for your GlideinWMS Submit host. There can be multiple probes (with different names) per site. If you haven't already, you should register your GlideinWMS submit host in <a href="https://oim.grid.iu.edu/oim/home">OIM</a>. Then you can use the name you used to register the resource.</p>
+<p>Edit the ProbeConfig located in <code>/etc/gratia/condor/ProbeConfig</code>. First, edit the <code>SiteName</code> and <code>ProbeName</code> to be a unique identifier for your GlideinWMS Submit host. There can be multiple probes (with different names) per site. If you haven't already, you should register your GlideinWMS submit host in <a href="https://oim.opensciencegrid.org/oim/home">OIM</a>. Then you can use the name you used to register the resource.</p>
 <div class="codehilite"><pre><span></span>ProbeName=&quot;condor:&lt;hostname&gt;&quot;
 SiteName=&quot;HCC-GlideinWMW-Frontend&quot;
 </pre></div>
@@ -3703,8 +3719,13 @@ groupwould only match jobs that have the <code>+is_itb=True</code> ClassAd.</p>
 </tr>
 <tr>
 <td align="left">GlideinWMS</td>
-<td align="left"><code>gwms-renew-proxies</code> and <code>gwms-frontend</code></td>
-<td align="left"><a href="#proxy-configuration">Automatic proxy renewal</a> and main GlideinWMS service</td>
+<td align="left"><code>gwms-renew-proxies</code> (EL6) or <code>gwms-renew-proxies.timer</code> (EL7)</td>
+<td align="left"><a href="#proxy-configuration">Automatic proxy renewal</a></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>gwms-frontend</code></td>
+<td align="left">The main GlideinWMS service</td>
 </tr>
 </tbody>
 </table>
@@ -4224,7 +4245,7 @@ internet (no NAT), and preferably with no firewalls. Incoming TCP ports 9618 to 
       
     </div>
     
-      <script src="../../assets/javascripts/application.8eb9be28.js"></script>
+      <script src="../../assets/javascripts/application.b438e6c5.js"></script>
       
       <script>app.initialize({version:"0.17.1",url:{base:"../.."}})</script>
       

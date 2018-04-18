@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.7.1">
+      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.7.2">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.78aab2dc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.8d40d89b.css">
       
     
     
@@ -1094,6 +1094,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-10/" title="OSG Release 3.4.10" class="md-nav__link">
+      OSG Release 3.4.10
+    </a>
+  </li>
+
         
           
           
@@ -2385,7 +2397,7 @@
 <li><strong>Collector</strong>: A web service running on the GRACC server that collects data from one or more Gratia probes. Users do not directly interact with the collector.</li>
 </ul>
 <p>You can see the OSG's GRACC website at <a href="https://gracc.opensciencegrid.org">https://gracc.opensciencegrid.org</a>.</p>
-<p>You can see a fancier version of the Gratia data at <a href="https://display.grid.iu.edu/">https://display.grid.iu.edu/</a>. This is <strong>not</strong> running a Gratia collector, but is a separate service.</p>
+<p>You can see a fancier version of the Gratia data at <a href="https://display.opensciencegrid.org/">https://display.opensciencegrid.org/</a>. This is <strong>not</strong> running a Gratia collector, but is a separate service.</p>
 <h2 id="gratia-probes">Gratia Probes<a class="headerlink" href="#gratia-probes" title="Permanent link">&para;</a></h2>
 <p>Gratia Probes are periodically run as cron jobs, but different probes will run at different intervals. The cron jobs will always run and you should not remove them. You can find them in <code>/etc/cron.d</code>.</p>
 <p>However, the cron jobs will only do anything if you have enabled them. You enable them via an init script. For example, to enable them:</p>
@@ -2494,7 +2506,7 @@
 
 <p>Correct the error and restart gratia.</p>
 <h2 id="have-you-configured-the-resource-names-correctly">Have you configured the resource names correctly?<a class="headerlink" href="#have-you-configured-the-resource-names-correctly" title="Permanent link">&para;</a></h2>
-<p>Do the names of your resources match the names in <a href="https://oim.grid.iu.edu/oim/topology">OIM</a>?  Gratia retrieves the resource name from the <code>Site Information</code> section of the <code>/etc/osg/config.d/40-siteinfo.ini</code></p>
+<p>Do the names of your resources match the names in <a href="https://oim.opensciencegrid.org/oim/topology">OIM</a>?  Gratia retrieves the resource name from the <code>Site Information</code> section of the <code>/etc/osg/config.d/40-siteinfo.ini</code></p>
 <div class="codehilite"><pre><span></span><span class="p">;</span><span class="o">===================================================================</span>
 <span class="p">;</span>                       <span class="n">Site</span> <span class="n">Information</span>
 <span class="p">;</span><span class="o">===================================================================</span>
@@ -2860,7 +2872,7 @@ Thanks, ...
       
     </div>
     
-      <script src="../../assets/javascripts/application.8eb9be28.js"></script>
+      <script src="../../assets/javascripts/application.b438e6c5.js"></script>
       
       <script>app.initialize({version:"0.17.1",url:{base:"../.."}})</script>
       
