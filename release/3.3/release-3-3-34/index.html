@@ -2459,18 +2459,20 @@
                 <h1 id="osg-software-release-3334">OSG Software Release 3.3.34<a class="headerlink" href="#osg-software-release-3334" title="Permanent link">&para;</a></h1>
 <p><strong>Release Date</strong>: 2018-05-09</p>
 <h2 id="summary-of-changes">Summary of changes<a class="headerlink" href="#summary-of-changes" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>The repositories referenced by osg-release will be retired on May 15th. Update osg-release before that date.</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum update osg-release
+</pre></div>
+
+
 <p>This release contains:</p>
 <ul>
 <li>Updated all references to grid.iu.edu with opensciencegrid.org<ul>
 <li>Updated Packages: osg-ca-certs-updater, osg-ca-scripts, osg-release, osg-test, rsv</li>
 </ul>
 </li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-</div>
-<p>The repository referenced by osg-release will be retired on May 15th. Update osg-release before that date.</p>
-<ul>
 <li>xrootd-lcmaps 1.2.1-3: fixed crashes on Enterprise Linux 6 when requests were made using HTTPS</li>
 <li>frontier-squid: Fixed startup problem under SELinux</li>
 <li>xrootd-hdfs 2.0.2: Improved write support</li>
