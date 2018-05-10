@@ -1389,6 +1389,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../release/3.3/release-3-3-34/" title="OSG Release 3.3.34" class="md-nav__link">
+      OSG Release 3.3.34
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../release/3.3/release-3-3-33-2/" title="OSG Release 3.3.33-2" class="md-nav__link">
       OSG Release 3.3.33-2
     </a>
@@ -2393,7 +2405,7 @@
                 
                 
                 <h1 id="network-performance-toolkit">Network Performance Toolkit<a class="headerlink" href="#network-performance-toolkit" title="Permanent link">&para;</a></h1>
-<p>This document is for System Administrators and advanced Grid Users. It describes the usage of tools provided by the <a href="http://vdt.cs.wisc.edu">Virtual Data Toolkit</a> to evaluate the network performance between resources.</p>
+<p>This document is for System Administrators and advanced Grid Users. It describes the usage of tools provided by the Open Science Grid to evaluate the network performance between resources.</p>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>The Network Performance Toolkit is a collection of applications provided by the <a href="http://www.perfsonar.net/">perfSONAR project</a> and distributed by the <a href="http://www.opensciencegrid.org">Open Science Grid</a>. The <em>server</em> components of the Network Performance Toolkit have been installed on dedicated resources of the <a href="http://www.opensciencegrid.org">Open Science Grid</a>. Following <em>client</em> tools are described in this document:</p>
 <ul>
@@ -2430,7 +2442,7 @@
 <p>Once the Toolkit server has booted you may begin on-demand testing. The server tools will use a generic set of configuration files. The intent is to make it easy to stand up a temporary server when and where it is needed. However, it is expected that a permanently installed server will be customized/configured, allowing it to support both on-demand testing and regularly scheduled monitoring. See the <a href="http://docs.perfsonar.net/">perfSONAR home page</a> for step-by-step instructions on how to complete this customization process.</p>
 <h2 id="finding-target-servers">Finding Target Servers<a class="headerlink" href="#finding-target-servers" title="Permanent link">&para;</a></h2>
 <p>Finding servers against which to run on-demand tests can be a major impediment to effectively using these tools. The <a href="http://www.perfsonar.net/about">perfSONAR</a> project tackles this problem by running a registration service for participating tools. The Performance Node ISO automatically uses this Lookup Service to advertise the tools' existence. You can also create custom views by making web-service calls to retrieve the data of interest. </p>
-<p>We also have requested ALL OSG sites register their perfSONAR Toolkit installations in OIM (See <a href="https://www.opensciencegrid.org/bin/view/Documentation/RegisterPSinOIM">https://www.opensciencegrid.org/bin/view/Documentation/RegisterPSinOIM</a> ). You can use the MyOSG -&gt; Resource Group -&gt; Resource Group Summary page to see a list of perfSONAR Toolkit hosts that are installed at <a href="http://tinyurl.com/mxfmutg">http://tinyurl.com/mxfmutg</a>. Using this list you can select a "closest" relevant instance to use for running on-demand tests. Alternately if you have a perfSONAR toolkit install, the web interface has a "Global Services" link you can visit to see ALL perfSONAR instances that have updated the perfSONAR lookup service.</p>
+<p>We also have requested ALL OSG sites register their perfSONAR Toolkit installations in OIM. You can use the MyOSG -&gt; Resource Group -&gt; Resource Group Summary page to see a list of perfSONAR Toolkit hosts that are installed at <a href="http://tinyurl.com/mxfmutg">http://tinyurl.com/mxfmutg</a>. Using this list you can select a "closest" relevant instance to use for running on-demand tests. Alternately if you have a perfSONAR toolkit install, the web interface has a "Global Services" link you can visit to see ALL perfSONAR instances that have updated the perfSONAR lookup service.</p>
 <h2 id="using-the-client-tools">Using the Client Tools<a class="headerlink" href="#using-the-client-tools" title="Permanent link">&para;</a></h2>
 <p>These tools support delay measurements (OWAMP), throughput measurements (BWCTL), and advanced diagnostics (NDT and NPAD). The command syntax for each tool is described in the following sub-sections. Each of the client tools listed above communicates with a companion server process to perform a measurement/test.</p>
 <h3 id="network-diagnostic-tool-ndt">Network Diagnostic Tool (NDT)<a class="headerlink" href="#network-diagnostic-tool-ndt" title="Permanent link">&para;</a></h3>
@@ -2496,7 +2508,7 @@
 <ul>
 <li><a href="http://docs.perfsonar.net/config_owamp.html">One Way Active Measurement Protocol (OWAMP)</a></li>
 <li><a href="http://docs.perfsonar.net/config_bwctl.html">Bandwidth Control tool (BWCTL)</a></li>
-<li><a href="https://opensciencegrid.github.io/networking/perfsonar/installation/">OSG/WLCG pages on perfSONAR</a>.</li>
+<li><a href="https://opensciencegrid.org/networking/perfsonar/installation/">OSG/WLCG pages on perfSONAR</a>.</li>
 </ul>
                 
                   
