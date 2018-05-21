@@ -660,8 +660,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/install-xroot-client/" title="Install XRootD Client" class="md-nav__link">
-      Install XRootD Client
+    <a href="../../data/install-xroot-client/" title="Using XRootD" class="md-nav__link">
+      Using XRootD
     </a>
   </li>
 
@@ -756,8 +756,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-lets-encrypt-certificates" title="Requesting Let's Encrypt Certificates" class="md-nav__link">
-    Requesting Let's Encrypt Certificates
+  <a href="#requesting-host-certificates-using-lets-encrypt" title="Requesting Host Certificates Using Let's Encrypt" class="md-nav__link">
+    Requesting Host Certificates Using Let's Encrypt
   </a>
   
 </li>
@@ -1176,6 +1176,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-12-3/" title="OSG Release 3.4.12-3" class="md-nav__link">
+      OSG Release 3.4.12-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../release/3.4/release-3-4-12-2/" title="OSG Release 3.4.12-2" class="md-nav__link">
       OSG Release 3.4.12-2
     </a>
@@ -1481,6 +1493,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.3/release-3-3-34-3/" title="OSG Release 3.3.34-3" class="md-nav__link">
+      OSG Release 3.3.34-3
+    </a>
+  </li>
+
         
           
           
@@ -2415,8 +2439,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-lets-encrypt-certificates" title="Requesting Let's Encrypt Certificates" class="md-nav__link">
-    Requesting Let's Encrypt Certificates
+  <a href="#requesting-host-certificates-using-lets-encrypt" title="Requesting Host Certificates Using Let's Encrypt" class="md-nav__link">
+    Requesting Host Certificates Using Let's Encrypt
   </a>
   
 </li>
@@ -2681,11 +2705,44 @@ Try using the CSR generated above in your initial request.</p>
 <p>Install the <a href="#installing-host-certificates">host</a> or <a href="#installing-service-certificates">service</a> certificate</p>
 </li>
 </ol>
-<h2 id="requesting-lets-encrypt-certificates">Requesting Let's Encrypt Certificates<a class="headerlink" href="#requesting-lets-encrypt-certificates" title="Permanent link">&para;</a></h2>
-<p>Instructions for requesting Let's Encrypt host certificates will be released with the next release of the
-<a href="../../common/ca/">OSG CA certificate bundle</a>, expected in early May 2018.</p>
-<p>See the <a href="https://opensciencegrid.org/security/LetsEncryptOSGCAbundle/">security team's position on Let's Encrypt</a>
-for more details</p>
+<h2 id="requesting-host-certificates-using-lets-encrypt">Requesting Host Certificates Using <a href="https://letsencrypt.org/">Let's Encrypt</a><a class="headerlink" href="#requesting-host-certificates-using-lets-encrypt" title="Permanent link">&para;</a></h2>
+<p><a href="https://letsencrypt.org/">Let's Encrypt</a> is a free, automated, and open CA frequently used for web services;
+see the <a href="https://opensciencegrid.github.io/security/LetsEncryptOSGCAbundle/">security team's position on Let's Encrypt</a>
+for more details.
+Let's Encrypt can be used to obtain host certificates as an alternative to InCommon if your institution does not have
+an InCommon subscription.</p>
+<p>The <code>letsencrypt</code> software (AKA <code>certbot</code>) can be obtained from the EPEL 7 yum repo:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install certbot
+</pre></div>
+
+
+<p>If you have any service running on port 80, you will have to disable it temporarily to obtain
+certificates, as letsencrypt needs to bind on it temporarily in order to verify the host.
+For instance, if you already have an HTCondor-CE set up with the
+<a href="https://opensciencegrid.github.io/docs/compute-element/install-htcondor-ce/#install-and-run-the-htcondor-ce-view">HTCondor-CE View service</a>
+running, stop the HTCondor-CE View service, as it listens on port 80.</p>
+<p>Run the following command to obtain the host certificate with Let's Encrypt:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> certbot certonly --standalone --email <span style="color:red">&lt;ADMIN_EMAIL&gt;</span> -d <span style="color:red">&lt;HOST&gt;</span>
+</pre></div>
+
+
+<p>Set up hostcert/hostkey links:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> ln -s /etc/letsencrypt/live/*/cert.pem /etc/grid-security/hostcert.pem
+<span class="gp">root@host #</span> ln -s /etc/letsencrypt/live/*/privkey.pem /etc/grid-security/hostkey.pem
+<span class="gp">root@host #</span> chmod <span class="m">0600</span> /etc/letsencrypt/archive/*/privkey*.pem
+</pre></div>
+
+
+<p>Before the host certificate expires, you can renew it with:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> certbot renew
+</pre></div>
+
+
+<p>To automate renewal monthly with a cron job; for example you can create <code>/etc/cron.d/certbot-renew</code> with the following contents:</p>
+<div class="codehilite"><pre><span></span><span class="go">* * 1 * * root certbot renew</span>
+</pre></div>
+
+
 <h2 id="requesting-hostservice-certificates-using-the-command-line">Requesting Host/Service Certificates Using the Command Line<a class="headerlink" href="#requesting-hostservice-certificates-using-the-command-line" title="Permanent link">&para;</a></h2>
 <p>The OSG PKI Command Line Clients are tested to work on Python version 2.4+. They
 have not been tested on Python version 3. In order to proceed you will also
@@ -2904,7 +2961,16 @@ to retrieve information about the certificate:</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://www.cilogon.org/globus-with-incommon-ca">CILogon documentation for requesting InCommon certificates</a></li>
-<li><a href="http://security.ncsa.illinois.edu/research/grid-howtos/usefulopenssl.html">Useful OpenSSL commands (from NCSA)</a> - e.g. how to convert the format of your certificate.</li>
+<li>
+<p><a href="http://security.ncsa.illinois.edu/research/grid-howtos/usefulopenssl.html">Useful OpenSSL commands (from NCSA)</a> - e.g. how to convert the format of your certificate.</p>
+</li>
+<li>
+<p><a href="https://letsencrypt.org/getting-started/">Official Let's Encrypt setup guide</a></p>
+</li>
+<li>
+<p>Another <a href="https://github.com/cilogon/letsencrypt-certificates">Let's Encrypt setup reference</a>
+    Under Getting your host certificate, we follow the first "Setting up" section.</p>
+</li>
 </ul>
                 
                   
