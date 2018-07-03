@@ -6,6 +6,8 @@
 <html lang="en" class="no-js">
   <head>
     
+  <meta name="robots" content="noindex, nofollow" />
+
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -34,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.9.0">
+      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.9.2">
     
     
       
@@ -42,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.4f4f49e8.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.ba0fd1a6.css">
       
       
     
@@ -672,6 +674,66 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+    
+    <label class="md-nav__link" for="nav-5-5">
+      StashCache
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
+        StashCache
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/stashcache/overview/" title="StashCache Overview" class="md-nav__link">
+      StashCache Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/stashcache/install-cache/" title="Intstall Cache" class="md-nav__link">
+      Intstall Cache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/stashcache/install-origin/" title="Install Origin" class="md-nav__link">
+      Install Origin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -846,6 +908,13 @@
           <li class="md-nav__item">
   <a href="#install-the-epel-repositories" title="Install the EPEL repositories" class="md-nav__link">
     Install the EPEL repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-updates" title="Automatic Updates" class="md-nav__link">
+    Automatic Updates
   </a>
   
 </li>
@@ -1585,6 +1654,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#automatic-updates" title="Automatic Updates" class="md-nav__link">
+    Automatic Updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#install-the-osg-repositories" title="Install the OSG Repositories" class="md-nav__link">
     Install the OSG Repositories
   </a>
@@ -1707,6 +1783,31 @@ You must install and enable those first.</p>
 The OSG repositories must have a better (numerically lower) priority than the EPEL repositories;
 you might have dependency resolution ("depsolving") issues otherwise.</p>
 </div>
+<h3 id="automatic-updates">Automatic Updates<a class="headerlink" href="#automatic-updates" title="Permanent link">&para;</a></h3>
+<p>For production services, we suggest only changing software versions during controlled downtime.
+Therefore we recommend security-only automatic updates or disabling automatic updates entirely.</p>
+<p>To enable only security related automatic updates:</p>
+<ul>
+<li>
+<p>On Enterprise Linux 6, edit <code>/etc/sysconfig/yum-autoupdate</code> and set <code>USE_YUMSEC="true"</code></p>
+</li>
+<li>
+<p>On Enterprise Linux 7, edit <code>/etc/yum/yum-cron.conf</code> and set <code>update_cmd = security</code></p>
+</li>
+</ul>
+<p>To disable automatic updates entirely:</p>
+<ul>
+<li>
+<p>On Enterprise Linux 6, edit <code>/etc/sysconfig/yum-autoupdate</code> and set <code>ENABLED="false"</code></p>
+</li>
+<li>
+<p>On Enterprise Linux 7, run:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> service yum-cron stop
+</pre></div>
+
+
+</li>
+</ul>
 <h3 id="install-the-osg-repositories">Install the OSG Repositories<a class="headerlink" href="#install-the-osg-repositories" title="Permanent link">&para;</a></h3>
 <p>This document assumes a fresh install.
 For instructions on upgrading from one OSG series to another, see the <a href="../../release/release_series#updating-from-old">release series document</a>.</p>
@@ -1766,7 +1867,7 @@ A local YUM mirror allows you to reduce the amount of external bandwidth used wh
 <p>Replace <span style="color:red">RANDOM</span> with a number between 0 and 59.</p>
 <p>Replace <span style="color:red">OSG_RELEASE</span> with the OSG release you want to use (e.g. '3.3', or '3.4').</p>
 <p>On your worker node, you can replace the <code>baseurl</code> line of <code>/etc/yum.repos.d/osg.repo</code> with the appropriate URL for your mirror.</p>
-<p>If you are interested in having your mirror be part of the OSG's default set of mirrors, <a href="https://ticket.opensciencegrid.org/">please file a GOC ticket</a>.</p>
+<p>If you are interested in having your mirror be part of the OSG's default set of mirrors, <a href="https://support.opensciencegrid.org/helpdesk/tickets/new">please file a GOC ticket</a>.</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../../release/yum-basics/">Basic use of Yum</a></li>
