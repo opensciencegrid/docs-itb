@@ -91,16 +91,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/data/hadoop-overview/</loc>
-     <lastmod>2018-09-06</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://opensciencegrid.github.io/docs-itb/data/install-hadoop/</loc>
-     <lastmod>2018-09-06</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://opensciencegrid.github.io/docs-itb/data/xrootd/overview/</loc>
      <lastmod>2018-09-06</lastmod>
      <changefreq>daily</changefreq>
@@ -147,6 +137,16 @@
     </url>
     <url>
      <loc>https://opensciencegrid.github.io/docs-itb/data/stashcache/install-origin/</loc>
+     <lastmod>2018-09-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb/data/hadoop-overview/</loc>
+     <lastmod>2018-09-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://opensciencegrid.github.io/docs-itb/data/install-hadoop/</loc>
      <lastmod>2018-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
