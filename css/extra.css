@@ -77,21 +77,21 @@ code, tt {
 }
 
 .wy-side-nav-search {
-background-color: #343a40;
+background-color: #CC0000;
 }
 .wy-nav-top {
-background-color: #343a40;
+background-color: #CC0000;
 }
 .md-header {
-background-color: #343a40;
+background-color: #CC0000;
 }
 @media only screen and (max-width: 76.1875em) {
   html .md-nav--primary .md-nav__title--site {
-    background-color: #343a40;
+    background-color: #CC0000;
   }
 }
 
 /* Repository background color for mobile */
 .md-nav__source {
-background-color: #1f2326;
+background-color: #A30000;
 }

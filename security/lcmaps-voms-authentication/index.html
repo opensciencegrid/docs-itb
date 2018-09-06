@@ -2110,7 +2110,7 @@
                 
                 
                 <h1 id="installing-and-maintaining-the-lcmaps-voms-plugin">Installing and Maintaining the LCMAPS VOMS Plugin<a class="headerlink" href="#installing-and-maintaining-the-lcmaps-voms-plugin" title="Permanent link">&para;</a></h1>
-<p>LCMAPS is a software library used on <a href="../../compute-element/install-htcondor-ce">HTCondor-CE</a>, <a href="../../data/gridftp">GridFTP</a>, and <a href="../../data/install-xrootd">XRootD</a> hosts for mapping grid certificates of incoming connections to specific Unix accounts. The LCMAPS VOMS plugin enables LCMAPS to make mapping decisions based on the VOMS attributes of grid certificates, e.g., <code>/cms/Role=production/Capability=NULL</code>. Starting in OSG 3.4, the LCMAPS VOMS plugin will replace GUMS and edg-mkgridmap as the authentication method at OSG sites.</p>
+<p>LCMAPS is a software library used on <a href="../../compute-element/install-htcondor-ce">HTCondor-CE</a>, <a href="../../data/gridftp">GridFTP</a>, and <a href="../../data/xrootd/install-storage-element">XRootD</a> hosts for mapping grid certificates of incoming connections to specific Unix accounts. The LCMAPS VOMS plugin enables LCMAPS to make mapping decisions based on the VOMS attributes of grid certificates, e.g., <code>/cms/Role=production/Capability=NULL</code>. Starting in OSG 3.4, the LCMAPS VOMS plugin will replace GUMS and edg-mkgridmap as the authentication method at OSG sites.</p>
 <p>The OSG provides a default set of mappings from VOMS attributes to Unix accounts. By configuring LCMAPS, you can override these mappings, including changing the Unix account that a VO is mapped to, banning based on VOMS attributes, banning a specific user, or adding a VO, VO group, VO role, and/or user that is not in the OSG's set of mappings.</p>
 <p>Use this page to learn how to install and configure the LCMAPS VOMS plugin to authenticate users to access your resources on a per-VO basis.</p>
 <h2 id="installing-the-lcmaps-voms-plugin">Installing the LCMAPS VOMS Plugin<a class="headerlink" href="#installing-the-lcmaps-voms-plugin" title="Permanent link">&para;</a></h2>
@@ -2527,7 +2527,7 @@ VOMS authentication as well as common LCMAPS VOMS authentication issues.</p>
 
 </li>
 <li>
-<p>Restart the <a href="../../data/install-xrootd#managing-xrootd-services">xrootd</a> service</p>
+<p>Restart the <a href="../../data/xrootd/install-storage-element#managing-xrootd-services">xrootd</a> service</p>
 </li>
 </ol>
 <div class="admonition tip">
