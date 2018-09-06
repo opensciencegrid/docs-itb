@@ -918,7 +918,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/xrootd-overview/" title="XRootD Overview" class="md-nav__link">
+    <a href="../../data/xrootd/overview/" title="XRootD Overview" class="md-nav__link">
       XRootD Overview
     </a>
   </li>
@@ -930,8 +930,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/install-xrootd/" title="Install XRootD" class="md-nav__link">
-      Install XRootD
+    <a href="../../data/xrootd/install-standalone/" title="Install Standalone XRootD" class="md-nav__link">
+      Install Standalone XRootD
     </a>
   </li>
 
@@ -942,7 +942,31 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/install-xroot-client/" title="Using XRootD" class="md-nav__link">
+    <a href="../../data/xrootd/install-storage-element/" title="Install XRootD SE" class="md-nav__link">
+      Install XRootD SE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/xrootd/configure-authorization/" title="Configure Authorization" class="md-nav__link">
+      Configure Authorization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/xrootd/install-client/" title="Using XRootD" class="md-nav__link">
       Using XRootD
     </a>
   </li>
@@ -963,14 +987,38 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
     
     <label class="md-nav__link" for="nav-5-5">
-      StashCache
+      XCache
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-5-5">
-        StashCache
+        XCache
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/xcache/overview/" title="XCache Overview" class="md-nav__link">
+      XCache Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/xcache/install-xcache/" title="Install XCache" class="md-nav__link">
+      Install XCache
+    </a>
+  </li>
+
         
           
           
@@ -990,8 +1038,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/stashcache/install-cache/" title="Intstall Cache" class="md-nav__link">
-      Intstall Cache
+    <a href="../../data/stashcache/install-cache/" title="Install StashCache Cache" class="md-nav__link">
+      Install StashCache Cache
     </a>
   </li>
 
@@ -1002,8 +1050,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/stashcache/install-origin/" title="Install Origin" class="md-nav__link">
-      Install Origin
+    <a href="../../data/stashcache/install-origin/" title="Install StashCache Origin" class="md-nav__link">
+      Install StashCache Origin
     </a>
   </li>
 
@@ -1043,8 +1091,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../security/lcmaps-voms-authentication/" title="LCMAPS-VOMS authentication" class="md-nav__link">
-      LCMAPS-VOMS authentication
+    <a href="../../security/lcmaps-voms-authentication/" title="LCMAPS VOMS authentication" class="md-nav__link">
+      LCMAPS VOMS authentication
     </a>
   </li>
 
@@ -1307,6 +1355,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-17/" title="OSG Release 3.4.17" class="md-nav__link">
+      OSG Release 3.4.17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-16-2/" title="OSG Release 3.4.16-2" class="md-nav__link">
+      OSG Release 3.4.16-2
+    </a>
+  </li>
+
         
           
           
@@ -2548,16 +2620,21 @@ cms\/Role=production cms.prod
 <h3 id="using-htcondor-ce-tools">Using HTCondor-CE tools<a class="headerlink" href="#using-htcondor-ce-tools" title="Permanent link">&para;</a></h3>
 <p>Some of the HTCondor-CE administrative and user tools are documented in <a href="../troubleshoot-htcondor-ce">the HTCondor-CE troubleshooting guide</a>.</p>
 <h2 id="validating-htcondor-ce">Validating HTCondor-CE<a class="headerlink" href="#validating-htcondor-ce" title="Permanent link">&para;</a></h2>
-<p>There are different ways to make sure that your HTCondor-CE host is working well:</p>
-<ul>
-<li>Perform automated validation by running <a href="../../monitoring/install-rsv">RSV</a></li>
-<li>Manually verify your HTCondor-CE using <a href="../troubleshoot-htcondor-ce">HTCondor-CE troubleshooting guide</a>; useful tools include:<ul>
-<li><a href="../troubleshoot-htcondor-ce#condor_ce_run">condor_ce_run</a></li>
-<li><a href="../troubleshoot-htcondor-ce#condor_ce_trace">condor_ce_trace</a></li>
-<li><a href="../troubleshoot-htcondor-ce#condor_submit">condor_submit</a></li>
-</ul>
+<p>To validate an HTCondor-CE, perform the following verification steps:</p>
+<ol>
+<li>
+<p>Verify that all the necessary daemons are running with
+   <a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_status">condor_ce_status</a>.</p>
 </li>
-</ul>
+<li>
+<p>Verify the CE's network configuration using
+   <a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_host_network_check">condor_ce_host_network_check</a>.</p>
+</li>
+<li>
+<p>Verify that jobs can complete successfully using
+   <a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_trace">condor_ce_trace</a>.</p>
+</li>
+</ol>
 <h2 id="troubleshooting-htcondor-ce">Troubleshooting HTCondor-CE<a class="headerlink" href="#troubleshooting-htcondor-ce" title="Permanent link">&para;</a></h2>
 <p>For information on how to troubleshoot your HTCondor-CE, please refer to <a href="../troubleshoot-htcondor-ce">the HTCondor-CE troubleshooting guide</a>.</p>
 <h2 id="registering-the-ce">Registering the CE<a class="headerlink" href="#registering-the-ce" title="Permanent link">&para;</a></h2>

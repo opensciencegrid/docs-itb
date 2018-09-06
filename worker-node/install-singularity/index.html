@@ -774,7 +774,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/xrootd-overview/" title="XRootD Overview" class="md-nav__link">
+    <a href="../../data/xrootd/overview/" title="XRootD Overview" class="md-nav__link">
       XRootD Overview
     </a>
   </li>
@@ -786,8 +786,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/install-xrootd/" title="Install XRootD" class="md-nav__link">
-      Install XRootD
+    <a href="../../data/xrootd/install-standalone/" title="Install Standalone XRootD" class="md-nav__link">
+      Install Standalone XRootD
     </a>
   </li>
 
@@ -798,7 +798,31 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/install-xroot-client/" title="Using XRootD" class="md-nav__link">
+    <a href="../../data/xrootd/install-storage-element/" title="Install XRootD SE" class="md-nav__link">
+      Install XRootD SE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/xrootd/configure-authorization/" title="Configure Authorization" class="md-nav__link">
+      Configure Authorization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/xrootd/install-client/" title="Using XRootD" class="md-nav__link">
       Using XRootD
     </a>
   </li>
@@ -819,14 +843,38 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
     
     <label class="md-nav__link" for="nav-5-5">
-      StashCache
+      XCache
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-5-5">
-        StashCache
+        XCache
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/xcache/overview/" title="XCache Overview" class="md-nav__link">
+      XCache Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/xcache/install-xcache/" title="Install XCache" class="md-nav__link">
+      Install XCache
+    </a>
+  </li>
+
         
           
           
@@ -846,8 +894,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/stashcache/install-cache/" title="Intstall Cache" class="md-nav__link">
-      Intstall Cache
+    <a href="../../data/stashcache/install-cache/" title="Install StashCache Cache" class="md-nav__link">
+      Install StashCache Cache
     </a>
   </li>
 
@@ -858,8 +906,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/stashcache/install-origin/" title="Install Origin" class="md-nav__link">
-      Install Origin
+    <a href="../../data/stashcache/install-origin/" title="Install StashCache Origin" class="md-nav__link">
+      Install StashCache Origin
     </a>
   </li>
 
@@ -899,8 +947,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../security/lcmaps-voms-authentication/" title="LCMAPS-VOMS authentication" class="md-nav__link">
-      LCMAPS-VOMS authentication
+    <a href="../../security/lcmaps-voms-authentication/" title="LCMAPS VOMS authentication" class="md-nav__link">
+      LCMAPS VOMS authentication
     </a>
   </li>
 
@@ -1163,6 +1211,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-17/" title="OSG Release 3.4.17" class="md-nav__link">
+      OSG Release 3.4.17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-16-2/" title="OSG Release 3.4.16-2" class="md-nav__link">
+      OSG Release 3.4.16-2
+    </a>
+  </li>
+
         
           
           
@@ -1929,8 +2001,31 @@ installing only this smaller package reduces risk of potential security
 exploits.</p>
 </div>
 <h3 id="configuring-singularity">Configuring singularity<a class="headerlink" href="#configuring-singularity" title="Permanent link">&para;</a></h3>
-<p>There are no required changes to the default configuration.  If you want
-to see what options are available, see <code>/etc/singularity/singularity.conf</code>.</p>
+<p>The OSG distribution of singularity includes an option called
+<code>underlay</code> that enables using bind mount points that do not exist in
+the container image.
+It is not enabled by default but recommended because it is less
+vulnerable to security problems than the similar default <code>overlay</code>
+option.
+In addition, the <code>overlay</code> option does not work on RHEL6 and does not
+work correctly on RHEL7 when container images are distributed by CVMFS.</p>
+<p>Set these options in <code>/etc/singularity/singularity.conf</code>:</p>
+<div class="codehilite"><pre><span></span>    use overlay = no
+    use underlay = yes
+</pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you modify <code>/etc/singularity/singularity.conf</code>, be careful with
+your upgrade procedures.
+RPM will not automatically merge your changes with new upstream
+configuration keys, which may cause a broken install or inadvertently
+change the site configuration.  Singularity changes its default
+configuration file more frequently than typical OSG software.</p>
+<p>Look for <code>singularity.conf.rpmnew</code> after upgrades and merge in any
+changes to the defaults.</p>
+</div>
 <h4 id="limiting-image-types">Limiting image types<a class="headerlink" href="#limiting-image-types" title="Permanent link">&para;</a></h4>
 <p>Images based on loopback devices carry an inherently higher exposure to
 unknown kernel exploits compared to directory-based images distributed via
@@ -1948,17 +2043,6 @@ the following option in <code>/etc/singularity/singularity.conf</code>:</p>
 <p>While reasonable for some sites, this is not required as there are currently
 no public kernel exploits for this issue; any exploits are patched by
 Red Hat when they are discovered.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If you modify <code>/etc/singularity/singularity.conf</code>, carefully test any
-upgrade procedures.
-RPM will not automatically merge your changes with new upstream
-configuration keys, which may cause a broken install or inadvertently
-change the site configuration.  Singularity renames configuration keys
-more frequently than typical OSG software.</p>
-<p>Look for <code>.rpmnew</code> files after upgrades and merge in any changes to the
-defaults.</p>
-</div>
 <h3 id="validating-singularity">Validating singularity<a class="headerlink" href="#validating-singularity" title="Permanent link">&para;</a></h3>
 <p>After singularity is installed, as an ordinary user run the following
 command to verify it:</p>

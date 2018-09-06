@@ -639,7 +639,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/xrootd-overview/" title="XRootD Overview" class="md-nav__link">
+    <a href="../../data/xrootd/overview/" title="XRootD Overview" class="md-nav__link">
       XRootD Overview
     </a>
   </li>
@@ -651,8 +651,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/install-xrootd/" title="Install XRootD" class="md-nav__link">
-      Install XRootD
+    <a href="../../data/xrootd/install-standalone/" title="Install Standalone XRootD" class="md-nav__link">
+      Install Standalone XRootD
     </a>
   </li>
 
@@ -663,7 +663,31 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/install-xroot-client/" title="Using XRootD" class="md-nav__link">
+    <a href="../../data/xrootd/install-storage-element/" title="Install XRootD SE" class="md-nav__link">
+      Install XRootD SE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/xrootd/configure-authorization/" title="Configure Authorization" class="md-nav__link">
+      Configure Authorization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/xrootd/install-client/" title="Using XRootD" class="md-nav__link">
       Using XRootD
     </a>
   </li>
@@ -684,14 +708,38 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
     
     <label class="md-nav__link" for="nav-5-5">
-      StashCache
+      XCache
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-5-5">
-        StashCache
+        XCache
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/xcache/overview/" title="XCache Overview" class="md-nav__link">
+      XCache Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/xcache/install-xcache/" title="Install XCache" class="md-nav__link">
+      Install XCache
+    </a>
+  </li>
+
         
           
           
@@ -711,8 +759,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/stashcache/install-cache/" title="Intstall Cache" class="md-nav__link">
-      Intstall Cache
+    <a href="../../data/stashcache/install-cache/" title="Install StashCache Cache" class="md-nav__link">
+      Install StashCache Cache
     </a>
   </li>
 
@@ -723,8 +771,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/stashcache/install-origin/" title="Install Origin" class="md-nav__link">
-      Install Origin
+    <a href="../../data/stashcache/install-origin/" title="Install StashCache Origin" class="md-nav__link">
+      Install StashCache Origin
     </a>
   </li>
 
@@ -764,8 +812,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../security/lcmaps-voms-authentication/" title="LCMAPS-VOMS authentication" class="md-nav__link">
-      LCMAPS-VOMS authentication
+    <a href="../../security/lcmaps-voms-authentication/" title="LCMAPS VOMS authentication" class="md-nav__link">
+      LCMAPS VOMS authentication
     </a>
   </li>
 
@@ -1273,6 +1321,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-17/" title="OSG Release 3.4.17" class="md-nav__link">
+      OSG Release 3.4.17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-16-2/" title="OSG Release 3.4.16-2" class="md-nav__link">
+      OSG Release 3.4.16-2
+    </a>
+  </li>
+
         
           
           
@@ -2609,7 +2681,7 @@ SE.</p>
 <tr>
 <td>max_wall_time</td>
 <td>Positive Integer</td>
-<td>Maximum wall-clock time, in minutes, that a job is allowed to run on this subcluster (the default is one day or 1440 mins)</td>
+<td>Maximum wall-clock time, in minutes, that a job is allowed to run on this subcluster. The default is 1440, or the equivalent of one day.</td>
 </tr>
 <tr>
 <td>queue</td>
