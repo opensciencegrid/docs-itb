@@ -1203,6 +1203,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-20/" title="OSG Release 3.4.20" class="md-nav__link">
+      OSG Release 3.4.20
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-19/" title="OSG Release 3.4.19" class="md-nav__link">
+      OSG Release 3.4.19
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../release/3.4/release-3-4-18-2/" title="OSG Release 3.4.18-2" class="md-nav__link">
       OSG Release 3.4.18-2
     </a>
@@ -2109,16 +2133,14 @@ to try to see what's wrong.</p>
 good to do the test in the
 <a href="https://twiki.cern.ch/twiki/bin/view/Frontier/InstallSquid#Testing_the_installation">upstream documentation Testing the installation section</a>.</p>
 <h2 id="registering-frontier-squid">Registering Frontier Squid<a class="headerlink" href="#registering-frontier-squid" title="Permanent link">&para;</a></h2>
-<p>See the <a href="../../common/registration#new-registrations">registration doc</a> for instructions on registering a new resource.
-See the instructions for <a href="../../common/registration#updating-existing-registrations">updating existing registrations</a>
-if you are adding the squid service to an existing resource or resource group.</p>
-<p>Additionally:</p>
+<p>To register your Frontier Squid host, follow the general registration instructions
+<a href="../../common/registration#new-resources">here</a> with the following Frontier Squid-specific details:</p>
 <ol>
 <li>
 <p>Add a <code>Squid:</code> section to the <code>Services:</code> list, with any relevant fields for that service.
     This is a partial example:</p>
 <div class="codehilite"><pre><span></span><span class="go">...</span>
-<span class="go">FQDN: fully.qualified.DNS.name.of.your.server(s)</span>
+<span class="go">FQDN: &lt;FULLY QUALIFIED DOMAIN NAME&gt;</span>
 <span class="go">Services:</span>
 <span class="go">  Squid:</span>
 <span class="go">    Description: Generic squid service</span>
@@ -2126,10 +2148,10 @@ if you are adding the squid service to an existing resource or resource group.</
 </pre></div>
 
 
-<p>See the <a href="https://github.com/opensciencegrid/topology/blob/master/topology/Brookhaven%20National%20Laboratory/Brookhaven%20ATLAS%20Tier1/BNL-ATLAS.yaml">BNL-ATLAS</a> Squid resource for a complete example.</p>
-<p>If you have more than one server providing the same squid service,
-it is best to register them with one FQDN that is a round-robin DNS
-entry listing all the squids, instead of registering them separately.</p>
+<p>Replacing <code>&lt;FULLY QUALIFIED DOMAIN NAME&gt;</code> with your Frontier Squid server's DNS entry or in the case of multiple
+Frontier Squid servers for a single resource, the round-robin DNS entry.</p>
+<p>See the <a href="https://github.com/opensciencegrid/topology/blob/master/topology/Brookhaven%20National%20Laboratory/Brookhaven%20ATLAS%20Tier1/BNL-ATLAS.yaml#L306-L325">BNL_ATLAS_Frontier_Squid</a> 
+for a complete example.</p>
 </li>
 <li>
 <p>If you are setting up a new resource, set <code>Active: false</code>.
@@ -2137,7 +2159,7 @@ entry listing all the squids, instead of registering them separately.</p>
 </li>
 </ol>
 <p>If you are running a WLCG site, a few hours after a squid is registered
-and marked Active
+and marked <code>Active</code>, 
 <a href="https://twiki.cern.ch/twiki/bin/view/LCG/WLCGSquidRegistration#Verify_monitor">verify that it is monitored by WLCG</a>.</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <h3 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h3>

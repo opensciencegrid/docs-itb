@@ -832,6 +832,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#registering-the-cache" title="Registering the Cache" class="md-nav__link">
+    Registering the Cache
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" title="Getting Help" class="md-nav__link">
+    Getting Help
+  </a>
+  
+</li>
+      
       
       
       
@@ -1202,6 +1216,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-20/" title="OSG Release 3.4.20" class="md-nav__link">
+      OSG Release 3.4.20
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-19/" title="OSG Release 3.4.19" class="md-nav__link">
+      OSG Release 3.4.19
+    </a>
+  </li>
+
         
           
           
@@ -1936,6 +1974,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#registering-the-cache" title="Registering the Cache" class="md-nav__link">
+    Registering the Cache
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" title="Getting Help" class="md-nav__link">
+    Getting Help
+  </a>
+  
+</li>
+      
       
       
       
@@ -1961,14 +2013,13 @@ network to cache data frequently used on the OSG, reducing data transfer over th
 decreasing access latency.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The cache service must be registered with the OSG if it is to be used by clients.  You may start the
-registration procedure prior to finishing the installation by contacting <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a>
-with the following details:</p>
+<p>The <em>cache</em> service must be registered with the OSG if it is to be used by clients. You may start 
+registration procedure prior to finishing the installation by <a href="#registering-the-cache">using this link</a> 
+along with the basic information like:</p>
 <ul>
 <li>Resource name and hostname.</li>
 <li>Administrative and security contact.</li>
 </ul>
-<p>Follow the <a href="../../../common/registration/">registration documentation</a> for more information.</p>
 </div>
 <h2 id="installation-prerequisites-for-the-cache">Installation prerequisites for the Cache<a class="headerlink" href="#installation-prerequisites-for-the-cache" title="Permanent link">&para;</a></h2>
 <p>Before starting the installation process, consider the following mandatory points:</p>
@@ -1987,7 +2038,7 @@ with the following details:</p>
 </ul>
 </li>
 <li><strong>Hardware requirements:</strong> We recommend that a StashCache server has at least 10Gbps connectivity, 1TB of
- disk space, and 8GB of RAM.</li>
+ disk space for the cache directory, and 8GB of RAM.</li>
 </ul>
 <p>If installing the (optional) authenticated StashCache, you also need to do the following:</p>
 <ul>
@@ -2012,35 +2063,40 @@ with the following details:</p>
 <p>The StashCache daemon consists of an XRootD server and an HTCondor-based service for collecting and reporting
 statistics about the cache. To simplify installation, OSG provides convenience RPMs that install all required
 software with a single command:</p>
-<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install --enablerepo<span class="o">=</span>osg-development stashcache-cache-server
+<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install --enablerepo<span class="o">=</span>osg-testing stashcache-cache-server
 </pre></div>
 
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If installing authenticated StashCache Cache server, you need an additional package:</p>
-<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install --enablerepo<span class="o">=</span>osg-development stashcache-cache-server-auth
+<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install --enablerepo<span class="o">=</span>osg-testing stashcache-cache-server-auth
 </pre></div>
 
 
 </div>
-<p>The cache server configuration assumes the disk used to cache data is mounted at <code>/stash</code> and owned by the
-<code>xrootd:xrootd</code> user and group.</p>
 <h2 id="configuring-the-cache">Configuring the Cache<a class="headerlink" href="#configuring-the-cache" title="Permanent link">&para;</a></h2>
+<p>First, you must create a "cache directory", which will be used to store downloaded files.
+By default this is <code>/stash</code>.
+We recommend using a separate file system for the cache directory,
+with at least 1 TB of storage available.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The cache directory must be writable by the <code>xrootd:xrootd</code> user and group.</p>
+</div>
 <p>The <code>stashcache-cache-server</code> provides a default configuration file,
 <code>/etc/xrootd/xrootd-stashcache-cache-server.cfg</code>, which must be customized for your cache.</p>
 <p>The most common lines to customize are:</p>
 <ul>
 <li><code>all.sitename YOUR_SITE_NAME</code>: The registered OSG resource name.  This <strong>must</strong> be changed.</li>
-<li><code>set cachedir = /stash</code>: The location of the cache directory for this service.  Files downloaded by the
-  cache will be stored here; we recommend it is at least 1TB in size.</li>
+<li><code>set cachedir = /stash</code>: The location of the cache directory for this service.</li>
 <li><code>*.trace</code>, <code>pss.setopt</code>: These control the logging verbosity of the cache.  The defaults are relatively high
   in order to aid in debugging.  These lines can be commented out to reduce logging; however, if issues occur,
   OSG support may ask you to re-enable them.</li>
 <li><code>pfc.ram 7g</code>: The amount of RAM the caching service should target to use.</li>
 </ul>
 <p>The Authfile specifies which files and directories can be read,
-relative to the <code>cachedir</code> that was defined in the main config.</p>
+relative to the cache directory (<code>cachedir</code> in the main config).</p>
 <p>An example:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> cat /etc/xrootd/Authfile-noauth
 <span class="go">u * /user/ligo -rl / rl</span>
@@ -2190,6 +2246,12 @@ mounted, then ensure you <em>enable</em> (set to start at boot) and <em>start</e
 
 
 <p>Where <code>hostname</code> is the string returned by the hostname command. The output of the above command should provide an HTCondor ClassAd that details the status of your cache.</p>
+<h2 id="registering-the-cache">Registering the Cache<a class="headerlink" href="#registering-the-cache" title="Permanent link">&para;</a></h2>
+<p>To be part of the OSG StashCache Federation, your <em>cache</em> must be
+<a href="../../../common/registration/">registered with the OSG</a>.  The service type is "XRootD cache server"</p>
+<p>Once the cache has been registered, open a <a href="https://support.opensciencegrid.org">help ticket</a> with your cache name.  Mention in your ticket that you would like to "Finalize the cache registration."</p>
+<h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
+<p>To get assistance, please use the <a href="../../../common/help">this page</a> or contact directly <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a>.</p>
                 
                   
                 

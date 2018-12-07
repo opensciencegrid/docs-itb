@@ -1195,6 +1195,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-20/" title="OSG Release 3.4.20" class="md-nav__link">
+      OSG Release 3.4.20
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-19/" title="OSG Release 3.4.19" class="md-nav__link">
+      OSG Release 3.4.19
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../release/3.4/release-3-4-18-2/" title="OSG Release 3.4.18-2" class="md-nav__link">
       OSG Release 3.4.18-2
     </a>
@@ -2021,7 +2045,7 @@ host to avoid any duplicate registrations:</p>
 <p>To register a new resource, follow the instructions below:</p>
 <ol>
 <li>
-<p>If you haven't already, verify that the FQDN of your resource is not <a href="#registering-resources">already registered</a></p>
+<p>If you haven't already, verify that the FQDN of your resource is not <a href="#searching-for-resources">already registered</a></p>
 </li>
 <li>
 <p>Choose the names of your facility, site, and resource group, ensuring that the names match any pre-existing
@@ -2031,7 +2055,7 @@ host to avoid any duplicate registrations:</p>
 <ul>
 <li>
 <p>If your resource group already exists under your facility and site, open the following URL in your browser:</p>
-<div class="codehilite"><pre><span></span><span class="nt">https</span><span class="o">://</span><span class="nt">github</span><span class="p">.</span><span class="nc">com</span><span class="o">/</span><span class="nt">opensciencegrid</span><span class="o">/</span><span class="nt">topology</span><span class="o">/</span><span class="nt">edit</span><span class="o">/</span><span class="nt">master</span><span class="o">/&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">FACILITY</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;/&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">SITE</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;/&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">RESOURCE</span> <span class="nt">GROUP</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span><span class="p">.</span><span class="nc">yaml</span>
+<div class="codehilite"><pre><span></span>https://github.com/opensciencegrid/topology/edit/master/topology/&lt;FACILITY&gt;/&lt;SITE&gt;/&lt;RESOURCE GROUP&gt;.yaml
 </pre></div>
 
 
@@ -2044,7 +2068,7 @@ Wisconsin</code>, open the following URL:</p>
 </li>
 <li>
 <p>If any of your facility, site, or resource group do not exist, open the following URL in your browser:</p>
-<div class="codehilite"><pre><span></span><span class="nt">https</span><span class="o">://</span><span class="nt">github</span><span class="p">.</span><span class="nc">com</span><span class="o">/</span><span class="nt">opensciencegrid</span><span class="o">/</span><span class="nt">topology</span><span class="o">/</span><span class="nt">new</span><span class="o">/</span><span class="nt">master</span><span class="o">?</span><span class="nt">filename</span><span class="o">=</span><span class="nt">topology</span><span class="o">/&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">FACILITY</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;/&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">SITE</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;/&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">RESOURCE</span> <span class="nt">GROUP</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span><span class="p">.</span><span class="nc">yaml</span>
+<div class="codehilite"><pre><span></span>https://github.com/opensciencegrid/topology/new/master?filename=topology/&lt;FACILITY&gt;/&lt;SITE&gt;/&lt;RESOURCE GROUP&gt;.yaml
 </pre></div>
 
 
@@ -2066,7 +2090,8 @@ access to the OSG copy of the topology data, which is why you are creating a pul
 <p>Make changes with the <a href="https://help.github.com/articles/editing-files-in-your-repository/">GitHub file editor</a> using
    the <a href="https://github.com/opensciencegrid/topology/blob/master/template-resourcegroup.yaml">resource group template</a>
    as a guide.
-   If you are modifying existing entries, make sure you do not change formatting or indentation of the modified entry.</p>
+   You may leave any <code>ID</code> or <code>GroupID</code> fields blank.
+   When adding new entries, make sure that the formatting and indentation of your entry matches that of the template.</p>
 </li>
 <li>
 <p>Submit your changes as a pull request, providing a descriptive commit message. For example:</p>
@@ -2091,6 +2116,7 @@ access to the OSG copy of the topology data, which is why you are creating a pul
 <p>Make changes with the <a href="https://help.github.com/articles/editing-files-in-your-repository/">GitHub file editor</a> using
    the <a href="https://github.com/opensciencegrid/topology/blob/master/template-resourcegroup.yaml">resource group template</a>
    as a guide.
+   You may leave any <code>ID</code> or <code>GroupID</code> fields blank.
    Make sure that the formatting and indentation of the modified entry does not change.</p>
 <div class="admonition note">
 <p class="admonition-title">"You're editing a file in a project you don't have write access to."</p>
@@ -2147,7 +2173,10 @@ Wisconsin</code> can be found and registered in the following file, relative to 
 </pre></div>
 
 
-<p>!!! note Do not put downtime updates in the same pull request as other topology updates.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not put downtime updates in the same pull request as other topology updates.</p>
+</div>
 <h3 id="registering-new-downtime">Registering new downtime<a class="headerlink" href="#registering-new-downtime" title="Permanent link">&para;</a></h3>
 <p>To register a new downtime for a registered resource,
 you will use a webform to generate the contents of the downtime entry,
@@ -2219,7 +2248,7 @@ Follow the instructions below:</p>
 <li>
 <p>Open the following URL in your browser using the facility, site, and resource group names to replace
     <code>&lt;FACILITY&gt;</code>, <code>&lt;SITE&gt;</code>, and <code>&lt;RESOURCE GROUP&gt;</code>, respectively:</p>
-<div class="codehilite"><pre><span></span> <span class="nt">https</span><span class="o">://</span><span class="nt">github</span><span class="p">.</span><span class="nc">com</span><span class="o">/</span><span class="nt">opensciencegrid</span><span class="o">/</span><span class="nt">topology</span><span class="o">/</span><span class="nt">edit</span><span class="o">/</span><span class="nt">master</span><span class="o">/</span><span class="nt">topology</span><span class="o">/&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">FACILITY</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;/&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">SITE</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;/&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">RESOURCE</span> <span class="nt">GROUP</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span><span class="nt">_downtime</span><span class="p">.</span><span class="nc">yaml</span>
+<div class="codehilite"><pre><span></span> https://github.com/opensciencegrid/topology/edit/master/topology/&lt;FACILITY&gt;/&lt;SITE&gt;/&lt;RESOURCE GROUP&gt;_downtime.yaml
 </pre></div>
 
 
@@ -2280,6 +2309,7 @@ access to the OSG copy of the topology data, which is why you are creating a pul
 <p>Make changes with the <a href="https://help.github.com/articles/editing-files-in-your-repository/">GitHub file editor</a> using
    the <a href="https://github.com/opensciencegrid/topology/blob/master/template-virtual-organization.yaml">VO template</a>
    as a guide.
+   You may leave any <code>ID</code> fields blank.
    If you are modifying existing entries, make sure you do not change formatting or indentation of the modified entry.</p>
 </li>
 <li>
@@ -2317,6 +2347,7 @@ access to the OSG copy of the topology data, which is why you are creating a pul
 <li>
 <p>Make changes with the <a href="https://help.github.com/articles/editing-files-in-your-repository/">GitHub file editor</a> using
    the <a href="https://github.com/opensciencegrid/topology/blob/master/template-projects.yaml">project template</a> as a guide.
+   You may leave any <code>ID</code> fields blank.
    If you are modifying existing entries, make sure you do not change formatting or indentation of the modified entry.</p>
 </li>
 <li>
