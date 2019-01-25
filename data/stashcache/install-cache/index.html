@@ -605,8 +605,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../xrootd/install-gateway/" title="Install XRootD Gateway" class="md-nav__link">
-      Install XRootD Gateway
+    <a href="../../xrootd/install-standalone/" title="Install XRootD Standalone" class="md-nav__link">
+      Install XRootD Standalone
     </a>
   </li>
 
@@ -629,7 +629,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../xrootd/configure-authorization/" title="Configure Authorization" class="md-nav__link">
+    <a href="../../xrootd/xrootd-authorization/" title="Configure Authorization" class="md-nav__link">
       Configure Authorization
     </a>
   </li>
@@ -1216,6 +1216,54 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-23/" title="OSG Release 3.4.23" class="md-nav__link">
+      OSG Release 3.4.23
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-22-2/" title="OSG Release 3.4.22-2" class="md-nav__link">
+      OSG Release 3.4.22-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-22/" title="OSG Release 3.4.22" class="md-nav__link">
+      OSG Release 3.4.22
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-21/" title="OSG Release 3.4.21" class="md-nav__link">
+      OSG Release 3.4.21
+    </a>
+  </li>
+
         
           
           
@@ -2060,7 +2108,7 @@ along with the basic information like:</p>
 <li>Install <a href="../../../common/ca/">CA certificates</a></li>
 </ul>
 <h2 id="installing-the-cache">Installing the Cache<a class="headerlink" href="#installing-the-cache" title="Permanent link">&para;</a></h2>
-<p>The StashCache daemon consists of an XRootD server and an HTCondor-based service for collecting and reporting
+<p>The StashCache daemon consists of an XRootD server and a service for collecting and reporting
 statistics about the cache. To simplify installation, OSG provides convenience RPMs that install all required
 software with a single command:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install --enablerepo<span class="o">=</span>osg-testing stashcache-cache-server
@@ -2093,7 +2141,6 @@ with at least 1 TB of storage available.</p>
 <li><code>*.trace</code>, <code>pss.setopt</code>: These control the logging verbosity of the cache.  The defaults are relatively high
   in order to aid in debugging.  These lines can be commented out to reduce logging; however, if issues occur,
   OSG support may ask you to re-enable them.</li>
-<li><code>pfc.ram 7g</code>: The amount of RAM the caching service should target to use.</li>
 </ul>
 <p>The Authfile specifies which files and directories can be read,
 relative to the cache directory (<code>cachedir</code> in the main config).</p>
@@ -2194,8 +2241,8 @@ mounted, then ensure you <em>enable</em> (set to start at boot) and <em>start</e
 <td>The xrootd daemon, which performs the data transfers</td>
 </tr>
 <tr>
-<td>HTCondor</td>
-<td><code>condor.service</code></td>
+<td>StashCache Reporter</td>
+<td><code>stashcache-reporter.timer</code></td>
 <td>Report cache statistics to central OSG collector</td>
 </tr>
 <tr>

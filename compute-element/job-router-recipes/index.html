@@ -982,8 +982,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/xrootd/install-gateway/" title="Install XRootD Gateway" class="md-nav__link">
-      Install XRootD Gateway
+    <a href="../../data/xrootd/install-standalone/" title="Install XRootD Standalone" class="md-nav__link">
+      Install XRootD Standalone
     </a>
   </li>
 
@@ -1006,7 +1006,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data/xrootd/configure-authorization/" title="Configure Authorization" class="md-nav__link">
+    <a href="../../data/xrootd/xrootd-authorization/" title="Configure Authorization" class="md-nav__link">
       Configure Authorization
     </a>
   </li>
@@ -1431,6 +1431,54 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-23/" title="OSG Release 3.4.23" class="md-nav__link">
+      OSG Release 3.4.23
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-22-2/" title="OSG Release 3.4.22-2" class="md-nav__link">
+      OSG Release 3.4.22-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-22/" title="OSG Release 3.4.22" class="md-nav__link">
+      OSG Release 3.4.22
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-21/" title="OSG Release 3.4.21" class="md-nav__link">
+      OSG Release 3.4.21
+    </a>
+  </li>
+
         
           
           
@@ -2770,7 +2818,7 @@
 
 <h3 id="debugging-routes">Debugging routes<a class="headerlink" href="#debugging-routes" title="Permanent link">&para;</a></h3>
 <p>To help debug expressions in your routes, you can use the <code>debug()</code> function. First, set the debug mode for the JobRouter by editing a file in <code>/etc/condor-ce/config.d/</code> to read</p>
-<div class="codehilite"><pre><span></span>JOB_ROUTER_DEBUG = D_FULLDEBUG
+<div class="codehilite"><pre><span></span>JOB_ROUTER_DEBUG = D_ALWAYS:2 D_CAT
 </pre></div>
 
 

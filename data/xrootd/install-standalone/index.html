@@ -13,7 +13,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://opensciencegrid.github.io/docs-itb/data/xrootd/install-gateway/">
+        <link rel="canonical" href="https://opensciencegrid.github.io/docs-itb/data/xrootd/install-standalone/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>Install XRootD Gateway - OSG Documentation (ITB)</title>
+        <title>Install XRootD Standalone - OSG Documentation (ITB)</title>
       
     
     
@@ -98,7 +98,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#install-xrootd-gateway" tabindex="1" class="md-skip">
+      <a href="#install-xrootd-standalone" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -124,7 +124,7 @@
                 OSG Documentation (ITB)
               </span>
               <span class="md-header-nav__topic">
-                Install XRootD Gateway
+                Install XRootD Standalone
               </span>
             
           
@@ -615,9 +615,140 @@
       
     
     
-    <a href="./" title="Install XRootD Gateway" class="md-nav__link md-nav__link--active">
-      Install XRootD Gateway
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Install XRootD Standalone
+      </label>
+    
+    <a href="./" title="Install XRootD Standalone" class="md-nav__link md-nav__link--active">
+      Install XRootD Standalone
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-starting" title="Before Starting" class="md-nav__link">
+    Before Starting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-xrootd" title="Installing XRootD" class="md-nav__link">
+    Installing XRootD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-xrootd" title="Configuring XRootD" class="md-nav__link">
+    Configuring XRootD
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-authorization" title="Configuring authorization" class="md-nav__link">
+    Configuring authorization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-configuration" title="Optional configuration" class="md-nav__link">
+    Optional configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-http-support" title="Enabling HTTP support" class="md-nav__link">
+    Enabling HTTP support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-hadoop-support" title="Enabling Hadoop support" class="md-nav__link">
+    Enabling Hadoop support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-cms-tfc-support-cms-sites-only" title="Enabling CMS TFC support (CMS sites only)" class="md-nav__link">
+    Enabling CMS TFC support (CMS sites only)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-xrootd" title="Using XRootD" class="md-nav__link">
+    Using XRootD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validating-xrootd" title="Validating XRootD" class="md-nav__link">
+    Validating XRootD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" title="Getting Help" class="md-nav__link">
+    Getting Help
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-locations" title="File locations" class="md-nav__link">
+    File locations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -640,7 +771,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../configure-authorization/" title="Configure Authorization" class="md-nav__link">
+    <a href="../xrootd-authorization/" title="Configure Authorization" class="md-nav__link">
       Configure Authorization
     </a>
   </li>
@@ -1065,6 +1196,54 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-23/" title="OSG Release 3.4.23" class="md-nav__link">
+      OSG Release 3.4.23
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-22-2/" title="OSG Release 3.4.22-2" class="md-nav__link">
+      OSG Release 3.4.22-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-22/" title="OSG Release 3.4.22" class="md-nav__link">
+      OSG Release 3.4.22
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-21/" title="OSG Release 3.4.21" class="md-nav__link">
+      OSG Release 3.4.21
+    </a>
+  </li>
+
         
           
           
@@ -1705,6 +1884,124 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-starting" title="Before Starting" class="md-nav__link">
+    Before Starting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-xrootd" title="Installing XRootD" class="md-nav__link">
+    Installing XRootD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-xrootd" title="Configuring XRootD" class="md-nav__link">
+    Configuring XRootD
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-authorization" title="Configuring authorization" class="md-nav__link">
+    Configuring authorization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-configuration" title="Optional configuration" class="md-nav__link">
+    Optional configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-http-support" title="Enabling HTTP support" class="md-nav__link">
+    Enabling HTTP support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-hadoop-support" title="Enabling Hadoop support" class="md-nav__link">
+    Enabling Hadoop support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-cms-tfc-support-cms-sites-only" title="Enabling CMS TFC support (CMS sites only)" class="md-nav__link">
+    Enabling CMS TFC support (CMS sites only)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-xrootd" title="Using XRootD" class="md-nav__link">
+    Using XRootD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validating-xrootd" title="Validating XRootD" class="md-nav__link">
+    Validating XRootD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" title="Getting Help" class="md-nav__link">
+    Getting Help
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-locations" title="File locations" class="md-nav__link">
+    File locations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1715,10 +2012,275 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opensciencegrid/docs-itb/edit/master/docs/data/xrootd/install-gateway.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opensciencegrid/docs-itb/edit/master/docs/data/xrootd/install-standalone.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="install-xrootd-gateway">Install XRootD Gateway<a class="headerlink" href="#install-xrootd-gateway" title="Permanent link">&para;</a></h1>
+                <h1 id="install-xrootd-standalone">Install XRootD Standalone<a class="headerlink" href="#install-xrootd-standalone" title="Permanent link">&para;</a></h1>
+<p><a href="http://xrootd.org/">XRootD</a> is a hierarchical storage system that can be used in a variety of ways to access data,
+typically distributed among actual storage resources. In this document we focus on using XRootD as a simple layer
+exporting an underlying storage system (e.g., <a href="../../install-hadoop/">HDFS</a>) to the outside world.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The OSG only supports XRootD standalone installations on EL7 hosts</p>
+</div>
+<h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
+<p>Before starting the installation process, consider the following points:</p>
+<ul>
+<li><strong>User IDs:</strong> If it does not exist already, the installation will create the Linux user ID <code>xrootd</code></li>
+<li><strong>Service certificate:</strong> The XRootD service uses a host certificate and key pair at
+    <code>/etc/grid-security/xrd/xrdcert.pem</code> and <code>/etc/grid-security/xrd/xrdkey.pem</code></li>
+<li><strong>Networking:</strong> The XRootD service uses port 1094 by default</li>
+</ul>
+<p>As with all OSG software installations, there are some one-time (per host) steps to prepare in advance:</p>
+<ul>
+<li>Ensure the host has <a href="../../../release/supported_platforms">a supported operating system</a></li>
+<li>Obtain root access to the host</li>
+<li>Prepare <a href="../../../common/yum">the required Yum repositories</a></li>
+<li>Install <a href="../../../common/ca">CA certificates</a></li>
+</ul>
+<h2 id="installing-xrootd">Installing XRootD<a class="headerlink" href="#installing-xrootd" title="Permanent link">&para;</a></h2>
+<p>To install XRootD, run the following Yum command:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@xrootd-standalone #</span> yum install xrootd
+</pre></div>
+
+
+<h2 id="configuring-xrootd">Configuring XRootD<a class="headerlink" href="#configuring-xrootd" title="Permanent link">&para;</a></h2>
+<p>To configure XRootD as a standalone server, replace the contents of <code>/etc/xrootd/xrootd-standalone.cfg</code> as follows:</p>
+<ol>
+<li>
+<p>Add an <code>all.export</code> directive for each directory that you wish to serve via XRootD.
+    For example, to serve the contents of <code>/store</code> and <code>/public</code>:</p>
+<div class="codehilite"><pre><span></span>all.export /store/
+all.export /public/
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The directories specified this way are writable by default.
+Access controls should be managed via <a href="#configuring-authorization">authorization configuration</a>.</p>
+</div>
+</li>
+<li>
+<p>Add an <code>all.sitename</code> directive set to the <a href="../../../common/registration/#registering-resources">resource name</a> of your
+   XRootD service.
+   For example, the XRootD service registered at the
+   <a href="https://github.com/opensciencegrid/topology/blob/master/topology/Fermi%20National%20Accelerator%20Laboratory/FermiGrid/FNAL_PUBLIC_DCACHE.yaml#L6">FermiGrid site</a>
+   should set the following configuration:</p>
+<div class="codehilite"><pre><span></span>all.sitename   Fermilab Public DCache
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>CMS sites should follow CMS policy for <code>all.sitename</code></p>
+</div>
+</li>
+<li>
+<p>Append the following configuration to the end of <code>/etc/xrootd/xrootd-standalone.cfg</code></p>
+<div class="codehilite"><pre><span></span>xrd.port 1094
+all.role server
+
+cms.allow host *
+# Logging verbosity
+xrootd.trace emsg login stall redirect
+ofs.trace -all
+xrd.trace conn
+cms.trace all
+
+xrd.report xrd-report.osgstorage.org:9931
+xrootd.monitor all \
+               auth \
+               flush 30s \
+               window 5s fstat 60 lfn ops xfr 5 \
+               dest redir fstat info user xrd-report.osgstorage.org:9930 \
+               dest fstat info user xrd-mon.osgstorage.org:9930
+
+xrd.network keepalive kaparms 10m,1m,5
+xrd.timeout idle 60m
+</pre></div>
+
+
+</li>
+</ol>
+<h3 id="configuring-authorization">Configuring authorization<a class="headerlink" href="#configuring-authorization" title="Permanent link">&para;</a></h3>
+<p>To configure XRootD authorization please follow the documentation <a href="../../../data/xrootd/xrootd-authorization">here</a>.</p>
+<h3 id="optional-configuration">Optional configuration<a class="headerlink" href="#optional-configuration" title="Permanent link">&para;</a></h3>
+<p>The following configuration steps are optional and will likely not be required for setting up a small site.
+If you do not need any of the following special configurations, skip to
+<a href="#using-xrootd">the section on using XRootD</a>.</p>
+<h4 id="enabling-http-support">Enabling HTTP support<a class="headerlink" href="#enabling-http-support" title="Permanent link">&para;</a></h4>
+<p>In order to enable XRootD HTTP support please follow the instructions
+<a href="../../../data/xrootd/install-storage-element#optional-enabling-xrootd-over-http">here</a></p>
+<h4 id="enabling-hadoop-support">Enabling Hadoop support<a class="headerlink" href="#enabling-hadoop-support" title="Permanent link">&para;</a></h4>
+<p>For documentation on how to export your Hadoop storage using XRootD please see
+<a href="../../../data/xrootd/install-storage-element#optional-adding-hadoop-support-to-xrootd">this documentation</a></p>
+<h4 id="enabling-cms-tfc-support-cms-sites-only">Enabling CMS TFC support (CMS sites only)<a class="headerlink" href="#enabling-cms-tfc-support-cms-sites-only" title="Permanent link">&para;</a></h4>
+<p>For CMS users, there is a package available to integrate rule-based name lookup using a <code>storage.xml</code> file.
+See <a href="../../../data/xrootd/install-storage-element#optional-adding-cms-tfc-support-to-xrootd-cms-sites-only">this documentation</a>.</p>
+<h2 id="using-xrootd">Using XRootD<a class="headerlink" href="#using-xrootd" title="Permanent link">&para;</a></h2>
+<p>In addition to the XRootD service itself, there are a number of supporting services in your installation.
+The specific services are:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Software</th>
+<th align="left">Service Name</th>
+<th align="left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Fetch CRL</td>
+<td align="left"><code>fetch-crl-boot</code> and <code>fetch-crl-cron</code></td>
+<td align="left">See <a href="../../../common/ca#managing-fetch-crl-services">CA documentation</a> for more info</td>
+</tr>
+<tr>
+<td align="left">XRootD</td>
+<td align="left"><code>xrootd@standalone</code></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>Start the services in the order listed and stop them in reverse order.
+As a reminder, here are common service commands (all run as <code>root</code>):</p>
+<table>
+<thead>
+<tr>
+<th align="left">To …</th>
+<th align="left">On EL 7, run the command…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Start a service</td>
+<td align="left"><code>systemctl start SERVICE-NAME</code></td>
+</tr>
+<tr>
+<td align="left">Stop a service</td>
+<td align="left"><code>systemctl start SERVICE-NAME</code></td>
+</tr>
+<tr>
+<td align="left">Enable a service to start during boot</td>
+<td align="left"><code>systemctl enable SERVICE-NAME</code></td>
+</tr>
+<tr>
+<td align="left">Disable a service from starting during boot</td>
+<td align="left"><code>systemctl disable SERVICE-NAME</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="validating-xrootd">Validating XRootD<a class="headerlink" href="#validating-xrootd" title="Permanent link">&para;</a></h2>
+<p>To validate an XRootD installation, perform the following verification steps:</p>
+<ol>
+<li>
+<p>Verify file transfer over the XRootD protocol using XRootD client tools:</p>
+<ol>
+<li>
+<p>Install the client tools:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@xrootd-standalone #</span> yum install xrootd-client
+</pre></div>
+
+
+</li>
+<li>
+<p>Copy a file to a directory for which you have write access:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@xrootd-standalone #</span> xrdcp /bin/sh root://localhost:1094//tmp/first_test
+<span class="go">[xrootd] Total 0.76 MB  [====================] 100.00 % [inf MB/s]</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Verify that the file has been copied over:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@xrootd-standalone #</span> ls -l /tmp/first_test
+<span class="go">-rw-r--r-- 1 xrootd xrootd 801512 Apr 11 10:48 /tmp/first_test</span>
+</pre></div>
+
+
+</li>
+</ol>
+</li>
+<li>
+<p>If you have enabled <a href="#enabling-http-support">HTTP support</a>, verify file transfer over HTTP using GFAL2 client
+   tools:</p>
+<ol>
+<li>
+<p>Install the GFAL2 client tools:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@xrootd-standalone #</span> yum install gfal2-util gfal2-plugin-http
+</pre></div>
+
+
+</li>
+<li>
+<p>Copy a file to a directory for which you have write access:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@xrootd-standalone #</span> gfal-copy /bin/sh http://localhost:1094//tmp/first_test
+</pre></div>
+
+
+</li>
+<li>
+<p>Verify that the file has been copied over:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@xrootd-standalone #</span> ls -l /tmp/first_test
+<span class="go">-rw-r--r-- 1 xrootd xrootd 801512 Apr 11 10:48 /tmp/first_test</span>
+</pre></div>
+
+
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
+<p>To get assistance. please use the <a href="../../../common/help/">Help Procedure</a> page.</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://xrootd.slac.stanford.edu/doc">XRootD documentation</a></li>
+<li><a href="http://xrootd.org/doc/dev48/ofs_config.htm#_Toc401930729">Export directive</a> in the XRootD configuration and
+  <a href="http://xrootd.org/doc/dev48/ofs_config.htm#_Toc401930728">relevant options</a></li>
+</ul>
+<h3 id="file-locations">File locations<a class="headerlink" href="#file-locations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Service/Process</th>
+<th align="left">Configuration File</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>xrootd</code></td>
+<td align="left"><code>/etc/xrootd/xrootd-standalone.cfg</code></td>
+<td align="left">Main XRootD configuration</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>/etc/xrootd/auth_file</code></td>
+<td align="left">Authorized users file</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Service/Process</th>
+<th align="left">Log File</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>xrootd</code></td>
+<td align="left"><code>/var/log/xrootd/server/xrootd.log</code></td>
+<td align="left">XRootD server daemon log</td>
+</tr>
+<tr>
+<td align="left"><code>cmsd</code></td>
+<td align="left"><code>/var/log/xrootd/server/cmsd.log</code></td>
+<td align="left">Cluster management log</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
