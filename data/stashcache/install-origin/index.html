@@ -1968,7 +1968,7 @@ allowed to access the VO's data, as well as which caches are allowed to cache th
 <h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
 <p>Before starting the installation process, consider the following points:</p>
 <ul>
-<li><strong>Operating system:</strong> A RHEL 7 or compatible operating systems.</li>
+<li><strong>Operating system:</strong> A RHEL 7 or compatible operating system.</li>
 <li><strong>User IDs:</strong> If they do not exist already, the installation will create the Linux user IDs <code>condor</code> and <code>xrootd</code>;
   only the <code>xrootd</code> user is utilized for the running daemons.</li>
 <li><strong>Host certificate:</strong> The StashCache server uses a host certificate to authenticate with the caches it serves.
@@ -1991,7 +1991,7 @@ allowed to access the VO's data, as well as which caches are allowed to cache th
 <li>Install <a href="../../../common/ca/">CA certificates</a></li>
 </ul>
 <h2 id="installing-the-origin">Installing the origin<a class="headerlink" href="#installing-the-origin" title="Permanent link">&para;</a></h2>
-<p>The origin service consists of an XRootD daemons and its dependencies for the authentication infrastructure.
+<p>The origin service consists of one or more XRootD daemons and their dependencies for the authentication infrastructure.
 To simplify installation, OSG provides convenience RPMs that install all required
 software with a single command:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install --enablerepo<span class="o">=</span>osg-development stash-origin
@@ -2015,20 +2015,20 @@ AFTER the OSG configuration).</p>
 directive there must be configured.</p>
 <p>The three mandatory directives that must be customized are:</p>
 <ul>
-<li><code>origindir</code>: the mounted filesystem path to export.  This document refers to this as <code>/stash</code>.</li>
+<li><code>origindir</code>: the mounted filesystem path to export.  This document refers to this as <code>/mnt/stash</code>.</li>
 <li><code>originexport</code>: the file within the <code>origindir</code> to export.  This MUST be in your supported VO's registered namespace.</li>
 <li><code>sitename</code>: the resource name registered with OSG.</li>
 </ul>
-<p>For example, if the HCC VO would like to set up an origin server exporting from the mountpoint <code>/mnt/bigdata</code>,
+<p>For example, if the HCC VO would like to set up an origin server exporting from the mountpoint <code>/mnt/stash</code>,
 but HCC's registered namespace is <code>/hcc</code>, then the following would be set:</p>
-<div class="codehilite"><pre><span></span>set origindir = /mnt/bigdata
+<div class="codehilite"><pre><span></span>set origindir = /mnt/stash
 set originexport = /hcc
 set sitename = HCC_STASH_ORIGIN
 </pre></div>
 
 
-<p>With this configuration, the data under <code>/mnt/bigdata/hcc/bio/datasets</code> would be available under the StashCache path
-<code>/hcc/bio/datasets</code> and the data under <code>/mnt/bigdata/hcc/hep/generators</code> would be available under the StashCache path
+<p>With this configuration, the data under <code>/mnt/stash/hcc/bio/datasets</code> would be available under the StashCache path
+<code>/hcc/bio/datasets</code> and the data under <code>/mnt/stash/hcc/hep/generators</code> would be available under the StashCache path
 <code>/hcc/hep/generators</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2059,7 +2059,7 @@ why the explicit registration is required.</p>
 </tr>
 <tr>
 <td>XRootD</td>
-<td><code>cmsd@stashcache-origin-server.service</code></td>
+<td><code>cmsd@stash-origin.service</code></td>
 <td>The "cluster management service" daemon, which integrates the origin into the data federation.</td>
 </tr>
 </tbody>
