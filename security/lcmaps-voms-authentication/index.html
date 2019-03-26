@@ -296,6 +296,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../compute-element/hosted-ce/" title="Request a Hosted CE" class="md-nav__link">
+      Request a Hosted CE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../compute-element/install-htcondor-ce/" title="Install HTCondor-CE" class="md-nav__link">
       Install HTCondor-CE
     </a>
@@ -430,6 +442,18 @@
   <li class="md-nav__item">
     <a href="../../worker-node/install-singularity/" title="Install Singularity" class="md-nav__link">
       Install Singularity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../worker-node/using-wn-containers/" title="Using WN Containers" class="md-nav__link">
+      Using WN Containers
     </a>
   </li>
 
@@ -701,6 +725,18 @@
   <li class="md-nav__item">
     <a href="../../data/stashcache/install-origin/" title="Install StashCache Origin" class="md-nav__link">
       Install StashCache Origin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/stashcache/vo-data/" title="Getting VO data into StashCache" class="md-nav__link">
+      Getting VO data into StashCache
     </a>
   </li>
 
@@ -1110,8 +1146,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../common/yum/" title="Yum Repos" class="md-nav__link">
-      Yum Repos
+    <a href="../../common/yum/" title="OSG Yum Repos" class="md-nav__link">
+      OSG Yum Repos
     </a>
   </li>
 
@@ -1290,6 +1326,54 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-26/" title="OSG Release 3.4.26" class="md-nav__link">
+      OSG Release 3.4.26
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-25/" title="OSG Release 3.4.25" class="md-nav__link">
+      OSG Release 3.4.25
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-24-2/" title="OSG Release 3.4.24-2" class="md-nav__link">
+      OSG Release 3.4.24-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-24/" title="OSG Release 3.4.24" class="md-nav__link">
+      OSG Release 3.4.24
+    </a>
+  </li>
+
         
           
           
@@ -1830,18 +1914,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../other/install-osg-upcoming-software/" title="OSG upcoming software" class="md-nav__link">
-      OSG upcoming software
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../release/yum-basics/" title="Yum Basics" class="md-nav__link">
       Yum Basics
     </a>
@@ -1856,18 +1928,6 @@
   <li class="md-nav__item">
     <a href="../../release/signing/" title="RPM Signing" class="md-nav__link">
       RPM Signing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release/contrib/" title="Contrib Software" class="md-nav__link">
-      Contrib Software
     </a>
   </li>
 
@@ -2213,9 +2273,8 @@ The LCMAPS VOMS plugin enables LCMAPS to make mapping decisions based on the VOM
 <code>/cms/Role=production/Capability=NULL</code>.
 In OSG 3.4, the LCMAPS VOMS plugin replaced GUMS and edg-mkgridmap as the authentication method at OSG sites.</p>
 <p>The OSG provides a default set of mappings from VOMS attributes to Unix accounts.
-By configuring LCMAPS, you can override these mappings, including changing the Unix account that a VO is mapped to,
-banning based on VOMS attributes, banning a specific user, or adding a VO, VO group, VO role, and/or user that is not in
-the OSG's set of mappings.</p>
+By configuring LCMAPS, you can override these mappings, including changing the Unix account that a VO is mapped to;
+adding custom mappings for specific users and VOMS attributes; and/or banning specific users and VOMS attributes.</p>
 <p>Use this page to learn how to install and configure the LCMAPS VOMS plugin to authenticate users to access your
 resources on a per-VO basis.</p>
 <h2 id="installing-the-lcmaps-voms-plugin">Installing the LCMAPS VOMS Plugin<a class="headerlink" href="#installing-the-lcmaps-voms-plugin" title="Permanent link">&para;</a></h2>
@@ -2271,7 +2330,7 @@ The LCMAPS VOMS plugin does not work with gLExec.</p>
 </li>
 <li>
 <p>Create Unix accounts for each VO, VO role, VO group, and user that you wish to support.
-    The full list of VOs is located on <a href="https://github.com/opensciencegrid/topology/tree/master/virtual-organizations">OIM</a>.
+    The full list of VOs is located in the <a href="https://github.com/opensciencegrid/topology/tree/master/virtual-organizations">OSG topology</a>.
     You are not expected to support all the VOs.
     If you would like to support opportunistic usage, we recommend creating the following Unix accounts:</p>
 <table>
@@ -2292,15 +2351,15 @@ The LCMAPS VOMS plugin does not work with gLExec.</p>
 </tr>
 <tr>
 <td><a href="https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/ATLAS.yaml">ATLAS</a></td>
-<td><code>usatlas1</code>, <code>usatlas2</code>, <code>usatlas3</code>, <code>usatlas4</code></td>
+<td><code>usatlas3</code></td>
 </tr>
 <tr>
 <td><a href="https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/CMS.yaml">CMS</a></td>
-<td><code>cmspilot</code>, <code>uscmslocal</code>, <code>cmslocal</code>, <code>cmsprod</code>, <code>lcgadmin</code>, <code>cmsuser</code></td>
+<td><code>cmsuser</code></td>
 </tr>
 <tr>
 <td><a href="https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/Fermilab.yaml">Fermilab</a></td>
-<td><code>fermigli</code>, <code>fermilab</code></td>
+<td><code>fnalgrid</code></td>
 </tr>
 <tr>
 <td><a href="https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/HCC.yaml">HCC</a></td>
@@ -2702,7 +2761,7 @@ VOMS authentication as well as common LCMAPS VOMS authentication issues.</p>
 <p>If the versions of the <code>globus-gridftp-server-*</code> packages do not end in <code>osgXX.elY</code>, 
    continue with these instructions.
    To check the version of your <code>globus-gridftp-server-*</code>, run the following command:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> rpm -q ^globus-gridftp
+<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> rpm -qa <span class="s1">&#39;globus-gridftp*&#39;</span>
 </pre></div>
 
 

@@ -296,6 +296,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../hosted-ce/" title="Request a Hosted CE" class="md-nav__link">
+      Request a Hosted CE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -363,13 +375,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuring-the-job-queue-location" title="Configuring the job queue location" class="md-nav__link">
-    Configuring the job queue location
-  </a>
   
 </li>
         
@@ -693,6 +698,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../worker-node/using-wn-containers/" title="Using WN Containers" class="md-nav__link">
+      Using WN Containers
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -964,6 +981,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/stashcache/vo-data/" title="Getting VO data into StashCache" class="md-nav__link">
+      Getting VO data into StashCache
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1131,8 +1160,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../common/yum/" title="Yum Repos" class="md-nav__link">
-      Yum Repos
+    <a href="../../common/yum/" title="OSG Yum Repos" class="md-nav__link">
+      OSG Yum Repos
     </a>
   </li>
 
@@ -1311,6 +1340,54 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-26/" title="OSG Release 3.4.26" class="md-nav__link">
+      OSG Release 3.4.26
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-25/" title="OSG Release 3.4.25" class="md-nav__link">
+      OSG Release 3.4.25
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-24-2/" title="OSG Release 3.4.24-2" class="md-nav__link">
+      OSG Release 3.4.24-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-24/" title="OSG Release 3.4.24" class="md-nav__link">
+      OSG Release 3.4.24
+    </a>
+  </li>
+
         
           
           
@@ -1851,18 +1928,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../other/install-osg-upcoming-software/" title="OSG upcoming software" class="md-nav__link">
-      OSG upcoming software
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../release/yum-basics/" title="Yum Basics" class="md-nav__link">
       Yum Basics
     </a>
@@ -1877,18 +1942,6 @@
   <li class="md-nav__item">
     <a href="../../release/signing/" title="RPM Signing" class="md-nav__link">
       RPM Signing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release/contrib/" title="Contrib Software" class="md-nav__link">
-      Contrib Software
     </a>
   </li>
 
@@ -2041,13 +2094,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuring-the-job-queue-location" title="Configuring the job queue location" class="md-nav__link">
-    Configuring the job queue location
-  </a>
   
 </li>
         
@@ -2271,10 +2317,8 @@ repositories.</p>
 <li><strong>Network ports:</strong> The pilot factories must be able to contact your HTCondor-CE service on port 9619 (TCP)</li>
 <li><strong>Submit host:</strong> HTCondor-CE should be installed on a host that already has the ability to submit jobs into your
     local cluster</li>
-<li><strong>File Systems:</strong> We recommend separate partitions for the <a href="#configuring-the-job-queue-location">job queue log</a> and
-    <code>SPOOL</code> directory.
-    Additionally, non-HTCondor batch systems require a <a href="#batch-systems-other-than-htcondor">shared file system</a> between
-    the HTCondor-CE host and the batch system worker nodes.</li>
+<li><strong>File Systems</strong>: Non-HTCondor batch systems require a <a href="#batch-systems-other-than-htcondor">shared file system</a>
+    between the HTCondor-CE host and the batch system worker nodes.</li>
 </ul>
 <p>As with all OSG software installations, there are some one-time (per host) steps to prepare in advance:</p>
 <ul>
@@ -2419,29 +2463,6 @@ For example, the following sets the <code>SPOOL</code> directory to <code>/home/
 <p class="admonition-title">Note</p>
 <p>The shared spool directory must be readable and writeable by the <code>condor</code> user for HTCondor-CE to function correctly.</p>
 </div>
-<h3 id="configuring-the-job-queue-location">Configuring the job queue location<a class="headerlink" href="#configuring-the-job-queue-location" title="Permanent link">&para;</a></h3>
-<p>The <a href="http://research.cs.wisc.edu/htcondor/manual/v8.6/4_5Logging_in.html#53484">job queue log</a> is a frequently written
-to file that contains the state of the HTCondor-CE job queue.
-For performance reasons, we recommend storing this file and the <code>SPOOL</code> directory on a different file system partitions.
-To configure the location of the job queue log:</p>
-<ol>
-<li>
-<p>Find which file system partition your <code>SPOOL</code> directory is located on:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@htcondor-ce $</span> df <span class="k">$(</span>condor_ce_config_val SPOOL<span class="k">)</span>
-</pre></div>
-
-
-</li>
-<li>
-<p>Set <code>JOB_QUEUE_LOG</code> in <code>/etc/condor-ce/config.d/99-local.conf</code> to the path of the job queue log on a separate file
-   system partition than the above.
-   For example, if you have a separate SSD that is mounted on <code>/ssd</code>, you could set the following:</p>
-<div class="codehilite"><pre><span></span>JOB_QUEUE_LOG = /ssd/condor/job_queue.log
-</pre></div>
-
-
-</li>
-</ol>
 <h3 id="configuring-authorization">Configuring authorization<a class="headerlink" href="#configuring-authorization" title="Permanent link">&para;</a></h3>
 <p>To configure which virtual organizations and users are authorized to submit jobs to your, follow the instructions in
 <a href="../../security/lcmaps-voms-authentication#configuring-the-lcmaps-voms-plugin">the LCMAPS VOMS plugin document</a>.</p>
@@ -2756,16 +2777,16 @@ The specific services are:</p>
 <p>To validate an HTCondor-CE, perform the following verification steps:</p>
 <ol>
 <li>
+<p>Verify that local job submissions complete successfully from the CE host.
+   For example, run <code>sbatch</code> from the CE and verify that it runs and completes in your Slurm cluster.</p>
+</li>
+<li>
 <p>Verify that all the necessary daemons are running with
    <a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_status">condor_ce_status</a>.</p>
 </li>
 <li>
 <p>Verify the CE's network configuration using
    <a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_host_network_check">condor_ce_host_network_check</a>.</p>
-</li>
-<li>
-<p>Verify that local job submissions complete successfully from the CE host.
-   For example, run <code>sbatch</code> from the CE and verify that it runs and completes in your Slurm cluster.</p>
 </li>
 <li>
 <p>Verify that jobs can complete successfully using
@@ -2922,7 +2943,7 @@ ephemeral outgoing ports are necessary.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../htcondor-ce-overview/" title="HTCondor-CE Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../hosted-ce/" title="Request a Hosted CE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2931,7 +2952,7 @@ ephemeral outgoing ports are necessary.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                HTCondor-CE Overview
+                Request a Hosted CE
               </span>
             </div>
           </a>

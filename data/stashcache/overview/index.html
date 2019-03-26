@@ -296,6 +296,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../compute-element/hosted-ce/" title="Request a Hosted CE" class="md-nav__link">
+      Request a Hosted CE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../compute-element/install-htcondor-ce/" title="Install HTCondor-CE" class="md-nav__link">
       Install HTCondor-CE
     </a>
@@ -430,6 +442,18 @@
   <li class="md-nav__item">
     <a href="../../../worker-node/install-singularity/" title="Install Singularity" class="md-nav__link">
       Install Singularity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../worker-node/using-wn-containers/" title="Using WN Containers" class="md-nav__link">
+      Using WN Containers
     </a>
   </li>
 
@@ -754,6 +778,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vo-data/" title="Getting VO data into StashCache" class="md-nav__link">
+      Getting VO data into StashCache
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -921,8 +957,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../common/yum/" title="Yum Repos" class="md-nav__link">
-      Yum Repos
+    <a href="../../../common/yum/" title="OSG Yum Repos" class="md-nav__link">
+      OSG Yum Repos
     </a>
   </li>
 
@@ -1101,6 +1137,54 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-26/" title="OSG Release 3.4.26" class="md-nav__link">
+      OSG Release 3.4.26
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-25/" title="OSG Release 3.4.25" class="md-nav__link">
+      OSG Release 3.4.25
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-24-2/" title="OSG Release 3.4.24-2" class="md-nav__link">
+      OSG Release 3.4.24-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-24/" title="OSG Release 3.4.24" class="md-nav__link">
+      OSG Release 3.4.24
+    </a>
+  </li>
+
         
           
           
@@ -1641,18 +1725,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../other/install-osg-upcoming-software/" title="OSG upcoming software" class="md-nav__link">
-      OSG upcoming software
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../../release/yum-basics/" title="Yum Basics" class="md-nav__link">
       Yum Basics
     </a>
@@ -1667,18 +1739,6 @@
   <li class="md-nav__item">
     <a href="../../../release/signing/" title="RPM Signing" class="md-nav__link">
       RPM Signing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../release/contrib/" title="Contrib Software" class="md-nav__link">
-      Contrib Software
     </a>
   </li>
 
@@ -1827,7 +1887,9 @@
                 
                 <h1 id="overview-of-stashcache">Overview of StashCache<a class="headerlink" href="#overview-of-stashcache" title="Permanent link">&para;</a></h1>
 <p>The OSG operates the <em>StashCache data federation</em>, which provides organizations with a method to distribute their data
-in a scalable manner to thousands of jobs without needing to pre-stage data across sites or operate their own scalable infrastructure.</p>
+in a scalable manner to thousands of jobs without needing to pre-stage data at each site.
+The StashCache data federation is best suited for per-job data set sizes between 1 and 50 GB,
+with no more than 1 TB for a complete workflow.</p>
 <p>Organizations export their data from an <em>origin server</em>,
 and the data is streamed to jobs from a set of <em>cache servers</em> distributed throughout the OSG and Internet2.
 Jobs can achieve lower latency and higher throughput for data transfer by using a nearby cache

@@ -296,6 +296,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../compute-element/hosted-ce/" title="Request a Hosted CE" class="md-nav__link">
+      Request a Hosted CE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../compute-element/install-htcondor-ce/" title="Install HTCondor-CE" class="md-nav__link">
       Install HTCondor-CE
     </a>
@@ -430,6 +442,18 @@
   <li class="md-nav__item">
     <a href="../../worker-node/install-singularity/" title="Install Singularity" class="md-nav__link">
       Install Singularity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../worker-node/using-wn-containers/" title="Using WN Containers" class="md-nav__link">
+      Using WN Containers
     </a>
   </li>
 
@@ -701,6 +725,18 @@
   <li class="md-nav__item">
     <a href="../../data/stashcache/install-origin/" title="Install StashCache Origin" class="md-nav__link">
       Install StashCache Origin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/stashcache/vo-data/" title="Getting VO data into StashCache" class="md-nav__link">
+      Getting VO data into StashCache
     </a>
   </li>
 
@@ -1014,8 +1050,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../common/yum/" title="Yum Repos" class="md-nav__link">
-      Yum Repos
+    <a href="../../common/yum/" title="OSG Yum Repos" class="md-nav__link">
+      OSG Yum Repos
     </a>
   </li>
 
@@ -1194,6 +1230,54 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-26/" title="OSG Release 3.4.26" class="md-nav__link">
+      OSG Release 3.4.26
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-25/" title="OSG Release 3.4.25" class="md-nav__link">
+      OSG Release 3.4.25
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-24-2/" title="OSG Release 3.4.24-2" class="md-nav__link">
+      OSG Release 3.4.24-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release/3.4/release-3-4-24/" title="OSG Release 3.4.24" class="md-nav__link">
+      OSG Release 3.4.24
+    </a>
+  </li>
+
         
           
           
@@ -1734,18 +1818,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../other/install-osg-upcoming-software/" title="OSG upcoming software" class="md-nav__link">
-      OSG upcoming software
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../release/yum-basics/" title="Yum Basics" class="md-nav__link">
       Yum Basics
     </a>
@@ -1760,18 +1832,6 @@
   <li class="md-nav__item">
     <a href="../../release/signing/" title="RPM Signing" class="md-nav__link">
       RPM Signing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release/contrib/" title="Contrib Software" class="md-nav__link">
-      Contrib Software
     </a>
   </li>
 
@@ -2050,7 +2110,7 @@ If so, you may safely skip this document:</p>
 
 <p>If you are using OpenSSL 1.1, you may notice minor formatting differences.</p>
 <h2 id="requesting-incommon-igtf-host-certificates">Requesting InCommon IGTF Host Certificates<a class="headerlink" href="#requesting-incommon-igtf-host-certificates" title="Permanent link">&para;</a></h2>
-<p>Many institution in the United States already subscribe to InCommon and offer certificate services.
+<p>Many institutions in the United States already subscribe to InCommon and offer certificate services.
 If your institution is in the list of <a href="https://www.incommon.org/certificates/subscribers.html">InCommon subscribers</a>,
 continue with the instructions below.
 If your institution is not in the list, Let's Encrypt certificates do not meet your needs, and you do not have access to
@@ -2241,7 +2301,7 @@ without warnings if the service does not run correctly.</p>
 on a host.
 This practice has become less popular as sites have separated SSL-requiring services to their own hosts.</p>
 <p>In the case where your host is only running a single service that requires a service certificate, we recommend using
-your host certificate as your service certificate.
+your <a href="#host-certificates">host certificate</a> as your service certificate.
 Ensure that the ownership of the host certificate and key are appropriate for the service you are running.</p>
 <p>If you are running multiple services that require host certificates, we recommend requesting a certificate whose
 CommonName is <code>&lt;service&gt;-hostname</code> and has the hostname in the list of subject alternative names.</p>
