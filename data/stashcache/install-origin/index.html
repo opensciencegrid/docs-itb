@@ -2052,14 +2052,15 @@ allowed to access the VO's data, as well as which caches are allowed to cache th
 <p>The origin service consists of one or more XRootD daemons and their dependencies for the authentication infrastructure.
 To simplify installation, OSG provides convenience RPMs that install all required
 software with a single command:</p>
-<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install --enablerepo<span class="o">=</span>osg-development stash-origin
+<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install --enablerepo<span class="o">=</span>osg-testing stash-origin
 </pre></div>
 
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This document covers a completely overhauled stash origin service that depends on XRootD 4.9.0; while this
-has not yet been released into the OSG production repository, we strongly recommend using this version.</p>
+<p>This document covers a completely overhauled stash origin service based on XCache 1.0.2;
+while this has not yet been released into the OSG production repository,
+we strongly recommend using this version for configuration and accounting improvements.</p>
 </div>
 <p>For this installation guide, we assume that the data to be exported to the federation is mounted at <code>/mnt/stash</code>
 and owned by the <code>xrootd:xrootd</code> user.</p>

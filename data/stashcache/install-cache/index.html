@@ -2227,10 +2227,16 @@ Mention in your ticket that you would like to "Finalize the cache registration."
 <p>The StashCache software consists of an XRootD server with special configuration and supporting services.
 To simplify installation, OSG provides convenience RPMs that install all required
 packages with a single command:</p>
-<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install stash-cache
+<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install --enablerepo<span class="o">=</span>osg-testing stash-cache
 </pre></div>
 
 
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This document covers a completely overhauled stash cache service based on XCache 1.0.2;
+while this has not yet been released into the OSG production repository,
+we strongly recommend using this version for configuration and accounting improvements.</p>
+</div>
 <h2 id="configuring-the-cache">Configuring the Cache<a class="headerlink" href="#configuring-the-cache" title="Permanent link">&para;</a></h2>
 <p>First, you must create a "cache directory", which will be used to store downloaded files.
 By default this is <code>/mnt/stash</code>.
