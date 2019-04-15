@@ -2016,14 +2016,14 @@ to export its data to the StashCache data federation.</p>
 <p class="admonition-title">Note</p>
 <p>The <em>origin</em> must be registered with the OSG prior to joining the data federation. You may start the
 registration process prior to finishing the installation by <a href="#registering-the-origin">using this link</a> 
-along with the basic information like:</p>
+along with information like:</p>
 <ul>
-<li>Resource name and hostname.</li>
-<li>VO associated with this origin server (will be used to determine the origin's namespace prefix).</li>
-<li>Administrative and security contact.</li>
+<li>Resource name and hostname</li>
+<li>VO associated with this origin server (which will be used to determine the origin's namespace prefix)</li>
+<li>Administrative and security contact(s)</li>
+<li>Who (or what) will be allowed to access the VO's data</li>
+<li>Which caches will be allowed to cache the VO data</li>
 </ul>
-<p>Additionally, if this is the first origin for the VO, you will need to decide on what identities are
-allowed to access the VO's data, as well as which caches are allowed to cache the VO data.</p>
 </div>
 <h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
 <p>Before starting the installation process, consider the following points:</p>
@@ -2066,23 +2066,39 @@ we strongly recommend using this version for configuration and accounting improv
 and owned by the <code>xrootd:xrootd</code> user.</p>
 <h2 id="configuring-the-origin-server">Configuring the Origin Server<a class="headerlink" href="#configuring-the-origin-server" title="Permanent link">&para;</a></h2>
 <p>The <code>stash-origin</code> package provides a default configuration files in
-<code>/etc/xrootd/xrootd-stash-origin.cfg</code> and <code>/etc/xrootd/config.d</code>.  Administrators may provide additional configuration
-by placing files in <code>/etc/xrootd/config.d</code> of the form <code>/etc/xrootd/config.d/1*.cfg</code> (for directives that need to
-be processed BEFORE the OSG configuration) or <code>/etc/xrootd/config.d/9*.cfg</code> (for directives that are processed
-AFTER the OSG configuration).</p>
+<code>/etc/xrootd/xrootd-stash-origin.cfg</code> and <code>/etc/xrootd/config.d</code>.
+Administrators may provide additional configuration by placing files in <code>/etc/xrootd/config.d</code>
+of the form <code>/etc/xrootd/config.d/1*.cfg</code> (for directives that need to be processed BEFORE the OSG configuration)
+or <code>/etc/xrootd/config.d/9*.cfg</code> (for directives that are processed AFTER the OSG configuration).</p>
 <p>You <em>must</em> configure every variable in <code>/etc/xrootd/10-common-site-local.cfg</code> and <code>/etc/xrootd/10-origin-site-local.cfg</code>.</p>
-<p>The mandatory variables to configure in <code>10-common-site-local.cfg</code> are:</p>
-<ul>
-<li><code>set rootdir = /mnt/stash</code>: the mounted filesystem path to export.
-  This document refers to this path as <code>/mnt/stash</code>.</li>
-<li><code>set resourcename = YOUR_RESOURCE_NAME</code>: the resource name registered with OSG.</li>
-</ul>
-<p>The mandatory variable to configure in <code>10-origin-site-local.cfg</code> is:</p>
-<ul>
-<li><code>set originexport = /VO</code>: the directory relative to <code>rootdir</code> that is the top of the exported namespace
-  for the origin services</li>
-</ul>
-<p>For example, if the HCC VO would like to set up an origin server exporting from the mountpoint <code>/mnt/stash</code>,
+<p>The mandatory variables to configure are:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Config line</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10-common-site-local.cfg</td>
+<td><code>set rootdir = /mnt/stash</code></td>
+<td>The mounted filesystem path to export; this document calls it <code>/mnt/stash</code></td>
+</tr>
+<tr>
+<td>10-common-site-local.cfg</td>
+<td><code>set resourcename = YOUR_RESOURCE_NAME</code></td>
+<td>The resource name registered with OSG</td>
+</tr>
+<tr>
+<td>10-origin-site-local.cfg</td>
+<td><code>set originexport = /VO</code></td>
+<td>The directory relative to <code>rootdir</code> that is the top of the exported namespace for the origin services</td>
+</tr>
+</tbody>
+</table>
+<p>For example, if the HCC VO would like to set up an origin server exporting from the mount point <code>/mnt/stash</code>,
 and HCC's registered namespace is <code>/hcc</code>, then the following would be set in <code>10-common-site-local.cfg</code>:</p>
 <div class="codehilite"><pre><span></span>set rootdir = /mnt/stash
 set resourcename = HCC_STASH_ORIGIN
@@ -2158,7 +2174,7 @@ As a reminder, here are common service commands (all run as <code>root</code>):<
 </tr>
 </tbody>
 </table>
-<p>In addition, the origin service automatically uses the following systemd units:</p>
+<p>In addition, the origin service automatically uses the following SystemD units:</p>
 <table>
 <thead>
 <tr>
