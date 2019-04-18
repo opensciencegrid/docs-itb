@@ -824,6 +824,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#enable-https-on-the-unauthenticated-cache" title="Enable HTTPS on the unauthenticated cache" class="md-nav__link">
+    Enable HTTPS on the unauthenticated cache
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2063,6 +2070,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#enable-https-on-the-unauthenticated-cache" title="Enable HTTPS on the unauthenticated cache" class="md-nav__link">
+    Enable HTTPS on the unauthenticated cache
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2297,6 +2311,27 @@ to anyone from <code>*.cs.wisc.edu</code> in the <code>/glow</code> VOMS group.<
 <p>See <a href="http://xrootd.org/doc/dev48/xrd_config.htm#_Toc496911334">the XRootD manual</a> for the full syntax.</p>
 <p>Remote debugging should only be enabled for as long as you need assistance.
 As soon as your issue has been resolved, revert any changes you have made to <code>/etc/xrootd/digauth.cfg</code>.</p>
+<h3 id="enable-https-on-the-unauthenticated-cache">Enable HTTPS on the unauthenticated cache<a class="headerlink" href="#enable-https-on-the-unauthenticated-cache" title="Permanent link">&para;</a></h3>
+<p>By default, the unauthenticated stash-cache instance uses plain HTTP, not HTTPS.
+To use HTTPS:</p>
+<ol>
+<li>
+<p>Add a service certificate according to the <a href="#add-a-service-certificate">instructions above</a></p>
+</li>
+<li>
+<p>Create a file named <code>/etc/xrootd/config.d/11-cache-https.cfg</code> with the following contents:</p>
+<div class="codehilite"><pre><span></span># Support HTTPS access to unauthenticated cache
+if named stash-cache
+  http.cadir /etc/grid-security/certificates
+  http.cert /etc/grid-security/xrd/xrdcert.pem
+  http.key /etc/grid-security/xrd/xrdkey.pem
+  http.secxtractor /usr/lib64/libXrdLcmaps.so
+fi
+</pre></div>
+
+
+</li>
+</ol>
 <h2 id="managing-stashcache-and-associated-services">Managing StashCache and associated services<a class="headerlink" href="#managing-stashcache-and-associated-services" title="Permanent link">&para;</a></h2>
 <p>These services must be managed by <code>systemctl</code> and may start additional services as dependencies.
 As a reminder, here are common service commands (all run as <code>root</code>) for EL7:</p>
