@@ -2233,6 +2233,18 @@ The service type is <code>XRootD cache server</code>.</p>
 </pre></div>
 
 
+<p>This is an example registration for a cache server that serves all public data <em>and</em> authenticated data from the OSG VO:</p>
+<div class="codehilite"><pre><span></span>  <span class="nt">MY_COMBO_STASHCACHE_CACHE</span><span class="p">:</span>
+    <span class="nt">FQDN</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-combo-cache.example.net</span>
+    <span class="nt">Service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">XRootD cache server</span>
+      <span class="l l-Scalar l-Scalar-Plain">Description</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">StashCache cache server</span>
+    <span class="nt">AllowedVOs</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">OSG</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ANY_PUBLIC</span>
+    <span class="nt">DN</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/DC=org/DC=opensciencegrid/O=Open Science Grid/OU=Services/CN=my-combo-cache.example.net</span>
+</pre></div>
+
+
 <h3 id="finalizing-registration">Finalizing registration<a class="headerlink" href="#finalizing-registration" title="Permanent link">&para;</a></h3>
 <p>Once initial registration is complete, you may start the installation process.
 In the meantime, open a <a href="https://support.opensciencegrid.org">help ticket</a> with your cache name.
