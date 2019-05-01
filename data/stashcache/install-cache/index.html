@@ -791,8 +791,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#add-a-service-certificate" title="Add a service certificate" class="md-nav__link">
-    Add a service certificate
+  <a href="#ensure-the-xrootd-service-has-a-certificate" title="Ensure the xrootd service has a certificate" class="md-nav__link">
+    Ensure the xrootd service has a certificate
   </a>
   
 </li>
@@ -2037,8 +2037,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#add-a-service-certificate" title="Add a service certificate" class="md-nav__link">
-    Add a service certificate
+  <a href="#ensure-the-xrootd-service-has-a-certificate" title="Ensure the xrootd service has a certificate" class="md-nav__link">
+    Ensure the xrootd service has a certificate
   </a>
   
 </li>
@@ -2280,7 +2280,7 @@ Administrators may provide additional configuration by placing files in <code>/e
 <li><code>set rootdir = /mnt/stash</code>: the mounted filesystem path to export.  This document refers to this as <code>/mnt/stash</code>.</li>
 <li><code>set resourcename = YOUR_RESOURCE_NAME</code>: the resource name registered with the OSG.</li>
 </ul>
-<h3 id="add-a-service-certificate">Add a service certificate<a class="headerlink" href="#add-a-service-certificate" title="Permanent link">&para;</a></h3>
+<h3 id="ensure-the-xrootd-service-has-a-certificate">Ensure the xrootd service has a certificate<a class="headerlink" href="#ensure-the-xrootd-service-has-a-certificate" title="Permanent link">&para;</a></h3>
 <p>The service will need a certificate for reporting and to authenticate to StashCache origins.
 The easiest solution for this is to use your host certificate and key as follows:</p>
 <ol>
@@ -2328,7 +2328,7 @@ As soon as your issue has been resolved, revert any changes you have made to <co
 To use HTTPS:</p>
 <ol>
 <li>
-<p>Add a service certificate according to the <a href="#add-a-service-certificate">instructions above</a></p>
+<p>Add a certificate according to the <a href="#ensure-the-xrootd-service-has-a-certificate">instructions above</a></p>
 </li>
 <li>
 <p>Create a file named <code>/etc/xrootd/config.d/11-cache-https.cfg</code> with the following contents:</p>
