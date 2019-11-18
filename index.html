@@ -268,9 +268,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#minimum-requirements" title="Minimum Requirements" class="md-nav__link">
-    Minimum Requirements
+  <a href="#contributing-to-the-osg" title="Contributing to the OSG" class="md-nav__link">
+    Contributing to the OSG
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osg-hosted-services" title="OSG-hosted services" class="md-nav__link">
+    OSG-hosted services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-hosted-services" title="Self-hosted services" class="md-nav__link">
+    Self-hosted services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2322,9 +2342,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#minimum-requirements" title="Minimum Requirements" class="md-nav__link">
-    Minimum Requirements
+  <a href="#contributing-to-the-osg" title="Contributing to the OSG" class="md-nav__link">
+    Contributing to the OSG
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osg-hosted-services" title="OSG-hosted services" class="md-nav__link">
+    OSG-hosted services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-hosted-services" title="Self-hosted services" class="md-nav__link">
+    Self-hosted services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2360,25 +2400,33 @@ The OSG does not own resources but provides software and services to users and r
 opportunistic usage and sharing of resources.</p>
 <p>This documentation aims to provide HTC/HPC system administrators with the necessary information to contribute resources
 to the OSG.</p>
-<h2 id="minimum-requirements">Minimum Requirements<a class="headerlink" href="#minimum-requirements" title="Permanent link">&para;</a></h2>
-<p>If you are interested in contributing resources to the OSG, your site must meet the following minimum requirements:</p>
+<h2 id="contributing-to-the-osg">Contributing to the OSG<a class="headerlink" href="#contributing-to-the-osg" title="Permanent link">&para;</a></h2>
+<p>We offer two models for sites to contribute resources to OSG users:
+one where the <a href="#osg-hosted-services">OSG hosts and maintains</a> the services to submit batch work to your site;
+and the traditional model where the <a href="#self-hosted-services">site</a> hosts and maintains these same services.
+In both of these cases, your site must meet the following requirements:</p>
 <ul>
 <li>An existing compute cluster running on a <a href="./release/supported_platforms">supported operating system</a> with a supported
-  batch system:<ul>
-<li><a href="http://www.univa.com/products/">Grid Engine</a></li>
-<li><a href="http://htcondor.org">HTCondor</a></li>
-<li><a href="https://www.ibm.com/us-en/marketplace/hpc-workload-management">LSF</a></li>
-<li><a href="https://www.pbsworks.com/PBSProduct.aspx?n=Altair-PBS-Professional&amp;c=Overview-and-Capabilities">PBS Pro</a>/<a href="http://www.adaptivecomputing.com/products/torque/">Torque</a></li>
-<li><a href="https://slurm.schedmd.com/">Slurm</a></li>
-</ul>
-</li>
+  batch system:
+  <a href="http://www.univa.com/products/">Grid Engine</a>,
+  <a href="http://htcondor.org">HTCondor</a>,
+  <a href="https://www.ibm.com/us-en/marketplace/hpc-workload-management">LSF</a>,
+  <a href="https://www.pbsworks.com/PBSProduct.aspx?n=Altair-PBS-Professional&amp;c=Overview-and-Capabilities">PBS Pro</a>/<a href="http://www.adaptivecomputing.com/products/torque/">Torque</a>,
+  or <a href="https://slurm.schedmd.com/">Slurm</a>.</li>
 <li>Outbound network connectivty from your cluster's worker nodes</li>
 <li><a href="./worker-node/using-wn#for-site-administrators">Temporary scratch space</a> on each worker node</li>
+</ul>
+<h3 id="osg-hosted-services">OSG-hosted services<a class="headerlink" href="#osg-hosted-services" title="Permanent link">&para;</a></h3>
+<p>To contribute computational resources with OSG-hosted services, your site must additionally provide the following:</p>
+<ul>
 <li>Allow SSH access to your local cluster's submit node from a known IP address</li>
 <li>Shared home directories on each cluster node</li>
 </ul>
-<p>If your cluster does not meet the above requirements but you are still interested in contributing to the OSG, please
-<a href="mailto:help@opensciencegrid.org">contact us</a>.</p>
+<p>If you are interested in OSG-hosted services, please <a href="mailto:help@opensciencegrid.org">contact us</a>, whether or not your
+site meets the above requirements!</p>
+<h3 id="self-hosted-services">Self-hosted services<a class="headerlink" href="#self-hosted-services" title="Permanent link">&para;</a></h3>
+<p>If you are interested in contributing resources by hosting your own OSG services, please continue with the
+<a href="./detailed-overview">detailed overview</a> page.</p>
                 
                   
                 
