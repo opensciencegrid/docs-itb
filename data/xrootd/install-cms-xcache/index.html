@@ -1,0 +1,3004 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+  <meta name="robots" content="noindex, nofollow" />
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://opensciencegrid.org/docs-itb/data/xrootd/install-cms-xcache/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+    
+    
+      
+        <title>Install CMS Xcache - OSG Site Documentation (ITB)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../css/itb.css">
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#installing-the-cms-xcache" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://opensciencegrid.org/docs-itb/" title="OSG Site Documentation (ITB)" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                OSG Site Documentation (ITB)
+              </span>
+              <span class="md-header-nav__topic">
+                Install CMS Xcache
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/opensciencegrid/docs-itb/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://opensciencegrid.org/docs-itb/" title="OSG Site Documentation (ITB)" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    OSG Site Documentation (ITB)
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/opensciencegrid/docs-itb/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../detailed-overview/" title="Detailed Overview" class="md-nav__link">
+      Detailed Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../site-planning/" title="Site Planning" class="md-nav__link">
+      Site Planning
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Compute Element
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Compute Element
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../compute-element/htcondor-ce-overview/" title="HTCondor-CE Overview" class="md-nav__link">
+      HTCondor-CE Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../compute-element/hosted-ce/" title="Request a Hosted CE" class="md-nav__link">
+      Request a Hosted CE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../compute-element/install-htcondor-ce/" title="Install HTCondor-CE" class="md-nav__link">
+      Install HTCondor-CE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../compute-element/job-router-recipes/" title="Job Router Recipes" class="md-nav__link">
+      Job Router Recipes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../compute-element/troubleshoot-htcondor-ce/" title="Troubleshooting HTCondor-CE" class="md-nav__link">
+      Troubleshooting HTCondor-CE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../compute-element/submit-htcondor-ce/" title="Submitting to HTCondor-CE" class="md-nav__link">
+      Submitting to HTCondor-CE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Worker Node
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Worker Node
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../worker-node/using-wn/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../worker-node/install-wn/" title="Install from RPM" class="md-nav__link">
+      Install from RPM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../worker-node/install-wn-tarball/" title="Install from Tarball" class="md-nav__link">
+      Install from Tarball
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../worker-node/install-wn-oasis/" title="Install from OASIS" class="md-nav__link">
+      Install from OASIS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../worker-node/install-cvmfs/" title="Install CVMFS" class="md-nav__link">
+      Install CVMFS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../worker-node/install-singularity/" title="Install Singularity" class="md-nav__link">
+      Install Singularity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../worker-node/using-wn-containers/" title="Using WN Containers" class="md-nav__link">
+      Using WN Containers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+    
+    <label class="md-nav__link" for="nav-6-1">
+      HTTP & OASIS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        HTTP & OASIS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../frontier-squid/" title="Install Squid HTTP Cache" class="md-nav__link">
+      Install Squid HTTP Cache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../update-oasis/" title="Update OASIS Shared Repo" class="md-nav__link">
+      Update OASIS Shared Repo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../external-oasis-repos/" title="Install an OASIS Repo" class="md-nav__link">
+      Install an OASIS Repo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+    
+    <label class="md-nav__link" for="nav-6-2">
+      POSIX Storage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        POSIX Storage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../gridftp/" title="Install GridFTP Server" class="md-nav__link">
+      Install GridFTP Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../load-balanced-gridftp/" title="Install Load Balanced GridFTP" class="md-nav__link">
+      Install Load Balanced GridFTP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3" checked>
+    
+    <label class="md-nav__link" for="nav-6-3">
+      XRootD
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-3">
+        XRootD
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../overview/" title="XRootD Overview" class="md-nav__link">
+      XRootD Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-standalone/" title="Install XRootD Standalone" class="md-nav__link">
+      Install XRootD Standalone
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-storage-element/" title="Install XRootD SE" class="md-nav__link">
+      Install XRootD SE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../xrootd-authorization/" title="Configure Authorization" class="md-nav__link">
+      Configure Authorization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install-client/" title="Using XRootD" class="md-nav__link">
+      Using XRootD
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Install CMS Xcache
+      </label>
+    
+    <a href="./" title="Install CMS Xcache" class="md-nav__link md-nav__link--active">
+      Install CMS Xcache
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-starting" title="Before Starting" class="md-nav__link">
+    Before Starting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-cache" title="Installing the Cache" class="md-nav__link">
+    Installing the Cache
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-cache" title="Configuring the Cache" class="md-nav__link">
+    Configuring the Cache
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ensure-the-xrootd-service-has-a-certificate" title="Ensure the xrootd service has a certificate" class="md-nav__link">
+    Ensure the xrootd service has a certificate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-optional-features" title="Configuring Optional Features" class="md-nav__link">
+    Configuring Optional Features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjust-disk-utilization" title="Adjust disk utilization" class="md-nav__link">
+    Adjust disk utilization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-the-storage-access-settings-at-a-site" title="Modify the storage access settings at a site" class="md-nav__link">
+    Modify the storage access settings at a site
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-remote-debugging" title="Enable remote debugging" class="md-nav__link">
+    Enable remote debugging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-multinode-cache-optional" title="Installing a Multinode Cache (optional)" class="md-nav__link">
+    Installing a Multinode Cache (optional)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-an-xcache-redirector" title="Install an XCache redirector" class="md-nav__link">
+    Install an XCache redirector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-each-of-your-cache-nodes" title="Configuring each of your cache nodes" class="md-nav__link">
+    Configuring each of your cache nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-cms-xcache-and-associated-services" title="Managing CMS XCache and associated services" class="md-nav__link">
+    Managing CMS XCache and associated services
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cms-xcache-services" title="CMS XCache services" class="md-nav__link">
+    CMS XCache services
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xcache-redirector-services-optional" title="XCache redirector services (Optional)" class="md-nav__link">
+    XCache redirector services (Optional)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validating-the-cache" title="Validating the Cache" class="md-nav__link">
+    Validating the Cache
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" title="Getting Help" class="md-nav__link">
+    Getting Help
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      StashCache
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        StashCache
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../stashcache/overview/" title="StashCache Overview" class="md-nav__link">
+      StashCache Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../stashcache/install-cache/" title="Install StashCache Cache" class="md-nav__link">
+      Install StashCache Cache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../stashcache/install-origin/" title="Install StashCache Origin" class="md-nav__link">
+      Install StashCache Origin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../stashcache/vo-data/" title="Getting VO data into StashCache" class="md-nav__link">
+      Getting VO data into StashCache
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      HDFS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        HDFS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../hadoop-overview/" title="HDFS Overview" class="md-nav__link">
+      HDFS Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install-hadoop/" title="Install HDFS" class="md-nav__link">
+      Install HDFS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Submit
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Submit
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      Flocking
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        Flocking
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../submit/osg-flock/" title="Flock to OSG" class="md-nav__link">
+      Flock to OSG
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Security
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Security
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../security/lcmaps-voms-authentication/" title="LCMAPS VOMS authentication" class="md-nav__link">
+      LCMAPS VOMS authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../security/user-certs/" title="User Certificates" class="md-nav__link">
+      User Certificates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../security/certificate-management/" title="Certificate Management Reference" class="md-nav__link">
+      Certificate Management Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4">
+    
+    <label class="md-nav__link" for="nav-8-4">
+      Host Certificates
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        Host Certificates
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../security/host-certs/" title="Host Certs" class="md-nav__link">
+      Host Certs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../security/host-certs/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../security/host-certs/incommon/" title="Using InCommon" class="md-nav__link">
+      Using InCommon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../security/host-certs/lets-encrypt/" title="Using Let's Encrypt" class="md-nav__link">
+      Using Let's Encrypt
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../security/host-certs/digicert/" title="Using DigiCert" class="md-nav__link">
+      Using DigiCert
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Common
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Common
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../common/ca/" title="CA Certificates" class="md-nav__link">
+      CA Certificates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../common/yum/" title="OSG Yum Repos" class="md-nav__link">
+      OSG Yum Repos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../other/configuration-with-osg-configure/" title="Configuration with OSG-Configure" class="md-nav__link">
+      Configuration with OSG-Configure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../common/registration/" title="Registration" class="md-nav__link">
+      Registration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Other
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Other
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../other/gsissh/" title="Install GSI-enabled SSH" class="md-nav__link">
+      Install GSI-enabled SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../other/install-gwms-frontend/" title="Install GlideinWMS Frontend" class="md-nav__link">
+      Install GlideinWMS Frontend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../other/install-cvmfs-stratum1/" title="Install a CVMFS Stratum 1" class="md-nav__link">
+      Install a CVMFS Stratum 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../other/network-performance-toolkit/" title="Install the Network Performance Toolkit" class="md-nav__link">
+      Install the Network Performance Toolkit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../other/troubleshooting-gratia/" title="Troubleshooting Gratia" class="md-nav__link">
+      Troubleshooting Gratia
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../other/schedd-filebeats/" title="Install Transfer Log Filebeats" class="md-nav__link">
+      Install Transfer Log Filebeats
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Release Information
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Release Information
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/notes/" title="Release Note Overview" class="md-nav__link">
+      Release Note Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-2" type="checkbox" id="nav-11-2">
+    
+    <label class="md-nav__link" for="nav-11-2">
+      3.5 Release Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-11-2">
+        3.5 Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.5/release-3-5-5/" title="OSG Release 3.5.5" class="md-nav__link">
+      OSG Release 3.5.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.5/release-3-5-4/" title="OSG Release 3.5.4" class="md-nav__link">
+      OSG Release 3.5.4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.5/release-3-5-3/" title="OSG Release 3.5.3" class="md-nav__link">
+      OSG Release 3.5.3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.5/release-3-5-2/" title="OSG Release 3.5.2" class="md-nav__link">
+      OSG Release 3.5.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.5/release-3-5-1/" title="OSG Release 3.5.1" class="md-nav__link">
+      OSG Release 3.5.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.5/release-3-5-0/" title="OSG Release 3.5.0" class="md-nav__link">
+      OSG Release 3.5.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-3" type="checkbox" id="nav-11-3">
+    
+    <label class="md-nav__link" for="nav-11-3">
+      3.4 Release Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-11-3">
+        3.4 Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-39/" title="OSG Release 3.4.39" class="md-nav__link">
+      OSG Release 3.4.39
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-38/" title="OSG Release 3.4.38" class="md-nav__link">
+      OSG Release 3.4.38
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-37/" title="OSG Release 3.4.37" class="md-nav__link">
+      OSG Release 3.4.37
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-36/" title="OSG Release 3.4.36" class="md-nav__link">
+      OSG Release 3.4.36
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-35/" title="OSG Release 3.4.35" class="md-nav__link">
+      OSG Release 3.4.35
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-34/" title="OSG Release 3.4.34" class="md-nav__link">
+      OSG Release 3.4.34
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-33/" title="OSG Release 3.4.33" class="md-nav__link">
+      OSG Release 3.4.33
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-32/" title="OSG Release 3.4.32" class="md-nav__link">
+      OSG Release 3.4.32
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-31-2/" title="OSG Release 3.4.31-2" class="md-nav__link">
+      OSG Release 3.4.31-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-31/" title="OSG Release 3.4.31" class="md-nav__link">
+      OSG Release 3.4.31
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-30-2/" title="OSG Release 3.4.30-2" class="md-nav__link">
+      OSG Release 3.4.30-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-30/" title="OSG Release 3.4.30" class="md-nav__link">
+      OSG Release 3.4.30
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-29-2/" title="OSG Release 3.4.29-2" class="md-nav__link">
+      OSG Release 3.4.29-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-29/" title="OSG Release 3.4.29" class="md-nav__link">
+      OSG Release 3.4.29
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-28-2/" title="OSG Release 3.4.28-2" class="md-nav__link">
+      OSG Release 3.4.28-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-28/" title="OSG Release 3.4.28" class="md-nav__link">
+      OSG Release 3.4.28
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-27-2/" title="OSG Release 3.4.27-2" class="md-nav__link">
+      OSG Release 3.4.27-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-27/" title="OSG Release 3.4.27" class="md-nav__link">
+      OSG Release 3.4.27
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-26-2/" title="OSG Release 3.4.26-2" class="md-nav__link">
+      OSG Release 3.4.26-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-26/" title="OSG Release 3.4.26" class="md-nav__link">
+      OSG Release 3.4.26
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-25/" title="OSG Release 3.4.25" class="md-nav__link">
+      OSG Release 3.4.25
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-24-2/" title="OSG Release 3.4.24-2" class="md-nav__link">
+      OSG Release 3.4.24-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-24/" title="OSG Release 3.4.24" class="md-nav__link">
+      OSG Release 3.4.24
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-23/" title="OSG Release 3.4.23" class="md-nav__link">
+      OSG Release 3.4.23
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-22-2/" title="OSG Release 3.4.22-2" class="md-nav__link">
+      OSG Release 3.4.22-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-22/" title="OSG Release 3.4.22" class="md-nav__link">
+      OSG Release 3.4.22
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-21/" title="OSG Release 3.4.21" class="md-nav__link">
+      OSG Release 3.4.21
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-20/" title="OSG Release 3.4.20" class="md-nav__link">
+      OSG Release 3.4.20
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-19/" title="OSG Release 3.4.19" class="md-nav__link">
+      OSG Release 3.4.19
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-18-2/" title="OSG Release 3.4.18-2" class="md-nav__link">
+      OSG Release 3.4.18-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-18/" title="OSG Release 3.4.18" class="md-nav__link">
+      OSG Release 3.4.18
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-17-3/" title="OSG Release 3.4.17-3" class="md-nav__link">
+      OSG Release 3.4.17-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-17-2/" title="OSG Release 3.4.17-2" class="md-nav__link">
+      OSG Release 3.4.17-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-17/" title="OSG Release 3.4.17" class="md-nav__link">
+      OSG Release 3.4.17
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-16-2/" title="OSG Release 3.4.16-2" class="md-nav__link">
+      OSG Release 3.4.16-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-16/" title="OSG Release 3.4.16" class="md-nav__link">
+      OSG Release 3.4.16
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-15/" title="OSG Release 3.4.15" class="md-nav__link">
+      OSG Release 3.4.15
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-14-2/" title="OSG Release 3.4.14-2" class="md-nav__link">
+      OSG Release 3.4.14-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-14/" title="OSG Release 3.4.14" class="md-nav__link">
+      OSG Release 3.4.14
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-13/" title="OSG Release 3.4.13" class="md-nav__link">
+      OSG Release 3.4.13
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-12-3/" title="OSG Release 3.4.12-3" class="md-nav__link">
+      OSG Release 3.4.12-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-12-2/" title="OSG Release 3.4.12-2" class="md-nav__link">
+      OSG Release 3.4.12-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-12/" title="OSG Release 3.4.12" class="md-nav__link">
+      OSG Release 3.4.12
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-11/" title="OSG Release 3.4.11" class="md-nav__link">
+      OSG Release 3.4.11
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-10/" title="OSG Release 3.4.10" class="md-nav__link">
+      OSG Release 3.4.10
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-9-2/" title="OSG Release 3.4.9-2" class="md-nav__link">
+      OSG Release 3.4.9-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-9/" title="OSG Release 3.4.9" class="md-nav__link">
+      OSG Release 3.4.9
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-8/" title="OSG Release 3.4.8" class="md-nav__link">
+      OSG Release 3.4.8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-7/" title="OSG Release 3.4.7" class="md-nav__link">
+      OSG Release 3.4.7
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-6-2/" title="OSG Release 3.4.6-2" class="md-nav__link">
+      OSG Release 3.4.6-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-6/" title="OSG Release 3.4.6" class="md-nav__link">
+      OSG Release 3.4.6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-5-4/" title="OSG Release 3.4.5-4" class="md-nav__link">
+      OSG Release 3.4.5-4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-5-3/" title="OSG Release 3.4.5-3" class="md-nav__link">
+      OSG Release 3.4.5-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-5-2/" title="OSG Release 3.4.5-2" class="md-nav__link">
+      OSG Release 3.4.5-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-5/" title="OSG Release 3.4.5" class="md-nav__link">
+      OSG Release 3.4.5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-4-3/" title="OSG Release 3.4.4-3" class="md-nav__link">
+      OSG Release 3.4.4-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-4-2/" title="OSG Release 3.4.4-2" class="md-nav__link">
+      OSG Release 3.4.4-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-4/" title="OSG Release 3.4.4" class="md-nav__link">
+      OSG Release 3.4.4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-3/" title="OSG Release 3.4.3" class="md-nav__link">
+      OSG Release 3.4.3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-2-2/" title="OSG Release 3.4.2-2" class="md-nav__link">
+      OSG Release 3.4.2-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-2/" title="OSG Release 3.4.2" class="md-nav__link">
+      OSG Release 3.4.2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-1-2/" title="OSG Release 3.4.1-2" class="md-nav__link">
+      OSG Release 3.4.1-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-1/" title="OSG Release 3.4.1" class="md-nav__link">
+      OSG Release 3.4.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-0-2/" title="OSG Release 3.4.0-2" class="md-nav__link">
+      OSG Release 3.4.0-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/3.4/release-3-4-0/" title="OSG Release 3.4.0" class="md-nav__link">
+      OSG Release 3.4.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/release_series/" title="OSG Release Series" class="md-nav__link">
+      OSG Release Series
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/supported_platforms/" title="Supported Platforms" class="md-nav__link">
+      Supported Platforms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/yum-basics/" title="Yum Basics" class="md-nav__link">
+      Yum Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release/signing/" title="RPM Signing" class="md-nav__link">
+      RPM Signing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Deprecated
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Deprecated
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../monitoring/install-rsv/" title="Install RSV" class="md-nav__link">
+      Install RSV
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../monitoring/advanced-rsv-configuration/" title="Advanced RSV Configuration" class="md-nav__link">
+      Advanced RSV Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../monitoring/rsv-control/" title="Manage RSV via rsv-control" class="md-nav__link">
+      Manage RSV via rsv-control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../monitoring/install-rsv-gwms-tester/" title="RSV GlideinWMS Tester" class="md-nav__link">
+      RSV GlideinWMS Tester
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../common/help/" title="Get Help" class="md-nav__link">
+      Get Help
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-starting" title="Before Starting" class="md-nav__link">
+    Before Starting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-cache" title="Installing the Cache" class="md-nav__link">
+    Installing the Cache
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-cache" title="Configuring the Cache" class="md-nav__link">
+    Configuring the Cache
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ensure-the-xrootd-service-has-a-certificate" title="Ensure the xrootd service has a certificate" class="md-nav__link">
+    Ensure the xrootd service has a certificate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-optional-features" title="Configuring Optional Features" class="md-nav__link">
+    Configuring Optional Features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjust-disk-utilization" title="Adjust disk utilization" class="md-nav__link">
+    Adjust disk utilization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-the-storage-access-settings-at-a-site" title="Modify the storage access settings at a site" class="md-nav__link">
+    Modify the storage access settings at a site
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-remote-debugging" title="Enable remote debugging" class="md-nav__link">
+    Enable remote debugging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-multinode-cache-optional" title="Installing a Multinode Cache (optional)" class="md-nav__link">
+    Installing a Multinode Cache (optional)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-an-xcache-redirector" title="Install an XCache redirector" class="md-nav__link">
+    Install an XCache redirector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-each-of-your-cache-nodes" title="Configuring each of your cache nodes" class="md-nav__link">
+    Configuring each of your cache nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-cms-xcache-and-associated-services" title="Managing CMS XCache and associated services" class="md-nav__link">
+    Managing CMS XCache and associated services
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cms-xcache-services" title="CMS XCache services" class="md-nav__link">
+    CMS XCache services
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xcache-redirector-services-optional" title="XCache redirector services (Optional)" class="md-nav__link">
+    XCache redirector services (Optional)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validating-the-cache" title="Validating the Cache" class="md-nav__link">
+    Validating the Cache
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" title="Getting Help" class="md-nav__link">
+    Getting Help
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/opensciencegrid/docs-itb/edit/master/docs/data/xrootd/install-cms-xcache.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="installing-the-cms-xcache">Installing the CMS XCache<a class="headerlink" href="#installing-the-cms-xcache" title="Permanent link">&para;</a></h1>
+<p>This document describes how to install a CMS XCache.  This service allows a site or regional
+network to cache data frequently used by the <a href="https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/CMS.yaml">CMS experiment</a>, reducing data transfer over the wide-area network and
+decreasing access latency. The are two types of installations described in this document: single or multinode cache. The difference might be based on the total disk that your cache needs.</p>
+<h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
+<p>Before starting the installation process, consider the following requirements:</p>
+<ul>
+<li><strong>Operating system:</strong> A RHEL 7 or compatible operating systems.</li>
+<li><strong>User IDs:</strong> If they do not exist already, the installation will create the Linux user IDs <code>xrootd</code></li>
+<li><strong>Host certificate:</strong> Required for client authentication and authentication with CMS VOMS Server
+  See our <a href="../../../security/host-certs/">documentation</a> for instructions on how to request and install host certificates.</li>
+<li><strong>Network ports:</strong> The cache service requires the following ports open:<ul>
+<li>Inbound TCP port 1094 for file access via the XRootD protocol</li>
+<li>Outbound UDP port 9930 for reporting to <code>xrd-report.osgstorage.org</code> and <code>xrd-mon.osgstorage.org</code> for monitoring</li>
+</ul>
+</li>
+<li><strong>Hardware requirements:</strong> We recommend that a cache has at least 10Gbps connectivity, 100TB of
+ disk space for the whole cache (can be divided among several caches), and 8GB of RAM.</li>
+</ul>
+<p>As with all OSG software installations, there are some one-time steps to prepare in advance:</p>
+<ul>
+<li>Obtain root access to the host</li>
+<li>Prepare <a href="../../../common/yum/">the required Yum repositories</a></li>
+<li>Install <a href="../../../common/ca/">CA certificates</a></li>
+</ul>
+<h2 id="installing-the-cache">Installing the Cache<a class="headerlink" href="#installing-the-cache" title="Permanent link">&para;</a></h2>
+<p>The CMS XCache ROM software consists of an XRootD server with special configuration and supporting services.
+To simplify installation, OSG provides convenience RPMs that install all required
+packages with a single command:</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install cms-xcache
+</pre></div>
+
+
+<h2 id="configuring-the-cache">Configuring the Cache<a class="headerlink" href="#configuring-the-cache" title="Permanent link">&para;</a></h2>
+<p>First, you must create a "cache directory", which will be used to store downloaded files.
+By default this is <code>/mnt/stash</code>.
+We recommend using a separate file system for the cache directory,
+with at least 1 TB of storage available.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The cache directory must be writable by the <code>xrootd:xrootd</code> user and group.</p>
+</div>
+<p>The <code>cms-xcache</code> package provides default configuration files in <code>/etc/xrootd/xrootd-cms-xcache.cfg</code> and <code>/etc/xrootd/config.d/</code>.
+Administrators may provide additional configuration by placing files in <code>/etc/xrootd/config.d/1*.cfg</code> (for files that need to be processed BEFORE the OSG configuration) or <code>/etc/xrootd/config.d/9*.cfg</code> (for files that need to be processed AFTER the OSG configuration).</p>
+<p>You <em>must</em> configure every variable in <code>/etc/xrootd/10-common-site-local.cfg</code>.</p>
+<p>The mandatory variables to configure are:</p>
+<ul>
+<li><code>set rootdir = /mnt/stash</code>: the mounted filesystem path to export.  This document refers to this as <code>/mnt/stash</code>.</li>
+<li><code>set resourcename = YOUR_RESOURCE_NAME</code>: the resource name registered with the OSG for example ("T2_US_UCSD")</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>XRootD can manage a set of independent disk for the cache. So you can modify file <code>90-cms-xcache-disks.cfg</code> and add the disks there then <code>rootdir</code> just becomes a place to hold symlinks.</p>
+</div>
+<h3 id="ensure-the-xrootd-service-has-a-certificate">Ensure the xrootd service has a certificate<a class="headerlink" href="#ensure-the-xrootd-service-has-a-certificate" title="Permanent link">&para;</a></h3>
+<p>The service will need a certificate for reporting and to authenticate to CMS AAA.
+The easiest solution for this is to use your host certificate and key as follows:</p>
+<ol>
+<li>Copy the host certificate to <code>/etc/grid-security/xrd/xrd{cert,key}.pem</code></li>
+<li>Set the owner of the directory and contents <code>/etc/grid-security/xrd/</code> to <code>xrootd:xrootd</code>:<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> chown -R xrootd:xrootd /etc/grid-security/xrd/
+</pre></div>
+
+
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must repeat the above steps whenever you renew your host certificate.
+If you automate certificate renewal, you should automate copying as well.
+For example, if you are using Certbot for Let's Encrypt, you should write a "deploy hook" as documented
+<a href="../../../security/host-certs/lets-encrypt/#pre-and-post-renewal-hooks">here</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must also register this certificate with the <a href="https://voms24.cern.ch:8443/voms/cms/">CMS VOMS</a></p>
+</div>
+<h2 id="configuring-optional-features">Configuring Optional Features<a class="headerlink" href="#configuring-optional-features" title="Permanent link">&para;</a></h2>
+<h3 id="adjust-disk-utilization">Adjust disk utilization<a class="headerlink" href="#adjust-disk-utilization" title="Permanent link">&para;</a></h3>
+<p>To adjust the disk utilization of your cache, create or edit a file named <code>/etc/xrootd/config.d/90-local.cfg</code>
+and set the values of <code>pfc.diskusage</code>.</p>
+<div class="codehilite"><pre><span></span>pfc.diskusage 0.90 0.95
+</pre></div>
+
+
+<p>The two values correspond to the low and high usage water marks, respectively.
+When usage goes above the high water mark,
+the XRootD service will delete cached files until usage goes below the low water mark.</p>
+<h3 id="modify-the-storage-access-settings-at-a-site">Modify the storage access settings at a site<a class="headerlink" href="#modify-the-storage-access-settings-at-a-site" title="Permanent link">&para;</a></h3>
+<p>In order for CMSSW jobs to use the cache at your site you need to modify the <code>storage.xml</code> and create the following rules</p>
+<div class="codehilite"><pre><span></span># Portions of /store in xcache
+  &lt;lfn-to-pfn protocol=&quot;direct&quot; destination-match=&quot;.*&quot;
+    path-match=&quot;/+store/(data/.*/.*/NANOAOD/.*)&quot;
+    result=&quot;root://yourlocalcache:1094//store/$1&quot;/&gt;
+  &lt;lfn-to-pfn protocol=&quot;direct&quot; destination-match=&quot;.*&quot;
+    path-match=&quot;/+store/(mc/.*/.*/NANOAODSIM/.*)&quot;
+    result=&quot;root://yourlocalcache:1094//store/$1&quot;/&gt;
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are installing a <a href="#installing-a-multinode-cache">multinode cache</a> then instead of <code>yourlocalcache:1094</code> url should be changed for <code>yourcacheredirector:2040</code></p>
+</div>
+<h3 id="enable-remote-debugging">Enable remote debugging<a class="headerlink" href="#enable-remote-debugging" title="Permanent link">&para;</a></h3>
+<p>XRootD provides remote debugging via a read-only file system named digFS.
+This feature is disabled by default, but you may enable it if you need help troubleshooting your server.</p>
+<p>To enable remote debugging, edit <code>/etc/xrootd/digauth.cfg</code> and specify the authorizations for reading digFS.
+An example of authorizations:</p>
+<div class="codehilite"><pre><span></span>all allow gsi g=/glow h=*.cs.wisc.edu
+</pre></div>
+
+
+<p>This gives access to the config file, log files, core files, and process information
+to anyone from <code>*.cs.wisc.edu</code> in the <code>/glow</code> VOMS group.</p>
+<p>See <a href="http://xrootd.org/doc/dev48/xrd_config.htm#_Toc496911334">the XRootD manual</a> for the full syntax.</p>
+<p>Remote debugging should only be enabled for as long as you need assistance.
+As soon as your issue has been resolved, revert any changes you have made to <code>/etc/xrootd/digauth.cfg</code>.</p>
+<h2 id="installing-a-multinode-cache-optional">Installing a Multinode Cache (optional)<a class="headerlink" href="#installing-a-multinode-cache-optional" title="Permanent link">&para;</a></h2>
+<p>Some sites would like to have a single logical cache composed of several nodes as shown below:</p>
+<p><img alt="XRootD cluster" src="../../../img/xrootd.jpg" /></p>
+<p>This can be achieved by following the next steps</p>
+<h3 id="install-an-xcache-redirector">Install an XCache redirector<a class="headerlink" href="#install-an-xcache-redirector" title="Permanent link">&para;</a></h3>
+<p>This can be a simple lightweight virtual machine and will be the single point of contact from jobs to the caches.</p>
+<ol>
+<li>
+<p>Install the redirector package</p>
+<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install xcache-redirector --enablerepo<span class="o">=</span>osg-development
+</pre></div>
+
+
+</li>
+<li>
+<p>Create file named <code>/etc/xrootd/config.d/04-local-redir.cfg</code> with contents</p>
+<div class="codehilite"><pre><span></span>all.manager yourlocalredir:2041
+</pre></div>
+
+
+</li>
+<li>
+<p>Start and enable the <code>cmsd</code> and <code>xrootd</code> proccess:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>Software</strong></th>
+<th><strong>Service name</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XRootD</td>
+<td><code>cmsd@xcache-redirector.service</code></td>
+<td>The cmsd daemon that interact with the different xrootd servers</td>
+</tr>
+<tr>
+<td>XRootD</td>
+<td><code>xrootd@xcache-redirector.service</code></td>
+<td>The xrootd daemon which performs authenticated data transfers</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuring-each-of-your-cache-nodes">Configuring each of your cache nodes<a class="headerlink" href="#configuring-each-of-your-cache-nodes" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Create a config file in the nodes where you installed your caches <code>/etc/xrootd/config.d/94-xrootd-manager.cfg</code> with the following contents:</p>
+<p>:::file
+  all.manager yourlocalredir:2041</p>
+</li>
+<li>
+<p>Start and enable the <code>cmsd</code> service:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>Software</strong></th>
+<th><strong>Service name</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XRootD</td>
+<td><code>cmsd@cms-xcache.service</code></td>
+<td>The xrootd daemon which performs authenticated data transfers</td>
+</tr>
+</tbody>
+</table>
+<h2 id="managing-cms-xcache-and-associated-services">Managing CMS XCache and associated services<a class="headerlink" href="#managing-cms-xcache-and-associated-services" title="Permanent link">&para;</a></h2>
+<p>These services must be managed by <code>systemctl</code> and may start additional services as dependencies.
+As a reminder, here are common service commands (all run as <code>root</code>) for EL7:</p>
+<table>
+<thead>
+<tr>
+<th align="left">To...</th>
+<th align="left">On EL7, run the command...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Start a service</td>
+<td align="left"><code>systemctl start &lt;SERVICE-NAME&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Stop a service</td>
+<td align="left"><code>systemctl stop &lt;SERVICE-NAME&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Enable a service to start on boot</td>
+<td align="left"><code>systemctl enable &lt;SERVICE-NAME&gt;</code></td>
+</tr>
+<tr>
+<td align="left">Disable a service from starting on boot</td>
+<td align="left"><code>systemctl disable &lt;SERVICE-NAME&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cms-xcache-services">CMS XCache services<a class="headerlink" href="#cms-xcache-services" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Software</strong></th>
+<th><strong>Service name</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XRootD</td>
+<td><code>xrootd@cms-xcache.service</code></td>
+<td>The XRootD daemon, which performs the data transfers</td>
+</tr>
+<tr>
+<td>XRootD (Optional)</td>
+<td><code>cmsd@cms-xcache.service</code></td>
+<td>The cmsd daemon that interact with the different xrootd servers</td>
+</tr>
+<tr>
+<td>Fetch CRL</td>
+<td><code>fetch-crl-boot</code> and <code>fetch-crl-cron</code></td>
+<td>Required to authenticate monitoring services.  See <a href="../../../common/ca#managing-fetch-crl-services">CA documentation</a> for more info</td>
+</tr>
+<tr>
+<td></td>
+<td><code>xrootd-renew-proxy.service</code></td>
+<td>Renew a proxy for downloads to the cache</td>
+</tr>
+<tr>
+<td></td>
+<td><code>xrootd-renew-proxy.timer</code></td>
+<td>Trigger daily proxy renewal</td>
+</tr>
+</tbody>
+</table>
+<h4 id="xcache-redirector-services-optional">XCache redirector services (Optional)<a class="headerlink" href="#xcache-redirector-services-optional" title="Permanent link">&para;</a></h4>
+<p>In the node where the cache redirector is installed these are the list of services:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Software</strong></th>
+<th><strong>Service name</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XRootD (Optional)</td>
+<td><code>xrootd@xcache-redirector.service</code></td>
+<td>The xrootd daemon which performs authenticated data transfers</td>
+</tr>
+<tr>
+<td>XRootD (Optional)</td>
+<td><code>cmsd@xcache-redirector.service</code></td>
+<td>The xrootd daemon which performs authenticated data transfers</td>
+</tr>
+</tbody>
+</table>
+<h2 id="validating-the-cache">Validating the Cache<a class="headerlink" href="#validating-the-cache" title="Permanent link">&para;</a></h2>
+<p>The cache server functions as a normal CMS XRootD server so first verify it with a personal CMS X.509 proxy: </p>
+<div class="codehilite"><pre><span></span>=== VO cms extension information ===
+VO        : cms
+subject   : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=efajardo/CN=722781/CN=Edgar Fajardo Hernandez
+issuer    : /DC=ch/DC=cern/OU=computers/CN=lcg-voms2.cern.ch
+attribute : /cms/Role=NULL/Capability=NULL
+attribute : /cms/uscms/Role=NULL/Capability=NULL
+timeleft  : 71:59:46
+uri       : lcg-voms2.cern.ch:15002
+</pre></div>
+
+
+<p>Then test using <code>xrdcp</code> directly in your cache:</p>
+<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> xrdcp -vf -d <span class="m">1</span> root://cache_host:1094//store/data/Run2017B/SingleElectron/MINIAOD/31Mar2018-v1/60000/9E0F8458-EA37-E811-93F1-008CFAC919F0.root /dev/null
+</pre></div>
+
+
+<h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
+<p>To get assistance, please use the <a href="../../../common/help">this page</a> or contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a> directly.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+
+<div class="md-footer-nav">
+  <nav class="md-footer-nav__inner md-grid">
+    
+    <a href="../install-client/" title="Using XRootD" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+        <span class="md-flex__ellipsis">
+          <span class="md-footer-nav__direction">
+            Previous
+          </span>
+          Using XRootD
+        </span>
+      </div>
+    </a>
+    
+    
+    <a href="../../stashcache/overview/" title="StashCache Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+      <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+        <span class="md-flex__ellipsis">
+          <span class="md-footer-nav__direction">
+            Next
+          </span>
+          StashCache Overview
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+      </div>
+    </a>
+    
+  </nav>
+</div>
+
+<div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+    <div class="md-footer-copyright">
+      
+      This material is based upon work supported by the
+      <a href="https://nsf.gov">National Science Foundation</a>
+      under Grant Nos.
+      <a href=https://www.nsf.gov/awardsearch/showAward?AWD_ID=1148698>1148698</a>
+      and
+      <a href=https://www.nsf.gov/awardsearch/showAward?AWD_ID=1836650>1836650</a>
+      . Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+    </div>
+    
+    
+    
+  </div>
+</div>
+
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.30f6b8b1.js"></script>
+      
+      <script>app.initialize({version:"0.17.5",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
