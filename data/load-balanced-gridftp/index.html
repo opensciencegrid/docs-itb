@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3300,7 +3304,7 @@
                 <h1 id="load-balancing-gridftp">Load Balancing GridFTP<a class="headerlink" href="#load-balancing-gridftp" title="Permanent link">&para;</a></h1>
 <p>GridFTP is designed for high throughput data transfers and in many cases can handle all of the transfers for a site. However, in some cases it may be useful to run multiple GridFTP servers to distribute the load. For such sites, we recommend using a <a href="https://en.wikipedia.org/wiki/Load_balancing_(computing)">load balancer</a> to distribute requests and present the appearance of a single high-throughput GridFTP server.</p>
 <p>One general-purpose technology for implementing a load balancer on Linux is <a href="http://www.linuxvirtualserver.org/whatis.html">Linux Virtual Server</a> (LVS). To use it with GridFTP, a single load balancer listens on a virtual IP address, monitors the health of the set of real GridFTP servers, and forwards requests to available ones. Optionally, there can be one or more inactive, backup load balancers that can activate and take over the virtual IP address in case the primary load balancer fails, resulting in a system that is more resilient to failure. LVS is implemented by the <a href="http://www.linuxvirtualserver.org/software/ipvs.html">IP Virtual Server</a> kernel module, which can be managed by userspace services on the load balancers such as <a href="http://www.keepalived.org">keepalived</a>.</p>
-<p>This guide explains how to install, configure, run, test, and troubleshoot the <code>keepalived</code> service on a load balancing host for a set of <a href="../gridftp">GridFTP</a> servers.</p>
+<p>This guide explains how to install, configure, run, test, and troubleshoot the <code>keepalived</code> service on a load balancing host for a set of <a href="../gridftp/">GridFTP</a> servers.</p>
 <h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
 <p>Before starting the installation process, consider the following requirements:</p>
 <ul>
@@ -3309,7 +3313,7 @@
 </ul>
 <p>As with all OSG software installations, there are some one-time (per host) steps to prepare in advance:</p>
 <ul>
-<li>Ensure the host has <a href="../../release/supported_platforms">a supported operating system</a></li>
+<li>Ensure the host has <a href="../../release/supported_platforms/">a supported operating system</a></li>
 <li>Obtain root access to each host</li>
 </ul>
 <h2 id="designing-your-load-balanced-gridftp-system">Designing Your Load-Balanced GridFTP System<a class="headerlink" href="#designing-your-load-balanced-gridftp-system" title="Permanent link">&para;</a></h2>
@@ -3317,10 +3321,10 @@
 <h3 id="gridftp-servers">GridFTP servers<a class="headerlink" href="#gridftp-servers" title="Permanent link">&para;</a></h3>
 <p>The number of GridFTP servers that you should run is determined first and foremost by the expected GridFTP transfer load at your site and the speed of the links available to each server. For example, if you expect a 20Gbps peak transfer load and have 10Gb links with 80–90% efficiency, you would need a minimum of 4 GridFTP servers: 3 to satisfy your desired throughput + 1 for failover or growth.</p>
 <h4 id="shared-file-system">Shared file system<a class="headerlink" href="#shared-file-system" title="Permanent link">&para;</a></h4>
-<p>The number of GridFTP servers can also be determined by your hardware needs and by your choice of shared file system. If you choose a POSIX-based shared file system, plan for machines with more cores, or more GridFTP hosts to distribute the CPU load. If you are running <a href="../install-hadoop#standalone-gridftp-node-installation">GridFTP with Hadoop</a>, plan for machines with more memory, or more GridFTP hosts to distribute the memory load.</p>
+<p>The number of GridFTP servers can also be determined by your hardware needs and by your choice of shared file system. If you choose a POSIX-based shared file system, plan for machines with more cores, or more GridFTP hosts to distribute the CPU load. If you are running <a href="../install-hadoop/#standalone-gridftp-node-installation">GridFTP with Hadoop</a>, plan for machines with more memory, or more GridFTP hosts to distribute the memory load.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you determine that you need only a single GridFTP host, you do not need load balancing. Instead, follow the <a href="../gridftp">standalone-GridFTP installation guide</a>.</p>
+<p>If you determine that you need only a single GridFTP host, you do not need load balancing. Instead, follow the <a href="../gridftp/">standalone-GridFTP installation guide</a>.</p>
 </div>
 <h3 id="load-balancers">Load balancer(s)<a class="headerlink" href="#load-balancers" title="Permanent link">&para;</a></h3>
 <p>In the recommended direct routing mode, load balancers simply rewrite initial packets from a given request so the hardware requirements are minimal. When choosing load balancer hosts, aim for stability. If your chosen host is unstable or if you do not want to introduce downtime for operating system or hardware updates, at least one additional load balancer will be needed as a backup.</p>
@@ -3332,7 +3336,7 @@
 <li>Load-balancing configuration</li>
 </ul>
 <h3 id="acquiring-host-certificates">Acquiring host certificate(s)<a class="headerlink" href="#acquiring-host-certificates" title="Permanent link">&para;</a></h3>
-<p>When authenticating with a GridFTP server, clients verify that the server's host certificate matches the hostname of the server. In the case of a load-balanced GridFTP system, clients contact the GridFTP server through the virtual hostname, so the GridFTP server will have to present a certificate containing the virtual hostname as well as the GridFTP server's hostname. Use the <a href="../../security/host-certs">OSG host certificate reference</a> for more information on how to request these types of certificates.  Additionally, a special procedure is available to acquire <a href="#with-lets-encrypt">Let's Encrypt certificates</a> with the load balanced gridftp.</p>
+<p>When authenticating with a GridFTP server, clients verify that the server's host certificate matches the hostname of the server. In the case of a load-balanced GridFTP system, clients contact the GridFTP server through the virtual hostname, so the GridFTP server will have to present a certificate containing the virtual hostname as well as the GridFTP server's hostname. Use the <a href="../security/host-certs">OSG host certificate reference</a> for more information on how to request these types of certificates.  Additionally, a special procedure is available to acquire <a href="#with-lets-encrypt">Let's Encrypt certificates</a> with the load balanced gridftp.</p>
 <p>If your GridFTP servers are also running XRootD, you will need unique certificates for each GridFTP server. Otherwise, you can request a single certificate that can be shared among the GridFTP servers.</p>
 <h4 id="without-xrootd">Without XRootD<a class="headerlink" href="#without-xrootd" title="Permanent link">&para;</a></h4>
 <p>The single shared certificate must have the hostname associated with the load-balanced GridFTP system as its <a href="https://en.wikipedia.org/wiki/X.509_attribute_certificate">common name</a> and each GridFTP servers hostname listed as <a href="https://en.wikipedia.org/wiki/Subject_Alternative_Name">subject alternative names</a>.</p>
@@ -3352,7 +3356,7 @@
 </li>
 <li>
 <p>Take the resulting CSR and get it signed by the appropriate authority.
-    Most institutions can use InCommon as outlined <a href="../../security/host-certs/#requesting-incommon-igtf-host-certificates">here</a>.</p>
+    Most institutions can use InCommon as outlined <a href="../security/host-certs/#requesting-incommon-igtf-host-certificates">here</a>.</p>
 </li>
 <li>
 <p>Create a directory to contain the shared certificate:</p>
@@ -3462,7 +3466,7 @@ export X509_USER_KEY=/etc/grid-security/gridftp/gridftp-hostkey.pem
 </ol>
 <p>For XRootD certificates, the real hostname of the XRootD node is required to be the first hostname in the <code>certbot</code> command.  You may run the <code>certbot</code> command several times on the same host, replacing the <code>VIRTUAL_HOSTNAME</code> with the real hostname of the XRootD servers, and placing the <code>VIRTUAL_HOSTNAME</code> in in the list of other domains in the certificate.</p>
 <h3 id="installing-gridftp">Installing GridFTP<a class="headerlink" href="#installing-gridftp" title="Permanent link">&para;</a></h3>
-<p>Whether you are starting from scratch or adding more GridFTP servers to your load-balanced GridFTP system, follow the documentation for <a href="../gridftp">installing a standalone GridFTP server</a> for each of your intended GridFTP servers (skip section 2.2, requesting a certificate). For hosts with GridFTP already installed, skip this section.</p>
+<p>Whether you are starting from scratch or adding more GridFTP servers to your load-balanced GridFTP system, follow the documentation for <a href="../gridftp/">installing a standalone GridFTP server</a> for each of your intended GridFTP servers (skip section 2.2, requesting a certificate). For hosts with GridFTP already installed, skip this section.</p>
 <h3 id="configuring-your-gridftp-servers">Configuring your GridFTP servers<a class="headerlink" href="#configuring-your-gridftp-servers" title="Permanent link">&para;</a></h3>
 <p>Each GridFTP server requires changes to its IP configuration and potentially its arptables:</p>
 <ul>
@@ -3713,7 +3717,7 @@ router_id &lt;MACHINE-IDENTIFYING-STRING&gt;
 </table>
 </li>
 </ol>
-<p>For information on how to use your individual GridFTP servers, please refer to the <a href="../gridftp#managing-gridftp">Managing GridFTP section</a> of the GridFTP installation guide.</p>
+<p>For information on how to use your individual GridFTP servers, please refer to the <a href="../gridftp/#managing-gridftp">Managing GridFTP section</a> of the GridFTP installation guide.</p>
 <h3 id="using-keepalived">Using Keepalived<a class="headerlink" href="#using-keepalived" title="Permanent link">&para;</a></h3>
 <p>On the load balancer nodes, <code>keepalived</code> is the only additional service required for running a load-balanced GridFTP system. As a reminder, here are common service commands (all run as <code>root</code>):</p>
 <table>
@@ -3748,7 +3752,7 @@ router_id &lt;MACHINE-IDENTIFYING-STRING&gt;
 </tbody>
 </table>
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
-<p>To get assistance with <code>keepalived</code> in front of OSG Software services, please use the <a href="../../common/help">this page</a>.</p>
+<p>To get assistance with <code>keepalived</code> in front of OSG Software services, please use the <a href="../../common/help/">this page</a>.</p>
 <hr />
 <ul>
 <li><a href="http://www.linuxvirtualserver.org/whatis.html">Linux Virtual Server homepage</a></li>
@@ -3776,7 +3780,7 @@ router_id &lt;MACHINE-IDENTIFYING-STRING&gt;
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../gridftp/" title="Install GridFTP Server" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="data/gridftp/" title="Install GridFTP Server" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3791,7 +3795,7 @@ router_id &lt;MACHINE-IDENTIFYING-STRING&gt;
     </a>
     
     
-    <a href="../xrootd/overview/" title="XRootD Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="data/xrootd/overview/" title="XRootD Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3829,12 +3833,9 @@ router_id &lt;MACHINE-IDENTIFYING-STRING&gt;
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

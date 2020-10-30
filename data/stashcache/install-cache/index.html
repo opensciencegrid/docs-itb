@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../../css/itb.css">
     
       <link rel="stylesheet" href="../../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3229,10 +3233,10 @@ The service type is <code>XRootD cache server</code>.</p>
 <ul>
 <li>In addition to the cache allowing a VO in the <code>AllowedVOs</code> list,
   that VO must also allow the cache in its <code>AllowedCaches</code> list.
-  See the page on <a href="../../../data/stashcache/vo-data">getting your VO's data into StashCache</a>.</li>
+  See the page on <a href="../vo-data/">getting your VO's data into StashCache</a>.</li>
 <li>There must be an authenticated XRootD instance on the cache server.</li>
 <li>There must be a <code>DN</code> attribute in the resource registration
-  with the <a href="../../../security/host-certs#before-starting">subject DN</a> of the host certificate</li>
+  with the <a href="../../security/host-certs#before-starting">subject DN</a> of the host certificate</li>
 </ul>
 <p>This is an example registration for a cache server that serves all public data:</p>
 <div class="codehilite"><pre><span></span>  <span class="nt">MY_STASHCACHE_CACHE</span><span class="p">:</span>
@@ -3426,7 +3430,7 @@ As a reminder, here are common service commands (all run as <code>root</code>) f
 <tr>
 <td>Fetch CRL</td>
 <td><code>fetch-crl-boot</code> and <code>fetch-crl-cron</code></td>
-<td>Required to authenticate monitoring services.  See <a href="../../../common/ca#managing-fetch-crl-services">CA documentation</a> for more info</td>
+<td>Required to authenticate monitoring services.  See <a href="../../../common/ca/#managing-fetch-crl-services">CA documentation</a> for more info</td>
 </tr>
 </tbody>
 </table>
@@ -3506,7 +3510,7 @@ STASHCACHE_DaemonVersion = &quot;1.0.0&quot;
 
 
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
-<p>To get assistance, please use the <a href="../../../common/help">this page</a> or contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a> directly.</p>
+<p>To get assistance, please use the <a href="../../../common/help/">this page</a> or contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a> directly.</p>
                 
                   
                 
@@ -3526,7 +3530,7 @@ STASHCACHE_DaemonVersion = &quot;1.0.0&quot;
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../run-stash-origin-container/" title="Running an Origin in a container" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="data/stashcache/run-stash-origin-container/" title="Running an Origin in a container" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3541,7 +3545,7 @@ STASHCACHE_DaemonVersion = &quot;1.0.0&quot;
     </a>
     
     
-    <a href="../install-origin/" title="Install an Origin" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="data/stashcache/install-origin/" title="Install an Origin" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3579,12 +3583,9 @@ STASHCACHE_DaemonVersion = &quot;1.0.0&quot;
       
     </div>
     
-      <script src="../../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
     
   </body>

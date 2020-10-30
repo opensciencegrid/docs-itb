@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3063,7 +3067,7 @@
 <p class="admonition-title">Difference between Gratia and GRACC</p>
 <p>Gratia is the legacy name of the OSG Accounting system.  GRACC is the new name of the server and hosted components of the accounting system.  When we refer to Gratia, we mean either the data or the probes on the resources.  If we mention GRACC, we are referring to the hosted components that the OSG maintains.</p>
 </div>
-<p><img alt="Gratia Basics" src="../../img/gratia-overview.png" /></p>
+<p><img alt="Gratia Basics" src="/img/gratia-overview.png" /></p>
 <p>These are the definitions of the major elements in the above figure.</p>
 <ul>
 <li><strong>Gratia probe</strong>: A piece of software that collects accounting data from the computer on which it's running, and transmits it to a Gratia server.</li>
@@ -3087,7 +3091,7 @@
 </pre></div>
 
 
-<p>You also need to enable individual probes, usually via <code>osg-configure</code>.  Documentation on using <code>osg-configure</code> with Gratia <a href="../configuration-with-osg-configure#gratia">documented elsewhere</a>.</p>
+<p>You also need to enable individual probes, usually via <code>osg-configure</code>.  Documentation on using <code>osg-configure</code> with Gratia <a href="../configuration-with-osg-configure/#gratia">documented elsewhere</a>.</p>
 <h3 id="running-gratia-probes">Running Gratia Probes<a class="headerlink" href="#running-gratia-probes" title="Permanent link">&para;</a></h3>
 <p>When the cron jobs are enabled and run, they go through the following process, with minor changes between different Gratia probes:</p>
 <ol>
@@ -3104,7 +3108,7 @@
 </li>
 </ol>
 <h3 id="gratia-probe-configuration">Gratia Probe Configuration<a class="headerlink" href="#gratia-probe-configuration" title="Permanent link">&para;</a></h3>
-<p>In normal cases, <code>osg-configure</code> does the editing of the probe configuration files, at least on the CE. The configuration is found in <code>/etc/osg/config.d/30-gratia.ini</code> and <a href="../configuration-with-osg-configure#gratia">documented elsewhere</a>.</p>
+<p>In normal cases, <code>osg-configure</code> does the editing of the probe configuration files, at least on the CE. The configuration is found in <code>/etc/osg/config.d/30-gratia.ini</code> and <a href="../configuration-with-osg-configure/#gratia">documented elsewhere</a>.</p>
 <p>If there are problems or special configuration, you might need to edit the Gratia configuration files yourself. Each probe has a separate configuration file found in <code>/etc/gratia/PROBE-NAME/ProbeConfig</code>.</p>
 <p>The ProbeConfig files have many details. A few options that you might need to edit are shown before. This is <strong>not</strong> a complete file, but only shows a subset of the options.</p>
 <div class="codehilite"><pre><span></span>&lt;ProbeConfiguration 
@@ -3506,7 +3510,7 @@ misspelled name is between angled brackets and capital letters below, but <em>it
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../network-performance-toolkit/" title="Install the Network Performance Toolkit" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="other/network-performance-toolkit/" title="Install the Network Performance Toolkit" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3521,7 +3525,7 @@ misspelled name is between angled brackets and capital letters below, but <em>it
     </a>
     
     
-    <a href="../schedd-filebeats/" title="Install Transfer Log Filebeats" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="other/schedd-filebeats/" title="Install Transfer Log Filebeats" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3559,12 +3563,9 @@ misspelled name is between angled brackets and capital letters below, but <em>it
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

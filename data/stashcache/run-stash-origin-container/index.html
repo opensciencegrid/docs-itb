@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../../css/itb.css">
     
       <link rel="stylesheet" href="../../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -2962,10 +2966,10 @@
                 
                 
                 <h1 id="running-stashcache-origin-in-a-container">Running StashCache Origin in a Container<a class="headerlink" href="#running-stashcache-origin-in-a-container" title="Permanent link">&para;</a></h1>
-<p>The OSG operates the <a href="../../../data/stashcache/overview">StashCache data federation</a>, which
+<p>The OSG operates the <a href="../overview/">StashCache data federation</a>, which
 provides organizations with a method to distribute their data in a scalable manner to thousands of jobs without needing
 to pre-stage data across sites or operate their own scalable infrastructure.</p>
-<p><a href="../../../data/stashcache/install-origin">Stash Origins</a> store copies of users' data.
+<p><a href="../install-origin/">Stash Origins</a> store copies of users' data.
 Each community (or experiment) needs to run one origin to export its data via the StashCache federation.
 This document outlines how to run such an origin in a Docker container.</p>
 <h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
@@ -2977,14 +2981,14 @@ to start containers (i.e., belong to the <code>docker</code> Unix group).</li>
 default).</li>
 <li><strong>File Systems:</strong> Stash Origin needs a partition on the host to store user data.</li>
 <li><strong>Registration:</strong> Before deploying an origin, you must
-   <a href="../../../data/stashcache/install-origin/#registering-the-origin">registered the service</a> in the OSG Topology</li>
+   <a href="../install-origin/#registering-the-origin">registered the service</a> in the OSG Topology</li>
 </ol>
 <h2 id="configuring-stash-origin">Configuring Stash Origin<a class="headerlink" href="#configuring-stash-origin" title="Permanent link">&para;</a></h2>
 <p>In addition to the required configuration above (ports and file systems), you may also configure the behavior of your
 origin with the following variables using an environment variable file:</p>
 <p>Where the environment file on the docker host, <code>/opt/origin/.env</code>, has (at least) the following contents (replace
 <code>YOUR_SITE_NAME</code> with the name of your site as
-<a href="../../../data/stashcache/install-origin/#registering-the-origin">registered in Topology</a>):</p>
+<a href="../install-origin/#registering-the-origin">registered in Topology</a>):</p>
 <div class="codehilite"><pre><span></span>XC_RESOURCENAME=YOUR_SITE_NAME
 </pre></div>
 
@@ -3042,14 +3046,14 @@ WantedBy=multi-user.target
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>You must <a href="../../../data/stashcache/install-origin/#registering-the-origin">register</a> the origin before considering it a
+<p>You must <a href="../install-origin/#registering-the-origin">register</a> the origin before considering it a
 production service.</p>
 </div>
 <h2 id="validating-origin">Validating Origin<a class="headerlink" href="#validating-origin" title="Permanent link">&para;</a></h2>
 <p>To validate the origin please follow the
-<a href="../../../data/stashcache/install-origin/#verifying-the-origin-server">validating origin instructions</a>.</p>
+<a href="../install-origin/#verifying-the-origin-server">validating origin instructions</a>.</p>
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
-<p>To get assistance, please use the <a href="../../../common/help">this page</a> or contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a> directly.</p>
+<p>To get assistance, please use the <a href="../../../common/help/">this page</a> or contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a> directly.</p>
                 
                   
                 
@@ -3069,7 +3073,7 @@ production service.</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../run-stashcache-container/" title="Running a Cache in a container" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="data/stashcache/run-stashcache-container/" title="Running a Cache in a container" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3084,7 +3088,7 @@ production service.</p>
     </a>
     
     
-    <a href="../install-cache/" title="Install a Cache" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="data/stashcache/install-cache/" title="Install a Cache" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3122,12 +3126,9 @@ production service.</p>
       
     </div>
     
-      <script src="../../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
     
   </body>

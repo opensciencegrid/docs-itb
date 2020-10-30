@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3078,10 +3082,10 @@ By installing CVMFS, you have access to an alternative installation method for r
 site you will be able to support a wider range of user jobs.
 For example, CVMFS provides easy access to the following:</p>
 <ul>
-<li>The <a href="../../worker-node/install-wn-oasis">worker node client</a></li>
+<li>The <a href="../install-wn-oasis/">worker node client</a></li>
 <li>CA and VO security data</li>
 <li>Software used by VOs</li>
-<li>Data stored in <a href="../../data/stashcache/overview">StashCache</a>.</li>
+<li>Data stored in <a href="../../data/stashcache/overview/">StashCache</a>.</li>
 </ul>
 <p>Use this page to learn how to install, configure, run, test, and troubleshoot the CVMFS client from the OSG software
 repositories.</p>
@@ -3101,9 +3105,9 @@ The version of CVMFS installed should be &gt;= 2.4.1</p>
 </ul>
 <p>As with all OSG software installations, there are some one-time (per host) steps to prepare in advance:</p>
 <ul>
-<li>Ensure the host has <a href="../../release/supported_platforms">a supported operating system</a></li>
+<li>Ensure the host has <a href="../../release/supported_platforms/">a supported operating system</a></li>
 <li>Obtain root access to the host</li>
-<li>Prepare the <a href="../../common/yum">required Yum repositories</a></li>
+<li>Prepare the <a href="../../common/yum/">required Yum repositories</a></li>
 </ul>
 <h2 id="installing-cvmfs">Installing CVMFS<a class="headerlink" href="#installing-cvmfs" title="Permanent link">&para;</a></h2>
 <p>The following will install CVMFS from the OSG yum repository. It will also install fuse and autofs if you do not have them, and it will install the configuration for the OSG CVMFS distribution which is called OASIS. To simplify installation, OSG provides convenience RPMs that install all required software with a single command.</p>
@@ -3208,7 +3212,7 @@ additional that have been mounted.  You may want to choose a different
 set of always-known repositories.</p>
 <p>Set up a list of CVMFS HTTP proxies to retrieve from in
 <code>CVMFS_HTTP_PROXY</code>. If you do not have any squid at your site follow
-the instructions to <a href="../../data/frontier-squid">install squid from OSG</a>.
+the instructions to <a href="../../data/frontier-squid/">install squid from OSG</a>.
 Vertical bars separating proxies means to load balance between them
 and try them all before continuing. A semicolon between proxies means
 to try that one only after the previous ones have failed. For example:</p>
@@ -3319,7 +3323,7 @@ the repositories are accessed; there are no system services to start.</p>
 <h2 id="how-to-get-help">How to get Help?<a class="headerlink" href="#how-to-get-help" title="Permanent link">&para;</a></h2>
 <p>If you cannot resolve the problem, there are several ways to receive help:</p>
 <ul>
-<li>For bug reporting and OSG-specific issues, see our <a href="../../common/help">help procedure</a></li>
+<li>For bug reporting and OSG-specific issues, see our <a href="../../common/help/">help procedure</a></li>
 <li>For community support and best-effort software team support contact
    <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#111;&#115;&#103;&#45;&#99;&#118;&#109;&#102;&#115;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#111;&#115;&#103;&#45;&#99;&#118;&#109;&#102;&#115;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a>.</li>
 <li>For general CernVM File System support contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#101;&#114;&#110;&#118;&#109;&#46;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#99;&#101;&#114;&#110;&#46;&#99;&#104;">&#99;&#101;&#114;&#110;&#118;&#109;&#46;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#99;&#101;&#114;&#110;&#46;&#99;&#104;</a>.</li>
@@ -3389,7 +3393,7 @@ that will create another group:</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../install-wn-oasis/" title="Install from OASIS" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="worker-node/install-wn-oasis/" title="Install from OASIS" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3404,7 +3408,7 @@ that will create another group:</p>
     </a>
     
     
-    <a href="../install-singularity/" title="Install Singularity" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="worker-node/install-singularity/" title="Install Singularity" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3442,12 +3446,9 @@ that will create another group:</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

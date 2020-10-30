@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3590,7 +3594,7 @@
 <ul>
 <li>If a value is set in <a href="#job_router_defaults">JOB_ROUTER_DEFAULTS</a> with <code>eval_set_&lt;variable&gt;</code>, override it by using <code>eval_set_&lt;variable&gt;</code> in the <code>JOB_ROUTER_ENTRIES</code>. Do this at your own risk as it may cause the CE to break.</li>
 <li>Make sure to run <code>condor_ce_reconfig</code> after changing your routes, otherwise they will not take effect.</li>
-<li>Do <strong>not</strong> set the job environment through the JobRouter. Instead, add any changes to the <code>[Local Settings]</code> section in <code>/etc/osg/config.d/40-localsettings.ini</code> and run osg-configure, as documented <a href="../../other/configuration-with-osg-configure#local-settings">here</a>.</li>
+<li>Do <strong>not</strong> set the job environment through the JobRouter. Instead, add any changes to the <code>[Local Settings]</code> section in <code>/etc/osg/config.d/40-localsettings.ini</code> and run osg-configure, as documented <a href="../../other/configuration-with-osg-configure/#local-settings">here</a>.</li>
 <li>HTCondor batch system only: Local universe jobs are excluded from any routing.</li>
 </ul>
 <h2 id="how-job-routes-are-constructed">How Job Routes are Constructed<a class="headerlink" href="#how-job-routes-are-constructed" title="Permanent link">&para;</a></h2>
@@ -3612,7 +3616,7 @@
 <p>Do <strong>not</strong> set the <code>JOB_ROUTER_DEFAULTS</code> configuration variable yourself. This will cause the CE to stop functioning.</p>
 </div>
 <h2 id="how-jobs-match-to-job-routes">How Jobs Match to Job Routes<a class="headerlink" href="#how-jobs-match-to-job-routes" title="Permanent link">&para;</a></h2>
-<p>The job router considers jobs in the queue (<a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_q">condor_ce_q</a>) that
+<p>The job router considers jobs in the queue (<a href="../troubleshoot-htcondor-ce/#condor_ce_q">condor_ce_q</a>) that
 meet the following constraints:</p>
 <ul>
 <li>The job has not already been considered by the job router</li>
@@ -3620,7 +3624,7 @@ meet the following constraints:</p>
 <li>The job's universe is standard or vanilla</li>
 </ul>
 <p>If the job meets the above constraints, then the job's ClassAd is compared against each
-<a href="../../compute-element/job-router-recipes/#filtering-jobs-based-on">route's requirements</a>.
+<a href="./#filtering-jobs-based-on">route's requirements</a>.
 If the job only meets one route's requirements, the job is matched to that route.
 If the job meets the requirements of multiple routes,  the route that is chosen depends on your version of HTCondor
 (<code>condor_version</code>):</p>
@@ -3690,7 +3694,7 @@ As a result, we recommend updating to at least HTCondor 8.9.5 (or 8.8.6) and spe
 </pre></div>
 
 
-<p>The name of the route will be useful in debugging since it shows up in the output of <a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_job_router_info">condor_ce_job_router_info</a>, the <a href="../../compute-element/troubleshoot-htcondor-ce#jobrouterlog">JobRouterLog</a>, and in the ClassAd of the routed job, which can be viewed with <a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_q">condor_ce_q</a> or <a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_history">condor_ce_history</a>.</p>
+<p>The name of the route will be useful in debugging since it shows up in the output of <a href="../troubleshoot-htcondor-ce/#condor_ce_job_router_info">condor_ce_job_router_info</a>, the <a href="../troubleshoot-htcondor-ce/#jobrouterlog">JobRouterLog</a>, and in the ClassAd of the routed job, which can be viewed with <a href="../troubleshoot-htcondor-ce/#condor_ce_q">condor_ce_q</a> or <a href="../troubleshoot-htcondor-ce/#condor_ce_history">condor_ce_history</a>.</p>
 <h3 id="writing-multiple-routes">Writing multiple routes<a class="headerlink" href="#writing-multiple-routes" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3730,7 +3734,7 @@ Any other jobs will be sent to that site's PBS batch system.</p>
 
 
 <h3 id="setting-attributes-for-all-routes">Setting attributes for all routes<a class="headerlink" href="#setting-attributes-for-all-routes" title="Permanent link">&para;</a></h3>
-<p>To set an attribute that will be applied to all routes, you will need to ensure that <code>MERGE_JOB_ROUTER_DEFAULT_ADS</code> is set to <code>True</code> (check the value with <a href="../troubleshoot-htcondor-ce#condor_ce_config_val">condor_ce_config_val</a>) and use the <a href="#setting-attributes">set_</a> function in the <code>JOB_ROUTER_DEFAULTS</code>. The following configuration sets the <code>Periodic_Hold</code> attribute for all routes:</p>
+<p>To set an attribute that will be applied to all routes, you will need to ensure that <code>MERGE_JOB_ROUTER_DEFAULT_ADS</code> is set to <code>True</code> (check the value with <a href="../troubleshoot-htcondor-ce/#condor_ce_config_val">condor_ce_config_val</a>) and use the <a href="#setting-attributes">set_</a> function in the <code>JOB_ROUTER_DEFAULTS</code>. The following configuration sets the <code>Periodic_Hold</code> attribute for all routes:</p>
 <div class="codehilite"><pre><span></span># Use the defaults generated by the condor_ce_router_defaults script.  To add
 # additional defaults, add additional lines of the form:
 #
@@ -3742,7 +3746,7 @@ MERGE_JOB_ROUTER_DEFAULT_ADS=True
 
 
 <h3 id="filtering-jobs-based-on">Filtering jobs based on…<a class="headerlink" href="#filtering-jobs-based-on" title="Permanent link">&para;</a></h3>
-<p>To filter jobs, use the <code>Requirements</code> attribute. Jobs will evaluate against the ClassAd expression set in the <code>Requirements</code> and if the expression evaluates to <code>TRUE</code>, the route will match. More information on the syntax of ClassAd's can be found in the <a href="http://research.cs.wisc.edu/htcondor/manual/v8.6/4_1HTCondor_s_ClassAd.html">HTCondor manual</a>. For an example on how incoming jobs interact with filtering in job routes, consult <a href="../../compute-element/submit-htcondor-ce">this document</a>.</p>
+<p>To filter jobs, use the <code>Requirements</code> attribute. Jobs will evaluate against the ClassAd expression set in the <code>Requirements</code> and if the expression evaluates to <code>TRUE</code>, the route will match. More information on the syntax of ClassAd's can be found in the <a href="http://research.cs.wisc.edu/htcondor/manual/v8.6/4_1HTCondor_s_ClassAd.html">HTCondor manual</a>. For an example on how incoming jobs interact with filtering in job routes, consult <a href="../submit-htcondor-ce/">this document</a>.</p>
 <p>When setting requirements, you need to prefix job attributes that you are filtering with <code>TARGET.</code> so that the job route knows to compare the attribute of the incoming job rather than the route’s own attribute. For example, if an incoming job has a <code>queue = "analy"</code> attribute, then the following job route will not match:</p>
 <div class="codehilite"><pre><span></span>JOB_ROUTER_ENTRIES @=jre
 [
@@ -3814,7 +3818,7 @@ MERGE_JOB_ROUTER_DEFAULT_ADS=True
 
 
 <h3 id="setting-a-default">Setting a default…<a class="headerlink" href="#setting-a-default" title="Permanent link">&para;</a></h3>
-<p>This section outlines how to set default job limits, memory, cores, and maximum walltime. For an example on how users can override these defaults, consult <a href="../submit-htcondor-ce#route-defaults">this document</a>.</p>
+<p>This section outlines how to set default job limits, memory, cores, and maximum walltime. For an example on how users can override these defaults, consult <a href="../submit-htcondor-ce/#route-defaults">this document</a>.</p>
 <h4 id="maximum-number-of-jobs">Maximum number of jobs<a class="headerlink" href="#maximum-number-of-jobs" title="Permanent link">&para;</a></h4>
 <p>To set a default limit to the maximum number of jobs per route, you can edit the configuration variable <code>CONDORCE_MAX_JOBS</code> in <code>/etc/condor-ce/config.d/01-ce-router.conf</code>:</p>
 <div class="codehilite"><pre><span></span>CONDORCE_MAX_JOBS = 10000
@@ -4027,7 +4031,7 @@ MERGE_JOB_ROUTER_DEFAULT_ADS=True
 
 
 <h3 id="setting-accounting-groups">Setting accounting groups<a class="headerlink" href="#setting-accounting-groups" title="Permanent link">&para;</a></h3>
-<p>To assign jobs to an HTCondor accounting group to manage fair share on your local batch system, we recommend using <a href="../../compute-element/install-htcondor-ce#htcondor-accounting-groups">UID and ExtAttr tables</a>.</p>
+<p>To assign jobs to an HTCondor accounting group to manage fair share on your local batch system, we recommend using <a href="../install-htcondor-ce/#htcondor-accounting-groups">UID and ExtAttr tables</a>.</p>
 <h2 id="routes-for-non-htcondor-batch-systems">Routes for non-HTCondor Batch Systems<a class="headerlink" href="#routes-for-non-htcondor-batch-systems" title="Permanent link">&para;</a></h2>
 <p>This section contains information about job routes that can be used if you are running a non-HTCondor batch system at your site.</p>
 <h3 id="setting-a-default-batch-queue">Setting a default batch queue<a class="headerlink" href="#setting-a-default-batch-queue" title="Permanent link">&para;</a></h3>
@@ -4120,10 +4124,10 @@ attribute of the job submitted to a PBS batch system:</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <p>Here are some other HTCondor-CE documents that might be helpful:</p>
 <ul>
-<li><a href="../htcondor-ce-overview">HTCondor-CE overview and architecture</a></li>
-<li><a href="../install-htcondor-ce">Installing HTCondor-CE</a></li>
-<li><a href="../troubleshoot-htcondor-ce">The HTCondor-CE troubleshooting guide</a></li>
-<li><a href="../submit-htcondor-ce">Submitting jobs to HTCondor-CE</a></li>
+<li><a href="../htcondor-ce-overview/">HTCondor-CE overview and architecture</a></li>
+<li><a href="../install-htcondor-ce/">Installing HTCondor-CE</a></li>
+<li><a href="../troubleshoot-htcondor-ce/">The HTCondor-CE troubleshooting guide</a></li>
+<li><a href="../submit-htcondor-ce/">Submitting jobs to HTCondor-CE</a></li>
 </ul>
 <h3 id="example-configurations">Example Configurations<a class="headerlink" href="#example-configurations" title="Permanent link">&para;</a></h3>
 <h4 id="aglt2s-job-routes">AGLT2's job routes<a class="headerlink" href="#aglt2s-job-routes" title="Permanent link">&para;</a></h4>
@@ -4397,7 +4401,7 @@ attribute of the job submitted to a PBS batch system:</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../install-htcondor-ce/" title="Install HTCondor-CE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="compute-element/install-htcondor-ce/" title="Install HTCondor-CE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -4412,7 +4416,7 @@ attribute of the job submitted to a PBS batch system:</p>
     </a>
     
     
-    <a href="../troubleshoot-htcondor-ce/" title="Troubleshooting HTCondor-CE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="compute-element/troubleshoot-htcondor-ce/" title="Troubleshooting HTCondor-CE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -4450,12 +4454,9 @@ attribute of the job submitted to a PBS batch system:</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

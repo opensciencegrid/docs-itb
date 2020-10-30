@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -2971,14 +2975,14 @@ and configure it for the science communities that you choose to support.
 The Hosted CE can support thousands of concurrent job submissions.</p>
 <p>This document explains the requirements and the procedure for obtaining a Hosted CE.
 If you wish to run your own local compute element or expect to support more than 10,000 concurrently running OSG jobs,
-see <a href="../../compute-element/install-htcondor-ce">this page</a> for installing the HTCondor-CE.</p>
-<p><img alt="managed services diagram" src="../../compute-element/img/managed_services_diagram.png" /></p>
+see <a href="../install-htcondor-ce/">this page</a> for installing the HTCondor-CE.</p>
+<p><img alt="managed services diagram" src="/compute-element/img/managed_services_diagram.png" /></p>
 <h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
 <p>Before preparing your cluster for OSG jobs, consider the following requirements:</p>
 <ul>
 <li>
 <p>An existing compute cluster with a <a href="../..#prepare-the-batch-system">supported batch system</a>
-    running on a <a href="../../release/supported_platforms">supported operating system</a></p>
+    running on a <a href="../../release/supported_platforms/">supported operating system</a></p>
 </li>
 <li>
 <p>Outbound network connectivity from the worker nodes (they can be behind NAT)</p>
@@ -2994,13 +2998,13 @@ see <a href="../../compute-element/install-htcondor-ce">this page</a> for instal
     See <a href="#providing-the-osg-worker-node-client-htcondor-batch-systems-only">this section</a> for details.</p>
 </li>
 <li>
-<p><a href="../../worker-node/using-wn#for-site-administrators">Temporary scratch space</a> on each worker node</p>
+<p><a href="../../worker-node/using-wn/#for-site-administrators">Temporary scratch space</a> on each worker node</p>
 </li>
 </ul>
 <h2 id="which-science-communities-and-institutions-am-i-supporting">Which Science Communities and Institutions am I Supporting?<a class="headerlink" href="#which-science-communities-and-institutions-am-i-supporting" title="Permanent link">&para;</a></h2>
 <p>The OSG provides monitoring to view which communities are accessing your site, their fields of science, and home institution.
 Below is an example of the monitoring views that will be available for your cluster.</p>
-<p><img alt="monitoring graphs" src="../../compute-element/img/monitoring_graphs.png" /></p>
+<p><img alt="monitoring graphs" src="/compute-element/img/monitoring_graphs.png" /></p>
 <p>Each community in the OSG utilizing the Hosted CEs is mapped to your site as a fixed, specific account; we request
 the account names are of the form <code>osg01</code> through <code>osg20</code>.</p>
 <p>The mappings from Unix username to community is as follows:</p>
@@ -3094,9 +3098,9 @@ This is normally handled by OSG staff for a Hosted CE, but requires shared home 
 If you run an HTCondor site and it is easier to install and maintain the Worker Node Client on each worker node than to
 set up and maintain shared file system, you have the following options:</p>
 <ul>
-<li>Install the <a href="../../worker-node/install-wn">Worker Node Client from RPM</a></li>
-<li>Install the <a href="../../worker-node/install-wn-tarball">Worker Node Client from tarball</a></li>
-<li>Install the Worker Node Client from <a href="../../worker-node/install-wn-oasis">OASIS</a></li>
+<li>Install the <a href="../../worker-node/install-wn/">Worker Node Client from RPM</a></li>
+<li>Install the <a href="../../worker-node/install-wn-tarball/">Worker Node Client from tarball</a></li>
+<li>Install the Worker Node Client from <a href="../../worker-node/install-wn-oasis/">OASIS</a></li>
 </ul>
 <h2 id="optional-providing-access-to-application-software-using-oasis"><strong>Optional</strong>: Providing Access to Application Software Using OASIS<a class="headerlink" href="#optional-providing-access-to-application-software-using-oasis" title="Permanent link">&para;</a></h2>
 <p>Many OSG jobs make of use software modules provided by their collaborations or by the OSG User Support team.
@@ -3107,16 +3111,16 @@ OSG sites may provide a distributed software repository system called OASIS, bui
 <ul>
 <li>
 <p>A cluster-wide Frontier Squid proxy service with at least 50GB of cache space;
-    installation instructions for Frontier Squid are <a href="../../data/frontier-squid">provided here</a>.</p>
+    installation instructions for Frontier Squid are <a href="../../data/frontier-squid/">provided here</a>.</p>
 </li>
 <li>
 <p>A local OASIS cache per worker node (10 GB minimum, 20 GB recommended)</p>
 </li>
 </ul>
 <p>After setting up the Frontier Squid proxy and local caches on each worker node,
-<a href="../../worker-node/install-cvmfs">install OASIS</a> on each worker node.</p>
+<a href="../../worker-node/install-cvmfs/">install OASIS</a> on each worker node.</p>
 <h2 id="how-to-get-help">How to Get Help<a class="headerlink" href="#how-to-get-help" title="Permanent link">&para;</a></h2>
-<p>If you need help with setup or troubleshooting, see our <a href="../../common/help">help procedure</a>.</p>
+<p>If you need help with setup or troubleshooting, see our <a href="../../common/help/">help procedure</a>.</p>
                 
                   
                 
@@ -3136,7 +3140,7 @@ OSG sites may provide a distributed software repository system called OASIS, bui
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../htcondor-ce-overview/" title="HTCondor-CE Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="compute-element/htcondor-ce-overview/" title="HTCondor-CE Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3151,7 +3155,7 @@ OSG sites may provide a distributed software repository system called OASIS, bui
     </a>
     
     
-    <a href="../install-htcondor-ce/" title="Install HTCondor-CE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="compute-element/install-htcondor-ce/" title="Install HTCondor-CE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3189,12 +3193,9 @@ OSG sites may provide a distributed software repository system called OASIS, bui
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

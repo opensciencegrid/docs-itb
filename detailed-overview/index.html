@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../css/itb.css">
     
       <link rel="stylesheet" href="../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3101,10 +3105,10 @@ installation, configuration, troubleshooting, and similar pages. If you do not s
 documentation listed here, try the search bar at the top or contacting us at
 <a href="mailto:help@opensciencegrid.org">help@opensciencegrid.org</a>.</p>
 <h2 id="plan-the-site">Plan the Site<a class="headerlink" href="#plan-the-site" title="Permanent link">&para;</a></h2>
-<p>If you have not done so already, <a href="../site-planning">plan the overall architecture of your OSG site</a>.
+<p>If you have not done so already, <a href="../site-planning/">plan the overall architecture of your OSG site</a>.
 It is recommended that your plan be sufficiently detailed to include the OSG hosts that are needed and the main software
 components for each host.
-Be sure to consider <a href="../release/supported_platforms">the operating systems that OSG supports</a>. For example, a basic site might include:</p>
+Be sure to consider <a href="../release/supported_platforms/">the operating systems that OSG supports</a>. For example, a basic site might include:</p>
 <table>
 <thead>
 <tr>
@@ -3142,7 +3146,7 @@ your batch system.</p>
 <p>If necessary, provision all OSG hosts that are in your site plan that do not exist yet.
 The general steps to installing an OSG site are:</p>
 <ol>
-<li>Install <a href="../common/yum">OSG Yum Repos</a> and the <a href="#installing-and-configuring-the-compute-element">Compute Element software</a>
+<li>Install <a href="../common/yum/">OSG Yum Repos</a> and the <a href="#installing-and-configuring-the-compute-element">Compute Element software</a>
    on your CE host</li>
 <li>Install the <a href="#adding-osg-software-to-worker-nodes">Worker Node client</a> on your worker nodes.</li>
 <li>Install <a href="#installing-and-configuring-other-services">optional software</a> to increase the capabilities of your site.</li>
@@ -3157,76 +3161,76 @@ configuration management tools are <a href="http://puppetlabs.com">Puppet</a>, <
 </div>
 <h3 id="general-installation-instructions">General Installation Instructions<a class="headerlink" href="#general-installation-instructions" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="../release/signing">Security information for OSG signed RPMs</a></li>
-<li><a href="../release/yum-basics">Using Yum and RPM</a></li>
-<li><a href="../common/yum">Install the OSG Yum repositories</a></li>
-<li><a href="../release/release_series">OSG Software release series</a> - look here to upgrade to OSG 3.5</li>
+<li><a href="../release/signing/">Security information for OSG signed RPMs</a></li>
+<li><a href="../release/yum-basics/">Using Yum and RPM</a></li>
+<li><a href="../common/yum/">Install the OSG Yum repositories</a></li>
+<li><a href="../release/release_series/">OSG Software release series</a> - look here to upgrade to OSG 3.5</li>
 </ul>
 <h3 id="installing-and-managing-certificates-for-site-security">Installing and Managing Certificates for Site Security<a class="headerlink" href="#installing-and-managing-certificates-for-site-security" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="../common/ca">Installing the grid certificate authorities (CAs)</a></li>
-<li><a href="../security/host-certs">How do I get X.509 host certificates?</a></li>
-<li><a href="../security/certificate-management">Automatically updating the grid certificate authorities (CAs)</a></li>
-<li><a href="../security/certificate-management">OSG PKI command line client reference</a></li>
+<li><a href="../common/ca/">Installing the grid certificate authorities (CAs)</a></li>
+<li><a href="security/host-certs">How do I get X.509 host certificates?</a></li>
+<li><a href="../security/certificate-management/">Automatically updating the grid certificate authorities (CAs)</a></li>
+<li><a href="../security/certificate-management/">OSG PKI command line client reference</a></li>
 </ul>
 <h3 id="installing-and-configuring-the-compute-element">Installing and Configuring the Compute Element<a class="headerlink" href="#installing-and-configuring-the-compute-element" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Install the compute element (HTCondor-CE and other software):<ul>
-<li><a href="../compute-element/htcondor-ce-overview">Overview and architecture</a></li>
-<li><a href="../compute-element/hosted-ce">Request a Hosted CE</a></li>
-<li><a href="../compute-element/install-htcondor-ce">Install HTCondor-CE</a></li>
-<li><a href="../compute-element/job-router-recipes">Configure the HTCondor-CE job router</a>, including common recipes</li>
-<li><a href="../compute-element/troubleshoot-htcondor-ce">Troubleshooting HTCondor-CE installations</a></li>
-<li><a href="../compute-element/submit-htcondor-ce">Submitting jobs to HTCondor-CE</a></li>
+<li><a href="../compute-element/htcondor-ce-overview/">Overview and architecture</a></li>
+<li><a href="../compute-element/hosted-ce/">Request a Hosted CE</a></li>
+<li><a href="../compute-element/install-htcondor-ce/">Install HTCondor-CE</a></li>
+<li><a href="../compute-element/job-router-recipes/">Configure the HTCondor-CE job router</a>, including common recipes</li>
+<li><a href="../compute-element/troubleshoot-htcondor-ce/">Troubleshooting HTCondor-CE installations</a></li>
+<li><a href="../compute-element/submit-htcondor-ce/">Submitting jobs to HTCondor-CE</a></li>
 </ul>
 </li>
-<li><a href="../other/configuration-with-osg-configure"><code>osg-configure</code> Reference</a></li>
+<li><a href="../other/configuration-with-osg-configure/"><code>osg-configure</code> Reference</a></li>
 </ul>
 <h3 id="adding-osg-software-to-worker-nodes">Adding OSG Software to Worker Nodes<a class="headerlink" href="#adding-osg-software-to-worker-nodes" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="../worker-node/using-wn">Worker Node (WN) Client Overview</a></li>
+<li><a href="../worker-node/using-wn/">Worker Node (WN) Client Overview</a></li>
 <li>Install the WN client software on every worker node – pick a method:<ul>
-<li><a href="../worker-node/install-wn">Using RPMs</a> – useful when managing your worker nodes with a tool (e.g., Puppet, Chef)</li>
-<li><a href="../worker-node/install-wn-tarball">Using a tarball</a> – useful for installation onto a shared filesystem (does not
+<li><a href="../worker-node/install-wn/">Using RPMs</a> – useful when managing your worker nodes with a tool (e.g., Puppet, Chef)</li>
+<li><a href="../worker-node/install-wn-tarball/">Using a tarball</a> – useful for installation onto a shared filesystem (does not
     require root access)</li>
-<li><a href="../worker-node/install-wn-oasis">Using OASIS</a> – useful when <a href="../worker-node/install-cvmfs">CVMFS</a> is already mounted
+<li><a href="../worker-node/install-wn-oasis/">Using OASIS</a> – useful when <a href="../worker-node/install-cvmfs/">CVMFS</a> is already mounted
     on your worker nodes</li>
 </ul>
 </li>
-<li>(optional) <a href="../worker-node/install-cvmfs">Install the CernVM-FS client</a> to make it easy for user jobs to use needed
+<li>(optional) <a href="../worker-node/install-cvmfs/">Install the CernVM-FS client</a> to make it easy for user jobs to use needed
     software from OSG's OASIS repositories</li>
-<li>(optional) <a href="../worker-node/install-singularity">Install singularity on the OSG worker node</a>, to allow pilot jobs to
+<li>(optional) <a href="../worker-node/install-singularity/">Install singularity on the OSG worker node</a>, to allow pilot jobs to
     isolate user jobs.</li>
 </ul>
 <h3 id="installing-and-configuring-other-services">Installing and Configuring Other Services<a class="headerlink" href="#installing-and-configuring-other-services" title="Permanent link">&para;</a></h3>
 <p>All of these node types and their services are optional, although OSG requires an HTTP caching service if you have
-installed <a href="../worker-node/install-cvmfs">CVMFS</a> on your worker nodes.</p>
+installed <a href="../worker-node/install-cvmfs/">CVMFS</a> on your worker nodes.</p>
 <ul>
-<li><a href="../data/frontier-squid">Install Frontier Squid</a>, an HTTP caching proxy service.</li>
+<li><a href="../data/frontier-squid/">Install Frontier Squid</a>, an HTTP caching proxy service.</li>
 <li>Storage element:<ul>
 <li>Existing POSIX-based systems (such as NFS, Lustre, or GPFS):<ul>
-<li><a href="../data/gridftp">Install standalone OSG GridFTP</a>: GridFTP server</li>
-<li>(optional) <a href="../data/load-balanced-gridftp">Install load-balanced OSG GridFTP</a>: when a single GridFTP server
+<li><a href="../data/gridftp/">Install standalone OSG GridFTP</a>: GridFTP server</li>
+<li>(optional) <a href="../data/load-balanced-gridftp/">Install load-balanced OSG GridFTP</a>: when a single GridFTP server
     isn't enough</li>
 </ul>
 </li>
 <li>Hadoop Distributed File System (HDFS):<ul>
-<li><a href="../data/hadoop-overview">Hadoop Overview</a>: HDFS information, planning, and guides</li>
+<li><a href="../data/hadoop-overview/">Hadoop Overview</a>: HDFS information, planning, and guides</li>
 </ul>
 </li>
 <li>XRootD:<ul>
-<li><a href="../data/xrootd/overview">XRootd Overview</a>: XRootD information, planning, and guides</li>
-<li><a href="../data/xrootd/install-storage-element">Install XRootD Server</a>: XRootD redirector installation</li>
+<li><a href="../data/xrootd/overview/">XRootd Overview</a>: XRootD information, planning, and guides</li>
+<li><a href="../data/xrootd/install-storage-element/">Install XRootD Server</a>: XRootD redirector installation</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>RSV monitoring to monitor and report to OSG on the health of your site<ul>
-<li><a href="../monitoring/install-rsv">Install RSV</a></li>
+<li><a href="../monitoring/install-rsv/">Install RSV</a></li>
 </ul>
 </li>
-<li><a href="../other/install-gwms-frontend">Install the GlideinWMS VO Frontend</a> if your want your users' jobs to run on the OSG<ul>
-<li><a href="../monitoring/install-rsv-gwms-tester">Install the RSV GlideinWMS Tester</a> if you want to test your front-end's
+<li><a href="../other/install-gwms-frontend/">Install the GlideinWMS VO Frontend</a> if your want your users' jobs to run on the OSG<ul>
+<li><a href="../monitoring/install-rsv-gwms-tester/">Install the RSV GlideinWMS Tester</a> if you want to test your front-end's
     ability to submit jobs to sites in the OSG</li>
 </ul>
 </li>
@@ -3241,7 +3245,7 @@ including HTCondor-CE, Frontier Squid, GridFTP, and/or XRootD.</p>
 system.
 If this process does not work manually, it will probably not work for the GlideinWMS pilot factory either.</p>
 <ul>
-<li><a href="../compute-element/submit-htcondor-ce">Test job submission into an HTCondor-CE</a></li>
+<li><a href="../compute-element/submit-htcondor-ce/">Test job submission into an HTCondor-CE</a></li>
 </ul>
 <h3 id="get-test-jobs">Get test jobs<a class="headerlink" href="#get-test-jobs" title="Permanent link">&para;</a></h3>
 <p>To begin running pilots at your site, e-mail <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#111;&#115;&#103;&#45;&#103;&#102;&#97;&#99;&#116;&#111;&#114;&#121;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#112;&#104;&#121;&#115;&#105;&#99;&#115;&#46;&#117;&#99;&#115;&#100;&#46;&#101;&#100;&#117;">&#111;&#115;&#103;&#45;&#103;&#102;&#97;&#99;&#116;&#111;&#114;&#121;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#112;&#104;&#121;&#115;&#105;&#99;&#115;&#46;&#117;&#99;&#115;&#100;&#46;&#101;&#100;&#117;</a> and ask for test pilots.
@@ -3271,19 +3275,19 @@ No action is required on your end, factory operations will start submitting pilo
 to your site, including:</p>
 <ul>
 <li>Major OS version changes on the worker nodes (e.g., upgraded from EL 6 to EL 7)</li>
-<li>Adding or removing <a href="../worker-node/install-singularity">container support</a></li>
+<li>Adding or removing <a href="../worker-node/install-singularity/">container support</a></li>
 <li>Policy changes regarding maximum walltime or memory usage</li>
-<li>Scheduled or unscheduled <a href="../common/registration#how-to-register-downtime">downtimes</a></li>
-<li><a href="../common/registration">Site topology changes</a> such as additions, modifications, or retirements</li>
+<li>Scheduled or unscheduled <a href="../common/registration/#how-to-register-downtime">downtimes</a></li>
+<li><a href="../common/registration/">Site topology changes</a> such as additions, modifications, or retirements</li>
 <li>Changes to site contacts, such as administrative or security staff</li>
 </ul>
 <p>It is also important to keep your software and data (e.g., CA and VO client) up-to-date with the
-<a href="../release/notes">latest OSG release</a>.
+<a href="../release/notes/">latest OSG release</a>.
 To stay abreast of software releases, we recommend subscribing to the <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#111;&#115;&#103;&#45;&#115;&#105;&#116;&#101;&#115;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#111;&#115;&#103;&#45;&#115;&#105;&#116;&#101;&#115;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a> mailing
 list.</p>
 <h2 id="get-help">Get Help<a class="headerlink" href="#get-help" title="Permanent link">&para;</a></h2>
 <p>If you need help with your site, or need to report a security incident,
-follow the <a href="../common/help">contact instructions</a>.</p>
+follow the <a href="../common/help/">contact instructions</a>.</p>
                 
                   
                 
@@ -3303,7 +3307,7 @@ follow the <a href="../common/help">contact instructions</a>.</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="" title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3318,7 +3322,7 @@ follow the <a href="../common/help">contact instructions</a>.</p>
     </a>
     
     
-    <a href="../site-planning/" title="Site Planning" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="site-planning/" title="Site Planning" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3356,12 +3360,9 @@ follow the <a href="../common/help">contact instructions</a>.</p>
       
     </div>
     
-      <script src="../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
     
   </body>

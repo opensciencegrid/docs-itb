@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../../css/itb.css">
     
       <link rel="stylesheet" href="../../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3335,10 +3339,10 @@ part of a global namespace.</p>
 </ul>
 <p>As with all OSG software installations, there are some one-time (per host) steps to prepare in advance:</p>
 <ul>
-<li>Ensure the host has <a href="../../../release/supported_platforms">a supported operating system</a></li>
+<li>Ensure the host has <a href="../../../release/supported_platforms/">a supported operating system</a></li>
 <li>Obtain root access to the host</li>
-<li>Prepare <a href="../../../common/yum">the required Yum repositories</a></li>
-<li>Install <a href="../../../common/ca">CA certificates</a></li>
+<li>Prepare <a href="../../../common/yum/">the required Yum repositories</a></li>
+<li>Install <a href="../../../common/ca/">CA certificates</a></li>
 </ul>
 <h2 id="installing-an-xrootd-server">Installing an XRootD Server<a class="headerlink" href="#installing-an-xrootd-server" title="Permanent link">&para;</a></h2>
 <p>An installation of the XRootD server consists of the server itself and its dependencies. 
@@ -3352,7 +3356,7 @@ Install these with Yum:</p>
 set up is working before moving on to the next component. 
 We have included validation instructions after each component below.</p>
 <h3 id="creating-an-xrootd-cluster">Creating an XRootD cluster<a class="headerlink" href="#creating-an-xrootd-cluster" title="Permanent link">&para;</a></h3>
-<p><img alt="XRootD cluster" src="../../../img/xrootd.jpg" /></p>
+<p><img alt="XRootD cluster" src="/img/xrootd.jpg" /></p>
 <p>If your storage is spread out over multiple hosts, you will need to set up an XRootD <em>cluster</em>. 
 The cluster uses one "redirector" node as a frontend for user accesses, and multiple data nodes that have the data that
 users request. 
@@ -3567,7 +3571,7 @@ This section is the procedure for EL 7.</p>
 <p>XRootD can be accessed using the HTTP protocol. To do that:</p>
 <ol>
 <li>
-<p>Configure <a href="../../../data/xrootd/xrootd-authorization">LCMAPS authorization</a>.</p>
+<p>Configure <a href="../xrootd-authorization/">LCMAPS authorization</a>.</p>
 </li>
 <li>
 <p>Uncomment the following line in <code>/etc/xrootd/config.d/10-xrootd-lcmaps.cfg</code>:</p>
@@ -3620,7 +3624,7 @@ Create <code>/mnt/xrootd</code> directory. Make sure the xrootd user exists on t
 <p>You should now be able to run UNIX commands such as <code>ls /mnt/xrootd</code> to see the contents of the XRootD server.</p>
 <h3 id="optional-authorization">(Optional) Authorization<a class="headerlink" href="#optional-authorization" title="Permanent link">&para;</a></h3>
 <p>For information on how to configure xrootd-lcmaps authorization, please refer to the
-<a href="../xrootd-authorization">Configuring XRootD Authorization guide</a>.</p>
+<a href="../xrootd-authorization/">Configuring XRootD Authorization guide</a>.</p>
 <h3 id="optional-adding-cms-tfc-support-to-xrootd-cms-sites-only">(Optional) Adding CMS TFC support to XRootD (CMS sites only)<a class="headerlink" href="#optional-adding-cms-tfc-support-to-xrootd-cms-sites-only" title="Permanent link">&para;</a></h3>
 <p>For CMS users, there is a package available to integrate rule-based name lookup using a <code>storage.xml</code> file. 
 If you are not setting up a CMS site, you can skip this section.</p>
@@ -3659,7 +3663,7 @@ oss.namelib /usr/lib64/libXrdCmsTfc.so file:/etc/xrootd/storage.xml?protocol=had
 
 </li>
 </ol>
-<p>For more information, see <a href="../../../data/install-hadoop">the HDFS installation documents</a>.</p>
+<p>For more information, see <a href="../../install-hadoop/">the HDFS installation documents</a>.</p>
 <h3 id="optional-adding-file-residency-manager-frm-to-an-xrootd-cluster">(Optional) Adding File Residency Manager (FRM) to an XRootd cluster<a class="headerlink" href="#optional-adding-file-residency-manager-frm-to-an-xrootd-cluster" title="Permanent link">&para;</a></h3>
 <p>If you have a multi-tiered storage system (e.g. some data is stored on SSDs and some on disks or tapes), then install
 the File Residency Manager (FRM), so you can move data between tiers more easily. 
@@ -3705,13 +3709,13 @@ storage.</p>
 abbreviated version documenting the special steps needed for XRootD integration.
 You may also find the following useful:</p>
 <ul>
-<li><a href="../../../data/gridftp">Basic GridFTP Install</a>.  Additionally covers service planning topics.</li>
-<li><a href="../../../data/load-balanced-gridftp">Load-balanced GridFTP Install</a>.  Covers the creation of
+<li><a href="../../gridftp/">Basic GridFTP Install</a>.  Additionally covers service planning topics.</li>
+<li><a href="../../load-balanced-gridftp/">Load-balanced GridFTP Install</a>.  Covers the creation of
     a load-balanced GridFTP service using multiple servers.</li>
 </ul>
 </div>
 <p>Prior to following this installation guide, verify the host certificates and networking is configured correctly as in
-the <a href="../../../data/gridftp">basic GridFTP install</a>.</p>
+the <a href="../../gridftp/">basic GridFTP install</a>.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <p>GridFTP support for XRootD-based storage is provided by the <code>osg-gridftp-xrootd</code> meta-package:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum install osg-gridftp-xrootd
@@ -3719,7 +3723,7 @@ the <a href="../../../data/gridftp">basic GridFTP install</a>.</p>
 
 
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
-<p>For information on how to configure authentication for your GridFTP installation, please refer to the <a href="../../../data/gridftp#configuring-authentication">configuring
+<p>For information on how to configure authentication for your GridFTP installation, please refer to the <a href="/data/gridftp#configuring-authentication">configuring
 authentication section of the GridFTP guide</a>.</p>
 <p>Edit <code>/etc/sysconfig/xrootd-dsi</code> to set <code>XROOTD_VMP</code> to use your XRootD redirector.</p>
 <div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">XROOTD_VMP</span><span class="o">=</span><span class="s2">&quot;redirector:1094:/local_path=/remote_path&quot;</span>
@@ -3740,7 +3744,7 @@ authentication section of the GridFTP guide</a>.</p>
 Sites should review any customizations made in the latter and copy them as necessary.</p>
 <p>You can use the FUSE mount in order to test POSIX access to xrootd in the GridFTP server.
 You should be able to run Unix commands such as <code>ls /mnt/xrootd</code> and see the contents of the XRootD server.</p>
-<p>For log / config file locations and system services to run, see the <a href="../../../data/gridftp">basic GridFTP install</a>.</p>
+<p>For log / config file locations and system services to run, see the <a href="../../gridftp/">basic GridFTP install</a>.</p>
 <h2 id="using-xrootd">Using XRootD<a class="headerlink" href="#using-xrootd" title="Permanent link">&para;</a></h2>
 <h3 id="managing-xrootd-services">Managing XRootD services<a class="headerlink" href="#managing-xrootd-services" title="Permanent link">&para;</a></h3>
 <p>Start services on the redirector node before starting any services on the data nodes. 
@@ -3908,7 +3912,7 @@ For example, to have <code>xrootd</code> use the clustered config, you would sta
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../install-standalone/" title="Install XRootD Standalone" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="data/xrootd/install-standalone/" title="Install XRootD Standalone" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3923,7 +3927,7 @@ For example, to have <code>xrootd</code> use the clustered config, you would sta
     </a>
     
     
-    <a href="../xrootd-authorization/" title="Configure Authorization" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="data/xrootd/xrootd-authorization/" title="Configure Authorization" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3961,12 +3965,9 @@ For example, to have <code>xrootd</code> use the clustered config, you would sta
       
     </div>
     
-      <script src="../../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
     
   </body>

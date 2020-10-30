@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -4286,7 +4290,7 @@ common issues with suggested troubleshooting steps.</p>
 <h3 id="submit_exprs-are-not-applied-to-jobs-on-the-local-htcondor">SUBMIT_EXPRS are not applied to jobs on the local HTCondor<a class="headerlink" href="#submit_exprs-are-not-applied-to-jobs-on-the-local-htcondor" title="Permanent link">&para;</a></h3>
 <p>If you are adding attributes to jobs submitted to your HTCondor pool with <code>SUBMIT_EXPRS</code>, these will <em>not</em> be applied to
 jobs that are entering your pool from the HTCondor-CE. 
-To get around this, you will want to add the attributes to your <a href="../job-router-recipes">job routes</a>. 
+To get around this, you will want to add the attributes to your <a href="../job-router-recipes/">job routes</a>. 
 If the CE is the only entry point for jobs into your pool, you can get rid of <code>SUBMIT_EXPRS</code> on your backend. Otherwise,
 you will have to maintain your list of attributes both in your list of routes and in your <code>SUBMIT_EXPRS</code>.</p>
 <h2 id="general-troubleshooting-items">General Troubleshooting Items<a class="headerlink" href="#general-troubleshooting-items" title="Permanent link">&para;</a></h2>
@@ -4399,7 +4403,7 @@ Check the following subsections in order:</p>
 </ul>
 <p><strong>Next actions</strong></p>
 <ol>
-<li><strong>If the MasterLog is filled with <code>ERROR:SECMAN...TCP connection to collector...failed</code>:</strong> This is likely due to a misconfiguration for a host with multiple network interfaces. Verify that you have followed the instructions in <a href="../install-htcondor-ce#networking">this</a> section of the install guide.</li>
+<li><strong>If the MasterLog is filled with <code>ERROR:SECMAN...TCP connection to collector...failed</code>:</strong> This is likely due to a misconfiguration for a host with multiple network interfaces. Verify that you have followed the instructions in <a href="../install-htcondor-ce/#networking">this</a> section of the install guide.</li>
 <li><strong>If the MasterLog is filled with <code>DC_AUTHENTICATE</code> errors:</strong> The HTCondor-CE daemons use the host certificate to authenticate with each other. Verify that your host certificate’s DN matches one of the regular expressions found in <code>/etc/condor-ce/condor_mapfile</code>.</li>
 <li><strong>If the SchedLog is filled with <code>Can’t find address for negotiator</code>:</strong> You can ignore this error! The negotiator daemon is used in HTCondor batch systems to match jobs with resources but since HTCondor-CE does not manage any resources directly, it does not run one.</li>
 </ol>
@@ -4416,7 +4420,7 @@ You may see error messages like the following in your <a href="#schedlog">SchedL
 <p><strong>Next actions</strong></p>
 <ol>
 <li><strong>Check voms-mapfile or grid-mapfile</strong> and ensure that the user's DN or VOMS attributes are known to your
-    <a href="../install-htcondor-ce#configuring-authentication">authentication method</a>, and that the mapped users exist
+    <a href="../install-htcondor-ce/#configuring-authentication">authentication method</a>, and that the mapped users exist
     on your CE and cluster.</li>
 <li><strong>Check for lcmaps errors</strong> in <code>/var/log/messages</code></li>
 <li><strong>If you do not see helpful error messages in <code>/var/log/messages</code>,</strong> adjust the debug level by adding <code>export LCMAPS_DEBUG_LEVEL=5</code> to <code>/etc/sysconfig/condor-ce</code>, restarting the condor-ce service, and checking <code>/var/log/messages</code> for errors again.</li>
@@ -4510,7 +4514,7 @@ Note that jobs may take several minutes or longer if the CE is busy.</p>
 </li>
 </ol>
 <h4 id="remote-idle-jobs-are-you-authorized-to-run-jobs-on-the-ce">Remote idle jobs: Are you authorized to run jobs on the CE?<a class="headerlink" href="#remote-idle-jobs-are-you-authorized-to-run-jobs-on-the-ce" title="Permanent link">&para;</a></h4>
-<p>The CE will only accept jobs from users that authenticate via <a href="../../security/lcmaps-voms-authentication">LCMAPS VOMS</a>.
+<p>The CE will only accept jobs from users that authenticate via <a href="../../security/lcmaps-voms-authentication/">LCMAPS VOMS</a>.
 You can use <a href="#condor_ce_ping">condor_ce_ping</a> to check if you are authorized and what user your proxy is being mapped
 to.</p>
 <p><strong>Symptoms</strong></p>
@@ -4532,7 +4536,7 @@ to.</p>
 <p>Notice the failures in the above message: <code>Remote Mapping: gsi@unmapped</code> and <code>Authorized: FALSE</code></p>
 <p><strong>Next actions</strong></p>
 <ol>
-<li>Verify that an <a href="../install-htcondor-ce#configuring-authentication">authentication method</a> is set up on the CE</li>
+<li>Verify that an <a href="../install-htcondor-ce/#configuring-authentication">authentication method</a> is set up on the CE</li>
 <li>Verify that your user DN is mapped to an existing system user</li>
 </ol>
 <h3 id="jobs-go-on-hold">Jobs go on hold<a class="headerlink" href="#jobs-go-on-hold" title="Permanent link">&para;</a></h3>
@@ -4548,9 +4552,9 @@ The most common cases for this behavior are as follows:</p>
 <ul>
 <li><strong>The job does not match any job routes:</strong>
   use <a href="#condor_ce_job_router_info">condor_ce_job_router_info</a> to see why your idle job does not match any
-  <a href="../../compute-element/job-router-recipes#how-job-routes-are-constructed">routes</a>.</li>
+  <a href="../job-router-recipes/#how-job-routes-are-constructed">routes</a>.</li>
 <li><strong>The route(s) that the job matches to are full:</strong>
-  See <a href="../../compute-element/job-router-recipes#limiting-the-number-of-jobs">limiting the number of jobs</a>.</li>
+  See <a href="../job-router-recipes/#limiting-the-number-of-jobs">limiting the number of jobs</a>.</li>
 <li><strong>The job router is throttling submission to your batch system due to submission failures:</strong>
   See the HTCondor manual for <a href="http://research.cs.wisc.edu/htcondor/manual/v8.6/5_4HTCondor_Job.html#55958">FailureRateThreshold</a>.
   Check for errors in the <a href="#jobrouterlog">JobRouterLog</a> or <a href="#gridmanagerlog">GridmanagerLog</a> for HTCondor and
@@ -4676,7 +4680,7 @@ If you are not running an HTCondor batch system, the non-CE commands will return
 <p><code>condor_ce_trace</code> is a useful tool for testing end-to-end job submission. It contacts both the CE’s Schedd and Collector daemons to verify your permission to submit to the CE, displays the submit script that it submits to the CE, and tracks the resultant job.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You must have generated a proxy (e.g., <code>voms-proxy-init</code>) and your DN must be added to your <a href="../install-htcondor-ce#configuring-authentication">chosen authentication method</a>.</p>
+<p>You must have generated a proxy (e.g., <code>voms-proxy-init</code>) and your DN must be added to your <a href="../install-htcondor-ce/#configuring-authentication">chosen authentication method</a>.</p>
 </div>
 <div class="codehilite"><pre><span></span><span class="gp">user@host $</span> condor_ce_trace condorce.example.com
 </pre></div>
@@ -4688,7 +4692,7 @@ condor output.</p>
 <h4 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>If the command fails with “Failed ping…”:</strong> Make sure that the HTCondor-CE daemons are running on the CE</li>
-<li><strong>If you see “gsi@unmapped” in the “Remote Mapping” line:</strong> Either your credentials are not mapped on the CE or authentication is not set up at all. To set up authentication, refer to our <a href="../install-htcondor-ce#configuring-authentication">installation document</a>.</li>
+<li><strong>If you see “gsi@unmapped” in the “Remote Mapping” line:</strong> Either your credentials are not mapped on the CE or authentication is not set up at all. To set up authentication, refer to our <a href="../install-htcondor-ce/#configuring-authentication">installation document</a>.</li>
 <li><strong>If the job submits but does not complete:</strong> Look at the status of the job and perform the relevant <a href="#htcondor-ce-troubleshooting-items">troubleshooting steps</a>.</li>
 </ol>
 <h3 id="condor_ce_host_network_check">condor_ce_host_network_check<a class="headerlink" href="#condor_ce_host_network_check" title="Permanent link">&para;</a></h3>
@@ -4718,7 +4722,7 @@ submitting jobs through your CE.
 To submit a job to the CE and run the <code>env</code> command on the remote batch system:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You must have generated a proxy (e.g., <code>voms-proxy-init</code>) and your DN must be added to your <a href="../install-htcondor-ce#configuring-authentication">chosen authentication method</a>.</p>
+<p>You must have generated a proxy (e.g., <code>voms-proxy-init</code>) and your DN must be added to your <a href="../install-htcondor-ce/#configuring-authentication">chosen authentication method</a>.</p>
 </div>
 <div class="codehilite"><pre><span></span><span class="gp">user@host $</span> condor_ce_run -r condorce.example.com:9619 /bin/env
 </pre></div>
@@ -4734,14 +4738,14 @@ The following example outputs the JobRouterLog of the CE in question:</p>
 
 <p>Replacing the <code>condorce.example.com</code> text with the hostname of the CE. 
 To disable this feature on your CE, consult
-<a href="../install-htcondor-ce#limiting-or-disabling-locally-running-jobs-on-the-ce">this</a> section of the install documentation.</p>
+<a href="../install-htcondor-ce/#limiting-or-disabling-locally-running-jobs-on-the-ce">this</a> section of the install documentation.</p>
 <h4 id="troubleshooting_2">Troubleshooting<a class="headerlink" href="#troubleshooting_2" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>If you do not see any results:</strong> <code>condor_ce_run</code> does not display results until the job completes on the CE, which may take several minutes or longer if the CE is busy. In the meantime, can use <a href="#condor_ce_q">condor_ce_q</a> in a separate terminal to track the job on the CE. If you never see any results, use <a href="#condor_ce_trace">condor_ce_trace</a> to pinpoint errors.</li>
 <li><strong>If you see an error message that begins with “Failed to…”:</strong> Check connectivity to the CE with <a href="#condor_ce_trace">condor_ce_trace</a> or <a href="#condor_ce_ping">condor_ce_ping</a></li>
 </ol>
 <h3 id="condor_ce_submit">condor_ce_submit<a class="headerlink" href="#condor_ce_submit" title="Permanent link">&para;</a></h3>
-<p>See the <a href="../submit-htcondor-ce">submitting to HTCondor-CE</a> document for details.</p>
+<p>See the <a href="../submit-htcondor-ce/">submitting to HTCondor-CE</a> document for details.</p>
 <h3 id="condor_ce_ping">condor_ce_ping<a class="headerlink" href="#condor_ce_ping" title="Permanent link">&para;</a></h3>
 <h4 id="usage_3">Usage<a class="headerlink" href="#usage_3" title="Permanent link">&para;</a></h4>
 <p>Use the following <code>condor_ce_ping</code> command to test your ability to submit jobs to an HTCondor-CE, replacing
@@ -4782,7 +4786,7 @@ SCHEDD_DEBUG = D_ALWAYS:2 D_CAT
 <p>Then look in the <a href="#masterlog">MasterLog</a> and <a href="#schedlog">SchedLog</a> for any errors.</p>
 </li>
 <li>
-<p><strong>If you see “gsi@unmapped” in the “Remote Mapping” line</strong>, this means that either your credentials are not mapped on the CE or that authentication is not set up at all. To set up authentication, refer to our <a href="../install-htcondor-ce#configuring-authentication">installation document</a>.</p>
+<p><strong>If you see “gsi@unmapped” in the “Remote Mapping” line</strong>, this means that either your credentials are not mapped on the CE or that authentication is not set up at all. To set up authentication, refer to our <a href="../install-htcondor-ce/#configuring-authentication">installation document</a>.</p>
 </li>
 </ol>
 <h3 id="condor_ce_q">condor_ce_q<a class="headerlink" href="#condor_ce_q" title="Permanent link">&para;</a></h3>
@@ -4865,7 +4869,7 @@ SCHEDD_DEBUG = D_ALWAYS:2 D_CAT
 <h4 id="usage_6">Usage<a class="headerlink" href="#usage_6" title="Permanent link">&para;</a></h4>
 <p>Use the <code>condor_ce_job_router_info</code> command to help troubleshoot your routes and how jobs will match to them. 
 To see all of your routes (the output is long because it combines your routes with the
-<a href="../job-router-recipes#job_router_defaults">JOB_ROUTER_DEFAULTS</a> configuration variable):</p>
+<a href="../job-router-recipes/#job_router_defaults">JOB_ROUTER_DEFAULTS</a> configuration variable):</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> condor_ce_job_router_info -config
 </pre></div>
 
@@ -4920,10 +4924,10 @@ target.RoutedBy isnt &quot;htcondor-ce&quot;)
 </pre></div>
 
 
-<p>Both routes evaluate to <code>true</code> for the job’s ClassAd because it contained <code>osgTestPBS = true</code>. Make sure your routes are mutually exclusive, otherwise you may have jobs routed incorrectly! See the <a href="../job-router-recipes">job route configuration page</a> for more details.</p>
+<p>Both routes evaluate to <code>true</code> for the job’s ClassAd because it contained <code>osgTestPBS = true</code>. Make sure your routes are mutually exclusive, otherwise you may have jobs routed incorrectly! See the <a href="../job-router-recipes/">job route configuration page</a> for more details.</p>
 </li>
 <li>
-<p><strong>If it is unclear why jobs are matching a route:</strong> wrap the route's requirements expression in <a href="../job-router-recipes#debugging-routes">debug()</a> and check the <a href="#jobrouterlog">JobRouterLog</a> for more information.</p>
+<p><strong>If it is unclear why jobs are matching a route:</strong> wrap the route's requirements expression in <a href="../job-router-recipes/#debugging-routes">debug()</a> and check the <a href="#jobrouterlog">JobRouterLog</a> for more information.</p>
 </li>
 </ol>
 <h3 id="condor_ce_router_q">condor_ce_router_q<a class="headerlink" href="#condor_ce_router_q" title="Permanent link">&para;</a></h3>
@@ -4960,8 +4964,8 @@ worker nodes.</p>
 <li>DaemonMaster</li>
 <li>Job_Router</li>
 </ul>
-<p>Increase the <a href="../../compute-element/troubleshoot-htcondor-ce/#htcondor-ce-troubleshooting-items">debug level</a> and consult the
-<a href="../../compute-element/troubleshoot-htcondor-ce/#htcondor-ce-troubleshooting-data">HTCondor-CE logs</a> for errors.</p>
+<p>Increase the <a href="./#htcondor-ce-troubleshooting-items">debug level</a> and consult the
+<a href="./#htcondor-ce-troubleshooting-data">HTCondor-CE logs</a> for errors.</p>
 <h3 id="condor_ce_config_val">condor_ce_config_val<a class="headerlink" href="#condor_ce_config_val" title="Permanent link">&para;</a></h3>
 <h4 id="usage_9">Usage<a class="headerlink" href="#usage_9" title="Permanent link">&para;</a></h4>
 <p>To see the value of configuration variables and where they are set, use <code>condor_ce_config_val</code>. 
@@ -5357,7 +5361,7 @@ This log is a good place to check if experiencing connectivity issues with HTCon
 </ul>
 <h3 id="messages-log">Messages log<a class="headerlink" href="#messages-log" title="Permanent link">&para;</a></h3>
 <p>The messages file can include output from lcmaps, which handles mapping of X.509 proxies to Unix usernames. 
-If there are issues with the <a href="../install-htcondor-ce#configuring-authentication">authentication setup</a>, the errors may
+If there are issues with the <a href="../install-htcondor-ce/#configuring-authentication">authentication setup</a>, the errors may
 appear here.</p>
 <ul>
 <li>Location: <code>/var/log/messages</code></li>
@@ -5415,10 +5419,10 @@ submit file and proxy used.</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <p>Here are some other HTCondor-CE documents that might be helpful:</p>
 <ul>
-<li><a href="../htcondor-ce-overview">HTCondor-CE overview and architecture</a></li>
-<li><a href="../install-htcondor-ce">Installing HTCondor-CE</a></li>
-<li><a href="../job-router-recipes">Configuring HTCondor-CE job routes</a></li>
-<li><a href="../submit-htcondor-ce">Submitting jobs to HTCondor-CE</a></li>
+<li><a href="../htcondor-ce-overview/">HTCondor-CE overview and architecture</a></li>
+<li><a href="../install-htcondor-ce/">Installing HTCondor-CE</a></li>
+<li><a href="../job-router-recipes/">Configuring HTCondor-CE job routes</a></li>
+<li><a href="../submit-htcondor-ce/">Submitting jobs to HTCondor-CE</a></li>
 </ul>
                 
                   
@@ -5439,7 +5443,7 @@ submit file and proxy used.</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../job-router-recipes/" title="Job Router Recipes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="compute-element/job-router-recipes/" title="Job Router Recipes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -5454,7 +5458,7 @@ submit file and proxy used.</p>
     </a>
     
     
-    <a href="../submit-htcondor-ce/" title="Submitting to HTCondor-CE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="compute-element/submit-htcondor-ce/" title="Submitting to HTCondor-CE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -5492,12 +5496,9 @@ submit file and proxy used.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3967,7 +3971,7 @@ SE.</p>
 <h3 id="misc-services">Misc Services<a class="headerlink" href="#misc-services" title="Permanent link">&para;</a></h3>
 <p>This section handles the configuration of services that do not have a dedicated section for their configuration.</p>
 <p>This section is contained in <code>/etc/osg/config.d/10-misc.ini</code> which is provided by the <code>osg-configure-misc</code> RPM.</p>
-<p>This section primarily deals with authentication/authorization. For information on suggested settings for your CE, see the <a href="../../compute-element/install-htcondor-ce#configuring-authentication">authentication section of the HTCondor-CE install documents</a>.</p>
+<p>This section primarily deals with authentication/authorization. For information on suggested settings for your CE, see the <a href="../../compute-element/install-htcondor-ce/#configuring-authentication">authentication section of the HTCondor-CE install documents</a>.</p>
 <table>
 <thead>
 <tr>
@@ -3990,7 +3994,7 @@ SE.</p>
 <tr>
 <td>all_fqans</td>
 <td><code>True</code>, <code>False</code></td>
-<td>(Optional, default False) If true, vomsmap auth will use all VOMS FQANs of a proxy for mapping -- see <a href="../../security/lcmaps-voms-authentication#mapping-using-all-fqans">documentation</a></td>
+<td>(Optional, default False) If true, vomsmap auth will use all VOMS FQANs of a proxy for mapping -- see <a href="../../security/lcmaps-voms-authentication/#mapping-using-all-fqans">documentation</a></td>
 </tr>
 </tbody>
 </table>
@@ -4111,7 +4115,7 @@ indicate this by using 'local' as the VO.</p>
 Several of these values are constrained and need to be set in a way that is consistent with one of the OSG storage models.
 Please review the Storage Related Parameters section of the
 <a href="../../worker-node/using-wn/">Environment Variables</a>
-description and <a href="../../site-planning">Site Planning</a> discussions for explanations of the various storage models and the requirements for them.</p>
+description and <a href="../../site-planning/">Site Planning</a> discussions for explanations of the various storage models and the requirements for them.</p>
 <p>This section is contained in <code>/etc/osg/config.d/10-storage.ini</code> which is provided by the <code>osg-configure-ce</code> RPM.</p>
 <table>
 <thead>
@@ -4217,7 +4221,7 @@ to just that worker node.</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../../common/yum/" title="OSG Yum Repos" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="common/yum/" title="OSG Yum Repos" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -4232,7 +4236,7 @@ to just that worker node.</p>
     </a>
     
     
-    <a href="../../common/registration/" title="Registration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="common/registration/" title="Registration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -4270,12 +4274,9 @@ to just that worker node.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

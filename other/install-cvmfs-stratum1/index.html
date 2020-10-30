@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3130,19 +3134,19 @@
 <h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
 <p>Before starting the installation process, consider the following points:</p>
 <ul>
-<li><strong>User IDs and Group IDs:</strong> If your machine is also going to be a repository server like OSG Operations, the installation will create the same user and group IDs as the <a href="../../worker-node/install-cvmfs">cvmfs client</a>.  If you are installing frontier-squid, the installation will also create the same user id as <a href="../../data/frontier-squid">frontier-squid</a>.</li>
+<li><strong>User IDs and Group IDs:</strong> If your machine is also going to be a repository server like OSG Operations, the installation will create the same user and group IDs as the <a href="../../worker-node/install-cvmfs/">cvmfs client</a>.  If you are installing frontier-squid, the installation will also create the same user id as <a href="../../data/frontier-squid/">frontier-squid</a>.</li>
 <li><strong>Network ports:</strong> This installation will host the stratum 1 on ports 80, 8000 and 8080, and if squid is installed it will host the uncached apache on port 8081.  Port 80 is default but sometimes runs into operational problems, port 8000 is the alternate for most production use, and port 8080 is for Cloudflare (https://openhtc.io).</li>
 <li><strong>Host choice:</strong> -  Make sure there is adequate disk space for the repositories that will be served, at <code>/srv/cvmfs</code>. Do not use xfs as the filesystem type on operating systems older than EL7, because it has been demonstrated to perform poorly for CVMFS repositories; instead use ext3 or ext4. About 10GB should be reserved for apache and squid logs under /var/log on a production server, although they normally will not get that large. A Stratum 1 that is also a repository server should have at least 5GB available at <code>/var/cache</code>.</li>
 <li><strong>SELinux</strong> - Ensure SELinux is disabled</li>
 </ul>
 <p>As with all OSG software installations, there are some one-time (per host) steps to prepare in advance:</p>
 <ul>
-<li>Ensure the host has <a href="../../release/supported_platforms">a supported operating system</a></li>
+<li>Ensure the host has <a href="../../release/supported_platforms/">a supported operating system</a></li>
 <li>Obtain root access to the host</li>
-<li>Prepare the <a href="../../common/yum">required Yum repositories</a></li>
+<li>Prepare the <a href="../../common/yum/">required Yum repositories</a></li>
 </ul>
 <h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
-<p>All CVMFS Stratum 1s require cvmfs-server software and apache (httpd). It is highly recommended to also install <a href="../../data/frontier-squid">frontier-squid</a> and <a href="https://twiki.cern.ch/twiki/bin/view/Frontier/InstallAwstats">frontier-awstats</a> on the same machine to be able to easily join the WLCG <a href="http://wlcg-squid-monitor.cern.ch/snmpstats/indexcvmfs.html">MRTG</a> and <a href="http://wlcg-squid-monitor.cern.ch/awstats/cvmfs.html">awstats</a> monitoring systems. The recommended configuration for frontier-squid below only caches geo api lookups.  Other than that, it is primarily for monitoring.</p>
+<p>All CVMFS Stratum 1s require cvmfs-server software and apache (httpd). It is highly recommended to also install <a href="../../data/frontier-squid/">frontier-squid</a> and <a href="https://twiki.cern.ch/twiki/bin/view/Frontier/InstallAwstats">frontier-awstats</a> on the same machine to be able to easily join the WLCG <a href="http://wlcg-squid-monitor.cern.ch/snmpstats/indexcvmfs.html">MRTG</a> and <a href="http://wlcg-squid-monitor.cern.ch/awstats/cvmfs.html">awstats</a> monitoring systems. The recommended configuration for frontier-squid below only caches geo api lookups.  Other than that, it is primarily for monitoring.</p>
 <h3 id="installing-cvmfs-server-and-httpd">Installing cvmfs-server and httpd<a class="headerlink" href="#installing-cvmfs-server-and-httpd" title="Permanent link">&para;</a></h3>
 <p>The OSG Operations Stratum 1 has to function as a repository server in addition to serving repository replications; most Stratum 1s serve only replications. Instructions are also provided for how to install cvmfs-server on Stratum 1s that do not have to be repository servers.  Choose the appropriate subsection.</p>
 <h4 id="installing-a-cvmfs-stratum-1-that-is-also-a-repository-server">Installing a CVMFS stratum 1 that is also a repository server<a class="headerlink" href="#installing-a-cvmfs-stratum-1-that-is-also-a-repository-server" title="Permanent link">&para;</a></h4>
@@ -3398,7 +3402,7 @@ Allow from all
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../install-gwms-frontend/" title="Install GlideinWMS Frontend" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="other/install-gwms-frontend/" title="Install GlideinWMS Frontend" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3413,7 +3417,7 @@ Allow from all
     </a>
     
     
-    <a href="../network-performance-toolkit/" title="Install the Network Performance Toolkit" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="other/network-performance-toolkit/" title="Install the Network Performance Toolkit" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3451,12 +3455,9 @@ Allow from all
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

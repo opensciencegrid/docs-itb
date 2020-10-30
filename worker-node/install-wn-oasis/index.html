@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -2953,7 +2957,7 @@ to use. Contents of the worker node client can be found <a href="../install-wn/#
 <p class="admonition-title">Note</p>
 <p>It is possible to install the Worker Node Client software in a variety of ways, depending on your local site:</p>
 <ul>
-<li>Use from OASIS (this guide) - useful when <a href="../install-cvmfs">CVMFS</a> is already mounted on your worker nodes</li>
+<li>Use from OASIS (this guide) - useful when <a href="../install-cvmfs/">CVMFS</a> is already mounted on your worker nodes</li>
 <li><a href="../install-wn-tarball/">Install using a tarball</a> - useful when installing onto a shared filesystem for distribution to worker nodes</li>
 <li><a href="../install-wn/">Install using RPMs and Yum</a> - useful when managing your worker nodes with a tool (e.g., Puppet, Chef) that can automate RPM installs</li>
 </ul>
@@ -2995,11 +2999,11 @@ This may result in extra network activity, especially on first use of the client
 
 
 <p>For more information, see the <a href="../using-wn/">OSG worker node environment documentation</a> and the
-<a href="../../other/configuration-with-osg-configure#storage">CE configuration instructions</a>.</p>
+<a href="../../other/configuration-with-osg-configure/#storage">CE configuration instructions</a>.</p>
 <h2 id="validating-the-worker-node-client">Validating the Worker Node Client<a class="headerlink" href="#validating-the-worker-node-client" title="Permanent link">&para;</a></h2>
 <p>To verify functionality of the worker node client, you will need to submit a test job against your CE and verify the job's output.</p>
 <ol>
-<li>Submit a job that executes the <code>env</code> command (e.g. Run <a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_trace">condor_ce_trace</a> with the <code>-d</code> flag from your HTCondor CE)</li>
+<li>Submit a job that executes the <code>env</code> command (e.g. Run <a href="../../compute-element/troubleshoot-htcondor-ce/#condor_ce_trace">condor_ce_trace</a> with the <code>-d</code> flag from your HTCondor CE)</li>
 <li>Verify that the value of <code>OSG_GRID</code> is set to the directory of your WN Client installation</li>
 </ol>
 <h3 id="manually-using-the-worker-node-client-from-oasis">Manually Using the Worker Node Client From OASIS<a class="headerlink" href="#manually-using-the-worker-node-client-from-oasis" title="Permanent link">&para;</a></h3>
@@ -3043,7 +3047,7 @@ This may result in extra network activity, especially on first use of the client
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../install-wn-tarball/" title="Install from Tarball" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="worker-node/install-wn-tarball/" title="Install from Tarball" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3058,7 +3062,7 @@ This may result in extra network activity, especially on first use of the client
     </a>
     
     
-    <a href="../install-cvmfs/" title="Install CVMFS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="worker-node/install-cvmfs/" title="Install CVMFS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3096,12 +3100,9 @@ This may result in extra network activity, especially on first use of the client
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

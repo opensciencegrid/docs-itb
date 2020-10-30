@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../../css/itb.css">
     
       <link rel="stylesheet" href="../../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3115,10 +3119,10 @@ exporting an underlying storage system (e.g., <a href="../../install-hadoop/">HD
 </ul>
 <p>As with all OSG software installations, there are some one-time (per host) steps to prepare in advance:</p>
 <ul>
-<li>Ensure the host has <a href="../../../release/supported_platforms">a supported operating system</a></li>
+<li>Ensure the host has <a href="../../../release/supported_platforms/">a supported operating system</a></li>
 <li>Obtain root access to the host</li>
-<li>Prepare <a href="../../../common/yum">the required Yum repositories</a></li>
-<li>Install <a href="../../../common/ca">CA certificates</a></li>
+<li>Prepare <a href="../../../common/yum/">the required Yum repositories</a></li>
+<li>Install <a href="../../../common/ca/">CA certificates</a></li>
 </ul>
 <h2 id="installing-xrootd">Installing XRootD<a class="headerlink" href="#installing-xrootd" title="Permanent link">&para;</a></h2>
 <p>To install the XRootD Standalone server, run the following Yum command:</p>
@@ -3187,17 +3191,17 @@ Access controls should be managed via <a href="#configuring-authorization">autho
 </li>
 </ol>
 <h3 id="configuring-authorization">Configuring authorization<a class="headerlink" href="#configuring-authorization" title="Permanent link">&para;</a></h3>
-<p>To configure XRootD authorization please follow the documentation <a href="../../../data/xrootd/xrootd-authorization">here</a>.</p>
+<p>To configure XRootD authorization please follow the documentation <a href="../xrootd-authorization/">here</a>.</p>
 <h3 id="optional-configuration">Optional configuration<a class="headerlink" href="#optional-configuration" title="Permanent link">&para;</a></h3>
 <p>The following configuration steps are optional and will likely not be required for setting up a small site.
 If you do not need any of the following special configurations, skip to
 <a href="#using-xrootd">the section on using XRootD</a>.</p>
 <h4 id="enabling-hadoop-support-el-7-only">Enabling Hadoop support (EL 7 Only)<a class="headerlink" href="#enabling-hadoop-support-el-7-only" title="Permanent link">&para;</a></h4>
 <p>For documentation on how to export your Hadoop storage using XRootD please see
-<a href="../../../data/xrootd/install-storage-element#optional-adding-hadoop-support-to-xrootd">this documentation</a></p>
+<a href="../install-storage-element/#optional-adding-hadoop-support-to-xrootd">this documentation</a></p>
 <h4 id="enabling-cms-tfc-support-cms-sites-only">Enabling CMS TFC support (CMS sites only)<a class="headerlink" href="#enabling-cms-tfc-support-cms-sites-only" title="Permanent link">&para;</a></h4>
 <p>For CMS users, there is a package available to integrate rule-based name lookup using a <code>storage.xml</code> file.
-See <a href="../../../data/xrootd/install-storage-element#optional-adding-cms-tfc-support-to-xrootd-cms-sites-only">this documentation</a>.</p>
+See <a href="../install-storage-element/#optional-adding-cms-tfc-support-to-xrootd-cms-sites-only">this documentation</a>.</p>
 <h2 id="using-xrootd">Using XRootD<a class="headerlink" href="#using-xrootd" title="Permanent link">&para;</a></h2>
 <p>In addition to the XRootD service itself, there are a number of supporting services in your installation.
 The specific services are:</p>
@@ -3213,7 +3217,7 @@ The specific services are:</p>
 <tr>
 <td align="left">Fetch CRL</td>
 <td align="left"><code>fetch-crl-boot</code> and <code>fetch-crl-cron</code></td>
-<td align="left">See <a href="../../../common/ca#managing-fetch-crl-services">CA documentation</a> for more info</td>
+<td align="left">See <a href="../../../common/ca/#managing-fetch-crl-services">CA documentation</a> for more info</td>
 </tr>
 <tr>
 <td align="left">XRootD</td>
@@ -3262,9 +3266,9 @@ As a reminder, here are common service commands (all run as <code>root</code>):<
 <p>If you have configured authentication/authorization for XRootD,
 be sure you have given yourself the necessary permissions to run these tests.
 For example, if you are using a grid proxy,
-make sure your DN is mapped to a user in <a href="../../../security/lcmaps-voms-authentication#mapping-users">/etc/grid-security/grid-mapfile</a>,
+make sure your DN is mapped to a user in <a href="../../../security/lcmaps-voms-authentication/#mapping-users">/etc/grid-security/grid-mapfile</a>,
 and make sure you have a valid proxy on your local machine.
-Also, ensure that the <a href="../../../data/xrootd/xrootd-authorization#authorization-file">Authfile</a> on the XRootD server gives write access to the Unix user you will get mapped to.</p>
+Also, ensure that the <a href="../xrootd-authorization/#authorization-file">Authfile</a> on the XRootD server gives write access to the Unix user you will get mapped to.</p>
 </div>
 <ol>
 <li>
@@ -3325,7 +3329,7 @@ Also, ensure that the <a href="../../../data/xrootd/xrootd-authorization#authori
 </ol>
 <h2 id="registering-an-xrootd-standalone-server">Registering an XRootD Standalone Server<a class="headerlink" href="#registering-an-xrootd-standalone-server" title="Permanent link">&para;</a></h2>
 <p>To register your XRootD server, follow the general registration instructions
-<a href="../../../common/registration#new-resources">here</a> with the following XRootD-specific details:</p>
+<a href="../../../common/registration/#new-resources">here</a> with the following XRootD-specific details:</p>
 <ol>
 <li>
 <p>Add an <code>XRootD component:</code> section to the <code>Services:</code> list, with any relevant fields for that service.
@@ -3434,7 +3438,7 @@ To use the standalone config, you would use:</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../overview/" title="XRootD Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="data/xrootd/overview/" title="XRootD Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3449,7 +3453,7 @@ To use the standalone config, you would use:</p>
     </a>
     
     
-    <a href="../install-storage-element/" title="Install XRootD SE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="data/xrootd/install-storage-element/" title="Install XRootD SE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3487,12 +3491,9 @@ To use the standalone config, you would use:</p>
       
     </div>
     
-      <script src="../../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
     
   </body>

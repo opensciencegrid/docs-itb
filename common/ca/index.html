@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3192,7 +3196,7 @@ For example, <code>yum install osg-ce</code> will bring in <code>osg-ca-certs</c
 </tr>
 </tbody>
 </table>
-<p>To automatically keep your RPM installation of CAs up to date, we recommend the <a href="../../security/certificate-management#osg-ca-certificates-updater">OSG CA certificates updater</a> service.</p>
+<p>To automatically keep your RPM installation of CAs up to date, we recommend the <a href="../../security/certificate-management/#osg-ca-certificates-updater">OSG CA certificates updater</a> service.</p>
 <h3 id="option-2-install-osg-ca-scripts">Option 2: Install osg-ca-scripts<a class="headerlink" href="#option-2-install-osg-ca-scripts" title="Permanent link">&para;</a></h3>
 <p>The <code>osg-ca-scripts</code> package provides scripts to install and update predefined sets of CAs with the ability to add or remove specific CAs. </p>
 <ul>
@@ -3278,7 +3282,7 @@ For example, <code>yum install osg-ce</code> will bring in <code>osg-ca-certs</c
 
 </li>
 </ol>
-<p>A complete set of options available though <code>osg-ca-manage</code> command, can be found in the <a href="../../security/certificate-management#managing-cas">osg-ca-manage documentation</a></p>
+<p>A complete set of options available though <code>osg-ca-manage</code> command, can be found in the <a href="../../security/certificate-management/#managing-cas">osg-ca-manage documentation</a></p>
 <h3 id="option-3-site-managed-cas">Option 3: Site-managed CAs<a class="headerlink" href="#option-3-site-managed-cas" title="Permanent link">&para;</a></h3>
 <p>If you want to handle the list of CAs completely internally to your site, you can utilize the <code>empty-ca-certs</code> RPM to satisfy
 RPM dependencies while not actually installing any CAs. To install this RPM, run the following command:</p>
@@ -3482,7 +3486,7 @@ syslogfacility = daemon
 </tbody>
 </table>
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
-<p>To get assistance, please use the <a href="../../common/help">this page</a>.</p>
+<p>To get assistance, please use the <a href="../help/">this page</a>.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <p>x509 certificates:</p>
 <ul>
@@ -3498,8 +3502,8 @@ syslogfacility = daemon
 </ul>
 <p>Related software:</p>
 <ul>
-<li><a href="../../security/certificate-management#managing-cas">osg-ca-manage</a></li>
-<li><a href="../../security/certificate-management#osg-ca-certificates-updater">osg-ca-certs-updater</a></li>
+<li><a href="../../security/certificate-management/#managing-cas">osg-ca-manage</a></li>
+<li><a href="../../security/certificate-management/#osg-ca-certificates-updater">osg-ca-certs-updater</a></li>
 </ul>
 <h3 id="configuration-files">Configuration files<a class="headerlink" href="#configuration-files" title="Permanent link">&para;</a></h3>
 <table>
@@ -3602,7 +3606,7 @@ syslogfacility = daemon
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../../security/host-certs/digicert/" title="Using DigiCert" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="security/host-certs/digicert/" title="Using DigiCert" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3617,7 +3621,7 @@ syslogfacility = daemon
     </a>
     
     
-    <a href="../yum/" title="OSG Yum Repos" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="common/yum/" title="OSG Yum Repos" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3655,12 +3659,9 @@ syslogfacility = daemon
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

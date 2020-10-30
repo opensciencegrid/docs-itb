@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../../css/itb.css">
     
       <link rel="stylesheet" href="../../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3275,13 +3279,13 @@
 <p><strong>Release Date</strong>: 2017-06-14</p>
 <h2 id="whats-new-in-osg-34">What's New in OSG 3.4<a class="headerlink" href="#whats-new-in-osg-34" title="Permanent link">&para;</a></h2>
 <p>The OSG 3.4.0 software stack features a more streamlined and consolidated package list. Specifically, the varied authentication solutions proved to be good candidates for consolidation and a new piece of software, the LCMAPS VOMS plugin, has been designed to replace both edg-mkgridmap and GUMS.</p>
-<p>See <a href="../../../security/lcmaps-voms-authentication">install the LCMAPS VOMS plugin</a> to replace GUMS + edg-mkgridmap.</p>
-<p>See <a href="../../../security/lcmaps-voms-authentication#migrating-from-edg-mkgridmap">migrating from edg-mkgridmap to lcmaps VOMS plugin</a> to transistion from edg-mkgridmap.</p>
+<p>See <a href="../../../security/lcmaps-voms-authentication/">install the LCMAPS VOMS plugin</a> to replace GUMS + edg-mkgridmap.</p>
+<p>See <a href="../../../security/lcmaps-voms-authentication/#migrating-from-edg-mkgridmap">migrating from edg-mkgridmap to lcmaps VOMS plugin</a> to transistion from edg-mkgridmap.</p>
 <p>In 3.4.0, we dropped HDFS 2.x with the intention of adding HDFS 3.x in a subsequent OSG 3.4 release when it becomes available upstream.</p>
 <p>In addition to GUMS, edg-mkgridmap, and HDFS 2.x, we dropped packages related to the following software:</p>
 <ul>
 <li>VOMS Admin Server - <a href="https://opensciencegrid.org/technology/policy/voms-admin-retire/">Retirement Policy</a></li>
-<li>BeStMan - replaced by <a href="../../../data/load-balanced-gridftp">Load Balanced GridFTP</a></li>
+<li>BeStMan - replaced by <a href="../../../data/load-balanced-gridftp/">Load Balanced GridFTP</a></li>
 <li>GLExec - replaced by <a href="http://singularity.lbl.gov/">Singularty</a></li>
 <li>Globus GRAM available from EPEL</li>
 <li>GIP and OSG Info Services BDII servers retired</li>
@@ -3359,7 +3363,7 @@
 
 <h2 id="updating-to-the-new-release">Updating to the new release<a class="headerlink" href="#updating-to-the-new-release" title="Permanent link">&para;</a></h2>
 <h3 id="update-repositories">Update Repositories<a class="headerlink" href="#update-repositories" title="Permanent link">&para;</a></h3>
-<p>To update to this series, you need to to <a href="../../../common/yum#install-osg-repositories">install the current OSG repositories</a>.</p>
+<p>To update to this series, you need to to <a href="../../../common/yum/#install-osg-repositories">install the current OSG repositories</a>.</p>
 <h3 id="update-software">Update Software<a class="headerlink" href="#update-software" title="Permanent link">&para;</a></h3>
 <p>Once the new repositories are installed, you can update to this new release with:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> yum update
@@ -3374,7 +3378,7 @@
 </ul>
 </div>
 <h2 id="need-help">Need help?<a class="headerlink" href="#need-help" title="Permanent link">&para;</a></h2>
-<p>Do you need help with this release? <a href="../../../common/help">Contact us for help</a>.</p>
+<p>Do you need help with this release? <a href="../../../common/help/">Contact us for help</a>.</p>
 <h2 id="detailed-changes-in-this-release">Detailed changes in this release<a class="headerlink" href="#detailed-changes-in-this-release" title="Permanent link">&para;</a></h2>
 <h3 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">&para;</a></h3>
 <p>We added or updated the following packages to the production OSG yum repository. Note that in some cases, there are multiple RPMs for each package. You can click on any given package to see the set of RPMs or see the complete list below.</p>
@@ -4383,7 +4387,7 @@ glideinwms-vofrontend-standalone-3.3.2-2.osgup.el7
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../release-3-4-0-2/" title="OSG Release 3.4.0-2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="release/3.4/release-3-4-0-2/" title="OSG Release 3.4.0-2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -4398,7 +4402,7 @@ glideinwms-vofrontend-standalone-3.3.2-2.osgup.el7
     </a>
     
     
-    <a href="../../release_series/" title="OSG Release Series" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="release/release_series/" title="OSG Release Series" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -4436,12 +4440,9 @@ glideinwms-vofrontend-standalone-3.3.2-2.osgup.el7
       
     </div>
     
-      <script src="../../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
     
   </body>

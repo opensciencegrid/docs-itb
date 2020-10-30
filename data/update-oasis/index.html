@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -2992,16 +2996,16 @@
                 <h1 id="updating-software-in-oasis">Updating Software in OASIS<a class="headerlink" href="#updating-software-in-oasis" title="Permanent link">&para;</a></h1>
 <p>OASIS is the OSG Application Software Installation Service. It is the recommended method to install software on the Open Science Grid. It is implemented using CernVM FileSystem (CVMFS) technology.</p>
 <p>This document is a step by step explanation of how a Virtual Organization (VO) Software Administrator can enable use of the shared OASIS service and use it to publish and update software on OSG Worker Nodes under <code>/cvmfs/oasis.opensciencegrid.org</code>.
-The shared OASIS service is especially appropropriate for VOs that have a relatively small number of members and a relatively small amount of software to distribute.  Larger VOs should consider <a href="../external-oasis-repos">hosting their own separate repositories</a>.</p>
+The shared OASIS service is especially appropropriate for VOs that have a relatively small number of members and a relatively small amount of software to distribute.  Larger VOs should consider <a href="../external-oasis-repos/">hosting their own separate repositories</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For information on how to configure a client for OASIS see the <a href="../../worker-node/install-cvmfs">CVMFS installation documentation</a>.</p>
+<p>For information on how to configure a client for OASIS see the <a href="../../worker-node/install-cvmfs/">CVMFS installation documentation</a>.</p>
 </div>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <p>To begin the process to distribute software on OASIS using the service hosted by OSG Operations, you must:</p>
 <ul>
-<li><a href="../../security/user-certs">Obtain a personal grid certificate</a>, if you don't have one already.</li>
-<li>Register yourself as a contact in <a href="../../common/registration#registering-contacts">OSG Topology</a></li>
+<li><a href="../../security/user-certs/">Obtain a personal grid certificate</a>, if you don't have one already.</li>
+<li>Register yourself as a contact in <a href="../../common/registration/#registering-contacts">OSG Topology</a></li>
 <li>Request to be associated with a <a href="https://github.com/opensciencegrid/topology/tree/master/virtual-organizations">VO registered in Topology</a>.</li>
 </ul>
 <h2 id="how-to-use-oasis">How to use OASIS<a class="headerlink" href="#how-to-use-oasis" title="Permanent link">&para;</a></h2>
@@ -3009,7 +3013,7 @@ The shared OASIS service is especially appropropriate for VOs that have a relati
 <p>When you are ready to distribute your software with OASIS, submit a <a href="https://support.opensciencegrid.org/helpdesk/tickets/new">support ticket</a> with a request to enable OASIS for your VO. In your request, please specify your VO and provide a list of people who will install and administer the VO software in OASIS.</p>
 <p>OSG Operations will set <code>UseOASIS</code> to true for your VO in <a href="https://github.com/opensciencegrid/topology#topology">OSG topology</a> and add your list of administrators to the "OASIS Managers" list (which is near the bottom of the page of information about each VO in Topology). oasis-login will then grant access to the people who are listed as OASIS managers. Any time the list is to be modified, submit another ticket.</p>
 <h3 id="log-in-with-gsissh">Log in with GSISSH<a class="headerlink" href="#log-in-with-gsissh" title="Permanent link">&para;</a></h3>
-<p>The next step is to generate a proxy and log into <code>oasis-login.opensciencegrid.org</code> with <code>gsissh</code>. These commands should be run on a computer that has the <a href="../../worker-node/install-wn">OSG worker node client</a> software. First make sure that your grid certificate is installed in <code>~/.globus/usercred.p12</code> on that computer and that it is mode 600, then run these commands:</p>
+<p>The next step is to generate a proxy and log into <code>oasis-login.opensciencegrid.org</code> with <code>gsissh</code>. These commands should be run on a computer that has the <a href="../../worker-node/install-wn/">OSG worker node client</a> software. First make sure that your grid certificate is installed in <code>~/.globus/usercred.p12</code> on that computer and that it is mode 600, then run these commands:</p>
 <div class="codehilite"><pre><span></span><span class="gp">user@host $</span> voms-proxy-init
 <span class="gp">user@host $</span> gsissh -o <span class="nv">GSSAPIDelegateCredentials</span><span class="o">=</span>yes oasis-login.opensciencegrid.org
 </pre></div>
@@ -3036,11 +3040,11 @@ The shared OASIS service is especially appropropriate for VOs that have a relati
 
 
 <p>This command queues a process to sync the content of OASIS with the content of <code>/stage/oasis/$VO</code></p>
-<p><code>osg-oasis-update</code> returns immediately, but only one update can run at a time (across all VOs); your request may be queued behind a different VO. If you encounter severe delays before the update is finished being published (more than 4 hours), please file a <a href="../../common/help">support ticket</a>.</p>
+<p><code>osg-oasis-update</code> returns immediately, but only one update can run at a time (across all VOs); your request may be queued behind a different VO. If you encounter severe delays before the update is finished being published (more than 4 hours), please file a <a href="../../common/help/">support ticket</a>.</p>
 <h3 id="limitations-on-repository-content">Limitations on repository content<a class="headerlink" href="#limitations-on-repository-content" title="Permanent link">&para;</a></h3>
 <p>Although CVMFS provides a POSIX filesystem, it does not work well with all types of content. Content in OASIS is expected to adhere to the <a href="http://cvmfs.readthedocs.io/en/stable/cpt-repo.html#limitations-on-repository-content">CVMFS repository content limitations</a> so please review those guidelines carefully.</p>
 <h3 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
-<p>After <code>osg-oasis-update</code> completes and the changes have been propagated to the CVMFS stratum 1 servers (typically between 0 and 60 minutes, but possibly longer if the servers are busy with updates of other repositories) then the changes can be visible under <code>/cvmfs/oasis.opensciencegrid.org</code> on a computer that has the <a href="../../worker-node/install-cvmfs">CVMFS client installed</a>. A client normally only checks for updates if at least an hour has passed since it last checked, but people who have superuser access on the client machine can force it to check again with</p>
+<p>After <code>osg-oasis-update</code> completes and the changes have been propagated to the CVMFS stratum 1 servers (typically between 0 and 60 minutes, but possibly longer if the servers are busy with updates of other repositories) then the changes can be visible under <code>/cvmfs/oasis.opensciencegrid.org</code> on a computer that has the <a href="../../worker-node/install-cvmfs/">CVMFS client installed</a>. A client normally only checks for updates if at least an hour has passed since it last checked, but people who have superuser access on the client machine can force it to check again with</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> cvmfs_talk -i oasis.opensciencegrid.org remount
 </pre></div>
 
@@ -3073,7 +3077,7 @@ The shared OASIS service is especially appropropriate for VOs that have a relati
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../frontier-squid/" title="Install Squid HTTP Cache" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="data/frontier-squid/" title="Install Squid HTTP Cache" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3088,7 +3092,7 @@ The shared OASIS service is especially appropropriate for VOs that have a relati
     </a>
     
     
-    <a href="../external-oasis-repos/" title="Install an OASIS Repo" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="data/external-oasis-repos/" title="Install an OASIS Repo" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3126,12 +3130,9 @@ The shared OASIS service is especially appropropriate for VOs that have a relati
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

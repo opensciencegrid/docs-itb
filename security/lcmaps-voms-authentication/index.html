@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3232,8 +3236,8 @@
                 
                 
                 <h1 id="installing-and-maintaining-the-lcmaps-voms-plugin">Installing and Maintaining the LCMAPS VOMS Plugin<a class="headerlink" href="#installing-and-maintaining-the-lcmaps-voms-plugin" title="Permanent link">&para;</a></h1>
-<p>LCMAPS is a software library used on <a href="../../compute-element/install-htcondor-ce">HTCondor-CE</a>, <a href="../../data/gridftp">GridFTP</a>, and
-<a href="../../data/xrootd/install-storage-element">XRootD</a> hosts for mapping grid certificates of incoming connections to specific
+<p>LCMAPS is a software library used on <a href="../../compute-element/install-htcondor-ce/">HTCondor-CE</a>, <a href="../../data/gridftp/">GridFTP</a>, and
+<a href="../../data/xrootd/install-storage-element/">XRootD</a> hosts for mapping grid certificates of incoming connections to specific
 Unix accounts.
 The LCMAPS VOMS plugin enables LCMAPS to make mapping decisions based on the VOMS attributes of grid certificates, e.g.
 <code>/cms/Role=production/Capability=NULL</code>.</p>
@@ -3328,7 +3332,7 @@ the default mappings.</p>
 </table>
 </li>
 <li>
-<p>Edit <code>/etc/osg/config.d/30-gip.ini</code> and specify the supported VOs per <a href="../../other/configuration-with-osg-configure#subcluster-resource-entry">Subcluster or ResourceEntry section</a>:</p>
+<p>Edit <code>/etc/osg/config.d/30-gip.ini</code> and specify the supported VOs per <a href="../../other/configuration-with-osg-configure/#subcluster-resource-entry">Subcluster or ResourceEntry section</a>:</p>
 <div class="codehilite"><pre><span></span><span class="na">allowed_vos</span><span class="o">=</span><span class="s">&quot;VO1,VO2...&quot;</span>
 </pre></div>
 
@@ -3338,7 +3342,7 @@ the default mappings.</p>
 <h3 id="applying-configuration-settings">Applying configuration settings<a class="headerlink" href="#applying-configuration-settings" title="Permanent link">&para;</a></h3>
 <p>Making changes to the OSG configuration files in the <code>/etc/osg/config.d</code> directory does not apply those settings to
 software automatically.
-For the OSG settings, use the <a href="../../other/configuration-with-osg-configure">osg-configure</a> tool to validate (to a limited
+For the OSG settings, use the <a href="../../other/configuration-with-osg-configure/">osg-configure</a> tool to validate (to a limited
 extent) and apply the settings to the relevant software components.
 If instead you wish to manage the LCMAPS VOMS plugin configuration yourself, skip to the
 <a href="#manual-configuration">manual configuration section</a>.</p>
@@ -3532,7 +3536,7 @@ VOMS authentication as well as common LCMAPS VOMS authentication issues.</p>
 
 </li>
 <li>
-<p>Restart the <a href="../../compute-element/install-htcondor-ce#managing-htcondor-ce-and-associated-services">condor-ce</a> service</p>
+<p>Restart the <a href="../../compute-element/install-htcondor-ce/#managing-htcondor-ce-and-associated-services">condor-ce</a> service</p>
 </li>
 </ol>
 <div class="admonition tip">
@@ -3577,7 +3581,7 @@ VOMS authentication as well as common LCMAPS VOMS authentication issues.</p>
 
 </li>
 <li>
-<p>Restart the <a href="../../data/xrootd/install-storage-element#managing-xrootd-services">xrootd</a> service</p>
+<p>Restart the <a href="../../data/xrootd/install-storage-element/#managing-xrootd-services">xrootd</a> service</p>
 </li>
 </ol>
 <div class="admonition tip">
@@ -3597,7 +3601,7 @@ VOMS authentication as well as common LCMAPS VOMS authentication issues.</p>
 
 </li>
 <li>
-<p>Restart the <a href="../../data/gridftp#managing-gridftp">globus-gridftp-server</a> service.</p>
+<p>Restart the <a href="../../data/gridftp/#managing-gridftp">globus-gridftp-server</a> service.</p>
 </li>
 </ol>
 <div class="admonition tip">
@@ -3625,7 +3629,7 @@ VOMS authentication as well as common LCMAPS VOMS authentication issues.</p>
 
 </li>
 <li>
-<p>Verify that the <a href="../../common/yum#installing-and-configuring-repositories">priority</a> of the OSG repositories are set
+<p>Verify that the <a href="../../common/yum/#installing-and-configuring-repositories">priority</a> of the OSG repositories are set
    properly</p>
 </li>
 <li>
@@ -3644,7 +3648,7 @@ VOMS authentication as well as common LCMAPS VOMS authentication issues.</p>
 </li>
 </ol>
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
-<p>To get assistance, please use the <a href="../../common/help">this page</a>.</p>
+<p>To get assistance, please use the <a href="../../common/help/">this page</a>.</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <h3 id="configuration-files">Configuration Files<a class="headerlink" href="#configuration-files" title="Permanent link">&para;</a></h3>
 <p>The files are evaluated in the following order, with earlier files taking precedence over later ones:</p>
@@ -3758,7 +3762,7 @@ defaultmapfile -&gt; good | bad
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../../submit/osg-flock/" title="Flock to OSG" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="submit/osg-flock/" title="Flock to OSG" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3773,7 +3777,7 @@ defaultmapfile -&gt; good | bad
     </a>
     
     
-    <a href="../user-certs/" title="User Certificates" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="security/user-certs/" title="User Certificates" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3811,12 +3815,9 @@ defaultmapfile -&gt; good | bad
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

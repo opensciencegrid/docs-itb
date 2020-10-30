@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3316,11 +3320,11 @@
                 
                 
                 <h1 id="installing-and-maintaining-htcondor-ce">Installing and Maintaining HTCondor-CE<a class="headerlink" href="#installing-and-maintaining-htcondor-ce" title="Permanent link">&para;</a></h1>
-<p>The <a href="../htcondor-ce-overview">HTCondor-CE</a> software is a <em>job gateway</em> for an OSG Compute Element (CE).
+<p>The <a href="../htcondor-ce-overview/">HTCondor-CE</a> software is a <em>job gateway</em> for an OSG Compute Element (CE).
 As such, HTCondor-CE is the entry point for jobs coming from the OSG — it handles authorization and delegation of jobs
 to your local batch system.
 In OSG today, most CEs accept <em>pilot jobs</em> from a factory, which in turn are able to accept and run end-user jobs.
-See the <a href="../htcondor-ce-overview">HTCondor-CE Overview</a> for a much more detailed introduction.</p>
+See the <a href="../htcondor-ce-overview/">HTCondor-CE Overview</a> for a much more detailed introduction.</p>
 <p>Use this page to learn how to install, configure, run, test, and troubleshoot HTCondor-CE from the OSG software
 repositories.</p>
 <div class="admonition note">
@@ -3344,10 +3348,10 @@ repositories.</p>
 </ul>
 <p>As with all OSG software installations, there are some one-time (per host) steps to prepare in advance:</p>
 <ul>
-<li>Ensure the host has <a href="../../release/supported_platforms">a supported operating system</a></li>
+<li>Ensure the host has <a href="../../release/supported_platforms/">a supported operating system</a></li>
 <li>Obtain root access to the host</li>
-<li>Prepare the <a href="../../common/yum">required Yum repositories</a></li>
-<li>Install <a href="../../common/ca">CA certificates</a></li>
+<li>Prepare the <a href="../../common/yum/">required Yum repositories</a></li>
+<li>Install <a href="../../common/ca/">CA certificates</a></li>
 </ul>
 <h2 id="installing-htcondor-ce">Installing HTCondor-CE<a class="headerlink" href="#installing-htcondor-ce" title="Permanent link">&para;</a></h2>
 <p>An HTCondor-CE installation consists of the job gateway (i.e., the HTCondor-CE job router) and other support software
@@ -3488,7 +3492,7 @@ For example, the following sets the <code>SPOOL</code> directory to <code>/home/
 </div>
 <h3 id="configuring-authorization">Configuring authorization<a class="headerlink" href="#configuring-authorization" title="Permanent link">&para;</a></h3>
 <p>To configure which virtual organizations and users are authorized to submit jobs to your, follow the instructions in
-<a href="../../security/lcmaps-voms-authentication#configuring-the-lcmaps-voms-plugin">the LCMAPS VOMS plugin document</a>.</p>
+<a href="../../security/lcmaps-voms-authentication/#configuring-the-lcmaps-voms-plugin">the LCMAPS VOMS plugin document</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If your local batch system is HTCondor, it will attempt to utilize the LCMAPS callouts if enabled in the
@@ -3500,14 +3504,14 @@ If this is not the desired behavior, set <code>GSI_AUTHZ_CONF=/dev/null</code> i
 collector.
 The job factories then query the central collector for idle resources and submit pilot jobs to the available sites.
 To advertise your site, you will need to enter some information about the worker nodes of your clusters.</p>
-<p>Please see the <a href="../../other/configuration-with-osg-configure#subcluster-resource-entry">Subcluster / Resource Entry configuration document</a>
+<p>Please see the <a href="../../other/configuration-with-osg-configure/#subcluster-resource-entry">Subcluster / Resource Entry configuration document</a>
 about configuring the data that will be uploaded to the central collector.</p>
 <h3 id="applying-configuration-settings">Applying configuration settings<a class="headerlink" href="#applying-configuration-settings" title="Permanent link">&para;</a></h3>
 <p>Making changes to the OSG configuration files in the <code>/etc/osg/config.d</code> directory does not apply those settings to
 software automatically.
 Settings that are made outside of the OSG directory take effect immediately or at least when the relevant service is
 restarted.
-For the OSG settings, use the <a href="../../other/configuration-with-osg-configure">osg-configure</a> tool to validate (to a limited
+For the OSG settings, use the <a href="../../other/configuration-with-osg-configure/">osg-configure</a> tool to validate (to a limited
 extent) and apply the settings to the relevant software components.
 The <code>osg-configure</code> software is included automatically in an HTCondor-CE installation.</p>
 <ol>
@@ -3549,7 +3553,7 @@ If you do not need any of the following special configurations, skip to
 <li><a href="#enable-job-retries">Enable job retries</a></li>
 </ul>
 <h4 id="transforming-and-filtering-jobs">Transforming and filtering jobs<a class="headerlink" href="#transforming-and-filtering-jobs" title="Permanent link">&para;</a></h4>
-<p>If you need to modify or filter jobs, more information can be found in the <a href="../job-router-recipes">Job Router Recipes</a>
+<p>If you need to modify or filter jobs, more information can be found in the <a href="../job-router-recipes/">Job Router Recipes</a>
 document.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3757,7 +3761,7 @@ The specific services are:</p>
 <tr>
 <td align="left">Fetch CRL</td>
 <td align="left"><code>fetch-crl-boot</code> and <code>fetch-crl-cron</code></td>
-<td align="left">See <a href="../../common/ca#managing-fetch-crl-services">CA documentation</a> for more info</td>
+<td align="left">See <a href="../../common/ca/#managing-fetch-crl-services">CA documentation</a> for more info</td>
 </tr>
 <tr>
 <td align="left">Gratia</td>
@@ -3809,7 +3813,7 @@ The specific services are:</p>
 </tbody>
 </table>
 <h3 id="using-htcondor-ce-tools">Using HTCondor-CE tools<a class="headerlink" href="#using-htcondor-ce-tools" title="Permanent link">&para;</a></h3>
-<p>Some of the HTCondor-CE administrative and user tools are documented in <a href="../troubleshoot-htcondor-ce">the HTCondor-CE troubleshooting guide</a>.</p>
+<p>Some of the HTCondor-CE administrative and user tools are documented in <a href="../troubleshoot-htcondor-ce/">the HTCondor-CE troubleshooting guide</a>.</p>
 <h2 id="validating-htcondor-ce">Validating HTCondor-CE<a class="headerlink" href="#validating-htcondor-ce" title="Permanent link">&para;</a></h2>
 <p>To validate an HTCondor-CE, perform the following verification steps:</p>
 <ol>
@@ -3820,20 +3824,20 @@ The specific services are:</p>
 </li>
 <li>
 <p>Verify that all the necessary daemons are running with
-   <a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_status">condor_ce_status -any</a>.</p>
+   <a href="../troubleshoot-htcondor-ce/#condor_ce_status">condor_ce_status -any</a>.</p>
 </li>
 <li>
 <p>Verify the CE's network configuration using
-   <a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_host_network_check">condor_ce_host_network_check</a>.</p>
+   <a href="../troubleshoot-htcondor-ce/#condor_ce_host_network_check">condor_ce_host_network_check</a>.</p>
 </li>
 <li>
 <p>Verify that jobs can complete successfully using
-   <a href="../../compute-element/troubleshoot-htcondor-ce#condor_ce_trace">condor_ce_trace</a>.</p>
+   <a href="../troubleshoot-htcondor-ce/#condor_ce_trace">condor_ce_trace</a>.</p>
 </li>
 </ol>
 <h2 id="troubleshooting-htcondor-ce">Troubleshooting HTCondor-CE<a class="headerlink" href="#troubleshooting-htcondor-ce" title="Permanent link">&para;</a></h2>
 <p>For information on how to troubleshoot your HTCondor-CE, please refer to
-<a href="../troubleshoot-htcondor-ce">the HTCondor-CE troubleshooting guide</a>.</p>
+<a href="../troubleshoot-htcondor-ce/">the HTCondor-CE troubleshooting guide</a>.</p>
 <h2 id="registering-the-ce">Registering the CE<a class="headerlink" href="#registering-the-ce" title="Permanent link">&para;</a></h2>
 <p>To be part of the OSG Production Grid, your CE must be
 <a href="https://github.com/opensciencegrid/topology#topology">registered with the OSG</a>.
@@ -3857,14 +3861,14 @@ Resource Group: CHTC
 </li>
 </ol>
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
-<p>To get assistance, please use the <a href="../../common/help">this page</a>.</p>
+<p>To get assistance, please use the <a href="../../common/help/">this page</a>.</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <p>Here are some other HTCondor-CE documents that might be helpful:</p>
 <ul>
-<li><a href="../htcondor-ce-overview">HTCondor-CE overview and architecture</a></li>
-<li><a href="../job-router-recipes">Configuring HTCondor-CE job routes</a></li>
-<li><a href="../troubleshoot-htcondor-ce">The HTCondor-CE troubleshooting guide</a></li>
-<li><a href="../submit-htcondor-ce">Submitting jobs to HTCondor-CE</a></li>
+<li><a href="../htcondor-ce-overview/">HTCondor-CE overview and architecture</a></li>
+<li><a href="../job-router-recipes/">Configuring HTCondor-CE job routes</a></li>
+<li><a href="../troubleshoot-htcondor-ce/">The HTCondor-CE troubleshooting guide</a></li>
+<li><a href="../submit-htcondor-ce/">Submitting jobs to HTCondor-CE</a></li>
 </ul>
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
 <p>The following directories contain the configuration for HTCondor-CE.
@@ -3935,7 +3939,7 @@ configuration specified in the previous directories.</p>
 </tr>
 </tbody>
 </table>
-<p>Find instructions to request a host certificate <a href="../../security/host-certs">here</a>.</p>
+<p>Find instructions to request a host certificate <a href="../security/host-certs">here</a>.</p>
 <h3 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -3980,7 +3984,7 @@ ephemeral outgoing ports are necessary.</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../hosted-ce/" title="Request a Hosted CE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="compute-element/hosted-ce/" title="Request a Hosted CE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3995,7 +3999,7 @@ ephemeral outgoing ports are necessary.</p>
     </a>
     
     
-    <a href="../job-router-recipes/" title="Job Router Recipes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="compute-element/job-router-recipes/" title="Job Router Recipes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -4033,12 +4037,9 @@ ephemeral outgoing ports are necessary.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

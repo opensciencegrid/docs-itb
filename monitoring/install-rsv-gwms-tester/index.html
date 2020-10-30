@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3128,8 +3132,8 @@
 <h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
 <p>Before starting the installation process, consider the following points (consulting <a href="#ReferenceSection">the Reference section below</a> as needed):</p>
 <ul>
-<li><strong>Software:</strong> You must have <a href="../../other/install-gwms-frontend">a GlideinWMS Front-end</a> installed</li>
-<li><strong>Configuration:</strong> The GlideinWMS Front-end must be configured (a) <a href="../../other/install-gwms-frontend#allow-users-to-specify-where-their-jobs-run">to have at least one group that matches pilots to sites using DESIRED_SITES</a>, and (b) <a href="../../other/install-gwms-frontend#creating-a-group-for-testing-configuration-changes">to support the is_itb user job attribute</a></li>
+<li><strong>Software:</strong> You must have <a href="../../other/install-gwms-frontend/">a GlideinWMS Front-end</a> installed</li>
+<li><strong>Configuration:</strong> The GlideinWMS Front-end must be configured (a) <a href="../../other/install-gwms-frontend/#allow-users-to-specify-where-their-jobs-run">to have at least one group that matches pilots to sites using DESIRED_SITES</a>, and (b) <a href="../../other/install-gwms-frontend/#creating-a-group-for-testing-configuration-changes">to support the is_itb user job attribute</a></li>
 <li><strong>Host choice:</strong> The Tester should be installed on its own host; a small Virtual Machine (VM) is ideal</li>
 <li><strong>Service certificate:</strong> The Tester requires a host certificate at <code>/etc/grid-security/hostcert.pem</code> and an accompanying key at <code>/etc/grid-security/hostkey.pem</code></li>
 <li><strong>Network ports:</strong> Test jobs must be able to contact the tester using the HTCondor Shared Port on port 9615 (TCP), and you must be able to contact a web server on port 80 (TCP) to view test results.</li>
@@ -3301,7 +3305,7 @@
 
 <p>Where <code>&lt;SITE_NAME&gt;</code> is the name of the site, and there should be one such line per site supported by your VO(s).</p>
 <h2 id="troubleshooting-rsv-gwms-tester">Troubleshooting RSV-GWMS-Tester<a class="headerlink" href="#troubleshooting-rsv-gwms-tester" title="Permanent link">&para;</a></h2>
-<p>You can find more information on troubleshooting in the <a href="../../monitoring/install-rsv#troubleshooting-rsv">RSV troubleshooting section</a></p>
+<p>You can find more information on troubleshooting in the <a href="../install-rsv/#troubleshooting-rsv">RSV troubleshooting section</a></p>
 <p>Logs and configuration:</p>
 <table>
 <thead>
@@ -3380,7 +3384,7 @@
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../rsv-control/" title="Manage RSV via rsv-control" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="monitoring/rsv-control/" title="Manage RSV via rsv-control" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3395,7 +3399,7 @@
     </a>
     
     
-    <a href="../../common/help/" title="Get Help" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="common/help/" title="Get Help" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3433,12 +3437,9 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

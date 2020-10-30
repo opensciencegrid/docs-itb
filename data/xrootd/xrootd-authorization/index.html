@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../../css/itb.css">
     
       <link rel="stylesheet" href="../../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -2916,7 +2920,7 @@
 In this document, we will cover the <a href="#enabling-xrootd-lcmaps-authorization"><code>xrootd-lcmaps</code></a> security option supported
 in the OSG.</p>
 <p>The XRootD LCMAPS authorization method depends on configuring
-<a href="../../../security/lcmaps-voms-authentication">LCMAPS with the VOMS plugin</a>.
+<a href="../../../security/lcmaps-voms-authentication/">LCMAPS with the VOMS plugin</a>.
 LCMAPS maps an incoming user's grid credentials to a Unix account name;
 the permissions listed in the <a href="#authorization-file">authorization file</a> all reference Unix account names. </p>
 <div class="admonition note">
@@ -3003,20 +3007,20 @@ xrootd config file.</p>
 
 
 <h4 id="enabling-xrootd-lcmaps-authorization">Enabling xrootd-lcmaps authorization<a class="headerlink" href="#enabling-xrootd-lcmaps-authorization" title="Permanent link">&para;</a></h4>
-<p>The xrootd-lcmaps security plugin uses the <code>lcmaps</code> library and the <a href="../../../security/lcmaps-voms-authentication">LCMAPS VOMS plugin</a>
+<p>The xrootd-lcmaps security plugin uses the <code>lcmaps</code> library and the <a href="../../../security/lcmaps-voms-authentication/">LCMAPS VOMS plugin</a>
 to authenticate and authorize users based on X509 certificates and VOMS attributes. Perform the following instructions
 on all data nodes:</p>
 <ol>
 <li>
-<p>Install <a href="../../../common/ca#installing-ca-certificates">CA certificates</a> and <a href="../../../common/ca#installing-ca-certificates#managing-certificate-revocation-lists">manage CRLs</a></p>
+<p>Install <a href="../../../common/ca/#installing-ca-certificates">CA certificates</a> and <a href="../../../common/ca/#installing-ca-certificates#managing-certificate-revocation-lists">manage CRLs</a></p>
 </li>
 <li>
-<p>Follow the instructions for requesting a <a href="../../../security/host-certs#requesting-service-certificates">service certificate</a>,
+<p>Follow the instructions for requesting a <a href="../../security/host-certs#requesting-service-certificates">service certificate</a>,
    using <code>xrootd</code> for both the <code>&lt;SERVICE&gt;</code> and <code>&lt;OWNER&gt;</code>, resulting in a certificate and key in <code>/etc/grid-security/xrd/xrdcert.pem</code>
    and <code>/etc/grid-security/xrd/xrdkey.pem</code>, respectively.</p>
 </li>
 <li>
-<p>Install and configure the <a href="../../../security/lcmaps-voms-authentication">LCMAPS VOMS plugin</a></p>
+<p>Install and configure the <a href="../../../security/lcmaps-voms-authentication/">LCMAPS VOMS plugin</a></p>
 </li>
 <li>
 <p>Install <code>xrootd-lcmaps</code> and necessary configuration:</p>
@@ -3029,7 +3033,7 @@ on all data nodes:</p>
 <p>Configure access rights for mapped users by creating and modifying the XRootD <a href="#authorization-file">authorization file</a></p>
 </li>
 <li>
-<p>Restart the <a href="../../../data/xrootd/install-standalone/#using-xrootd">relevant services</a></p>
+<p>Restart the <a href="../install-standalone/#using-xrootd">relevant services</a></p>
 </li>
 </ol>
 <h2 id="verifying-xrootd-authorization">Verifying XRootD Authorization<a class="headerlink" href="#verifying-xrootd-authorization" title="Permanent link">&para;</a></h2>
@@ -3048,13 +3052,13 @@ on all data nodes:</p>
 
 </li>
 <li>
-<p>On the XRootD host, add your DN to <a href="../../../security/lcmaps-voms-authentication#mapping-users">/etc/grid-security/grid-mapfile</a></p>
+<p>On the XRootD host, add your DN to <a href="../../../security/lcmaps-voms-authentication/#mapping-users">/etc/grid-security/grid-mapfile</a></p>
 </li>
 <li>
 <p>Add a line to <code>/etc/xrootd/auth_file</code> to ensure the mapped user can write to <code>&lt;DESTINATION PATH&gt;</code></p>
 </li>
 <li>
-<p>Restart the xrootd service. (See <a href="../../../data/xrootd/install-standalone/#using-xrootd">this section</a> for more information
+<p>Restart the xrootd service. (See <a href="../install-standalone/#using-xrootd">this section</a> for more information
    of managing XRootD services.)</p>
 </li>
 <li>
@@ -3087,7 +3091,7 @@ on all data nodes:</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../install-storage-element/" title="Install XRootD SE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="data/xrootd/install-storage-element/" title="Install XRootD SE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3102,7 +3106,7 @@ on all data nodes:</p>
     </a>
     
     
-    <a href="../install-client/" title="Using XRootD" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="data/xrootd/install-client/" title="Using XRootD" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3140,12 +3144,9 @@ on all data nodes:</p>
       
     </div>
     
-      <script src="../../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
     
   </body>

@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3263,8 +3267,8 @@ A stand-alone GridFTP server might be used under the following circumstances:</p
 <p>This document is for a standalone GridFTP server on top of POSIX storage.  We have two specialized documents
 for Hadoop Distributed File System (HDFS) and XRootD based storage:</p>
 <ul>
-<li><a href="../install-hadoop#standalone-gridftp-node-installation">Install and configure a GridFTP server on top of HDFS.</a></li>
-<li><a href="../../data/xrootd/install-storage-element#optional-installing-a-gridftp-server">Install and configure a GridFTP server on top of XRootD.</a></li>
+<li><a href="../install-hadoop/#standalone-gridftp-node-installation">Install and configure a GridFTP server on top of HDFS.</a></li>
+<li><a href="../xrootd/install-storage-element/#optional-installing-a-gridftp-server">Install and configure a GridFTP server on top of XRootD.</a></li>
 </ul>
 </div>
 <h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
@@ -3286,7 +3290,7 @@ for Hadoop Distributed File System (HDFS) and XRootD based storage:</p>
 <h2 id="configuring-gridftp">Configuring GridFTP<a class="headerlink" href="#configuring-gridftp" title="Permanent link">&para;</a></h2>
 <h3 id="configuring-authentication">Configuring authentication<a class="headerlink" href="#configuring-authentication" title="Permanent link">&para;</a></h3>
 <p>To configure which virtual organizations and users are allowed to use your GridFTP server, follow the instructions in
-<a href="../../security/lcmaps-voms-authentication#configuring-the-lcmaps-voms-plugin">the LCMAPS VOMS plugin document</a>.</p>
+<a href="../../security/lcmaps-voms-authentication/#configuring-the-lcmaps-voms-plugin">the LCMAPS VOMS plugin document</a>.</p>
 <h3 id="set-port-ranges">Set port ranges<a class="headerlink" href="#set-port-ranges" title="Permanent link">&para;</a></h3>
 <p>As mentioned above, GridFTP uses port 2811 for control communication as well as a range of ports for the data transfer.
 This range of ports has to defined by setting the variable <code>GLOBUS_TCP_PORT_RANGE</code> within the configuration file:
@@ -3517,7 +3521,7 @@ already be installed.</p>
 <h2 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h2>
 <h3 id="gridftp">GridFTP<a class="headerlink" href="#gridftp" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Acquire a <a href="../../security/user-certs">user certificate</a></li>
+<li>Acquire a <a href="../../security/user-certs/">user certificate</a></li>
 <li>
 <p>Find your subject DN:</p>
 <div class="codehilite"><pre><span></span><span class="gp">user@host #</span> openssl x509 -in &lt;CERITIFICATE_FILE.pem&gt; -noout -subject
@@ -3585,7 +3589,7 @@ Look for any abnormal termination and <a href="#getting-help">report it</a> if i
 </li>
 </ol>
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
-<p>For assistance, please use <a href="../../common/help">this page</a>.</p>
+<p>For assistance, please use <a href="../../common/help/">this page</a>.</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://gridcf.org/gct-docs/latest/gridftp/admin/index.html">GridFTP administration manual</a></li>
@@ -3729,7 +3733,7 @@ Look for any abnormal termination and <a href="#getting-help">report it</a> if i
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../external-oasis-repos/" title="Install an OASIS Repo" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="data/external-oasis-repos/" title="Install an OASIS Repo" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3744,7 +3748,7 @@ Look for any abnormal termination and <a href="#getting-help">report it</a> if i
     </a>
     
     
-    <a href="../load-balanced-gridftp/" title="Install Load Balanced GridFTP" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="data/load-balanced-gridftp/" title="Install Load Balanced GridFTP" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3782,12 +3786,9 @@ Look for any abnormal termination and <a href="#getting-help">report it</a> if i
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

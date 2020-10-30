@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3028,78 +3032,6 @@
                 
                 
                 <h1 id="installing-and-maintaining-gsi-openssh">Installing and Maintaining GSI OpenSSH<a class="headerlink" href="#installing-and-maintaining-gsi-openssh" title="Permanent link">&para;</a></h1>
-<p><strong>LINKING TEST</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left"><strong>link</strong></th>
-<th align="left"><strong>goes to (rel. to osg.org)</strong></th>
-<th align="left"><strong>tl;dr</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><a href="../schedd-filebeats">schedd-filebeats</a></td>
-<td align="left">/docs-itb/other/schedd-filebeats</td>
-<td align="left">ok</td>
-</tr>
-<tr>
-<td align="left"><a href="../schedd-filebeats/">schedd-filebeats/</a></td>
-<td align="left">/docs-itb/other/schedd-filebeats/</td>
-<td align="left">ok</td>
-</tr>
-<tr>
-<td align="left"><a href="../schedd-filebeats/">schedd-filebeats.md</a></td>
-<td align="left">/docs-itb/other/schedd-filebeats/</td>
-<td align="left">ok</td>
-</tr>
-<tr>
-<td align="left"><a href="../schedd-filebeats">./schedd-filebeats</a></td>
-<td align="left">/docs-itb/other/schedd-filebeats</td>
-<td align="left">ok</td>
-</tr>
-<tr>
-<td align="left"><a href="../schedd-filebeats/">./schedd-filebeats/</a></td>
-<td align="left">/docs-itb/other/schedd-filebeats/</td>
-<td align="left">ok</td>
-</tr>
-<tr>
-<td align="left"><a href="../schedd-filebeats/">./schedd-filebeats.md</a></td>
-<td align="left">/docs-itb/other/schedd-filebeats/</td>
-<td align="left">ok</td>
-</tr>
-<tr>
-<td align="left"><a href="../../other/schedd-filebeats">../other/schedd-filebeats</a></td>
-<td align="left">/docs-itb/other/schedd-filebeats</td>
-<td align="left">ok</td>
-</tr>
-<tr>
-<td align="left"><a href="../../other/schedd-filebeats/">../other/schedd-filebeats/</a></td>
-<td align="left">/docs-itb/other/schedd-filebeats/</td>
-<td align="left">ok</td>
-</tr>
-<tr>
-<td align="left"><a href="../schedd-filebeats/">../other/schedd-filebeats.md</a></td>
-<td align="left">/docs-itb/other/schedd-filebeats/</td>
-<td align="left">ok</td>
-</tr>
-<tr>
-<td align="left"><a href="../../../other/schedd-filebeats">../../other/schedd-filebeats</a></td>
-<td align="left">/other/schedd-filebeats</td>
-<td align="left">BUSTED</td>
-</tr>
-<tr>
-<td align="left"><a href="../../../other/schedd-filebeats/">../../other/schedd-filebeats/</a></td>
-<td align="left">/other/schedd-filebeats/</td>
-<td align="left">BUSTED</td>
-</tr>
-<tr>
-<td align="left"><a href="../../other/schedd-filebeats.md">../../other/schedd-filebeats.md</a></td>
-<td align="left">/docs-itb/other/schedd-filebeats.md</td>
-<td align="left">BUSTED</td>
-</tr>
-</tbody>
-</table>
 <p>This document contains instructions to install and configure the GSI OpenSSH server available in the OSG repository for
 use on your cluster.</p>
 <h2 id="before-starting">Before Starting<a class="headerlink" href="#before-starting" title="Permanent link">&para;</a></h2>
@@ -3110,10 +3042,10 @@ below</a> as needed):</p>
 </ul>
 <p>As with all OSG software installations, there are some one-time (per host) steps to prepare in advance:</p>
 <ul>
-<li>Ensure the host has <a href="../../release/supported_platforms">a supported operating system</a></li>
+<li>Ensure the host has <a href="../../release/supported_platforms/">a supported operating system</a></li>
 <li>Obtain root access to the host</li>
-<li>Prepare the <a href="../../common/yum">required Yum repositories</a></li>
-<li>Install <a href="../../common/ca">CA certificates</a></li>
+<li>Prepare the <a href="../../common/yum/">required Yum repositories</a></li>
+<li>Install <a href="../../common/ca/">CA certificates</a></li>
 </ul>
 <h2 id="installing-gsi-openssh">Installing GSI OpenSSH<a class="headerlink" href="#installing-gsi-openssh" title="Permanent link">&para;</a></h2>
 <p>Install the GSI OpenSSH rpms:</p>
@@ -3153,7 +3085,7 @@ account that will be used with GSI OpenSSH must have a shell
 assigned to it and not be locked (e.g., have <code>!</code> in the password field of <code>/etc/shadow</code>).</p>
 </div>
 <h3 id="configuring-authentication">Configuring authentication<a class="headerlink" href="#configuring-authentication" title="Permanent link">&para;</a></h3>
-<p>To configure authentication for GSI OpenSSH, follow the instructions in <a href="../../security/lcmaps-voms-authentication#configuring-the-lcmaps-voms-plugin">the LCMAPS VOMS plugin document</a>
+<p>To configure authentication for GSI OpenSSH, follow the instructions in <a href="../../security/lcmaps-voms-authentication/#configuring-the-lcmaps-voms-plugin">the LCMAPS VOMS plugin document</a>
 to prepare the LCMAPS VOMS plugin.</p>
 <h2 id="using-gsi-openssh">Using GSI OpenSSH<a class="headerlink" href="#using-gsi-openssh" title="Permanent link">&para;</a></h2>
 <p>The following table gives the commands needed to start, stop, enable, and disable GSI OpenSSH.</p>
@@ -3213,7 +3145,7 @@ level:</p>
 
 <p>Output goes to <code>/var/log/messages</code> or <code>journalctl</code> by default.</p>
 <h2 id="help">Help<a class="headerlink" href="#help" title="Permanent link">&para;</a></h2>
-<p>To get assistance please use this <a href="../../common/help">Help Procedure</a>.</p>
+<p>To get assistance please use this <a href="../../common/help/">Help Procedure</a>.</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <h3 id="useful-configuration-and-log-files">Useful configuration and log files<a class="headerlink" href="#useful-configuration-and-log-files" title="Permanent link">&para;</a></h3>
 <p>Configuration Files</p>
@@ -3306,7 +3238,7 @@ level:</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../../common/registration/" title="Registration" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="common/registration/" title="Registration" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3321,7 +3253,7 @@ level:</p>
     </a>
     
     
-    <a href="../install-gwms-frontend/" title="Install GlideinWMS Frontend" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="other/install-gwms-frontend/" title="Install GlideinWMS Frontend" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3359,12 +3291,9 @@ level:</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

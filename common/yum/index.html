@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3165,7 +3169,7 @@
                 
                 <h1 id="osg-yum-repositories">OSG Yum Repositories<a class="headerlink" href="#osg-yum-repositories" title="Permanent link">&para;</a></h1>
 <p>This document introduces Yum repositories and how they are used in the OSG.
-If you are unfamiliar with Yum, see the <a href="../../release/yum-basics">documentation on using Yum and RPM</a>.</p>
+If you are unfamiliar with Yum, see the <a href="../../release/yum-basics/">documentation on using Yum and RPM</a>.</p>
 <h2 id="repositories">Repositories<a class="headerlink" href="#repositories" title="Permanent link">&para;</a></h2>
 <p>The OSG hosts multiple repositories at <a href="https://repo.opensciencegrid.org/osg/">repo.opensciencegrid.org</a> that are
 intended for public use:</p>
@@ -3238,7 +3242,7 @@ contain a small subset of the software we ship.
 Both the main <code>osg</code> and the <code>osg-upcoming</code> repositories will need to be enabled for the installation to work.
 Because of this, interoperability will be maintained between the main <code>osg</code> and <code>osg-upcoming</code>.</p>
 <p>Depending on test results from sites, some packages in <code>osg-upcoming</code> may eventually end up in the main <code>osg</code> branch.
-The rest of the packages will eventually form the basis of the next <a href="../../release/release_series">OSG release series</a>
+The rest of the packages will eventually form the basis of the next <a href="../../release/release_series/">OSG release series</a>
 (e.g. "OSG 3.5").</p>
 <h3 id="contrib-software">Contrib Software<a class="headerlink" href="#contrib-software" title="Permanent link">&para;</a></h3>
 <p>In addition to our regular software repositories, we also have a <code>contrib</code> (short for "contributed") software repository.
@@ -3253,7 +3257,7 @@ supported by the OSG.</p>
 <li><a href="https://repo.opensciencegrid.org/osg/3.4/el7/contrib/x86_64/">OSG 3.4 EL7 contrib software repository</a></li>
 <li><a href="https://repo.opensciencegrid.org/osg/3.4/el6/contrib/x86_64/">OSG 3.4 EL6 contrib software repository</a></li>
 </ul>
-<p>If you would like to distribute your software in the OSG <code>contrib</code> repository, please <a href="../../common/help">contact us</a> with a
+<p>If you would like to distribute your software in the OSG <code>contrib</code> repository, please <a href="../help/">contact us</a> with a
 description of your software, what users it serves, and relevant RPM packaging.</p>
 <h2 id="installing-yum-repositories">Installing Yum Repositories<a class="headerlink" href="#installing-yum-repositories" title="Permanent link">&para;</a></h2>
 <h3 id="install-the-yum-priorities-plugin-el6-el7">Install the Yum priorities plugin (EL6, EL7)<a class="headerlink" href="#install-the-yum-priorities-plugin-el6-el7" title="Permanent link">&para;</a></h3>
@@ -3347,10 +3351,10 @@ otherwise, you might have dependency resolution ("depsolving") issues.</p>
 <h3 id="install-the-osg-repositories">Install the OSG Repositories<a class="headerlink" href="#install-the-osg-repositories" title="Permanent link">&para;</a></h3>
 <p>This document assumes a fresh install.
 For instructions on upgrading from one OSG series to another, see the
-<a href="../../release/release_series#updating-from-old">release series document</a>.</p>
+<a href="../../release/release_series/#updating-from-old">release series document</a>.</p>
 <ol>
 <li>
-<p>Install the OSG repository for your OS version and the <a href="../../release/release_series">OSG release series</a> that you wish to
+<p>Install the OSG repository for your OS version and the <a href="../../release/release_series/">OSG release series</a> that you wish to
    use:</p>
 <ul>
 <li>
@@ -3494,7 +3498,7 @@ mirror.</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../ca/" title="CA Certificates" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="common/ca/" title="CA Certificates" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3509,7 +3513,7 @@ mirror.</p>
     </a>
     
     
-    <a href="../../other/configuration-with-osg-configure/" title="Configuration with OSG-Configure" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="other/configuration-with-osg-configure/" title="Configuration with OSG-Configure" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3547,12 +3551,9 @@ mirror.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

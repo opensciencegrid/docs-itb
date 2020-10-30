@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3185,14 +3189,14 @@
 
 
 <h3 id="using-htcondor-ce-tools">Using HTCondor-CE tools<a class="headerlink" href="#using-htcondor-ce-tools" title="Permanent link">&para;</a></h3>
-<p>There are two HTCondor-CE tools that allow users to test the functionality of their HTCondor-CE: <a href="../troubleshoot-htcondor-ce#condor_ce_trace">condor_ce_trace</a> and <a href="../troubleshoot-htcondor-ce#condor_ce_run">condor_ce_run</a>. The former is the preferred tool as it provides useful feedback if failure occurs while the latter is simply an automated submission tool. These commands may be run from any host that has <code>htcondor-ce-client</code> installed, which you may wish to do if you are testing availability of your CE from an external source.</p>
+<p>There are two HTCondor-CE tools that allow users to test the functionality of their HTCondor-CE: <a href="../troubleshoot-htcondor-ce/#condor_ce_trace">condor_ce_trace</a> and <a href="../troubleshoot-htcondor-ce/#condor_ce_run">condor_ce_run</a>. The former is the preferred tool as it provides useful feedback if failure occurs while the latter is simply an automated submission tool. These commands may be run from any host that has <code>htcondor-ce-client</code> installed, which you may wish to do if you are testing availability of your CE from an external source.</p>
 <h4 id="condor_ce_trace">condor_ce_trace<a class="headerlink" href="#condor_ce_trace" title="Permanent link">&para;</a></h4>
 <p><code>condor_ce_trace</code> is a Python script that uses HTCondor's Python bindings to run diagnostics, including job submission, against your HTCondor-CE. To submit a job with <code>condor_ce_trace</code>, run the following command:</p>
 <div class="codehilite"><pre><span></span><span class="gp">user@host $</span> condor_ce_trace --debug condorce.example.com
 </pre></div>
 
 
-<p>Replacing <code>condorce.example.com</code> with the hostname of the CE you wish to test. On success, you will see <code>Job status: Completed</code> and the environment of the job on the worker node it landed on. If you do not get the expected output, refer to the <a href="../troubleshoot-htcondor-ce#condor_ce_trace">troubleshooting guide</a>.</p>
+<p>Replacing <code>condorce.example.com</code> with the hostname of the CE you wish to test. On success, you will see <code>Job status: Completed</code> and the environment of the job on the worker node it landed on. If you do not get the expected output, refer to the <a href="../troubleshoot-htcondor-ce/#condor_ce_trace">troubleshooting guide</a>.</p>
 <h5 id="requesting-resources">Requesting resources<a class="headerlink" href="#requesting-resources" title="Permanent link">&para;</a></h5>
 <p><code>condor_ce_trace</code> doesn't make any specific resource requests so its jobs are only given the default resources by the CE. To request specific resources (or other job attributes), you can specify the <code>--attribute</code> option on the command line:</p>
 <div class="codehilite"><pre><span></span><span class="gp">user@host $</span> condor_ce_trace --debug --attribute<span class="o">=</span><span class="s1">&#39;+resource1=value1&#39;</span>...--attribute<span class="o">=</span><span class="s1">&#39;+resourceN=valueN&#39;</span> condorce.example.com
@@ -3207,7 +3211,7 @@
 <p>For a list of other attributes that can be set with the <code>--attribute</code> option, consult the <a href="#job-attributes">job attributes</a> section.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Non HTCondor batch systems may need additional configuration to support these job attributes.  See the <a href="../../compute-element/job-router-recipes/#setting-batch-system-directives">job router recipes</a> for details on how to support them.</p>
+<p>Non HTCondor batch systems may need additional configuration to support these job attributes.  See the <a href="../job-router-recipes/#setting-batch-system-directives">job router recipes</a> for details on how to support them.</p>
 </div>
 <h4 id="condor_ce_run">condor_ce_run<a class="headerlink" href="#condor_ce_run" title="Permanent link">&para;</a></h4>
 <p><code>condor_ce_run</code> is a Python script that calls <code>condor_submit</code> on a generated submit file and tracks its progress with <code>condor_q</code>. To submit a job with <code>condor_ce_run</code>, run the following command:</p>
@@ -3215,7 +3219,7 @@
 </pre></div>
 
 
-<p>Replacing <code>condorce.example.com</code> with the hostname of the CE you wish to test. The command will not return any output until it completes: When it does you will see the environment of the job on the worker noded it landed on. If you do not get the expected output, refer to the <a href="../troubleshoot-htcondor-ce#condor_ce_run">troubleshooting guide</a>.</p>
+<p>Replacing <code>condorce.example.com</code> with the hostname of the CE you wish to test. The command will not return any output until it completes: When it does you will see the environment of the job on the worker noded it landed on. If you do not get the expected output, refer to the <a href="../troubleshoot-htcondor-ce/#condor_ce_run">troubleshooting guide</a>.</p>
 <h3 id="using-a-submit-file">Using a submit file...<a class="headerlink" href="#using-a-submit-file" title="Permanent link">&para;</a></h3>
 <p>If you are familiar with HTCondor, submitting a job to an HTCondor-CE using a submit file follows the same procedure as submitting a job to an HTCondor batch system: Write a submit file and use <code>condor_submit</code> (or in one of our cases, <code>condor_ce_submit</code>) to submit the job. This is by virtue of the fact that HTCondor-CE is just a special configuration of HTCondor. The major differences occur in the specific attributes for the submit files outlined below.</p>
 <h4 id="from-the-ce-host">From the CE host<a class="headerlink" href="#from-the-ce-host" title="Permanent link">&para;</a></h4>
@@ -3412,7 +3416,7 @@ env
 <h2 id="how-job-routes-affect-your-job">How Job Routes Affect Your Job<a class="headerlink" href="#how-job-routes-affect-your-job" title="Permanent link">&para;</a></h2>
 <p>Upon successful submission of your job, the Job Router takes control of your job by matching it to routes and submitting a transformed job to your batch system.</p>
 <h3 id="matching">Matching<a class="headerlink" href="#matching" title="Permanent link">&para;</a></h3>
-<p>See <a href="../../compute-element/job-router-recipes#how-jobs-match-to-job-routes">this section</a> for details on how jobs are matched
+<p>See <a href="../job-router-recipes/#how-jobs-match-to-job-routes">this section</a> for details on how jobs are matched
 to job routes.</p>
 <p><strong>Examples</strong></p>
 <p>The following three routes only perform filtering and submission of routed jobs to an HTCondor batch system. The only differences are in the types of jobs that they match:</p>
@@ -3445,7 +3449,7 @@ to job routes.</p>
 
 <p>If a user submitted their job with <code>+foo = bar</code> in their submit file, the job would match <code>Route 1</code>.</p>
 <h3 id="route-defaults">Route defaults<a class="headerlink" href="#route-defaults" title="Permanent link">&para;</a></h3>
-<p><a href="../job-router-recipes#setting-a-default">Route defaults</a> can be set for batch system queue, maximum memory, number of cores to request, and maximum walltime. The submitting user can override any of these by setting the corresponding <a href="#job-attributes">attribute</a> in their job.</p>
+<p><a href="../job-router-recipes/#setting-a-default">Route defaults</a> can be set for batch system queue, maximum memory, number of cores to request, and maximum walltime. The submitting user can override any of these by setting the corresponding <a href="#job-attributes">attribute</a> in their job.</p>
 <p><strong>Examples</strong></p>
 <p>The following route takes all incoming jobs and submits them to an HTCondor batch system requesting 1GB of memory.</p>
 <div class="codehilite"><pre><span></span>JOB_ROUTER_ENTRIES = [ \
@@ -3488,14 +3492,14 @@ to job routes.</p>
 </pre></div>
 
 
-<p>This indicates a communication issue with your CE that can be diagnosed with <a href="../troubleshoot-htcondor-ce#condor_ce_ping">condor_ce_ping</a>.</p>
+<p>This indicates a communication issue with your CE that can be diagnosed with <a href="../troubleshoot-htcondor-ce/#condor_ce_ping">condor_ce_ping</a>.</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <p>Here are some other HTCondor-CE documents that might be helpful:</p>
 <ul>
-<li><a href="../htcondor-ce-overview">HTCondor-CE overview and architecture</a></li>
-<li><a href="../install-htcondor-ce">Installing HTCondor-CE</a></li>
-<li><a href="../job-router-recipes">Configuring HTCondor-CE job routes</a></li>
-<li><a href="../troubleshoot-htcondor-ce">The HTCondor-CE troubleshooting guide</a></li>
+<li><a href="../htcondor-ce-overview/">HTCondor-CE overview and architecture</a></li>
+<li><a href="../install-htcondor-ce/">Installing HTCondor-CE</a></li>
+<li><a href="../job-router-recipes/">Configuring HTCondor-CE job routes</a></li>
+<li><a href="../troubleshoot-htcondor-ce/">The HTCondor-CE troubleshooting guide</a></li>
 </ul>
 <h3 id="job-attributes">Job attributes<a class="headerlink" href="#job-attributes" title="Permanent link">&para;</a></h3>
 <p>The following table is a reference of job attributes that can be included in HTCondor submit files and their GlobusRSL equivalents. A more comprehensive list of submit file attributes specific to HTCondor-CE can be found in the <a href="http://research.cs.wisc.edu/htcondor/manual/v8.6/condor_submit.html#SECTION0012574000000000000000">HTCondor manual</a>.</p>
@@ -3585,7 +3589,7 @@ to job routes.</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../troubleshoot-htcondor-ce/" title="Troubleshooting HTCondor-CE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="compute-element/troubleshoot-htcondor-ce/" title="Troubleshooting HTCondor-CE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3600,7 +3604,7 @@ to job routes.</p>
     </a>
     
     
-    <a href="../covid-19/" title="Supporting COVID-19 Research" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="compute-element/covid-19/" title="Supporting COVID-19 Research" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3638,12 +3642,9 @@ to job routes.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

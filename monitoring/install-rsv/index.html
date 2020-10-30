@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3215,7 +3219,7 @@ a local website. Also, the client can upload test results to a central collector
 <li>Ensure the RSV host has <a href="../../common/yum/">a supported operating system</a></li>
 <li>Obtain root access to the host</li>
 <li>Prepare <a href="../../common/yum/">the required Yum repositories</a></li>
-<li>Install <a href="../../common/ca">CA certificates</a></li>
+<li>Install <a href="../../common/ca/">CA certificates</a></li>
 </ul>
 <h2 id="installing-rsv">Installing RSV<a class="headerlink" href="#installing-rsv" title="Permanent link">&para;</a></h2>
 <p>An installation of RSV at a site consists of the RSV client software, the Apache web server, parts of HTCondor (for its cron-like scheduling capabilities), and various other small tools. To simplify installation, OSG provides a convenience RPM that installs all required software with a single command.</p>
@@ -3267,14 +3271,14 @@ a local website. Also, the client can upload test results to a central collector
 </ol>
 <h3 id="optional-configuration">Optional configuration<a class="headerlink" href="#optional-configuration" title="Permanent link">&para;</a></h3>
 <p>The following configuration steps are optional and will likely not be required for setting up a small or typical site. If you do not need any of the following special configurations, skip to <a href="#using-rsv">the section on using RSV</a>.</p>
-<p>Generally speaking, read the <a href="../advanced-rsv-configuration">ConfigureRsv</a> page for more advanced configuration options.</p>
+<p>Generally speaking, read the <a href="../advanced-rsv-configuration/">ConfigureRsv</a> page for more advanced configuration options.</p>
 <h4 id="configuring-rsv-to-run-probes-using-a-remote-server">Configuring RSV to run probes using a remote server<a class="headerlink" href="#configuring-rsv-to-run-probes-using-a-remote-server" title="Permanent link">&para;</a></h4>
 <p>RSV monitors systems by running probes, which can run on the RSV host itself (the default case), via a separate batch system like HTCondor, or via a remote batch system using a Globus gatekeeper and its job manager. The last two options both can count those jobs and report them to, for example, Gratia.</p>
 <p>In this case, remember to:</p>
 <ul>
 <li>Add the RSV user <code>rsv</code> on all the systems where the probes may run, and</li>
 <li>Map the RSV service certificate to the user you intend to use for RSV. This should be a local user used exclusively for RSV and not belonging to an institutional VO to avoid for the RSV probes to be accounted as regular VO jobs in Gratia. 
-This can be done in the configuration of the <a href="../../security/lcmaps-voms-authentication">LCMAPS VOMS plugin</a> on your CE.</li>
+This can be done in the configuration of the <a href="../../security/lcmaps-voms-authentication/">LCMAPS VOMS plugin</a> on your CE.</li>
 </ul>
 <h4 id="configuring-the-rsv-web-server-to-use-https-instead-of-http">Configuring the RSV web server to use HTTPS instead of HTTP<a class="headerlink" href="#configuring-the-rsv-web-server-to-use-https-instead-of-http" title="Permanent link">&para;</a></h4>
 <p>If you would like your local RSV web server to use HTTPS instead of the default HTTP (for compatibility or security reasons), complete the steps below. This procedure assumes that you already have an HTTP service certificate (or a copy of the host certificate) in <code>/etc/grid-security/http/</code>. If not, omit the <code>SSLCertificate*</code> modifications below, and your web server will start with its own, self-signed certificate.</p>
@@ -3395,9 +3399,9 @@ SSLCertificateKeyFile /etc/grid-security/http/httpkey2.pem
 
 
 <p>If successful, results will be available from your local RSV web server (e.g., <code>http://localhost/rsv</code>) and, if enabled (which is the default) on <a href="http://my.opensciencegrid.org/">MyOSG</a>.</p>
-<p>You can also run the metrics individually or pass special parameters as explained in the <a href="../rsv-control">rsv-control document</a>.</p>
+<p>You can also run the metrics individually or pass special parameters as explained in the <a href="../rsv-control/">rsv-control document</a>.</p>
 <h2 id="troubleshooting-rsv">Troubleshooting RSV<a class="headerlink" href="#troubleshooting-rsv" title="Permanent link">&para;</a></h2>
-<p>To get assistance, use the <a href="../../common/help">help procedure</a>.</p>
+<p>To get assistance, use the <a href="../../common/help/">help procedure</a>.</p>
 <p>RSV has a tool to collect information useful for troubleshooting into a tarball that can be shared with the developers and support staff.
 To use it:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host#</span> rsv-control --profile
@@ -3408,7 +3412,7 @@ To use it:</p>
 </pre></div>
 
 
-<p>You can find more information on troubleshooting RSV in the <a href="../rsv-control">rsv-control documentation</a>.</p>
+<p>You can find more information on troubleshooting RSV in the <a href="../rsv-control/">rsv-control documentation</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are getting assistance via the trouble ticket system, you must add a <code>.txt</code> extension to the tarball so it can be uploaded:</p>
@@ -3485,8 +3489,9 @@ To use it:</p>
 <li>3 = full debugging output</li>
 </ul>
 <p>For example, here is the output when running a metric with -v2.</p>
-<p><details>
-  <summary>Show detailed ouput</summary></p>
+<details>
+  <summary>Show detailed ouput</summary>
+
 <div class="codehilite"><pre><span></span><span class="go">   [root@fermicloud016 condor]# rsv-control -r org.osg.general.osg-version -v 2 -u osg-edu.cs.wisc.edu</span>
 <span class="go">   INFO: Reading configuration file /etc/rsv/rsv.conf</span>
 <span class="go">   INFO: Reading configuration file /etc/rsv/consumers.conf</span>
@@ -3539,7 +3544,8 @@ To use it:</p>
 </pre></div>
 
 
-<p></details></p>
+</details>
+
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
 <p>To get assistance, please use <a href="../../common/help/">this page</a> and attach the output of <code>rsv-control --profile</code>:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> rsv-control --profile
@@ -3667,7 +3673,7 @@ To use it:</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../../release/signing/" title="RPM Signing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="release/signing/" title="RPM Signing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3682,7 +3688,7 @@ To use it:</p>
     </a>
     
     
-    <a href="../advanced-rsv-configuration/" title="Advanced RSV Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="monitoring/advanced-rsv-configuration/" title="Advanced RSV Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3720,12 +3726,9 @@ To use it:</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

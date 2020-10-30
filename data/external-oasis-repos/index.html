@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../../css/itb.css">
     
       <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -3048,7 +3052,7 @@
 <a href="https://cvmfs.readthedocs.io">CVMFS</a>, for distributing software throughout the OSG.  Once software is installed into
 an OASIS repository, the goal is to make it available across about 90% of the OSG within an hour.</p>
 <p>OASIS consists of keysigning infrastructure, a content distribution network (CDN), and a shared CVMFS repository that
-is hosted by the OSG.  Many use cases will be covered by utilizing the <a href="../update-oasis">shared repository</a>; this document
+is hosted by the OSG.  Many use cases will be covered by utilizing the <a href="../update-oasis/">shared repository</a>; this document
 covers how to install, configure, and host your own CVMFS <em>repository server</em>.  This server will distribute software
 via OASIS, but will be hosted and operated externally from the OSG project.</p>
 <p>OASIS-based distribution and key signing is available to OSG VOs or repositories affiliated with an OSG VO.
@@ -3071,7 +3075,7 @@ OSG install.  The host OS must meet ONE of the following:</p>
     and one uncompressed. <code>/srv/cvmfs</code> will hold all the published data (compressed and de-deuplicated).  The
     <code>/var/spool/cvmfs</code> directory will contain all the data in all current transactions (uncompressed).</li>
 <li><strong>Root access</strong> will be needed to install.  Software install will be done as an unprivileged user.</li>
-<li><strong>Yum</strong> will need to be <a href="../../common/yum">configured to use the OSG repositories</a>.</li>
+<li><strong>Yum</strong> will need to be <a href="../../common/yum/">configured to use the OSG repositories</a>.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Overlay-FS limitations</p>
@@ -3316,7 +3320,7 @@ remove the repository configuration while preserving the data and keys:</p>
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../update-oasis/" title="Update OASIS Shared Repo" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="data/update-oasis/" title="Update OASIS Shared Repo" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3331,7 +3335,7 @@ remove the repository configuration while preserving the data and keys:</p>
     </a>
     
     
-    <a href="../gridftp/" title="Install GridFTP Server" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="data/gridftp/" title="Install GridFTP Server" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3369,12 +3373,9 @@ remove the repository configuration while preserving the data and keys:</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

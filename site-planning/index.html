@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -44,25 +44,29 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
+    
       <link rel="stylesheet" href="../css/itb.css">
     
       <link rel="stylesheet" href="../css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -2998,14 +3002,14 @@ However, today, there are two options for accepting pilot jobs at your site:</p>
    The OSG CE install and operation is covered in this documentation page.</li>
 </ul>
 <h3 id="runtime-environment">Runtime environment<a class="headerlink" href="#runtime-environment" title="Permanent link">&para;</a></h3>
-<p>The OSG requires a very minimal runtime environment that can be deployed via <a href="../worker-node/install-wn-tarball">tarball</a>,
-<a href="../worker-node/install-wn">RPM</a>, or through a <a href="../worker-node/install-wn-oasis">global filesystem</a> on your cluster's worker
+<p>The OSG requires a very minimal runtime environment that can be deployed via <a href="../worker-node/install-wn-tarball/">tarball</a>,
+<a href="../worker-node/install-wn/">RPM</a>, or through a <a href="../worker-node/install-wn-oasis/">global filesystem</a> on your cluster's worker
 nodes.</p>
 <p>We believe that all research applications should be portable and self-contained, with no OS dependencies.
 This provides access to the most resources and minimizes the presence at sites.
 However, this ideal is often difficult to achieve in practice.
 For sites that want to support a uniform runtime environment, we provide a global filesystem called
-<a href="../worker-node/install-cvmfs">CVMFS</a> that VOs can use to distribute their own software dependencies.</p>
+<a href="../worker-node/install-cvmfs/">CVMFS</a> that VOs can use to distribute their own software dependencies.</p>
 <p>Finally, many researchers use applications that require a specific OS environment - not just individual dependencies -
 that is distributed as a container.
 OSG supports the use of the <a href="http://singularity.lbl.gov/">Singularity</a> container runtime with
@@ -3013,7 +3017,7 @@ OSG supports the use of the <a href="http://singularity.lbl.gov/">Singularity</a
 <h3 id="data-services">Data Services<a class="headerlink" href="#data-services" title="Permanent link">&para;</a></h3>
 <p>Whether accessed through CVMFS or command-line software like <code>curl</code>, the majority of software is moved via HTTP in
 cache-friendly patterns.
-All sites are highly encouraged to use an <a href="../data/frontier-squid">HTTP proxy</a> to reduce the load on the WAN from the
+All sites are highly encouraged to use an <a href="../data/frontier-squid/">HTTP proxy</a> to reduce the load on the WAN from the
 cluster.</p>
 <p>Depending on the VOs you want to support, additional data services may be necessary:</p>
 <ul>
@@ -3058,7 +3062,7 @@ example.
 <div class="md-footer-nav">
   <nav class="md-footer-nav__inner md-grid">
     
-    <a href="../detailed-overview/" title="Detailed Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+    <a href="detailed-overview/" title="Detailed Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
       <div class="md-flex__cell md-flex__cell--shrink">
         <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
       </div>
@@ -3073,7 +3077,7 @@ example.
     </a>
     
     
-    <a href="../compute-element/htcondor-ce-overview/" title="HTCondor-CE Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+    <a href="compute-element/htcondor-ce-overview/" title="HTCondor-CE Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
       <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
         <span class="md-flex__ellipsis">
           <span class="md-footer-nav__direction">
@@ -3111,12 +3115,9 @@ example.
       
     </div>
     
-      <script src="../assets/javascripts/application.30f6b8b1.js"></script>
+      <script src="../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
     
   </body>
